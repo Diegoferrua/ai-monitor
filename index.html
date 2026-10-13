@@ -19,9 +19,9 @@
         :root, [data-theme="dark"] {
             --bg: #060911;
             --bg-elevated: #0b1120;
-            --bg-card: #0e1628;
-            --bg-card-hover: #131d34;
-            --bg-subtle: #16223b;
+            --bg-card: #0d1527;
+            --bg-card-hover: #121c33;
+            --bg-subtle: #15223a;
             --border: #1b2842;
             --border-hover: #3b82f6;
             --border-accent: #60a5fa;
@@ -33,24 +33,24 @@
             
             /* Tiers Palette */
             --coral: #f43f5e;
-            --coral-bg: rgba(244, 63, 94, 0.1);
-            --coral-border: rgba(244, 63, 94, 0.38);
-            --coral-glow: rgba(244, 63, 94, 0.22);
+            --coral-bg: rgba(244, 63, 94, 0.12);
+            --coral-border: rgba(244, 63, 94, 0.45);
+            --coral-glow: rgba(244, 63, 94, 0.25);
 
             --gold: #f59e0b;
-            --gold-bg: rgba(245, 158, 11, 0.1);
-            --gold-border: rgba(245, 158, 11, 0.38);
-            --gold-glow: rgba(245, 158, 11, 0.2);
+            --gold-bg: rgba(245, 158, 11, 0.12);
+            --gold-border: rgba(245, 158, 11, 0.45);
+            --gold-glow: rgba(245, 158, 11, 0.22);
 
             --teal: #14b8a6;
-            --teal-bg: rgba(20, 184, 166, 0.1);
-            --teal-border: rgba(20, 184, 166, 0.38);
-            --teal-glow: rgba(20, 184, 166, 0.2);
+            --teal-bg: rgba(20, 184, 166, 0.12);
+            --teal-border: rgba(20, 184, 166, 0.45);
+            --teal-glow: rgba(20, 184, 166, 0.22);
 
             --purple: #a855f7;
-            --purple-bg: rgba(168, 85, 247, 0.1);
-            --purple-border: rgba(168, 85, 247, 0.38);
-            --purple-glow: rgba(168, 85, 247, 0.2);
+            --purple-bg: rgba(168, 85, 247, 0.12);
+            --purple-border: rgba(168, 85, 247, 0.45);
+            --purple-glow: rgba(168, 85, 247, 0.22);
         }
 
         [data-theme="light"] {
@@ -70,23 +70,23 @@
 
             --coral: #e11d48;
             --coral-bg: rgba(225, 29, 72, 0.08);
-            --coral-border: rgba(225, 29, 72, 0.28);
-            --coral-glow: rgba(225, 29, 72, 0.12);
+            --coral-border: rgba(225, 29, 72, 0.35);
+            --coral-glow: rgba(225, 29, 72, 0.15);
 
             --gold: #d97706;
             --gold-bg: rgba(217, 119, 6, 0.08);
-            --gold-border: rgba(217, 119, 6, 0.28);
-            --gold-glow: rgba(217, 119, 6, 0.12);
+            --gold-border: rgba(217, 119, 6, 0.35);
+            --gold-glow: rgba(217, 119, 6, 0.15);
 
             --teal: #0d9488;
             --teal-bg: rgba(13, 148, 136, 0.08);
-            --teal-border: rgba(13, 148, 136, 0.28);
-            --teal-glow: rgba(13, 148, 136, 0.12);
+            --teal-border: rgba(13, 148, 136, 0.35);
+            --teal-glow: rgba(13, 148, 136, 0.15);
 
             --purple: #9333ea;
             --purple-bg: rgba(147, 51, 234, 0.08);
-            --purple-border: rgba(147, 51, 234, 0.28);
-            --purple-glow: rgba(147, 51, 234, 0.12);
+            --purple-border: rgba(147, 51, 234, 0.35);
+            --purple-glow: rgba(147, 51, 234, 0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -103,7 +103,6 @@
         .mono { font-family: 'JetBrains Mono', monospace; }
         .disp { font-family: 'Archivo', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
 
-        /* Fluid Widescreen Container */
         .wrap {
             max-width: 1560px;
             margin: 0 auto;
@@ -433,122 +432,141 @@
             box-shadow: 0 2px 10px var(--accent-glow);
         }
 
-        /* ========================================================
-           HORIZONTAL-FIRST BENTO MOSAIC (FLUID ASYMMETRIC GRID)
-           ======================================================== */
-        .mosaic-grid {
+        /* Widescreen 2-Column Split: Collage Cluster on Left, Company Intel on Right */
+        .widescreen-layout {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr 360px;
+            gap: 26px;
+            align-items: start;
             margin-bottom: 40px;
         }
 
-        .mosaic-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 22px 24px;
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.25s ease;
-            position: relative;
+        @media (max-width: 1180px) {
+            .widescreen-layout { grid-template-columns: 1fr; }
+        }
+
+        /* ========================================================
+           PHOTO COLLAGE MOCKUP GEOMETRY (EXACT TO USER REFERENCE)
+           3-Column Asymmetric Cluster with Floating Photo-Frame Borders
+           ======================================================== */
+        .photo-collage-cluster {
+            display: grid;
+            grid-template-columns: 1fr 1.35fr 1fr;
+            grid-auto-rows: min-content;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        @media (max-width: 900px) {
+            .photo-collage-cluster { grid-template-columns: 1fr; }
+        }
+
+        /* Card Photo-Frame Aesthetic */
+        .photo-card {
+            background: radial-gradient(circle at center, var(--bg-card) 0%, #080d1a 100%);
+            border: 2px solid rgba(255, 255, 255, 0.18);
+            border-radius: 14px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.2s ease;
+            position: relative;
         }
 
-        .mosaic-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 3px;
-            background: transparent;
-            border-radius: 16px 16px 0 0;
-            transition: background 0.2s ease;
+        .photo-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
         }
 
-        .mosaic-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+        /* Positions matching the reference image */
+        /* Col 1 Top: Landscape (Horizontal) */
+        .slot-col1-top {
+            grid-column: 1;
+            grid-row: 1;
+            aspect-ratio: 16 / 10;
         }
 
-        /* Proportions in 12-column grid */
-        /* 1. Widescreen Hero Billboard (Spans 12 or 8 cols with horizontal 2-col split) */
-        .mosaic-card.span-hero {
-            grid-column: span 12;
-            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+        /* Col 1 Bottom: Square */
+        .slot-col1-bottom {
+            grid-column: 1;
+            grid-row: 2;
+            aspect-ratio: 1 / 1;
         }
 
-        .hero-horizontal-split {
-            display: grid;
-            grid-template-columns: 1.15fr 1fr;
-            gap: 28px;
-            align-items: start;
+        /* Col 2 Top: Landscape (Horizontal) */
+        .slot-col2-top {
+            grid-column: 2;
+            grid-row: 1;
+            aspect-ratio: 16 / 9;
         }
 
-        @media (max-width: 980px) {
-            .hero-horizontal-split { grid-template-columns: 1fr; gap: 16px; }
+        /* Col 2 Bottom: Center Focal Hero (Large Dominant Square/Portrait) */
+        .slot-col2-bottom {
+            grid-column: 2;
+            grid-row: 2;
+            aspect-ratio: 1 / 1.08;
+            transform: translateY(12px);
+            z-index: 2;
+        }
+        .slot-col2-bottom .paper-title { font-size: 20px; line-height: 1.3; }
+
+        /* Col 3 Top: Square */
+        .slot-col3-top {
+            grid-column: 3;
+            grid-row: 1;
+            aspect-ratio: 1 / 1;
         }
 
-        /* 2. Wide Horizontal Card (Spans 6 cols = half width) */
-        .mosaic-card.span-half {
-            grid-column: span 6;
+        /* Col 3 Bottom: Landscape (Horizontal) */
+        .slot-col3-bottom {
+            grid-column: 3;
+            grid-row: 2;
+            aspect-ratio: 16 / 10;
         }
 
-        /* 3. Medium Horizontal Card (Spans 4 cols = third width) */
-        .mosaic-card.span-third {
-            grid-column: span 4;
-        }
-
-        /* 4. Compact Card (Spans 4 cols) */
-        .mosaic-card.span-compact {
-            grid-column: span 4;
-        }
-
-        @media (max-width: 1200px) {
-            .mosaic-card.span-third, .mosaic-card.span-compact { grid-column: span 6; }
-        }
-
-        @media (max-width: 768px) {
-            .mosaic-card.span-hero, .mosaic-card.span-half, .mosaic-card.span-third, .mosaic-card.span-compact {
-                grid-column: span 12;
+        @media (max-width: 900px) {
+            .slot-col1-top, .slot-col1-bottom, .slot-col2-top, .slot-col2-bottom, .slot-col3-top, .slot-col3-bottom {
+                grid-column: 1 !important;
+                grid-row: auto !important;
+                aspect-ratio: auto !important;
+                transform: none !important;
             }
         }
 
         /* Color Differentiation by Importance */
         .tier-critical {
             border-color: var(--coral-border);
-            background: linear-gradient(150deg, var(--coral-bg) 0%, var(--bg-card) 60%);
-            box-shadow: 0 4px 20px var(--coral-glow);
+            box-shadow: 0 16px 36px var(--coral-glow);
         }
-        .tier-critical::before { background: var(--coral); }
         .tier-critical:hover { border-color: var(--coral); }
 
         .tier-high {
             border-color: var(--gold-border);
-            background: linear-gradient(150deg, var(--gold-bg) 0%, var(--bg-card) 60%);
-            box-shadow: 0 4px 20px var(--gold-glow);
+            box-shadow: 0 16px 36px var(--gold-glow);
         }
-        .tier-high::before { background: var(--gold); }
         .tier-high:hover { border-color: var(--gold); }
 
         .tier-medium {
             border-color: var(--teal-border);
-            background: linear-gradient(150deg, var(--teal-bg) 0%, var(--bg-card) 60%);
-            box-shadow: 0 4px 20px var(--teal-glow);
+            box-shadow: 0 16px 36px var(--teal-glow);
         }
-        .tier-medium::before { background: var(--teal); }
         .tier-medium:hover { border-color: var(--teal); }
 
         .tier-standard {
             border-color: var(--purple-border);
-            background: linear-gradient(150deg, var(--purple-bg) 0%, var(--bg-card) 60%);
-            box-shadow: 0 4px 20px var(--purple-glow);
+            box-shadow: 0 16px 36px var(--purple-glow);
         }
-        .tier-standard::before { background: var(--purple); }
         .tier-standard:hover { border-color: var(--purple); }
 
-        /* Typography & Internal Elements */
+        /* Card Elements */
+        .card-top { margin-bottom: 12px; }
+        .card-bottom { margin-top: auto; }
+
         .card-tags {
             display: flex;
-            gap: 8px;
+            gap: 7px;
             flex-wrap: wrap;
             margin-bottom: 10px;
             align-items: center;
@@ -574,31 +592,29 @@
         .node-pin { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); }
 
         .paper-title {
-            font-size: 17px;
+            font-size: 15.5px;
             font-weight: 700;
             line-height: 1.35;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: var(--text-main);
         }
 
-        .span-hero .paper-title { font-size: 22px; line-height: 1.3; margin-bottom: 10px; }
-
         .paper-author {
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--text-dim);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
 
         /* Editorial Content Panels */
         .panel {
-            border-radius: 8px;
-            padding: 12px 14px;
-            margin-bottom: 10px;
-            font-size: 13.5px;
-            line-height: 1.55;
+            border-radius: 7px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            font-size: 12.5px;
+            line-height: 1.45;
         }
 
         .panel-esencial {
@@ -616,11 +632,11 @@
 
         .panel-lbl {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
+            font-size: 9.5px;
             font-weight: 700;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
             display: block;
         }
 
@@ -629,40 +645,40 @@
 
         /* Collapsible Details */
         .card-details {
-            margin-top: 10px;
+            margin-top: 8px;
             border-top: 1px dashed var(--border);
-            padding-top: 8px;
+            padding-top: 6px;
         }
 
         .card-details summary {
-            font-size: 12px;
+            font-size: 11.5px;
             font-weight: 600;
             color: var(--accent);
             cursor: pointer;
             user-select: none;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
 
         .card-details summary:hover { text-decoration: underline; }
 
         .links-row {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
-            margin-top: 8px;
+            margin-top: 6px;
         }
 
         .link-pill {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            font-size: 11px;
+            gap: 5px;
+            font-size: 10.5px;
             font-weight: 600;
             text-decoration: none;
-            padding: 5px 12px;
-            border-radius: 6px;
+            padding: 4px 10px;
+            border-radius: 5px;
             background: var(--bg-subtle);
             border: 1px solid var(--border);
             color: var(--accent);
@@ -673,57 +689,47 @@
         .link-pill.primary { background: var(--accent); border-color: var(--accent); color: #ffffff; }
 
         /* ========================================================
-           HORIZONTAL INDUSTRY SECTION (LAUNCHES & NEWS SIDE-BY-SIDE)
+           RIGHT SIDEBAR (EMPRESAS / LANZAMIENTOS & NOTICIAS)
            ======================================================== */
-        .industry-section-wrap {
-            margin-top: 20px;
-            margin-bottom: 40px;
-            border-top: 1px solid var(--border);
-            padding-top: 32px;
+        .companies-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .industry-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        @media (max-width: 900px) {
-            .industry-grid { grid-template-columns: 1fr; }
-        }
-
-        .industry-card-box {
+        .sidebar-box {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
         }
 
-        .industry-box-title {
-            font-size: 16px;
+        .sidebar-title {
+            font-size: 14.5px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
             gap: 8px;
             color: var(--text-main);
         }
 
-        .launch-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .launch-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
         .launch-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .launch-company { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--purple); text-transform: uppercase; }
-        .launch-name { font-size: 14px; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
-        .launch-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 6px; }
+        .launch-company { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; color: var(--purple); text-transform: uppercase; }
+        .launch-name { font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
+        .launch-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.45; margin-bottom: 6px; }
 
-        .news-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .news-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
         .news-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .news-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--teal); text-transform: uppercase; margin-bottom: 4px; display: block; }
-        .news-headline { font-size: 13.5px; color: var(--text-main); line-height: 1.5; margin-bottom: 6px; }
+        .news-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--teal); text-transform: uppercase; margin-bottom: 3px; display: block; }
+        .news-headline { font-size: 13px; color: var(--text-main); line-height: 1.45; margin-bottom: 6px; }
 
         /* ========================================================
-           CAROUSEL SWIPER VIEW (HORIZONTAL SLIDES & TIER ACCENTS)
+           CAROUSEL SWIPER VIEW (COLOR-ENHANCED SLIDER)
            ======================================================== */
         .carousel-container {
             display: none;
@@ -810,30 +816,33 @@
 
         .carousel-track::-webkit-scrollbar { display: none; }
 
-        /* Widescreen Horizontal Carousel Slide */
         .carousel-slide {
             flex: 0 0 100%;
             max-width: 960px;
             scroll-snap-align: center;
             background: var(--bg-card);
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
             border-radius: 18px;
             padding: 28px 32px;
             position: relative;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
         }
 
-        .carousel-slide::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            border-radius: 18px 18px 0 0;
+        .carousel-slide.tier-critical { border-color: var(--coral-border); box-shadow: 0 12px 36px var(--coral-glow); }
+        .carousel-slide.tier-high { border-color: var(--gold-border); box-shadow: 0 12px 36px var(--gold-glow); }
+        .carousel-slide.tier-medium { border-color: var(--teal-border); box-shadow: 0 12px 36px var(--teal-glow); }
+        .carousel-slide.tier-standard { border-color: var(--purple-border); box-shadow: 0 12px 36px var(--purple-glow); }
+
+        .carousel-horizontal-split {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 28px;
+            align-items: start;
         }
 
-        .carousel-slide.tier-critical::before { background: var(--coral); }
-        .carousel-slide.tier-high::before { background: var(--gold); }
-        .carousel-slide.tier-medium::before { background: var(--teal); }
-        .carousel-slide.tier-standard::before { background: var(--purple); }
+        @media (max-width: 860px) {
+            .carousel-horizontal-split { grid-template-columns: 1fr; }
+        }
 
         /* States */
         .loading-box { text-align: center; padding: 60px 20px; color: var(--text-muted); }
@@ -888,11 +897,11 @@
         <section class="hero">
             <span class="kicker">RESEARCH & FRONTIER LABS · INTEL DIARIO</span>
             <h1 class="disp">La frontera de AI, antes de tu primer café.</h1>
-            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, estructurados en formato horizontal panorámico y carrusel deslizable.</p>
+            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, estructurados en formato de collage asimétrico de galería y carrusel deslizable.</p>
             <div class="pills">
                 <span class="pill live"><span class="live-dot"></span> Pipeline Activo · 7:30 AM Diario</span>
-                <span class="pill">Mosaico Horizontal Panorámico</span>
-                <span class="pill">Proporciones Fluidas & Contenido</span>
+                <span class="pill">Collage Asimétrico de Galería</span>
+                <span class="pill">Empresas a la Derecha</span>
             </div>
         </section>
 
@@ -923,7 +932,7 @@
                     <span>🕸️</span> Constelación de Nodos · Red de Research del Día
                 </div>
                 <div class="graph-caption">
-                    Puntos coloreados por impacto · Pasa el cursor o haz clic para enfocar en el mosaico
+                    Puntos coloreados por impacto · Pasa el cursor o haz clic para enfocar en el collage
                 </div>
             </div>
             <div class="canvas-wrap" id="canvasWrap">
@@ -949,10 +958,10 @@
         <div class="toolbar" id="viewToolbar">
             <div class="view-switcher">
                 <button id="btnViewCollage" class="view-btn active" type="button">
-                    <span>⊞</span> Vista Mosaico Horizontal
+                    <span>⊞</span> Vista Collage Asimétrico
                 </button>
                 <button id="btnViewCarousel" class="view-btn" type="button">
-                    <span>⇄</span> Vista Carrusel Panorámico
+                    <span>⇄</span> Vista Carrusel (Swipe)
                 </button>
             </div>
 
@@ -967,7 +976,7 @@
         <!-- Date Tabs -->
         <nav class="tabs-nav" id="tabsNav" aria-label="Historial por fechas"></nav>
 
-        <!-- Main Dynamic Content (Horizontal Mosaic + Lower Industry Section) -->
+        <!-- Main Dynamic Content -->
         <main id="mainGrid">
             <div class="loading-box">
                 <div class="spinner"></div>
@@ -987,7 +996,7 @@
         let allDates = [];
         let activeDate = null;
         let lastManifestUpdatedAt = null;
-        let currentViewMode = 'collage'; // 'collage' | 'carousel'
+        let currentViewMode = 'collage';
         let currentCarouselIndex = 0;
         let currentLoadedData = null;
 
@@ -1018,7 +1027,7 @@
             drawGraph();
         };
 
-        // --- View Switcher Logic (Mosaic vs Carousel) ---
+        // --- View Switcher Logic ---
         const btnViewCollage = document.getElementById('btnViewCollage');
         const btnViewCarousel = document.getElementById('btnViewCarousel');
 
@@ -1038,7 +1047,6 @@
             if (currentLoadedData) renderCurrentData();
         };
 
-        // Keyboard navigation for Carousel
         window.addEventListener('keydown', (e) => {
             if (currentViewMode !== 'carousel') return;
             if (e.key === 'ArrowRight') moveCarousel(1);
@@ -1134,127 +1142,77 @@
             document.getElementById('statUpdated').textContent = `${date} · 07:30 AM`;
         }
 
-        // --- Importance & Horizontal Proportions Classifier ---
-        function classifyPaper(paper, index, category, total) {
+        // --- Classifier for the 6 Collage Slots ---
+        function classifyPaper(paper, index, category) {
             const titleLower = (paper.title || '').toLowerCase();
             const descLower = (paper.description || '').toLowerCase();
 
-            // 1. Critical / Hero Spotlight (Wide Billboard span-hero)
             if (index === 0 && (category === 'LLMs' || category === 'Agents & Reasoning')) {
                 return {
                     tierClass: 'tier-critical',
-                    spanClass: 'span-hero', // Full 12 cols with horizontal 2-col layout
                     tagClass: 'tag-critical',
                     tagLabel: '🔥 SPOTLIGHT FRONTIER',
                     color: '#f43f5e',
                     glow: 'rgba(244, 63, 94, 0.45)',
-                    radius: 12,
-                    isHero: true
+                    radius: 12
                 };
             }
             if (titleLower.includes('breakthrough') || titleLower.includes('reasoning') || descLower.includes('redefine') || descLower.includes('10x')) {
                 return {
                     tierClass: 'tier-critical',
-                    spanClass: 'span-half', // 6 cols
                     tagClass: 'tag-critical',
                     tagLabel: '⚡ BREAKTHROUGH',
                     color: '#f43f5e',
                     glow: 'rgba(244, 63, 94, 0.45)',
-                    radius: 10,
-                    isHero: false
+                    radius: 10
                 };
             }
-
-            // 2. High Impact (Half or Third width)
             if (category === 'LLMs' || category === 'Agents & Reasoning') {
                 return {
                     tierClass: 'tier-high',
-                    spanClass: index % 2 === 1 ? 'span-half' : 'span-third',
                     tagClass: 'tag-high',
                     tagLabel: '⭐ ALTO IMPACTO',
                     color: '#f59e0b',
                     glow: 'rgba(245, 158, 11, 0.4)',
-                    radius: 9,
-                    isHero: false
+                    radius: 9
                 };
             }
-
-            // 3. Medium Impact (Vision/Agents - Third width)
             if (category === 'Vision/Multimodal') {
                 return {
                     tierClass: 'tier-medium',
-                    spanClass: 'span-third',
                     tagClass: 'tag-medium',
-                    tagLabel: '👁️ VISIÓN & MULTIMODAL',
+                    tagLabel: '👁️ VISIÓN & AGENTES',
                     color: '#14b8a6',
                     glow: 'rgba(20, 184, 166, 0.4)',
-                    radius: 8,
-                    isHero: false
+                    radius: 8
                 };
             }
-
-            // 4. Infrastructure / Compact (Third or Half width)
             return {
                 tierClass: 'tier-standard',
-                spanClass: 'span-compact',
                 tagClass: 'tag-standard',
                 tagLabel: '⚙️ INFRAESTRUCTURA',
                 color: '#a855f7',
                 glow: 'rgba(168, 85, 247, 0.35)',
-                radius: 7,
-                isHero: false
+                radius: 7
             };
         }
 
-        function createMosaicCardHTML(p, tierInfo, overallIdx = 0) {
+        // Maps item index to the exact 6 mockup slots
+        const slotClasses = [
+            'slot-col1-top',    // 0: Top-Left Landscape
+            'slot-col2-top',    // 1: Top-Center Landscape
+            'slot-col3-top',    // 2: Top-Right Square
+            'slot-col1-bottom', // 3: Bottom-Left Square
+            'slot-col2-bottom', // 4: Center-Bottom Big Focal Hero!
+            'slot-col3-bottom'  // 5: Bottom-Right Landscape
+        ];
+
+        function createPhotoCardHTML(p, tierInfo, overallIdx) {
             const nodeId = `node-card-${overallIdx}`;
+            const slotClass = slotClasses[overallIdx % slotClasses.length];
 
-            if (tierInfo.isHero) {
-                // Wide Billboard Layout with 2-Column Horizontal Split
-                return `
-                <article id="${nodeId}" class="mosaic-card ${tierInfo.tierClass} ${tierInfo.spanClass}" data-idx="${overallIdx}">
-                    <div class="hero-horizontal-split">
-                        <div class="split-left">
-                            <div class="card-tags">
-                                <span class="tag ${tierInfo.tagClass}">${tierInfo.tagLabel}</span>
-                                <span class="tag tag-category">${escapeHtml(p._category)}</span>
-                                <span class="node-pin mono">● N-${String(overallIdx + 1).padStart(2, '0')}</span>
-                                ${p._date ? `<span class="tag tag-date mono">📅 ${escapeHtml(p._date)}</span>` : ''}
-                            </div>
-                            <h3 class="paper-title">${escapeHtml(p.title)}</h3>
-                            <div class="paper-author mono">🏛️ ${escapeHtml(p.author || 'Frontier Lab')}</div>
-                            <div class="panel panel-esencial">
-                                <span class="panel-lbl">01 · Lo Esencial</span>
-                                <p>${escapeHtml(p.description)}</p>
-                            </div>
-                        </div>
-
-                        <div class="split-right">
-                            ${p.analogy ? `
-                            <div class="panel panel-simple" style="margin-top: 4px;">
-                                <span class="panel-lbl">02 · Dicho en Simple</span>
-                                <p>${escapeHtml(p.analogy)}</p>
-                            </div>` : ''}
-
-                            ${p.links && p.links.length > 0 ? `
-                            <details class="card-details" open>
-                                <summary><span>🔗</span> Enlaces de investigación y fuentes</summary>
-                                <div class="links-row">
-                                    ${p.links.map(l => `
-                                        <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener" class="link-pill ${l.type === 'primary' ? 'primary' : ''}">
-                                            ${escapeHtml(l.text || 'Paper')} →
-                                        </a>
-                                    `).join('')}
-                                </div>
-                            </details>` : ''}
-                        </div>
-                    </div>
-                </article>`;
-            }
-
-            // Standard / Medium / Compact Horizontal Cards
             return `
-            <article id="${nodeId}" class="mosaic-card ${tierInfo.tierClass} ${tierInfo.spanClass}" data-idx="${overallIdx}">
+            <article id="${nodeId}" class="photo-card ${tierInfo.tierClass} ${slotClass}" data-idx="${overallIdx}">
                 <div class="card-top">
                     <div class="card-tags">
                         <span class="tag ${tierInfo.tagClass}">${tierInfo.tagLabel}</span>
@@ -1280,7 +1238,7 @@
 
                     ${p.links && p.links.length > 0 ? `
                     <details class="card-details">
-                        <summary><span>🔗</span> Enlaces y arXiv</summary>
+                        <summary><span>🔗</span> Enlaces & arXiv</summary>
                         <div class="links-row">
                             ${p.links.map(l => `
                                 <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener" class="link-pill ${l.type === 'primary' ? 'primary' : ''}">
@@ -1293,10 +1251,10 @@
             </article>`;
         }
 
-        function createCarouselSlideHTML(p, tierInfo, overallIdx = 0) {
+        function createCarouselSlideHTML(p, tierInfo, overallIdx) {
             return `
             <article class="carousel-slide ${tierInfo.tierClass}" data-idx="${overallIdx}">
-                <div class="hero-horizontal-split">
+                <div class="carousel-horizontal-split">
                     <div class="split-left">
                         <div class="card-tags">
                             <span class="tag ${tierInfo.tagClass}">${tierInfo.tagLabel}</span>
@@ -1335,7 +1293,6 @@
             </article>`;
         }
 
-        // --- Render Functions ---
         function renderContent(data) {
             const allPapersWithCat = [];
             if (data.papers && Object.keys(data.papers).length > 0) {
@@ -1348,29 +1305,52 @@
                 }
             }
 
-            let html = '';
+            // Ensure the main spotlight paper is in slot 4 (Center-Bottom Big Focal Hero)
+            if (allPapersWithCat.length >= 5) {
+                // Swap index 0 and index 4 so the #1 Spotlight sits right in the big center-bottom frame
+                const temp = allPapersWithCat[0];
+                allPapersWithCat[0] = allPapersWithCat[4];
+                allPapersWithCat[4] = temp;
+            }
 
-            // Section 1: Papers (Mosaic or Carousel)
+            let leftCollageHtml = '';
+
             if (allPapersWithCat.length > 0) {
                 if (currentViewMode === 'collage') {
-                    // Fluid Horizontal Mosaic Grid
-                    html += `<div class="mosaic-grid">`;
-                    allPapersWithCat.forEach((p, overallIdx) => {
-                        const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
-                        html += createMosaicCardHTML(p, tier, overallIdx);
+                    // Exact Photo-Frame Asymmetrical Cluster Grid
+                    leftCollageHtml += `<div class="photo-collage-cluster">`;
+                    allPapersWithCat.slice(0, 6).forEach((p, overallIdx) => {
+                        const tier = classifyPaper(p, p._index, p._category);
+                        leftCollageHtml += createPhotoCardHTML(p, tier, overallIdx);
                     });
-                    html += `</div>`;
+                    leftCollageHtml += `</div>`;
+
+                    // If more than 6 papers, render remaining papers in an organic companion grid below
+                    if (allPapersWithCat.length > 6) {
+                        leftCollageHtml += `
+                        <div style="margin-top: 24px; padding-top: 18px; border-top: 1px dashed var(--border);">
+                            <div style="font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px;">
+                                Papers Adicionales del Día
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+                        `;
+                        allPapersWithCat.slice(6).forEach((p, overallIdx) => {
+                            const tier = classifyPaper(p, p._index, p._category);
+                            leftCollageHtml += createPhotoCardHTML(p, tier, overallIdx + 6);
+                        });
+                        leftCollageHtml += `</div></div>`;
+                    }
                 } else {
                     // Widescreen Carousel View
                     currentCarouselIndex = 0;
-                    html += `
+                    leftCollageHtml += `
                     <div class="carousel-container" style="display: block;">
                         <div class="carousel-top-bar">
                             <div class="carousel-indicator-wrap">
                                 <span class="carousel-indicator" id="carouselCounter">Paper 1 de ${allPapersWithCat.length}</span>
                                 <div class="carousel-dot-strip" id="carouselDots">
                                     ${allPapersWithCat.map((p, idx) => {
-                                        const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
+                                        const tier = classifyPaper(p, p._index, p._category);
                                         return `<span class="slide-dot ${idx === 0 ? 'active' : ''}" style="background-color: ${tier.color}; color: ${tier.color};" onclick="goToCarouselSlide(${idx})" title="Ir a Paper ${idx + 1}"></span>`;
                                     }).join('')}
                                 </div>
@@ -1383,82 +1363,80 @@
                         <div class="carousel-track" id="carouselTrack">
                     `;
                     allPapersWithCat.forEach((p, overallIdx) => {
-                        const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
-                        html += createCarouselSlideHTML(p, tier, overallIdx);
+                        const tier = classifyPaper(p, p._index, p._category);
+                        leftCollageHtml += createCarouselSlideHTML(p, tier, overallIdx);
                     });
-                    html += `
+                    leftCollageHtml += `
                         </div>
                     </div>`;
                 }
             } else {
-                html += `<p class="mono" style="color: var(--text-dim); padding: 40px 0;">Sin papers registrados para este día.</p>`;
+                leftCollageHtml += `<p class="mono" style="color: var(--text-dim); padding: 40px 0;">Sin papers registrados para este día.</p>`;
             }
 
-            // Section 2: Industry Intel (Side-by-Side Horizontal Section at Bottom)
-            html += `
-            <section class="industry-section-wrap">
-                <div class="industry-grid">
-                    <!-- Launches -->
-                    <div class="industry-card-box">
-                        <h3 class="industry-box-title disp">🚀 Lanzamientos Frontier Labs</h3>
-                        ${Array.isArray(data.launches) && data.launches.length > 0 ? data.launches.map(l => `
-                            <div class="launch-item">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                                    <span class="launch-company">${escapeHtml(l.company)}</span>
-                                    ${l._date ? `<span class="tag tag-date mono" style="font-size: 9px;">${escapeHtml(l._date)}</span>` : ''}
-                                </div>
-                                <div class="launch-name">${escapeHtml(l.name)}</div>
-                                <p class="launch-desc">${escapeHtml(l.description)}</p>
-                                ${l.links && l.links.length > 0 ? `
-                                    <div class="links-row">
-                                        ${l.links.map(link => `
-                                            <a href="${escapeHtml(link.url)}" target="_blank" rel="noopener" class="link-pill">
-                                                ${escapeHtml(link.text || 'Ver')} →
-                                            </a>
-                                        `).join('')}
-                                    </div>
-                                ` : ''}
+            // Right Sidebar: Company Launches & News
+            let rightSidebarHtml = `
+            <aside class="companies-sidebar">
+                <!-- Launches Box -->
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title disp">🚀 Lanzamientos Frontier Labs</h3>
+                    ${Array.isArray(data.launches) && data.launches.length > 0 ? data.launches.map(l => `
+                        <div class="launch-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <span class="launch-company">${escapeHtml(l.company)}</span>
+                                ${l._date ? `<span class="tag tag-date mono" style="font-size: 9px;">${escapeHtml(l._date)}</span>` : ''}
                             </div>
-                        `).join('') : '<p class="mono" style="font-size: 12px; color: var(--text-dim);">Sin lanzamientos.</p>'}
-                    </div>
-
-                    <!-- News & Signals -->
-                    <div class="industry-card-box">
-                        <h3 class="industry-box-title disp">📰 Señales & Regulación de Industria</h3>
-                        ${Array.isArray(data.news) && data.news.length > 0 ? data.news.map(n => `
-                            <div class="news-item">
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <span class="news-tag">${escapeHtml(n.company || 'Industria')}</span>
-                                    ${n._date ? `<span class="tag tag-date mono" style="font-size: 9px;">${escapeHtml(n._date)}</span>` : ''}
+                            <div class="launch-name">${escapeHtml(l.name)}</div>
+                            <p class="launch-desc">${escapeHtml(l.description)}</p>
+                            ${l.links && l.links.length > 0 ? `
+                                <div class="links-row">
+                                    ${l.links.map(link => `
+                                        <a href="${escapeHtml(link.url)}" target="_blank" rel="noopener" class="link-pill">
+                                            ${escapeHtml(link.text || 'Ver')} →
+                                        </a>
+                                    `).join('')}
                                 </div>
-                                <p class="news-headline">${escapeHtml(n.headline)}</p>
-                                ${n.links && n.links.length > 0 ? `
-                                    <div class="links-row">
-                                        ${n.links.map(link => `
-                                            <a href="${escapeHtml(link.url)}" target="_blank" rel="noopener" class="link-pill">
-                                                ${escapeHtml(link.text || 'Reporte')} →
-                                            </a>
-                                        `).join('')}
-                                    </div>
-                                ` : ''}
-                            </div>
-                        `).join('') : '<p class="mono" style="font-size: 12px; color: var(--text-dim);">Sin noticias.</p>'}
-                    </div>
+                            ` : ''}
+                        </div>
+                    `).join('') : '<p class="mono" style="font-size: 12px; color: var(--text-dim);">Sin lanzamientos.</p>'}
                 </div>
-            </section>`;
 
-            return html;
+                <!-- News Box -->
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title disp">📰 Señales & Regulación</h3>
+                    ${Array.isArray(data.news) && data.news.length > 0 ? data.news.map(n => `
+                        <div class="news-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span class="news-tag">${escapeHtml(n.company || 'Industria')}</span>
+                                ${n._date ? `<span class="tag tag-date mono" style="font-size: 9px;">${escapeHtml(n._date)}</span>` : ''}
+                            </div>
+                            <p class="news-headline">${escapeHtml(n.headline)}</p>
+                            ${n.links && n.links.length > 0 ? `
+                                <div class="links-row">
+                                    ${n.links.map(link => `
+                                        <a href="${escapeHtml(link.url)}" target="_blank" rel="noopener" class="link-pill">
+                                            ${escapeHtml(link.text || 'Reporte')} →
+                                        </a>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `).join('') : '<p class="mono" style="font-size: 12px; color: var(--text-dim);">Sin noticias.</p>'}
+                </div>
+            </aside>`;
+
+            return `
+            <div class="widescreen-layout">
+                <div class="collage-main-area">${leftCollageHtml}</div>
+                ${rightSidebarHtml}
+            </div>`;
         }
 
         function updateCarouselIndicators(idx) {
             const counter = document.getElementById('carouselCounter');
             const dots = document.querySelectorAll('.slide-dot');
-            if (counter) {
-                counter.textContent = `Paper ${idx + 1} de ${dots.length}`;
-            }
-            dots.forEach((d, i) => {
-                d.classList.toggle('active', i === idx);
-            });
+            if (counter) counter.textContent = `Paper ${idx + 1} de ${dots.length}`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === idx));
         }
 
         function goToCarouselSlide(idx) {
@@ -1491,7 +1469,6 @@
             const main = document.getElementById('mainGrid');
             main.innerHTML = renderContent(currentLoadedData);
 
-            // Bind carousel scroll listener
             const track = document.getElementById('carouselTrack');
             if (track) {
                 track.addEventListener('scroll', () => {
@@ -1552,7 +1529,7 @@
             const height = rect.height;
 
             graphNodes = allPapers.map((p, idx) => {
-                const tier = classifyPaper(p, p._index, p._category, allPapers.length);
+                const tier = classifyPaper(p, p._index, p._category);
                 const angle = (idx / allPapers.length) * Math.PI * 2 + (Math.random() * 0.4 - 0.2);
                 const radius = Math.min(width, height) * 0.38 * (0.35 + Math.random() * 0.65);
                 
@@ -1592,7 +1569,6 @@
                 if (node.y < 20 || node.y > height - 20) node.vy *= -1;
             });
 
-            // Constellation connection lines
             for (let i = 0; i < graphNodes.length; i++) {
                 for (let j = i + 1; j < graphNodes.length; j++) {
                     const a = graphNodes[i];
@@ -1613,7 +1589,6 @@
                 }
             }
 
-            // Draw nodes
             graphNodes.forEach(node => {
                 const isHovered = hoveredNode === node;
                 const r = isHovered ? node.baseRadius * 1.4 : node.baseRadius;
@@ -1685,7 +1660,7 @@
                     const card = document.getElementById(`node-card-${hoveredNode.idx}`);
                     if (card) {
                         card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        card.style.transform = 'scale(1.02)';
+                        card.style.transform = 'scale(1.03)';
                         card.style.borderColor = 'var(--border-accent)';
                         setTimeout(() => {
                             card.style.transform = '';
