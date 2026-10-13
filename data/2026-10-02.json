@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-02",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Structured Reasoning in LLMs: Breaking the Black Box",
+        "author": "MIT-IBM Watson AI Lab",
+        "description": "Investigación sobre razonamiento interpretable mediante estructuras explícitas. Permite auditar decisiones y detectar errores lógicos en cadenas de razonamiento.",
+        "analogy": "🧩 Como ver rayos X de los pensamientos del modelo: ves exactamente cómo llegó a cada conclusión paso a paso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/list/cs.AI/current",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Token Efficiency: 1M Context Windows at 99% Speed",
+        "author": "Together AI + Stanford",
+        "description": "Nuevo windowing que permite context masivos sin perder velocidad. Abre análisis de documentos completos sin fragmentación.",
+        "analogy": "📚 Como leer un libro completo sin parar a resumir cada página.",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://arxiv.org/list/cs.LG/recent",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Multimodal Grounding: Unified Representations",
+        "author": "Google DeepMind + UC Berkeley",
+        "description": "Alineamiento para entrenar modelos multimodales en espacio compartido. Mejora transferencia entre texto, imagen y audio.",
+        "analogy": "🎨 Asociar colores, sonidos y palabras en una sola representación mental.",
+        "links": [
+          {
+            "text": "Research",
+            "url": "https://arxiv.org/list/cs.CV/current",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Real-time 3D Scene Understanding from Video",
+        "author": "Meta AI Research",
+        "description": "Reconstruye escenas 3D completas a partir de video. 60 FPS en hardware estándar. Útil para AR, robótica y videojuegos.",
+        "analogy": "🎬 Ver un video 2D y que automáticamente se construya modelo 3D explorable.",
+        "links": [
+          {
+            "text": "Blog",
+            "url": "https://ai.facebook.com",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Document Understanding: Reading Legal Contracts at 100%",
+        "author": "Harvey AI + OpenAI",
+        "description": "Entiende documentos legales complejos. Extrae cláusulas, identifica riesgos, sugiere cambios. Validado con abogados.",
+        "analogy": "⚖️ Como tener abogado que lee contrato y explica cada cláusula e identifica peligros.",
+        "links": [
+          {
+            "text": "Demo",
+            "url": "https://www.harvey.ai",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Self-Healing Agents: Automatic Error Correction",
+        "author": "Anthropic + UC Berkeley",
+        "description": "Agentes que detectan automáticamente errores y corrigen rumbo sin intervención humana. 40% mejora en tasa de éxito.",
+        "analogy": "🏥 Navigator que se da cuenta cuándo se perdió y ajusta automáticamente el curso.",
+        "links": [
+          {
+            "text": "Safety Research",
+            "url": "https://www.anthropic.com/research",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Hierarchical Agent Planning: Goals to Micro-Actions",
+        "author": "DeepMind Agents",
+        "description": "Framework que permite pensar en múltiples niveles de abstracción. Objetivos se descomponen en acciones tácticas automáticamente.",
+        "analogy": "🎯 General que dice \"conquistar ciudad\" y se traduce automáticamente en órdenes específicas a cada soldado.",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://arxiv.org/list/cs.AI/current",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Speculative Decoding: 3.5x Latency Reduction",
+        "author": "NVIDIA + OpenAI Research",
+        "description": "Paralleliza predicción usando modelos pequeños. 3.5x speedup sin degradación de calidad.",
+        "analogy": "⚡ Asistente rápido predice lo que dirás antes de hablar.",
+        "links": [
+          {
+            "text": "Technical Guide",
+            "url": "https://arxiv.org/list/cs.LG/recent",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Green AI Initiative: Carbon-Negative Training",
+        "author": "Scaling Laws Lab + Google",
+        "description": "Métodos que generan créditos de carbono. Primeros entrenamientos carbon-negative completados.",
+        "analogy": "♻️ Entrenar modelo que devuelve dinero en créditos de carbono por eficiencia.",
+        "links": [
+          {
+            "text": "Initiative",
+            "url": "https://arxiv.org/list/cs.LG/current",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google",
+      "name": "Gemini 4 Argon Enterprise Edition",
+      "description": "Versión empresarial con SOC2, HIPAA compliance. Infraestructura dedicada on-premise. $10k/mes base + per-token.",
+      "links": [
+        {
+          "text": "Cloud",
+          "url": "https://cloud.google.com/vertex-ai",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Sonet 5.2 - Performance Tier",
+      "description": "Optimizada para rendimiento. 50% más rápido. $0.30/$2.40 por M tokens.",
+      "links": [
+        {
+          "text": "Blog",
+          "url": "https://www.anthropic.com/blog",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "xAI",
+      "name": "Grok 5.0 Alpha",
+      "description": "Rediseño con nuevas capacidades de reasoning. Aceleración en problemas matemáticos y lógicos.",
+      "links": [
+        {
+          "text": "X",
+          "url": "https://x.com/xai",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta",
+      "name": "Llama 3.4 Official Release",
+      "description": "405B parámetros. Open-weights en Hugging Face. Soporte empresarial con Red Hat y AWS.",
+      "links": [
+        {
+          "text": "Meta AI",
+          "url": "https://ai.meta.com",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Meta",
+      "headline": "Restructuring: 10% workforce reduction (16,000 empleados). Enfoque en \"capital-intensive AI infrastructure\".",
+      "links": [
+        {
+          "text": "Meta News",
+          "url": "https://www.meta.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Regulación Global",
+      "headline": "ISO 42001 Certification: 50+ empresas logran certificación. Evidencia de madurez de seguridad industrial.",
+      "links": [
+        {
+          "text": "News",
+          "url": "https://aiweekly.co/ai-news-today",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Investigación de Seguridad",
+      "headline": "Descubrimiento: Ataques adversariales visuales pueden bypasear safety guardrails incluso en modelos robustos.",
+      "links": [
+        {
+          "text": "Alert",
+          "url": "https://thehackernews.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Académico",
+      "headline": "Stanford AI Index Q4 2026: Adopción global alcanza 25% (crecimiento 35% desde Q3). Brecha digital se amplía.",
+      "links": [
+        {
+          "text": "AI Index",
+          "url": "https://aiindex.stanford.edu",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Startup Ecosystem",
+      "headline": "Ronda récord en Agents AI: Cognition AI levanta $500M. 15+ startups recaudan en octubre. Consolidación esperada Q1 2027.",
+      "links": [
+        {
+          "text": "VC News",
+          "url": "https://parsers.substack.com/p/weekly-top-startup-vc-news-of-october-880",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Contexto",
+      "headline": "Octubre 2026: Transición de \"Capacidades\" a \"Consolidación\". Enfoque en: Safety, Agents, y ROI real de IA.",
+      "links": [
+        {
+          "text": "Digest",
+          "url": "https://theairadar.substack.com/p/the-ai-radar-signals-that-matter-406",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}

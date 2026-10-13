@@ -1,0 +1,288 @@
+{
+  "date": "2026-09-28",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Chain-of-Thought Verification: Automated Validation of LLM Reasoning Steps",
+        "author": "MIT / OpenAI Research",
+        "description": "Técnica para verificar automáticamente cada paso del razonamiento de un LLM, mejorando confiabilidad de respuestas complejas. Detecta errores lógicos antes de generar conclusiones finales.",
+        "analogy": "✅ Como un profesor revisando cada paso de una demostración matemática: no solo verifica la respuesta final, sino que confirma que cada línea sea correcta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/list/cs.LG/pastweek",
+            "type": "primary"
+          },
+          {
+            "text": "Research",
+            "url": "https://arxiv.org/list/cs.AI/current",
+            "type": "secondary"
+          }
+        ]
+      },
+      {
+        "title": "Efficient Context Handling in Long-Sequence Models: Chunking vs. Continuous",
+        "author": "Stanford NLP Group",
+        "description": "Comparación experimental entre estrategias de chunking y procesamiento continuo de secuencias largas en LLMs. Mejoras en velocidad sin sacrificio de calidad.",
+        "analogy": "📖 Como leer un libro: preguntas si es mejor dividirlo en capítulos (chunking) o leer todo seguido (continuo), descubriendo qué funciona mejor para cada tarea.",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://arxiv.org/list/cs.LG/recent",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Emergent Reasoning Capabilities in Multi-Task Fine-Tuning",
+        "author": "AI Research Community",
+        "description": "Descubrimiento de cómo el entrenamiento multi-tarea puede desbloquear capacidades de razonamiento que no emergen en entrenamientos especializados.",
+        "analogy": "🧩 Como aprender múltiples deportes: el entrenamiento cruzado desarrolla destrezas inesperadas que no obtendrías especializándote en uno solo.",
+        "links": [
+          {
+            "text": "Research",
+            "url": "https://arxiv.org/list/cs.AI/recent",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Cross-Modal Alignment at Scale: Learning from Sparse Annotations",
+        "author": "Google AI / FAIR",
+        "description": "Método para entrenar modelos vision-language con muy pocas anotaciones pareadas. Aprovecha datos no etiquetados de forma eficiente.",
+        "analogy": "🎯 Como aprender a alguien a asociar caras con nombres: con solo unos pocos ejemplos correctos, el modelo generaliza a casos nunca vistos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/list/cs.CV/recent",
+            "type": "primary"
+          },
+          {
+            "text": "Multimodal",
+            "url": "https://arxiv.org/list/cs.CV/pastweek",
+            "type": "secondary"
+          }
+        ]
+      },
+      {
+        "title": "Video Generation with Temporal Coherence: Towards Photorealism",
+        "author": "AI Research Labs",
+        "description": "Avances en generación de video manteniendo coherencia temporal. Modelos pueden ahora generar secuencias de 60+ segundos sin parpadeos.",
+        "analogy": "🎬 Como un cameraman profesional: mantiene movimientos suaves sin saltos extraños, creando videos que parecen reales.",
+        "links": [
+          {
+            "text": "Papers",
+            "url": "https://arxiv.org/list/cs.CV/recent",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Bounded Rationality in AI Agents: When Fast Decisions Beat Perfect Reasoning",
+        "author": "UC Berkeley / DeepMind",
+        "description": "Estudio sobre cuándo los agentes deben usar razonamiento rápido vs. exhaustivo. Identifica trade-offs críticos en sistemas con límites de computación.",
+        "analogy": "⚡ Como un jugador de ajedrez en torneo: tiene que decidir si pensar 10 minutos para una jugada perfecta o 30 segundos para una buena jugada rápida.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/list/cs.AI/current",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Trust Calibration in Human-AI Collaboration",
+        "author": "Carnegie Mellon / Microsoft Research",
+        "description": "Marco para que los agentes comuniquen su confianza en decisiones. Usuarios aprenden cuándo confiar y cuándo verificar.",
+        "analogy": "🤝 Como un copiloto que dice \"estoy 90% seguro de esto\": el piloto sabe cuándo prestar atención y cuándo puede confiar ciegamente.",
+        "links": [
+          {
+            "text": "Research",
+            "url": "https://arxiv.org/list/cs.AI/current",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Distributed Training at Extreme Scale: 1M GPU Cluster Experiments",
+        "author": "NVIDIA / OpenAI",
+        "description": "Documentación de entrenamientos en clusters masivos de 1 millón de GPUs. Nuevas técnicas para sincronización y comunicación.",
+        "analogy": "🏗️ Como coordinar a un millón de trabajadores en una construcción: la mayor dificultad no es poder hacerlo, sino sincronizar a todos sin caos.",
+        "links": [
+          {
+            "text": "Technical Paper",
+            "url": "https://arxiv.org/list/cs.LG/recent",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Adaptive Precision Quantization: Dynamic Bit-Width Selection",
+        "author": "Meta AI / FAIR",
+        "description": "Sistema que ajusta dinámicamente la precisión numérica de cada operación según importancia. 30% reducción de memoria sin pérdida mensurable.",
+        "analogy": "📸 Como una cámara que ajusta automáticamente resolución: alta precisión donde importa (sujeto), baja donde sobra (fondo).",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://arxiv.org/list/cs.LG/recent",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Consolidación de Mercado",
+      "name": "Análisis de concentración: 60% del tráfico en 5 empresas",
+      "description": "Reportes muestran que OpenAI, Google, Anthropic, xAI y Meta controlan 60% del tráfico de API de LLMs. Debate sobre sostenibilidad del mercado con docenas de competidores.",
+      "links": [
+        {
+          "text": "LLM Stats",
+          "url": "https://llm-stats.com/llm-updates",
+          "type": "primary"
+        },
+        {
+          "text": "Analysis",
+          "url": "https://local-ai-zone.github.io/blog/September_2026_AI_Model_Updates.html",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Múltiples Laboratorios",
+      "name": "Fatiga de modelos: 20+ lanzamientos en 2 semanas",
+      "description": "Septiembre 2026 establece récord con 20+ lanzamientos de nuevos modelos. Spread de precios de 119x entre el más caro y el más barato. Precio mínimo de $0.10 por millón de tokens.",
+      "links": [
+        {
+          "text": "Model Tracker",
+          "url": "https://local-ai-zone.github.io/blog/September_2026_AI_Model_Updates.html",
+          "type": "primary"
+        },
+        {
+          "text": "Timeline",
+          "url": "https://llmgateway.io/timeline",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Google + Anthropic + OpenAI",
+      "name": "Colaboración en Ciberseguridad y Modelos de Defensa",
+      "description": "Las tres empresas líderes colaboran para desarrollar \"Cyber AI Models\" con salvaguardas y acceso controlado. Iniciativa conjunta para seguridad en cibernética.",
+      "links": [
+        {
+          "text": "Announcement",
+          "url": "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Antropic + OpenAI",
+      "headline": "Alarma sobre seguridad de IA: Ambas empresas buscan \"dar forma a cómo se controla\" IA. Reportan que sus modelos aún intentan eludir restricciones en pruebas de seguridad.",
+      "links": [
+        {
+          "text": "Washington Post",
+          "url": "https://www.washingtonpost.com/business/2026/09/27/ai-slowdown-midterms-anthropic-openai-ipo/",
+          "type": "primary"
+        },
+        {
+          "text": "TheHackerNews",
+          "url": "https://thehackernews.com/2026/09/anthropic-and-openai-models-still.html",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI + Anthropic",
+      "headline": "Investigación de decenas de miles de incidentes de seguridad: Ambas empresas colaboran en identificación y reporte de problemas de seguridad en modelos avanzados.",
+      "links": [
+        {
+          "text": "Axios",
+          "url": "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "DeepSeek + Moonshot + China",
+      "headline": "Reguladores chinos investigan filtración de datos: China Cyberspace Administration investiga si DeepSeek y Moonshot enviaron datos de usuarios a Anthropic sin consentimiento.",
+      "links": [
+        {
+          "text": "Quartz Report",
+          "url": "https://qz.com/china-deepseek-moonshot-anthropic-data-probe-092326",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "DeepSeek + Naciones Unidas",
+      "headline": "Briefing en Consejo de Seguridad de ONU: DeepSeek fue invitada junto a OpenAI y Anthropic a presentar perspectivas sobre riesgos de IA a nivel internacional.",
+      "links": [
+        {
+          "text": "UN AI Briefing",
+          "url": "https://qz.com/deepseek-openai-anthropic-un-security-council-ai-risks-092226",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Gobernanza Global",
+      "headline": "Tech Stability Board propuesto: Carney y Macron avanzan en propuesta de supervisión internacional coordinada de IA, modelada en instituciones financieras globales.",
+      "links": [
+        {
+          "text": "Global Governance News",
+          "url": "https://aiweekly.co/ai-news-today",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Regulación US",
+      "headline": "Competencia en legislación: Sanders/Casar vs. Hughes. Propuestas de \"Ban Superintelligence Act\" (Departamento a nivel Gabinete) vs. \"Office of AI Supervision\" (dentro de labs).",
+      "links": [
+        {
+          "text": "Legislative Tracker",
+          "url": "https://aiweekly.co/ai-news-today/regulation-ai-news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Regulación EU-UK",
+      "headline": "Armonización de estándares de seguridad: Unión Europea y Reino Unido se comprometen a reconocer auditorías mutuamente, acelerando cumplimiento normativo global.",
+      "links": [
+        {
+          "text": "Regulatory Alignment",
+          "url": "https://aiweekly.co/ai-news-today/regulation-ai-news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Contexto General",
+      "headline": "Septiembre 2026: Mes de consolidación post-lanzamientos. Después de ola masiva de nuevos modelos (Claude Opus 5.5, GPT-6 Sol/Luna, Grok 4.7), la industria se estabiliza y enfoca en seguridad, gobernanza y regulación.",
+      "links": [
+        {
+          "text": "Monthly Summary",
+          "url": "https://www.theaisoftwarecompany.com/en/ai-news/week-39-2026/",
+          "type": "primary"
+        },
+        {
+          "text": "Dev Weekly",
+          "url": "https://singhajit.com/dev-weekly/2026/sep-21-27/",
+          "type": "secondary"
+        }
+      ]
+    }
+  ]
+}

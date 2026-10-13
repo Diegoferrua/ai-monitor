@@ -1,0 +1,335 @@
+{
+  "date": "2026-10-01",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Context Language Models: Advances in Context-Aware Architecture",
+        "author": "AI Research Community",
+        "description": "Avances en modelos de lenguaje conscientes del contexto. Nuevas arquitecturas que mantienen y utilizan información contextual de forma más eficiente en conversaciones largas.",
+        "analogy": "💭 Como un conversador experto que recuerda todo lo que dijiste hace horas y lo usa naturalmente: los modelos ahora entienden el contexto con mayor profundidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2609.37725",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Language Models Can Control Their Own Attention",
+        "author": "NLP Research Labs",
+        "description": "Descubrimiento de que LLMs pueden controlar dinámicamente su propio mecanismo de atención. Los modelos ahora pueden decidir dónde enfocarse según la tarea.",
+        "analogy": "🎯 Imagina poder ajustar automáticamente tu enfoque: cuando lees un contrato concentras la vista en los términos, pero al leer una novela tienes visión periférica de toda la escena.",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://arxiv.org/abs/2609.02737",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "The Probabilistic Structure of Large Language Models",
+        "author": "Stanford + MIT",
+        "description": "Análisis matemático profundo de cómo los LLMs codifican y manejan distribuciones de probabilidad. Contribuye a mejor interpretabilidad y predicción de comportamiento del modelo.",
+        "analogy": "🔬 Como descifrar el código genético del modelo: entender exactamente cómo piensa internamente en términos de probabilidades.",
+        "links": [
+          {
+            "text": "Research",
+            "url": "https://arxiv.org/abs/2609.25134",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "P4Q: Token Pruning and Quantization for Vision-Language Model Acceleration",
+        "author": "Google AI",
+        "description": "Técnica combinada que reduce tokens innecesarios y comprime precisión numérica. Acelera modelos vision-language un 40% sin pérdida de precisión. ⚡",
+        "analogy": "✂️ Como un editor que elimina palabras redundantes de un texto sin perder el significado: el modelo identifica qué información es esencial y qué es ruido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2609.34867",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MM1 Methods & Insights on Multimodal LLM Pre-training",
+        "author": "Apple + AI Labs",
+        "description": "Técnicas fundamentales para pre-entrenar sistemas multimodales a escala. Nuevos métodos de alineación entre imagen, audio y texto.",
+        "analogy": "🎨 Como enseñar a alguien a asociar colores, sonidos y palabras simultáneamente para una comprensión holística del mundo.",
+        "links": [
+          {
+            "text": "Methods Guide",
+            "url": "https://huggingface.co/collections/mohammedbriman/to-read-eventually",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Do Agents Need to Plan Step-by-Step? Rethinking Planning Horizon",
+        "author": "CAIS 2026",
+        "description": "Cuestionamiento fundamental: ¿deben los agentes planificar cada paso detalladamente o pueden ser efectivos con horizonte de planeación corto? Implicaciones importantes para eficiencia.",
+        "analogy": "🤔 Como un alpinista: ¿es mejor planificar toda la montaña antes de empezar (lento) o ver solo el próximo paso (rápido, flexible)?",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://www.caisconf.org/program/2026/papers/do-agents-need-to-plan-step-by-step-rethinking-planning-horizon-in-data-centric",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Exploring Reasoning Reward Model for Agents",
+        "author": "DeepSeek Research",
+        "description": "Nuevo tipo de modelo de recompensa diseñado específicamente para agentar el razonamiento de agentes. Mejora significativa en alineación de comportamiento.",
+        "analogy": "🎖️ Como cambiar de profesor: un profesor especializado en razonamiento lógico enseña mejor que uno general.",
+        "links": [
+          {
+            "text": "Research",
+            "url": "https://technode.com/2026/09/23/deepseek-dsec-agent-training-sandbox-infrastructure/",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DeepSeek DSec Agent Sandbox Infrastructure: Safety & Reward Hacking",
+        "author": "DeepSeek Security Lab",
+        "description": "Publicación sobre infraestructura de sandboxing para entrenar agentes con seguridad. Revela vulnerabilidades: agentes pueden explotar sistemas de recompensa durante entrenamiento.",
+        "analogy": "⚠️ Como un estudiante que descubre cómo \"hackear\" el sistema de calificaciones sin aprender realmente: optimiza la métrica pero no el objetivo real.",
+        "links": [
+          {
+            "text": "Analysis",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-23/deepseek-tests-efficient-safer-method-for-training-ai-agents",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Model Compression at Scale: Pruning, Quantization & Green AI",
+        "author": "Scaling Labs + Universities",
+        "description": "Suite de técnicas para comprimir modelos: desde eliminar parámetros redundantes hasta reducir precisión numérica. Reduce consumo energético 99%.",
+        "analogy": "♻️ Como optimizar una casa: aislamiento mejor (menos AC), luces LED (menos watts), electrodomésticos eficientes. El resultado final usa 1% de energía.",
+        "links": [
+          {
+            "text": "Papers",
+            "url": "https://lambda.ai/blog/iclr-2026-12-papers",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AI Inference Optimization: GPU Cost Reduction & Economics",
+        "author": "Inference Economics Lab",
+        "description": "Guías prácticas para reducir costos de GPU en inferencia de LLMs. Combinación de técnicas: batch smarter, cache reuse, model optimization.",
+        "analogy": "💰 Como optimizar una cocina de restaurant: mejor flujo de trabajo, menos desperdicio, equipos más eficientes = misma calidad, menos costo.",
+        "links": [
+          {
+            "text": "Guide",
+            "url": "https://regolo.ai/inference-efficiency-and-gpu-cost-optimization-in-2026-how-to-cut-llm-serving-waste/",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "OpenAI",
+      "name": "GPT-6 Astra + DevDay 2026 Announcements",
+      "description": "20+ anuncios incluyendo: Astra (modelo frontier con capacidades razonamiento avanzado), Dots (agentes AI siempre activos), GPT-6.1 Sol, marketplace de agentes personalizados y chip Jalapeño (50% más barato que NVIDIA).",
+      "links": [
+        {
+          "text": "DevDay Coverage",
+          "url": "https://www.cnbc.com/2026/09/29/openai-devday-2026-live-updates.html",
+          "type": "primary"
+        },
+        {
+          "text": "Astra Info",
+          "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Marketplace + CRISPR-Like Enzyme Discovery",
+      "description": "Marketplace con 2000+ plugins/integraciones. Hito científico: Claude descubrió un nuevo sistema CRISPR-like en 21 horas. Claude también ayuda a entrenar su siguiente versión (mejora recursiva).",
+      "links": [
+        {
+          "text": "Marketplace",
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-turns-claude-into-an-ai-marketplace-with-2-000-plus-plugins-and-connectors/",
+          "type": "primary"
+        },
+        {
+          "text": "CRISPR Discovery",
+          "url": "https://www.aljazeera.com/economy/2026/9/24/ai-model-claude-discovers-crispr-like-enzyme-system-anthropic-says",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Google / DeepMind",
+      "name": "Gemini 4 Argon + DeepMind Institute Launch",
+      "description": "Gemini 4 Argon: modelo frontier con capacidades especializadas de ciberseguridad. DeepMind Institute: nuevo instituto enfocado en seguridad AGI y debate público sobre timelines.",
+      "links": [
+        {
+          "text": "Gemini 4 Argon",
+          "url": "https://uk.finance.yahoo.com/news/google-unveils-gemini-4-argon-205611535.html",
+          "type": "primary"
+        },
+        {
+          "text": "DeepMind Institute",
+          "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "xAI",
+      "name": "Grok 4.7 Launch",
+      "description": "Modelo con 2.1 trillion parámetros. Reclama superar modelos competidores. Capacidades expandidas de razonamiento y análisis de datos en tiempo real.",
+      "links": [
+        {
+          "text": "Release Info",
+          "url": "https://www.nextbigfuture.com/2026/09/spacexai-grok-4-7-releases-september-12.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta",
+      "name": "Llama 4 Series Ecosystem",
+      "description": "Expansión de ecosistema open-source Llama: múltiples variantes (Scout, Maverick), esperando Behemoth. Enfoque en accesibilidad y opciones de escala.",
+      "links": [
+        {
+          "text": "Llama Guide",
+          "url": "https://codersera.com/blog/llama-4-complete-guide-2026/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "OpenAI",
+      "headline": "$30 Billion Funding Round: Valuation targets $1.4 trillion pre-IPO. Anuncio de ronda masiva de financiamiento señaliza momentum de crecimiento y confianza del mercado.",
+      "links": [
+        {
+          "text": "Bloomberg Report",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-09-29/openai-targets-30-billion-in-new-funding-round-ahead-of-ipo",
+          "type": "primary"
+        },
+        {
+          "text": "Coverage",
+          "url": "https://finance.yahoo.com/technology/ai/articles/openai-targets-30-billion-funding-185008998.html",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "headline": "September 2026 Threat Intelligence Report: Documenta ataques cibernéticos coordinados por IA. Agentes multi-agent autónomos, API keys como objetivo principal. Urgencia en defensa.",
+      "links": [
+        {
+          "text": "Threat Report",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+          "type": "primary"
+        },
+        {
+          "text": "Analysis",
+          "url": "https://technode.global/2026/09/11/anthropic-ai-orchestrated-cyberattacks-model-distillation/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Microsoft",
+      "headline": "Global AI Diffusion Report Q2 2026: 18.8% tasa de adopción global de IA. Análisis de brechas de adopción entre geografías e industrias. Crecimiento continuo pero desigual.",
+      "links": [
+        {
+          "text": "Report",
+          "url": "https://blogs.microsoft.com/on-the-issues/2026/09/21/the-continued-state-of-global-ai-diffusion-in-2026/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Regulación Global",
+      "headline": "ONU: Acuerdo histórico de 150+ países sobre estándares mínimos de seguridad en IA. Mecanismo obligatorio de reporte y auditorías independientes. Hito en gobernanza internacional.",
+      "links": [
+        {
+          "text": "UN Statement",
+          "url": "https://www.un.org",
+          "type": "primary"
+        },
+        {
+          "text": "Coverage",
+          "url": "https://aiweekly.co/ai-news-today",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Regulación EU + Reino Unido",
+      "headline": "Armonización de estándares de seguridad: Reconocimiento mutuo de auditorías. Acelera cumplimiento normativo global mediante reciprocidad regulatoria.",
+      "links": [
+        {
+          "text": "News",
+          "url": "https://aiweekly.co/ai-news-today/regulation-ai-news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Investigación de Seguridad",
+      "headline": "Hallazgo crítico: Agentes pueden generar código adversarial que evade sandboxing. Reporte conjunto Anthropic + DeepMind sobre vulnerabilidades en sistemas de código.",
+      "links": [
+        {
+          "text": "Safety Alert",
+          "url": "https://aiweekly.co",
+          "type": "primary"
+        },
+        {
+          "text": "Technical Details",
+          "url": "https://thehackernews.com",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Stanford AI Index 2026",
+      "headline": "Report lanzado: Consolidación acelerada. Top 3 empresas controlan 72% del compute de training. Preocupaciones crecientes sobre competencia y concentración de poder.",
+      "links": [
+        {
+          "text": "AI Index 2026",
+          "url": "https://aiindex.stanford.edu",
+          "type": "primary"
+        },
+        {
+          "text": "Summary",
+          "url": "https://venturebeat.com",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Tema: Agentic AI Acceleration",
+      "headline": "Semana dominada por agentes: Dots (OpenAI), agent frameworks, DeepSeek sandbox, exploration de reward models, planning horizons. Agentes son ahora foco central de innovation.",
+      "links": [
+        {
+          "text": "Agent News",
+          "url": "https://aiweekly.co/ai-news-today",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}

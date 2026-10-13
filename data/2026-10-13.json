@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-13",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "BoundaryEvo: Data-Model Co-Evolution at the Capability Boundary for Long-Chain Reasoning Distillation",
+        "author": "Jiaming Su et al.",
+        "description": "Propone un marco de co-evolución entre datos sintéticos y modelos en la frontera de capacidad para destilar razonamiento de cadena larga (long-chain) en modelos compactos sin pérdida de rigor.",
+        "analogy": "🧗 Como un escalador que avanza colocando sus apoyos exactamente al borde del abismo: expone al modelo únicamente a los problemas que desafían su frontera de habilidad, acelerando su maduración.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.13285",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "The Weakest Link: Distilling LLM Reasoning with Worst-Case Constrained Reinforcement Learning",
+        "author": "Matthieu Zimmer, Xiaotong Ji, et al.",
+        "description": "Explora optimización de políticas y destilación enfocadas en reforzar los eslabones más débiles en cadenas de razonamiento paso a paso mediante restricciones de peor caso.",
+        "analogy": "🔗 Como una cadena que solo es tan fuerte como su eslabón más débil: en vez de entrenar al modelo para que acierte en promedio, lo obligan a corregir sus peores tropezones lógicos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.05123",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Certainty Is Not Just Correctness: Rethinking Token-Level Certainty in LLM Reasoning",
+        "author": "Yunfan Zhou, Ye Zhu, Zhihai Wang, et al.",
+        "description": "Demuestra que la certeza a nivel de token no equivale a corrección lógica o fáctica, proponiendo nuevas formas de calibrar la confianza durante deducciones complejas.",
+        "analogy": "🎯 Como un orador elocuente que habla con absoluta seguridad pero dice una falacia: la confianza estadística interna no garantiza que la deducción sea correcta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.04891",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "MultiFly: A Real-World Multimodal Aerial Dataset with Annotation-Efficient Label Transfer",
+        "author": "Markus Gross et al.",
+        "description": "Dataset sincronizado que integra RGB, térmico, LiDAR y radar en vehículos aéreos, transfiriendo anotaciones geométricas con alta consistencia semántica sin requerir etiquetado manual redundante.",
+        "analogy": "🚁 Como dotar a un dron de visión nocturna, radar y vista humana a la vez: cuando un sensor reconoce un objeto, los otros tres aprenden de inmediato qué es sin re-etiquetar todo a mano.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.10359",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "GATOR: Generative and Agentic 3D Object Reconstruction From Casual Images",
+        "author": "Qirui Wu, Bowen Wen, et al.",
+        "description": "Arquitectura agentica generativa que reconstruye modelos 3D con textura realista a partir de fotos casuales dispersas, empleando un bucle activo de renderizado, revisión y refinamiento.",
+        "analogy": "🏺 Como un escultor observando fotos casuales de un jarrón: moldea la figura en 3D, la gira frente a las fotos, compara discrepancias y retoca los detalles hasta calzarla a la perfección.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.11215",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "HarnessIR: Leveraging Multimodal Foundation Models for Universal Real-World Image Restoration",
+        "author": "Vision & Restoration Research Group",
+        "description": "Reemplaza pipelines fragmentados de restauración convirtiendo un modelo multimodal fundacional en ejecutor directo con percepción e invocación adaptativa de herramientas de corrección.",
+        "analogy": "🎨 Como un restaurador de arte que no aplica un solvente uniforme a toda la pintura, sino que examina con lupa cada desgaste y elige el bisturí o barniz exacto para cada zona dañada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.10842",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "GitSwarm: Decentralized Compounding Inference",
+        "author": "Vedant Shah et al. (Mila, CMU, Princeton, FAIR)",
+        "description": "Introduce inferencia compuesta descentralizada inspirada en repositorios Git, permitiendo a los agentes ramificar, probar hipótesis y consolidar soluciones intermedias de manera asíncrona.",
+        "analogy": "🐙 Como un equipo de desarrolladores usando Git: en lugar de un solo agente intentando una hazaña lineal, decenas abren ramas, testean código, hacen merge de aciertos y descartan ramas fallidas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.04862",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",
+        "author": "Oliver Jaffe, Dane Sherburn",
+        "description": "Benchmark para medir el 'criterio experimental' de sistemas de IA: evaluar si un agente sabe escoger problemas valiosos, plantear experimentos eficientes e interpretar resultados frente a científicos humanos.",
+        "analogy": "👨‍🍳 Como la diferencia entre seguir una receta y tener criterio gastronómico: mide si la IA sabe qué hipótesis vale la pena investigar antes de quemar semanas de cómputo en ideas triviales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.06824",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams",
+        "author": "Sahan Paliskara, Nattaput Namchittai, Andrew Lampinen",
+        "description": "Investigación empírica sobre la degradación de rendimiento y fricción comunicativa en equipos donde múltiples usuarios interactúan con múltiples agentes coordinados.",
+        "analogy": "👥 Como una sala de conferencias saturada de gente hablando al mismo tiempo: cuando la sobrecarga de coordinación supera el beneficio del reparto de tareas, el resultado colectivo empeora.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.00583",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Optimizing Large Language Models with Chained LMOs",
+        "author": "Sungyoon Kim et al.",
+        "description": "Presenta TensorChain y oráculos de minimización lineal encadenados con normalización intercapa, superando barreras de optimización anisotrópica durante preentrenamiento masivo de LLMs.",
+        "analogy": "⚙️ Como sincronizar los cambios de una transmisión de carreras: en lugar de forzar todos los engranajes por igual, compensa cada capa en cadena para acelerar el entrenamiento gastando menos energía.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.07119",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Efficient Reasoning via Constrained Optimization in Latent Space",
+        "author": "Zhinan Hou et al.",
+        "description": "Resuelve la redundancia y el 'overthinking' en modelos de razonamiento restringiendo trayectorias dentro de conglomerados latentes óptimos sin truncar la profundidad deductiva.",
+        "analogy": "🧠 Como enseñarle a un prodigio matemático a no dar rodeos innecesarios: llega a la demostración exacta por la ruta más elegante sin perder rigor ni saltarse pasos clave.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.08234",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling",
+        "author": "Systems & Compilation Research Group",
+        "description": "Separa la optimización algebraica de la programación de operadores en kernels de LLM, reduciendo drásticamente los tiempos de compilación de grafos y elevando la velocidad en aceleradores.",
+        "analogy": "🏗️ Como separar el diseño de los planos de la logística de la obra: primero calculas la distribución matemática ideal y luego programas cómo se colocan los bloques en GPU, evitando embotellamientos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.09588",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "EmbeddingGemma 2 (740M Multimodal Open-Weights)",
+      "description": "Modelo de embeddings multimodal open-weight de 740M parámetros sobre arquitectura Gemma 4. Unifica texto, imagen, video y audio en un único espacio vectorial optimizado para edge computing y privacidad local.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/technology/ai/embedding-gemma-2/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Decisions API (Public Preview) & Enterprise Codex Expansion",
+      "description": "Despliegue en preview de la API Decisions impulsada por GPT-6 Luna para enrutamiento autónomo y toma de decisiones en tiempo real, junto con integración nativa en Atlassian Rovo y Jira.",
+      "links": [
+        {
+          "text": "OpenAI Platform",
+          "url": "https://openai.com/index/decisions-api/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude 5.5 Rollout & Critical Infrastructure Defense Program (CIDP)",
+      "description": "Disponibilidad general de Claude Sonnet 5.5 y Claude Haiku 5.5 con menor latencia para agentes autónomos, y lanzamiento de CIDP para defensa de tecnología operativa industrial (OT).",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Muse Wonder & Muse Wonder Full (Meta Superintelligence Labs)",
+      "description": "Modelos frontier insignia de MSL dirigidos por Alexandr Wang, incorporando Active Memory (retención contextual persistente) y Active Focus (recuperación autónoma ante fallos en flujos agenticos).",
+      "links": [
+        {
+          "text": "Meta AI",
+          "url": "https://ai.meta.com/research/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "International Monetary Fund (IMF)",
+      "headline": "El FMI eleva la proyección de crecimiento económico global para 2026 a 3.1%, destacando la inversión masiva en infraestructura de IA como el motor central de resiliencia macroeconómica.",
+      "links": [
+        {
+          "text": "IMF Outlook",
+          "url": "https://www.imf.org",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "arXiv Moderation Policy",
+      "headline": "arXiv impone por primera vez un tope mensual de 2 papers por autor tras sobrepasar las 40.000 presentaciones mensuales impulsadas por generación y redacción automatizada con IA.",
+      "links": [
+        {
+          "text": "arXiv Policy",
+          "url": "https://arxiv.org/about",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Enterprise Financial Consortium",
+      "headline": "Bancos e instituciones de primer nivel (Santander, Axa, ABN Amro) exigen métricas de ROI verificables y salvaguardas de intercepción en tiempo de ejecución para continuar financiando proyectos de IA.",
+      "links": [
+        {
+          "text": "Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Government of Canada",
+      "headline": "Canadá inyecta 500 millones de dólares adicionales en su programa 'AI for All' para acelerar la adopción, comercialización y soberanía tecnológica en empresas medianas.",
+      "links": [
+        {
+          "text": "Canada Press",
+          "url": "https://www.canada.ca",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}

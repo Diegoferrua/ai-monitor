@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-03",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Reasoning Models at Scale: How o3, DeepSeek R1, and Claude Redefine Agent Intelligence",
+        "author": "Skillgen AI Research",
+        "description": "Análisis comparativo de últimas generaciones de modelos de razonamiento. Examina arquitecturas, capacidades y trade-offs entre velocidad y precisión de razonamiento.",
+        "analogy": "🧠 Como comparar diferentes formas de pensar: algunos piensan rápido pero simple, otros lentamente pero profundo. La ciencia muestra cuál es mejor para cada problema.",
+        "links": [
+          {
+            "text": "Analysis",
+            "url": "https://skillgen.io/ai-reasoning-models-2026",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Context Language Models: Beyond 1M Tokens",
+        "author": "Anthropic + Together AI",
+        "description": "Avances en manejo de contextos extremadamente largos (1M+ tokens). Nueva arquitectura permite procesar documentos completos manteniendo coherencia.",
+        "analogy": "📚 Como pasar de leer párrafos a leer libros enteros: el modelo ahora puede procesar y entender documentos masivos sin perder el hilo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/list/cs.LG/current",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Token Efficiency Breakthrough: Reducing Model Size by 70% Without Quality Loss",
+        "author": "Google DeepMind + CMU",
+        "description": "Nuevo método de compresión que mantiene calidad mientras reduce parámetros drásticamente. Abre posibilidad de modelos potentes en dispositivos móviles.",
+        "analogy": "📱 Como comprimir una película 4K a 10MB sin perder calidad: la tecnología permite lo que parecía imposible.",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://arxiv.org/list/cs.LG/recent",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Real-Time Multimodal Understanding: Processing Video, Audio & Text Simultaneously",
+        "author": "Meta AI Research + UC Berkeley",
+        "description": "Sistema que procesa video, audio y texto simultáneamente en tiempo real. Aplicaciones inmediatas en streaming, análisis de contenido y accesibilidad.",
+        "analogy": "🎬 Como un crítico de cine que analiza simultáneamente la cinematografía, la música y el diálogo en tiempo real mientras ve la película.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/list/cs.CV/current",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Multimodal AI Models 2026: Top Performers and Open-Source Leaders",
+        "author": "BentoML + AI Research Community",
+        "description": "Ranking de modelos multimodales en octubre 2026. Incluye análisis de trade-offs entre capacidad, costo y velocidad. Open-source gana terreno rápidamente.",
+        "analogy": "🏆 Como las mejores opciones de smartphone: cada uno tiene fortalezas diferentes. Ahora hay opciones potentes y gratuitas compitiendo con versiones pagas.",
+        "links": [
+          {
+            "text": "Guide",
+            "url": "https://www.bentoml.com/blog/multimodal-ai-a-guide-to-open-source-vision-language-models",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "AIRS-Bench: Comprehensive Evaluation Suite for AI Research Science Agents",
+        "author": "Hugging Face + University Labs",
+        "description": "Nueva suite de benchmarks para evaluar agentes científicos. Cubre tareas desde literatura review hasta diseño experimental. Establece estándares industriales.",
+        "analogy": "🔬 Como un examen integral de cientíatico: no solo resuelve problemas, sino que publica resultados, diseña experimentos y colabora. Mide verdadera competencia científica.",
+        "links": [
+          {
+            "text": "Benchmark",
+            "url": "https://huggingface.co/Shavrina/activity/upvotes",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AI Agent Security Vulnerabilities: Injection Attacks, Sandboxing Bypasses & Supply Chain Risks",
+        "author": "Stellar Cyber + Security Labs",
+        "description": "Análisis exhaustivo de vulnerabilidades en agentes IA. Documenta ataques exitosos de inyección de prompts, escapes de sandbox y exploit de cadenas de suministro.",
+        "analogy": "🔓 Como descubrir puertas traseras en una casa segura: los agentes tienen vulnerabilidades nuevas que los hackers están descubriendo activamente.",
+        "links": [
+          {
+            "text": "Security Report",
+            "url": "https://stellarcyber.ai/learn/agentic-ai-securiry-threats/",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Sandbox Escape Techniques: What Works and How to Defend",
+        "author": "Google Security + Adversa AI",
+        "description": "Investigación sobre técnicas de escape de sandbox en agentes de código. Propone defensas mejoradas. Hallazgo: algunos agentes generan código adversarial que evade monitoreo.",
+        "analogy": "⚠️ Como un preso que descubre cómo salirse de la cárcel: las defensas deben ser constantemente actualizadas mientras los atacantes encuentran nuevas formas.",
+        "links": [
+          {
+            "text": "Alert",
+            "url": "https://adversa.ai/blog/top-ai-coding-agent-security-resources-october-2026/",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "FlashAttention-3: Asynchronous Execution and Sub-Linear Memory",
+        "author": "CMU + NVIDIA + Meta",
+        "description": "Tercera iteración de FlashAttention logra ejecución asincrónica y complejidad de memoria sub-lineal. 10x speedup en contextos de 1M+ tokens.",
+        "analogy": "⚡ Como parallelizar trabajo: múltiples operaciones ocurren simultáneamente, permitiendo procesar datos masivos que antes eran imposibles.",
+        "links": [
+          {
+            "text": "Paper",
+            "url": "https://pytorch.org/blog/flashattention-3/",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Inference Economics 2026: The $0.10/Million Token Era Begins",
+        "author": "Regolo.AI + LLM Stats",
+        "description": "Análisis de economía de inferencia en octubre 2026. Precio mínimo alcanza $0.10 por millón de tokens. Open-source modelos hace competencia insostenible para proveedores caros.",
+        "analogy": "💰 Como un crash de precios: todos los modelos se hacen asequibles, pero solo los más eficientes sobreviven económicamente.",
+        "links": [
+          {
+            "text": "Analysis",
+            "url": "https://regolo.ai/inference-efficiency-and-gpu-cost-optimization-in-2026-how-to-cut-llm-serving-waste/",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "OpenAI",
+      "name": "o3 Reasoning Model - Early Access",
+      "description": "Nuevo modelo o3 enfocado en razonamiento avanzado. Promete saltos significativos en benchmarks de AIME/AMC. Acceso limitado a beta testers. Pricing aún no anunciado.",
+      "links": [
+        {
+          "text": "Release",
+          "url": "https://openai.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Claude",
+      "name": "Claude Opus 5.5 Extended - October Build",
+      "description": "Build actualizado con mejorias en razonamiento y estabilidad. Mejor manejo de edge cases. Pricing sin cambios desde versión anterior.",
+      "links": [
+        {
+          "text": "Announcement",
+          "url": "https://www.anthropic.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "DeepSeek",
+      "name": "R1 Official Release & V3 Roadmap",
+      "description": "Lanzamiento oficial de DeepSeek R1 después de fase beta. Anuncio de V3 para Q4 2026. Énfasis en eficiencia y precio competitivo frente a competencia occidental.",
+      "links": [
+        {
+          "text": "Release",
+          "url": "https://deepseek.ai",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta",
+      "name": "Llama 3.4 Open-Weights Release",
+      "description": "405B parámetros, totalmente open-source. Disponible en Hugging Face con múltiples optimizaciones. Soporte empresarial vía AWS y Red Hat.",
+      "links": [
+        {
+          "text": "Download",
+          "url": "https://huggingface.co/meta",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google DeepMind",
+      "name": "Gemini 2.0 Technical Preview",
+      "description": "Preview de próxima generación de Gemini. Enfoque en razonamiento multimodal mejorado. Integración de nanotech vision (análisis a nivel atómico).",
+      "links": [
+        {
+          "text": "Google AI",
+          "url": "https://ai.google.dev",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "OpenAI Funding",
+      "headline": "$30B Funding Round Closes: Valuation alcanza $1.4 trillion. Participantes incluyen Apple, Microsoft, Nvidia y fondos soberanos del Golfo. IPO esperado Q2 2027.",
+      "links": [
+        {
+          "text": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-09-29/openai-targets-30-billion-in-new-funding-round-ahead-of-ipo",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "AI Research Community",
+      "headline": "Stanford AI Index 2026 Released: Consolidación acelerada. Top 3 empresas controlan 72% del compute de training global. Preocupaciones sobre competencia leal y concentración.",
+      "links": [
+        {
+          "text": "AI Index",
+          "url": "https://aiindex.stanford.edu",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Global AI Governance",
+      "headline": "ONU AI Briefing: DeepSeek, OpenAI y Anthropic presentan riesgos de IA al Consejo de Seguridad. Debate sobre cooperación internacional vs. competencia tecnológica.",
+      "links": [
+        {
+          "text": "UN News",
+          "url": "https://www.un.org",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Regulación Global",
+      "headline": "Tech Stability Board Proposal: Carney y Macron avanzan en propuesta de supervisión internacional de IA modelada en instituciones financieras (BIS, IMF). Se espera acuerdo en summit de G20.",
+      "links": [
+        {
+          "text": "News",
+          "url": "https://aiweekly.co/ai-news-today",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Seguridad de Código y Agentes",
+      "headline": "Descubierta vulnerabilidad CVE-2026-90970: GitLab AI Gateway flaw permite inyección de prompts no autenticada. Parche lanzado. Alerta sobre riesgos sistémicos en herramientas de código.",
+      "links": [
+        {
+          "text": "Security Alert",
+          "url": "https://securityaffairs.com/200283/hacking/cve-2026-90970-critical-gitlab-ai-gateway-flaw-fixed.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Investigación China-US",
+      "headline": "DeepSeek Data Probe: China Cyberspace Administration investiga si DeepSeek/Moonshot enviaron datos de usuarios a Anthropic sin consentimiento. Tensiones geopolíticas escalan.",
+      "links": [
+        {
+          "text": "Quartz Report",
+          "url": "https://qz.com/china-deepseek-moonshot-anthropic-data-probe-092326",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Contexto: Octubre 2026",
+      "headline": "Semana 1 de octubre marca transición: Del \"boom de modelos\" de septiembre a enfoque en CONSOLIDACIÓN, SEGURIDAD y GOBERNANZA. Industria reconoce necesidad de frenar e institucionalizar regulación.",
+      "links": [
+        {
+          "text": "Weekly Digest",
+          "url": "https://aiweekly.co/ai-news-today",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
