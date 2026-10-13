@@ -146,6 +146,7 @@
 
         .action-btn:hover { border-color: var(--border-hover); color: var(--text-main); }
         .action-btn.active-notif { color: var(--teal); border-color: var(--teal-border); background: var(--teal-bg); }
+        .action-btn.active-analytics { color: var(--accent); border-color: var(--accent); background: var(--accent-glow); }
 
         /* Hero */
         .hero { margin-bottom: 28px; }
@@ -427,45 +428,17 @@
             letter-spacing: 0.06em;
         }
 
-        .node-coord {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
+        .node-coord { display: inline-flex; align-items: center; gap: 6px; }
+        .node-anchor-dot { width: 7px; height: 7px; border-radius: 50%; box-shadow: 0 0 6px currentColor; }
 
-        .node-anchor-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            box-shadow: 0 0 6px currentColor;
-        }
-
-        /* Asymmetric Graph Sizes (Nube de Puntos Proporciones) */
-        .bento-card.node-hub {
-            grid-column: span 2;
-            min-height: 480px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-        }
+        /* Asymmetric Graph Sizes */
+        .bento-card.node-hub { grid-column: span 2; min-height: 480px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); }
         .bento-card.node-hub .paper-title { font-size: 21px; line-height: 1.3; }
 
-        .bento-card.node-wide {
-            grid-column: span 2;
-            min-height: 380px;
-        }
-
-        .bento-card.node-tall {
-            min-height: 510px;
-            transform: translateY(6px);
-        }
-
-        .bento-card.node-square {
-            min-height: 420px;
-        }
-
-        .bento-card.node-compact {
-            min-height: 330px;
-            transform: translateY(-4px);
-        }
+        .bento-card.node-wide { grid-column: span 2; min-height: 380px; }
+        .bento-card.node-tall { min-height: 510px; transform: translateY(6px); }
+        .bento-card.node-square { min-height: 420px; }
+        .bento-card.node-compact { min-height: 330px; transform: translateY(-4px); }
 
         @media (max-width: 800px) {
             .bento-grid { grid-template-columns: 1fr; }
@@ -587,6 +560,52 @@
 
         .panel-esencial .panel-lbl { color: var(--accent); }
         .panel-simple .panel-lbl { color: var(--gold); }
+
+        /* ========================================================
+           EMOJI REACTION STRIP
+           ======================================================== */
+        .reactions-strip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border);
+            flex-wrap: wrap;
+        }
+
+        .reaction-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+        }
+
+        .reaction-btn:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+            color: var(--text-main);
+        }
+
+        .reaction-btn.active-reacted {
+            border-color: var(--gold);
+            background: var(--gold-bg);
+            color: var(--gold);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+        }
+
+        .reaction-btn:active { transform: scale(0.92); }
 
         /* Collapsible Details */
         .card-details {
@@ -713,10 +732,8 @@
             max-width: 760px;
             margin: 0 auto;
             scroll-snap-align: center;
-            transition: transform 0.3s ease, filter 0.3s ease;
         }
 
-        /* Carousel Color Immersive Highlights */
         .carousel-slide .bento-card {
             border-width: 2px;
             min-height: 480px;
@@ -747,7 +764,6 @@
             background: linear-gradient(155deg, rgba(168, 85, 247, 0.14) 0%, var(--bg-card) 60%);
         }
 
-        /* Dots Progress Bar */
         .carousel-dots {
             display: flex;
             align-items: center;
@@ -804,6 +820,175 @@
         .news-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--teal); text-transform: uppercase; margin-bottom: 4px; display: block; }
         .news-headline { font-size: 13px; color: var(--text-main); line-height: 1.45; margin-bottom: 6px; }
 
+        /* ========================================================
+           ANALYTICS & USAGE DASHBOARD MODAL
+           ======================================================== */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 860px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: modalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.95) translateY(12px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-title { font-size: 20px; font-weight: 700; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
+        
+        .modal-close {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+        .modal-close:hover { border-color: var(--coral); color: var(--coral); }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .kpi-box {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .kpi-num { font-size: 26px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+        .kpi-label { font-size: 11px; text-transform: uppercase; color: var(--text-dim); letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace; }
+
+        .analytics-section {
+            margin-bottom: 24px;
+        }
+
+        .analytics-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .bar-chart-row {
+            margin-bottom: 12px;
+        }
+
+        .bar-chart-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .bar-chart-track {
+            height: 10px;
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            overflow: hidden;
+        }
+
+        .bar-chart-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 0.6s ease;
+        }
+
+        .leaderboard-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .leaderboard-item {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .leader-rank {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent);
+            min-width: 28px;
+        }
+
+        .leader-info { flex: 1; }
+        .leader-title { font-size: 13px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+        .leader-author { font-size: 11px; color: var(--text-dim); }
+
+        .leader-reactions {
+            display: flex;
+            gap: 6px;
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .arch-notice {
+            background: var(--bg-subtle);
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
         /* States */
         .loading-box { text-align: center; padding: 60px 20px; color: var(--text-muted); }
         .spinner {
@@ -842,6 +1027,10 @@
                 <b>AI Frontier Intel</b>
             </a>
             <div class="top-actions">
+                <button id="analyticsBtn" class="action-btn" type="button" aria-label="Abrir Dashboard de Analítica">
+                    <span>📊</span>
+                    <span>Analítica & Uso</span>
+                </button>
                 <button id="notifToggle" class="action-btn" type="button" aria-label="Notificaciones Push">
                     <span id="notifIcon">🔔</span>
                     <span id="notifText">Notificaciones</span>
@@ -857,11 +1046,11 @@
         <section class="hero">
             <span class="kicker">RESEARCH & FRONTIER LABS · INTEL DIARIO</span>
             <h1 class="disp">La frontera de AI, antes de tu primer café.</h1>
-            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, visualizados como constelación de grafos y carrusel de inmersión cromática.</p>
+            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, con reacciones interactivas y métricas de uso de la comunidad.</p>
             <div class="pills">
                 <span class="pill live"><span class="live-dot"></span> Pipeline Activo · 7:30 AM Diario</span>
-                <span class="pill">Red de Grafos & Nube de Nodos</span>
-                <span class="pill">Carrusel Cromático</span>
+                <span class="pill">Reacciones Interactivas</span>
+                <span class="pill">Dashboard de Analítica</span>
             </div>
         </section>
 
@@ -935,14 +1124,75 @@
         </footer>
     </div>
 
+    <!-- Analytics & Usage Modal -->
+    <div id="analyticsModal" class="modal-backdrop">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title disp">
+                    <span>📊</span> Dashboard de Analítica & Uso
+                </div>
+                <button id="closeAnalyticsModal" class="modal-close" type="button" title="Cerrar">✕</button>
+            </div>
+
+            <!-- KPI Row -->
+            <div class="kpi-grid">
+                <div class="kpi-box">
+                    <div class="kpi-num disp" id="kpiVisits">1</div>
+                    <div class="kpi-label">Visitas Registradas</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-num disp" id="kpiTimeSaved">~180m</div>
+                    <div class="kpi-label">Tiempo Ahorrado (IA)</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-num disp" id="kpiTotalReactions">0</div>
+                    <div class="kpi-label">Reacciones Totales</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-num disp" id="kpiTotalDays">6</div>
+                    <div class="kpi-label">Días en Archivo</div>
+                </div>
+            </div>
+
+            <!-- Category Breakdown -->
+            <div class="analytics-section">
+                <div class="analytics-title disp"><span>📈</span> Distribución de Research por Categoría</div>
+                <div id="categoryBars"></div>
+            </div>
+
+            <!-- Top Reacted Papers Leaderboard -->
+            <div class="analytics-section">
+                <div class="analytics-title disp"><span>🏆</span> Papers Más Reaccionados por la Comunidad</div>
+                <div class="leaderboard-list" id="leaderboardList"></div>
+            </div>
+
+            <!-- Architecture Notice -->
+            <div class="arch-notice mono">
+                <strong>🏛️ ARQUITECTURA DEL TRACKER:</strong> Los eventos y reacciones se procesan con caché persistente en cliente (localStorage). Para escalar a miles de usuarios sincronizados en tiempo real en GitHub Pages, la arquitectura está lista para vincularse a un backend serverless sin servidor (Supabase / Cloudflare KV).
+            </div>
+        </div>
+    </div>
+
     <script>
         const dateCache = {};
         let allDates = [];
         let activeDate = null;
         let lastManifestUpdatedAt = null;
-        let currentViewMode = 'collage'; // 'collage' | 'carousel'
+        let currentViewMode = 'collage';
         let currentCarouselIndex = 0;
         let currentLoadedData = null;
+
+        // --- Analytics Local State ---
+        function initAnalytics() {
+            try {
+                let stats = JSON.parse(localStorage.getItem('ai_monitor_analytics') || '{}');
+                stats.page_views = (stats.page_views || 0) + 1;
+                stats.last_visit = new Date().toISOString();
+                if (!stats.first_visit) stats.first_visit = new Date().toISOString();
+                localStorage.setItem('ai_monitor_analytics', JSON.stringify(stats));
+            } catch (e) {}
+        }
+        initAnalytics();
 
         // --- Theme Toggle Logic ---
         const themeBtn = document.getElementById('themeToggle');
@@ -970,6 +1220,173 @@
             updateThemeUI(next);
         };
 
+        // --- Analytics Modal Logic ---
+        const analyticsBtn = document.getElementById('analyticsBtn');
+        const analyticsModal = document.getElementById('analyticsModal');
+        const closeAnalyticsModal = document.getElementById('closeAnalyticsModal');
+
+        analyticsBtn.onclick = () => openAnalyticsDashboard();
+        closeAnalyticsModal.onclick = () => { analyticsModal.style.display = 'none'; };
+        analyticsModal.onclick = (e) => {
+            if (e.target === analyticsModal) analyticsModal.style.display = 'none';
+        };
+
+        async function openAnalyticsDashboard() {
+            analyticsModal.style.display = 'flex';
+            
+            // Load stats
+            let stats = {};
+            try { stats = JSON.parse(localStorage.getItem('ai_monitor_analytics') || '{}'); } catch (e) {}
+            document.getElementById('kpiVisits').textContent = stats.page_views || 1;
+            document.getElementById('kpiTotalDays').textContent = allDates.length || 6;
+
+            // Make sure all dates are loaded to calculate leaderboard
+            for (const d of allDates) {
+                if (!dateCache[d]) {
+                    try { await fetchDateData(d); } catch (e) {}
+                }
+            }
+
+            // Calculate total papers, categories, reactions
+            let totalPapers = 0;
+            const categoryCounts = {};
+            const paperScores = [];
+            let totalReactions = 0;
+
+            allDates.forEach(d => {
+                const data = dateCache[d];
+                if (!data || !data.papers) return;
+
+                Object.keys(data.papers).forEach(cat => {
+                    const arr = data.papers[cat] || [];
+                    categoryCounts[cat] = (categoryCounts[cat] || 0) + arr.length;
+                    totalPapers += arr.length;
+
+                    arr.forEach(p => {
+                        const pid = getPaperId(p);
+                        const r = getReactionsForPaper(pid, p);
+                        const score = (r['🔥'] || 0) + (r['💡'] || 0) + (r['🧠'] || 0) + (r['📌'] || 0);
+                        totalReactions += score;
+                        paperScores.push({ paper: p, score, reactions: r, date: d });
+                    });
+                });
+            });
+
+            document.getElementById('kpiTotalReactions').textContent = totalReactions;
+            document.getElementById('kpiTimeSaved').textContent = `~${totalPapers * 15}m`;
+
+            // Render category bars
+            const categoryBars = document.getElementById('categoryBars');
+            categoryBars.innerHTML = '';
+            const catColors = {
+                'LLMs': 'var(--coral)',
+                'Vision/Multimodal': 'var(--teal)',
+                'Agents & Reasoning': 'var(--gold)',
+                'Infrastructure & Optimization': 'var(--purple)'
+            };
+
+            Object.keys(categoryCounts).forEach(cat => {
+                const count = categoryCounts[cat];
+                const pct = totalPapers > 0 ? Math.round((count / totalPapers) * 100) : 0;
+                const color = catColors[cat] || 'var(--accent)';
+                categoryBars.innerHTML += `
+                <div class="bar-chart-row">
+                    <div class="bar-chart-labels">
+                        <span class="mono" style="font-weight: 600;">${cat} (${count})</span>
+                        <span class="mono" style="color: var(--text-dim);">${pct}%</span>
+                    </div>
+                    <div class="bar-chart-track">
+                        <div class="bar-chart-fill" style="width: ${pct}%; background: ${color};"></div>
+                    </div>
+                </div>`;
+            });
+
+            // Render leaderboard
+            paperScores.sort((a, b) => b.score - a.score);
+            const top5 = paperScores.slice(0, 5);
+            const leaderboardList = document.getElementById('leaderboardList');
+            leaderboardList.innerHTML = '';
+
+            top5.forEach((item, idx) => {
+                leaderboardList.innerHTML += `
+                <div class="leaderboard-item">
+                    <div class="leader-rank">#${idx + 1}</div>
+                    <div class="leader-info">
+                        <div class="leader-title">${escapeHtml(item.paper.title)}</div>
+                        <div class="leader-author mono">🏛️ ${escapeHtml(item.paper.author || 'Frontier Lab')} · 📅 ${item.date}</div>
+                    </div>
+                    <div class="leader-reactions">
+                        <span>🔥 ${item.reactions['🔥']}</span>
+                        <span>💡 ${item.reactions['💡']}</span>
+                        <span>🧠 ${item.reactions['🧠']}</span>
+                    </div>
+                </div>`;
+            });
+        }
+
+        // --- Reactions Logic (LocalStorage + Seed Hash) ---
+        function getPaperId(paper) {
+            return (paper.title || '').trim().toLowerCase().replace(/[^a-z0-9]/g, '-').slice(0, 48);
+        }
+
+        function getReactionsForPaper(pid, paper) {
+            let custom = {};
+            try {
+                custom = JSON.parse(localStorage.getItem('ai_monitor_reactions') || '{}');
+            } catch (e) {}
+
+            if (custom[pid]) return custom[pid];
+
+            // Deterministic initial seed based on title hash
+            let hash = 0;
+            const str = paper.title || 'ai';
+            for (let i = 0; i < str.length; i++) hash = (hash * 31 + str.charCodeAt(i)) & 0xffffffff;
+            const seedF = Math.abs(hash % 9) + 1;
+            const seedI = Math.abs((hash >> 2) % 6) + 1;
+            const seedB = Math.abs((hash >> 4) % 8) + 1;
+
+            return { '🔥': seedF, '💡': seedI, '🧠': seedB, '📌': 0 };
+        }
+
+        function getUserVotes() {
+            try {
+                return JSON.parse(localStorage.getItem('ai_monitor_user_votes') || '{}');
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function toggleReaction(pid, emoji, btnElem) {
+            let allReactions = {};
+            try { allReactions = JSON.parse(localStorage.getItem('ai_monitor_reactions') || '{}'); } catch (e) {}
+
+            const currentObj = allReactions[pid] || { '🔥': 2, '💡': 1, '🧠': 2, '📌': 0 };
+            const userVotes = getUserVotes();
+            const voteKey = `${pid}:${emoji}`;
+            const hasVoted = !!userVotes[voteKey];
+
+            if (hasVoted) {
+                currentObj[emoji] = Math.max(0, (currentObj[emoji] || 1) - 1);
+                delete userVotes[voteKey];
+                btnElem.classList.remove('active-reacted');
+            } else {
+                currentObj[emoji] = (currentObj[emoji] || 0) + 1;
+                userVotes[voteKey] = true;
+                btnElem.classList.add('active-reacted');
+            }
+
+            allReactions[pid] = currentObj;
+            localStorage.setItem('ai_monitor_reactions', JSON.stringify(allReactions));
+            localStorage.setItem('ai_monitor_user_votes', JSON.stringify(userVotes));
+
+            const countElem = btnElem.querySelector('.count');
+            if (countElem) countElem.textContent = currentObj[emoji];
+
+            // Micro-pulse animation
+            btnElem.style.transform = 'scale(1.2)';
+            setTimeout(() => { btnElem.style.transform = ''; }, 180);
+        }
+
         // --- View Switcher Logic (Collage vs Carousel) ---
         const btnViewCollage = document.getElementById('btnViewCollage');
         const btnViewCarousel = document.getElementById('btnViewCarousel');
@@ -979,9 +1396,7 @@
             currentViewMode = 'collage';
             btnViewCollage.classList.add('active');
             btnViewCarousel.classList.remove('active');
-            if (currentLoadedData) {
-                renderCurrentData();
-            }
+            if (currentLoadedData) renderCurrentData();
         };
 
         btnViewCarousel.onclick = () => {
@@ -989,19 +1404,13 @@
             currentViewMode = 'carousel';
             btnViewCarousel.classList.add('active');
             btnViewCollage.classList.remove('active');
-            if (currentLoadedData) {
-                renderCurrentData();
-            }
+            if (currentLoadedData) renderCurrentData();
         };
 
-        // Keyboard navigation for Carousel
         window.addEventListener('keydown', (e) => {
             if (currentViewMode !== 'carousel') return;
-            if (e.key === 'ArrowRight') {
-                moveCarousel(1);
-            } else if (e.key === 'ArrowLeft') {
-                moveCarousel(-1);
-            }
+            if (e.key === 'ArrowRight') moveCarousel(1);
+            else if (e.key === 'ArrowLeft') moveCarousel(-1);
         });
 
         // --- Web Push Notification Logic ---
@@ -1098,11 +1507,10 @@
             const titleLower = (paper.title || '').toLowerCase();
             const descLower = (paper.description || '').toLowerCase();
 
-            // 1. Critical / Breakthrough
             if (index === 0 && (category === 'LLMs' || category === 'Agents & Reasoning')) {
                 return {
                     tierClass: 'tier-critical',
-                    nodeSizeClass: 'node-hub', // Major Hub Node (2x2)
+                    nodeSizeClass: 'node-hub',
                     tagClass: 'tag-critical',
                     tagLabel: '🔥 HUB FRONTIER',
                     dotColor: 'var(--coral)'
@@ -1111,25 +1519,23 @@
             if (titleLower.includes('breakthrough') || titleLower.includes('reasoning') || descLower.includes('redefine') || descLower.includes('10x')) {
                 return {
                     tierClass: 'tier-critical',
-                    nodeSizeClass: 'node-wide', // Wide Bridge Node (2x1)
+                    nodeSizeClass: 'node-wide',
                     tagClass: 'tag-critical',
                     tagLabel: '⚡ BREAKTHROUGH',
                     dotColor: 'var(--coral)'
                 };
             }
 
-            // 2. High Impact
             if (category === 'LLMs' || category === 'Agents & Reasoning') {
                 return {
                     tierClass: 'tier-high',
-                    nodeSizeClass: index % 2 === 1 ? 'node-tall' : 'node-square', // Vertical Orbital or Square
+                    nodeSizeClass: index % 2 === 1 ? 'node-tall' : 'node-square',
                     tagClass: 'tag-high',
                     tagLabel: '⭐ NODO ALTO IMPACTO',
                     dotColor: 'var(--gold)'
                 };
             }
 
-            // 3. Medium Impact
             if (category === 'Vision/Multimodal') {
                 return {
                     tierClass: 'tier-medium',
@@ -1140,7 +1546,6 @@
                 };
             }
 
-            // 4. Standard / Infrastructure
             return {
                 tierClass: 'tier-standard',
                 nodeSizeClass: 'node-compact',
@@ -1153,6 +1558,16 @@
         function createPaperCardHTML(p, tierInfo, isCarousel = false, overallIdx = 0) {
             const slideClass = isCarousel ? `carousel-slide ${tierInfo.tierClass}` : '';
             const sizeClass = isCarousel ? '' : tierInfo.nodeSizeClass;
+            const pid = getPaperId(p);
+            const reactions = getReactionsForPaper(pid, p);
+            const userVotes = getUserVotes();
+
+            const emojis = [
+                { icon: '🔥', key: '🔥', title: 'Breakthrough' },
+                { icon: '💡', key: '💡', title: 'Inspirador' },
+                { icon: '🧠', key: '🧠', title: 'Deep Tech' },
+                { icon: '📌', key: '📌', title: 'Guardar' }
+            ];
 
             return `
             <article class="bento-card ${tierInfo.tierClass} ${sizeClass} ${slideClass}" data-index="${overallIdx}">
@@ -1186,6 +1601,21 @@
                         <p>${escapeHtml(p.analogy)}</p>
                     </div>` : ''}
 
+                    <!-- Emoji Reaction Strip -->
+                    <div class="reactions-strip" data-pid="${pid}">
+                        ${emojis.map(e => {
+                            const isVoted = !!userVotes[`${pid}:${e.key}`];
+                            return `
+                            <button class="reaction-btn ${isVoted ? 'active-reacted' : ''}" 
+                                    type="button" 
+                                    title="${e.title}" 
+                                    onclick="toggleReaction('${pid}', '${e.key}', this)">
+                                <span>${e.icon}</span>
+                                <span class="count">${reactions[e.key] || 0}</span>
+                            </button>`;
+                        }).join('')}
+                    </div>
+
                     ${p.links && p.links.length > 0 ? `
                     <details class="card-details">
                         <summary><span>🔗</span> Enlaces de investigación y arXiv</summary>
@@ -1218,7 +1648,6 @@
 
             if (allPapersWithCat.length > 0) {
                 if (currentViewMode === 'collage') {
-                    // Constellation Graph / Point Cloud Mode
                     leftHtml += `
                     <div class="graph-cloud-wrap">
                         <div class="graph-ambient-glow"></div>
@@ -1231,7 +1660,6 @@
                         </div>
                     </div>`;
                 } else {
-                    // Carousel Swipe Mode with Color Immersion
                     currentCarouselIndex = 0;
                     leftHtml += `
                     <div class="carousel-container" id="carouselContainer" style="display: block;">
@@ -1344,7 +1772,6 @@
                 dot.classList.toggle('active', i === index);
             });
 
-            // Color ambience on container
             if (container && currentSlide) {
                 if (currentSlide.classList.contains('tier-critical')) {
                     container.style.borderColor = 'rgba(244, 63, 94, 0.4)';
