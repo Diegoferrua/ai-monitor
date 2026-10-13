@@ -17,29 +17,31 @@
     </script>
     <style>
         :root, [data-theme="dark"] {
-            --bg: #080c15;
-            --bg-elevated: #0e1525;
-            --bg-card: #121a2d;
-            --bg-card-hover: #17223b;
-            --bg-subtle: #19243d;
-            --border: #1f2c47;
+            --bg: #070b13;
+            --bg-elevated: #0d1424;
+            --bg-card: #11192d;
+            --bg-card-hover: #16213a;
+            --bg-subtle: #18233d;
+            --border: #1e2b46;
             --border-hover: #3b82f6;
             --border-accent: #60a5fa;
             --text-main: #f1f5f9;
             --text-muted: #94a3b8;
             --text-dim: #64748b;
             --accent: #3b82f6;
-            --accent-glow: rgba(59, 130, 246, 0.14);
+            --accent-glow: rgba(59, 130, 246, 0.16);
             --gold: #f59e0b;
-            --gold-bg: rgba(245, 158, 11, 0.1);
-            --gold-border: rgba(245, 158, 11, 0.28);
+            --gold-bg: rgba(245, 158, 11, 0.12);
+            --gold-border: rgba(245, 158, 11, 0.35);
             --teal: #14b8a6;
             --teal-bg: rgba(20, 184, 166, 0.12);
+            --teal-border: rgba(20, 184, 166, 0.35);
             --coral: #f43f5e;
             --coral-bg: rgba(244, 63, 94, 0.12);
-            --coral-border: rgba(244, 63, 94, 0.3);
+            --coral-border: rgba(244, 63, 94, 0.35);
             --purple: #a855f7;
             --purple-bg: rgba(168, 85, 247, 0.12);
+            --purple-border: rgba(168, 85, 247, 0.35);
         }
 
         [data-theme="light"] {
@@ -58,21 +60,19 @@
             --accent-glow: rgba(37, 99, 235, 0.08);
             --gold: #d97706;
             --gold-bg: rgba(217, 119, 6, 0.08);
-            --gold-border: rgba(217, 119, 6, 0.22);
+            --gold-border: rgba(217, 119, 6, 0.28);
             --teal: #0d9488;
-            --teal-bg: rgba(13, 148, 136, 0.1);
+            --teal-bg: rgba(13, 148, 136, 0.08);
+            --teal-border: rgba(13, 148, 136, 0.28);
             --coral: #e11d48;
             --coral-bg: rgba(225, 29, 72, 0.08);
-            --coral-border: rgba(225, 29, 72, 0.25);
+            --coral-border: rgba(225, 29, 72, 0.28);
             --purple: #9333ea;
             --purple-bg: rgba(147, 51, 234, 0.08);
+            --purple-border: rgba(147, 51, 234, 0.28);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -87,12 +87,12 @@
         .disp { font-family: 'Archivo', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
 
         .wrap {
-            max-width: 1400px;
+            max-width: 1440px;
             margin: 0 auto;
             padding: 24px 20px 60px;
         }
 
-        /* Top Nav Bar */
+        /* Top Bar */
         .top-bar {
             display: flex;
             align-items: center;
@@ -116,15 +116,11 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
-            box-shadow: 0 0 10px var(--accent);
+            background: linear-gradient(135deg, var(--coral) 0%, var(--purple) 50%, var(--accent) 100%);
+            box-shadow: 0 0 12px var(--accent);
         }
 
-        .brand b {
-            font-size: 15px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
+        .brand b { font-size: 15px; letter-spacing: 0.05em; text-transform: uppercase; }
 
         .top-actions {
             display: flex;
@@ -148,16 +144,8 @@
             transition: all 0.2s ease;
         }
 
-        .action-btn:hover {
-            border-color: var(--border-hover);
-            color: var(--text-main);
-        }
-
-        .action-btn.active-notif {
-            color: var(--teal);
-            border-color: rgba(20, 184, 166, 0.4);
-            background: var(--teal-bg);
-        }
+        .action-btn:hover { border-color: var(--border-hover); color: var(--text-main); }
+        .action-btn.active-notif { color: var(--teal); border-color: var(--teal-border); background: var(--teal-bg); }
 
         /* Hero */
         .hero { margin-bottom: 28px; }
@@ -187,7 +175,7 @@
         .hero p {
             font-size: 16px;
             color: var(--text-muted);
-            max-width: 820px;
+            max-width: 840px;
             line-height: 1.6;
             margin-bottom: 16px;
         }
@@ -207,11 +195,7 @@
             color: var(--text-muted);
         }
 
-        .pill.live {
-            color: var(--teal);
-            border-color: rgba(20, 184, 166, 0.3);
-            background: var(--teal-bg);
-        }
+        .pill.live { color: var(--teal); border-color: var(--teal-border); background: var(--teal-bg); }
 
         .live-dot {
             width: 7px;
@@ -259,34 +243,83 @@
             font-family: 'Public Sans', sans-serif;
             transition: all 0.2s ease;
         }
-        .search-input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
-        }
+        .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
         .search-clear {
-            position: absolute;
-            right: 14px;
-            background: var(--bg-subtle);
-            border: none;
-            color: var(--text-muted);
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
+            position: absolute; right: 14px; background: var(--bg-subtle); border: none;
+            color: var(--text-muted); border-radius: 50%; width: 24px; height: 24px;
+            cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 12px;
         }
         .search-status-bar {
-            margin-top: 10px;
-            font-size: 13px;
-            color: var(--text-muted);
+            margin-top: 10px; font-size: 13px; color: var(--text-muted);
+            display: flex; align-items: center; justify-content: space-between;
+        }
+
+        /* View Mode & Legend Toolbar */
+        .toolbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 14px;
         }
+
+        .view-switcher {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 4px;
+        }
+
+        .view-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            border-radius: 999px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .view-btn.active {
+            background: var(--accent);
+            color: #ffffff;
+            box-shadow: 0 2px 8px var(--accent-glow);
+        }
+
+        .legend-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-dim);
+        }
+
+        .legend-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+        .dot-coral { background: var(--coral); box-shadow: 0 0 6px var(--coral); }
+        .dot-gold { background: var(--gold); box-shadow: 0 0 6px var(--gold); }
+        .dot-teal { background: var(--teal); box-shadow: 0 0 6px var(--teal); }
+        .dot-purple { background: var(--purple); box-shadow: 0 0 6px var(--purple); }
 
         /* Date Tabs */
         .tabs-nav {
@@ -321,7 +354,7 @@
             box-shadow: 0 2px 10px var(--accent-glow);
         }
 
-        /* Two Column Layout (Bento Collage + Sidebar) */
+        /* Two Column Layout (Main Papers + Sidebar) */
         .layout-cols {
             display: grid;
             grid-template-columns: 1fr 360px;
@@ -334,20 +367,21 @@
             .stat-stamp { border-left: none; padding-left: 0; padding-top: 10px; border-top: 1px solid var(--border); }
         }
 
-        /* Bento Grid Collage for Papers */
+        /* ========================================================
+           BENTO COLLAGE (ASYMMETRIC DIVERSE SIZES)
+           ======================================================== */
         .bento-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             grid-auto-flow: dense;
             gap: 18px;
             margin-bottom: 32px;
         }
 
-        /* Bento Card Architecture */
         .bento-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 18px;
             padding: 22px;
             display: flex;
             flex-direction: column;
@@ -358,37 +392,66 @@
         }
 
         .bento-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
         }
 
-        /* Tier 1: Hero / Spotlight Card (Double Span) */
-        .bento-card.tier-hero {
+        /* Asymmetric Size Variations */
+        .bento-card.size-2x2 {
             grid-column: span 2;
-            background: linear-gradient(145deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.35);
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.08);
+            min-height: 480px;
         }
 
-        .bento-card.tier-hero .paper-title {
-            font-size: 20px;
+        .bento-card.size-2x1 {
+            grid-column: span 2;
+            min-height: 380px;
         }
 
-        /* Tier 2: Standard Square Card */
-        .bento-card.tier-square {
-            min-height: 420px;
+        .bento-card.size-1x2 {
+            min-height: 490px;
         }
 
-        /* Tier 3: Compact Square Card */
-        .bento-card.tier-compact {
-            min-height: 360px;
+        .bento-card.size-1x1 {
+            min-height: 410px;
+        }
+
+        .bento-card.size-compact {
+            min-height: 330px;
         }
 
         @media (max-width: 768px) {
             .bento-grid { grid-template-columns: 1fr; }
-            .bento-card.tier-hero { grid-column: span 1; }
+            .bento-card.size-2x2, .bento-card.size-2x1 { grid-column: span 1; }
         }
+
+        /* Color Differentiation by Importance */
+        .tier-critical {
+            border-color: var(--coral-border);
+            background: linear-gradient(155deg, var(--coral-bg) 0%, var(--bg-card) 45%);
+            box-shadow: 0 4px 20px rgba(244, 63, 94, 0.08);
+        }
+        .tier-critical:hover { border-color: var(--coral); }
+
+        .tier-high {
+            border-color: var(--gold-border);
+            background: linear-gradient(155deg, var(--gold-bg) 0%, var(--bg-card) 45%);
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.08);
+        }
+        .tier-high:hover { border-color: var(--gold); }
+
+        .tier-medium {
+            border-color: var(--teal-border);
+            background: linear-gradient(155deg, var(--teal-bg) 0%, var(--bg-card) 45%);
+            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.08);
+        }
+        .tier-medium:hover { border-color: var(--teal); }
+
+        .tier-standard {
+            border-color: var(--purple-border);
+            background: linear-gradient(155deg, var(--purple-bg) 0%, var(--bg-card) 45%);
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08);
+        }
+        .tier-standard:hover { border-color: var(--purple); }
 
         /* Card Elements */
         .card-top { margin-bottom: 14px; }
@@ -412,43 +475,23 @@
             text-transform: uppercase;
         }
 
-        .tag-hero {
-            background: var(--coral-bg);
-            color: var(--coral);
-            border: 1px solid var(--coral-border);
-        }
+        .tag-critical { background: var(--coral-bg); color: var(--coral); border: 1px solid var(--coral-border); }
+        .tag-high { background: var(--gold-bg); color: var(--gold); border: 1px solid var(--gold-border); }
+        .tag-medium { background: var(--teal-bg); color: var(--teal); border: 1px solid var(--teal-border); }
+        .tag-standard { background: var(--purple-bg); color: var(--purple); border: 1px solid var(--purple-border); }
 
-        .tag-mid {
-            background: var(--gold-bg);
-            color: var(--gold);
-            border: 1px solid var(--gold-border);
-        }
-
-        .tag-info {
-            background: var(--teal-bg);
-            color: var(--teal);
-            border: 1px solid rgba(20, 184, 166, 0.3);
-        }
-
-        .tag-category {
-            background: var(--accent-glow);
-            color: var(--accent);
-            border: 1px solid rgba(59, 130, 246, 0.25);
-        }
-
-        .tag-date {
-            background: var(--bg-subtle);
-            color: var(--text-dim);
-            border: 1px solid var(--border);
-        }
+        .tag-category { background: var(--accent-glow); color: var(--accent); border: 1px solid rgba(59, 130, 246, 0.25); }
+        .tag-date { background: var(--bg-subtle); color: var(--text-dim); border: 1px solid var(--border); }
 
         .paper-title {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 700;
             line-height: 1.35;
             margin-bottom: 8px;
             color: var(--text-main);
         }
+
+        .size-2x2 .paper-title { font-size: 22px; line-height: 1.3; }
 
         .paper-author {
             font-size: 12px;
@@ -539,6 +582,77 @@
         .link-pill:hover { border-color: var(--accent); background: var(--accent-glow); }
         .link-pill.primary { background: var(--accent); border-color: var(--accent); color: #ffffff; }
 
+        /* ========================================================
+           CAROUSEL SWIPER VIEW
+           ======================================================== */
+        .carousel-container {
+            display: none;
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .carousel-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .carousel-indicator {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .carousel-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .carousel-arrow {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .carousel-arrow:hover {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+            color: var(--accent);
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 6px 4px 20px;
+            scrollbar-width: none;
+        }
+
+        .carousel-track::-webkit-scrollbar { display: none; }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            max-width: 640px;
+            scroll-snap-align: center;
+        }
+
+        @media (max-width: 680px) {
+            .carousel-slide { max-width: 100%; }
+        }
+
         /* Sidebar Widgets */
         .sidebar-section {
             background: var(--bg-card);
@@ -624,11 +738,11 @@
         <section class="hero">
             <span class="kicker">RESEARCH & FRONTIER LABS · INTEL DIARIO</span>
             <h1 class="disp">La frontera de AI, antes de tu primer café.</h1>
-            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, estructurados en formato Bento collage interactivo.</p>
+            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, estructurados en formato Bento collage interactivo y carrusel deslizable.</p>
             <div class="pills">
                 <span class="pill live"><span class="live-dot"></span> Pipeline Activo · 7:30 AM Diario</span>
-                <span class="pill">Bento Collage Dinámico</span>
-                <span class="pill">Notificaciones Push</span>
+                <span class="pill">Collage Asimétrico & Carrusel</span>
+                <span class="pill">Colores por Importancia</span>
             </div>
         </section>
 
@@ -665,6 +779,25 @@
             </div>
         </section>
 
+        <!-- View Switcher & Color Legend Toolbar -->
+        <div class="toolbar" id="viewToolbar">
+            <div class="view-switcher">
+                <button id="btnViewCollage" class="view-btn active" type="button">
+                    <span>⊞</span> Vista Collage
+                </button>
+                <button id="btnViewCarousel" class="view-btn" type="button">
+                    <span>⇄</span> Vista Carrusel
+                </button>
+            </div>
+
+            <div class="legend-bar">
+                <span class="legend-item"><span class="legend-dot dot-coral"></span> Crítico / Breakthrough</span>
+                <span class="legend-item"><span class="legend-dot dot-gold"></span> Alto Impacto</span>
+                <span class="legend-item"><span class="legend-dot dot-teal"></span> Impacto Medio</span>
+                <span class="legend-item"><span class="legend-dot dot-purple"></span> Infraestructura</span>
+            </div>
+        </div>
+
         <!-- Date Tabs -->
         <nav class="tabs-nav" id="tabsNav" aria-label="Historial por fechas"></nav>
 
@@ -688,6 +821,9 @@
         let allDates = [];
         let activeDate = null;
         let lastManifestUpdatedAt = null;
+        let currentViewMode = 'collage'; // 'collage' | 'carousel'
+        let currentCarouselIndex = 0;
+        let currentLoadedData = null;
 
         // --- Theme Toggle Logic ---
         const themeBtn = document.getElementById('themeToggle');
@@ -714,6 +850,40 @@
             localStorage.setItem('ai-monitor-theme', next);
             updateThemeUI(next);
         };
+
+        // --- View Switcher Logic (Collage vs Carousel) ---
+        const btnViewCollage = document.getElementById('btnViewCollage');
+        const btnViewCarousel = document.getElementById('btnViewCarousel');
+
+        btnViewCollage.onclick = () => {
+            if (currentViewMode === 'collage') return;
+            currentViewMode = 'collage';
+            btnViewCollage.classList.add('active');
+            btnViewCarousel.classList.remove('active');
+            if (currentLoadedData) {
+                renderCurrentData();
+            }
+        };
+
+        btnViewCarousel.onclick = () => {
+            if (currentViewMode === 'carousel') return;
+            currentViewMode = 'carousel';
+            btnViewCarousel.classList.add('active');
+            btnViewCollage.classList.remove('active');
+            if (currentLoadedData) {
+                renderCurrentData();
+            }
+        };
+
+        // Keyboard navigation for Carousel
+        window.addEventListener('keydown', (e) => {
+            if (currentViewMode !== 'carousel') return;
+            if (e.key === 'ArrowRight') {
+                moveCarousel(1);
+            } else if (e.key === 'ArrowLeft') {
+                moveCarousel(-1);
+            }
+        });
 
         // --- Web Push Notification Logic ---
         const notifToggle = document.getElementById('notifToggle');
@@ -747,7 +917,7 @@
                 return;
             }
             if (Notification.permission === 'granted') {
-                new Notification("⚡ AI Frontier Intel · Prueba de Notificación", {
+                new Notification("⚡ AI Frontier Intel · Alerta Matutina", {
                     body: "Las alertas matutinas de las 7:30 AM están listas y configuradas en tu navegador.",
                     icon: ""
                 });
@@ -763,6 +933,16 @@
             }
         };
 
+        function notifyNewIntel(date) {
+            if ("Notification" in window && Notification.permission === 'granted') {
+                new Notification("⚡ Nuevo Intel Diario Disponible", {
+                    body: `El reporte de investigación del ${date} ya está listo para leer.`,
+                    icon: ""
+                });
+            }
+        }
+
+        // --- Data Fetching ---
         function escapeHtml(text) {
             if (!text) return '';
             const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -794,48 +974,102 @@
             document.getElementById('statUpdated').textContent = `${date} · 07:30 AM`;
         }
 
-        // --- Bento Collage Card Classifier ---
-        function getPaperTier(paper, index, category) {
+        // --- Importance & Size Classifier ---
+        function classifyPaper(paper, index, category, total) {
             const titleLower = (paper.title || '').toLowerCase();
             const descLower = (paper.description || '').toLowerCase();
-            
-            // Tier 1: Hero / Flagship Spotlight (Double span)
+
+            // 1. Critical / Breakthrough
             if (index === 0 && (category === 'LLMs' || category === 'Agents & Reasoning')) {
                 return {
-                    tierClass: 'tier-hero',
-                    tagClass: 'tag-hero',
+                    tierClass: 'tier-critical',
+                    sizeClass: 'size-2x2', // Hero Big Square
+                    tagClass: 'tag-critical',
                     tagLabel: '🔥 SPOTLIGHT FRONTIER'
                 };
             }
             if (titleLower.includes('breakthrough') || titleLower.includes('reasoning') || descLower.includes('redefine') || descLower.includes('10x')) {
                 return {
-                    tierClass: index % 3 === 0 ? 'tier-hero' : 'tier-square',
-                    tagClass: 'tag-hero',
-                    tagLabel: '⚡ ALTO IMPACTO'
+                    tierClass: 'tier-critical',
+                    sizeClass: 'size-2x1', // Wide Rectangle
+                    tagClass: 'tag-critical',
+                    tagLabel: '⚡ BREAKTHROUGH'
                 };
             }
 
-            // Tier 2: Standard Square
-            if (category === 'LLMs' || category === 'Vision/Multimodal') {
+            // 2. High Impact
+            if (category === 'LLMs' || category === 'Agents & Reasoning') {
                 return {
-                    tierClass: 'tier-square',
-                    tagClass: 'tag-mid',
-                    tagLabel: '⭐ RESEARCH DESTACADO'
+                    tierClass: 'tier-high',
+                    sizeClass: index % 2 === 1 ? 'size-1x2' : 'size-1x1', // Tall or Square
+                    tagClass: 'tag-high',
+                    tagLabel: '⭐ ALTO IMPACTO'
                 };
             }
 
-            // Tier 3: Compact Square
+            // 3. Medium Impact
+            if (category === 'Vision/Multimodal') {
+                return {
+                    tierClass: 'tier-medium',
+                    sizeClass: 'size-1x1',
+                    tagClass: 'tag-medium',
+                    tagLabel: '👁️ VISIÓN & MULTIMODAL'
+                };
+            }
+
+            // 4. Standard / Infrastructure
             return {
-                tierClass: 'tier-compact',
-                tagClass: 'tag-info',
-                tagLabel: '📘 INVESTIGACIÓN'
+                tierClass: 'tier-standard',
+                sizeClass: 'size-compact',
+                tagClass: 'tag-standard',
+                tagLabel: '⚙️ INFRAESTRUCTURA'
             };
         }
 
-        function renderTwoColumnContent(data) {
-            let leftHtml = '<div class="bento-container">';
-            
-            // Flatten papers into a dynamic Bento collage
+        function createPaperCardHTML(p, tierInfo, isCarousel = false) {
+            const slideClass = isCarousel ? 'carousel-slide' : '';
+            return `
+            <article class="bento-card ${tierInfo.tierClass} ${isCarousel ? '' : tierInfo.sizeClass} ${slideClass}">
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag ${tierInfo.tagClass}">${tierInfo.tagLabel}</span>
+                        <span class="tag tag-category">${escapeHtml(p._category)}</span>
+                        ${p._date ? `<span class="tag tag-date mono">📅 ${escapeHtml(p._date)}</span>` : ''}
+                    </div>
+                    <h3 class="paper-title">${escapeHtml(p.title)}</h3>
+                    <div class="paper-author mono">🏛️ ${escapeHtml(p.author || 'Frontier Lab')}</div>
+                    
+                    <div class="panel panel-esencial">
+                        <span class="panel-lbl">01 · Lo Esencial</span>
+                        <p>${escapeHtml(p.description)}</p>
+                    </div>
+                </div>
+
+                <div class="card-bottom">
+                    ${p.analogy ? `
+                    <div class="panel panel-simple">
+                        <span class="panel-lbl">02 · Dicho en Simple</span>
+                        <p>${escapeHtml(p.analogy)}</p>
+                    </div>` : ''}
+
+                    ${p.links && p.links.length > 0 ? `
+                    <details class="card-details">
+                        <summary><span>🔗</span> Enlaces de investigación y arXiv</summary>
+                        <div class="links-row">
+                            ${p.links.map(l => `
+                                <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener" class="link-pill ${l.type === 'primary' ? 'primary' : ''}">
+                                    ${escapeHtml(l.text || 'Paper')} →
+                                </a>
+                            `).join('')}
+                        </div>
+                    </details>` : ''}
+                </div>
+            </article>`;
+        }
+
+        // --- Render Functions ---
+        function renderContent(data) {
+            // Flatten papers
             const allPapersWithCat = [];
             if (data.papers && Object.keys(data.papers).length > 0) {
                 for (const cat of Object.keys(data.papers)) {
@@ -847,51 +1081,41 @@
                 }
             }
 
+            let leftHtml = '<div class="main-papers-area">';
+
             if (allPapersWithCat.length > 0) {
-                leftHtml += `<div class="bento-grid">`;
-                allPapersWithCat.forEach((p, overallIdx) => {
-                    const tier = getPaperTier(p, p._index, p._category);
+                if (currentViewMode === 'collage') {
+                    // Bento Collage Mode
+                    leftHtml += `<div class="bento-grid">`;
+                    allPapersWithCat.forEach((p, overallIdx) => {
+                        const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
+                        leftHtml += createPaperCardHTML(p, tier, false);
+                    });
+                    leftHtml += `</div>`;
+                } else {
+                    // Carousel Swipe Mode
+                    currentCarouselIndex = 0;
                     leftHtml += `
-                    <article class="bento-card ${tier.tierClass}">
-                        <div class="card-top">
-                            <div class="card-tags">
-                                <span class="tag ${tier.tagClass}">${tier.tagLabel}</span>
-                                <span class="tag tag-category">${escapeHtml(p._category)}</span>
-                                ${p._date ? `<span class="tag tag-date mono">📅 ${escapeHtml(p._date)}</span>` : ''}
-                            </div>
-                            <h3 class="paper-title">${escapeHtml(p.title)}</h3>
-                            <div class="paper-author mono">🏛️ ${escapeHtml(p.author || 'Frontier Lab')}</div>
-                            
-                            <div class="panel panel-esencial">
-                                <span class="panel-lbl">01 · Lo Esencial</span>
-                                <p>${escapeHtml(p.description)}</p>
+                    <div class="carousel-container" style="display: block;">
+                        <div class="carousel-top-bar">
+                            <span class="carousel-indicator" id="carouselCounter">Paper 1 de ${allPapersWithCat.length}</span>
+                            <div class="carousel-controls">
+                                <button class="carousel-arrow" onclick="moveCarousel(-1)" title="Anterior (←)">‹</button>
+                                <button class="carousel-arrow" onclick="moveCarousel(1)" title="Siguiente (→)">›</button>
                             </div>
                         </div>
-
-                        <div class="card-bottom">
-                            ${p.analogy ? `
-                            <div class="panel panel-simple">
-                                <span class="panel-lbl">02 · Dicho en Simple</span>
-                                <p>${escapeHtml(p.analogy)}</p>
-                            </div>` : ''}
-
-                            ${p.links && p.links.length > 0 ? `
-                            <details class="card-details">
-                                <summary><span>🔗</span> Fuentes & arXiv</summary>
-                                <div class="links-row">
-                                    ${p.links.map(l => `
-                                        <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener" class="link-pill ${l.type === 'primary' ? 'primary' : ''}">
-                                            ${escapeHtml(l.text || 'Paper')} →
-                                        </a>
-                                    `).join('')}
-                                </div>
-                            </details>` : ''}
+                        <div class="carousel-track" id="carouselTrack">
+                    `;
+                    allPapersWithCat.forEach((p, overallIdx) => {
+                        const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
+                        leftHtml += createPaperCardHTML(p, tier, true);
+                    });
+                    leftHtml += `
                         </div>
-                    </article>`;
-                });
-                leftHtml += `</div>`;
+                    </div>`;
+                }
             } else {
-                leftHtml += `<p class="mono" style="color: var(--text-dim); padding: 40px 0;">Sin papers coincidentes.</p>`;
+                leftHtml += `<p class="mono" style="color: var(--text-dim); padding: 40px 0;">Sin papers registrados.</p>`;
             }
             leftHtml += '</div>';
 
@@ -952,6 +1176,59 @@
             return `<div class="layout-cols">${leftHtml}${rightHtml}</div>`;
         }
 
+        function moveCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const slides = track.querySelectorAll('.carousel-slide');
+            if (slides.length === 0) return;
+
+            currentCarouselIndex += direction;
+            if (currentCarouselIndex < 0) currentCarouselIndex = slides.length - 1;
+            if (currentCarouselIndex >= slides.length) currentCarouselIndex = 0;
+
+            slides[currentCarouselIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            
+            const counter = document.getElementById('carouselCounter');
+            if (counter) {
+                counter.textContent = `Paper ${currentCarouselIndex + 1} de ${slides.length}`;
+            }
+        }
+
+        function renderCurrentData() {
+            if (!currentLoadedData) return;
+            const main = document.getElementById('mainGrid');
+            main.innerHTML = renderContent(currentLoadedData);
+
+            // Add scroll listener to track for counter update
+            const track = document.getElementById('carouselTrack');
+            if (track) {
+                track.addEventListener('scroll', () => {
+                    const slides = track.querySelectorAll('.carousel-slide');
+                    if (slides.length === 0) return;
+                    const trackRect = track.getBoundingClientRect();
+                    const centerPoint = trackRect.left + trackRect.width / 2;
+
+                    let closestIdx = 0;
+                    let closestDist = Infinity;
+                    slides.forEach((s, idx) => {
+                        const sRect = s.getBoundingClientRect();
+                        const sCenter = sRect.left + sRect.width / 2;
+                        const dist = Math.abs(centerPoint - sCenter);
+                        if (dist < closestDist) {
+                            closestDist = dist;
+                            closestIdx = idx;
+                        }
+                    });
+
+                    currentCarouselIndex = closestIdx;
+                    const counter = document.getElementById('carouselCounter');
+                    if (counter) {
+                        counter.textContent = `Paper ${closestIdx + 1} de ${slides.length}`;
+                    }
+                }, { passive: true });
+            }
+        }
+
         async function selectDate(date) {
             activeDate = date;
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -961,6 +1238,7 @@
             document.getElementById('searchInput').value = '';
             document.getElementById('searchClear').style.display = 'none';
             document.getElementById('searchStatus').style.display = 'none';
+            document.getElementById('viewToolbar').style.display = 'flex';
             document.getElementById('tabsNav').style.display = 'flex';
 
             const main = document.getElementById('mainGrid');
@@ -973,8 +1251,9 @@
 
             try {
                 const data = await fetchDateData(date);
+                currentLoadedData = data;
                 updateStats(data, date);
-                main.innerHTML = renderTwoColumnContent(data);
+                renderCurrentData();
             } catch (err) {
                 console.error(err);
                 main.innerHTML = `
@@ -1079,8 +1358,8 @@
             document.getElementById('statNews').textContent = matchedNews.length;
             document.getElementById('statUpdated').textContent = `Búsqueda Global`;
 
-            const searchPayload = { papers: matchedPapers, launches: matchedLaunches, news: matchedNews };
-            main.innerHTML = renderTwoColumnContent(searchPayload);
+            currentLoadedData = { papers: matchedPapers, launches: matchedLaunches, news: matchedNews };
+            renderCurrentData();
         }
 
         function renderTabs(dates) {
@@ -1101,6 +1380,7 @@
                 const res = await fetch('data/manifest.json');
                 const manifest = await res.json();
                 allDates = manifest.dates || [];
+                lastManifestUpdatedAt = manifest.updated_at || null;
 
                 if (allDates.length === 0) {
                     document.getElementById('mainGrid').innerHTML = '<p class="loading-box">No hay fechas en el manifiesto.</p>';
@@ -1109,6 +1389,19 @@
 
                 renderTabs(allDates);
                 selectDate(allDates[0]);
+
+                setInterval(async () => {
+                    try {
+                        const r = await fetch('data/manifest.json?_t=' + Date.now());
+                        const m = await r.json();
+                        if (lastManifestUpdatedAt && m.updated_at && m.updated_at !== lastManifestUpdatedAt) {
+                            lastManifestUpdatedAt = m.updated_at;
+                            notifyNewIntel(m.dates && m.dates[0]);
+                            allDates = m.dates || [];
+                            renderTabs(allDates);
+                        }
+                    } catch (e) {}
+                }, 45000);
             } catch (err) {
                 console.error('Init error:', err);
                 document.getElementById('mainGrid').innerHTML = '<p class="loading-box" style="color: var(--coral);">Error conectando al manifest.json.</p>';
