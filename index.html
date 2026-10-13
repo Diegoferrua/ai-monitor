@@ -17,31 +17,40 @@
     </script>
     <style>
         :root, [data-theme="dark"] {
-            --bg: #070b13;
-            --bg-elevated: #0d1424;
-            --bg-card: #11192d;
-            --bg-card-hover: #16213a;
-            --bg-subtle: #18233d;
-            --border: #1e2b46;
+            --bg: #060a12;
+            --bg-elevated: #0b1120;
+            --bg-card: #0f172a;
+            --bg-card-hover: #141f38;
+            --bg-subtle: #17233f;
+            --border: #1e2c48;
             --border-hover: #3b82f6;
             --border-accent: #60a5fa;
             --text-main: #f1f5f9;
             --text-muted: #94a3b8;
             --text-dim: #64748b;
             --accent: #3b82f6;
-            --accent-glow: rgba(59, 130, 246, 0.16);
-            --gold: #f59e0b;
-            --gold-bg: rgba(245, 158, 11, 0.12);
-            --gold-border: rgba(245, 158, 11, 0.35);
-            --teal: #14b8a6;
-            --teal-bg: rgba(20, 184, 166, 0.12);
-            --teal-border: rgba(20, 184, 166, 0.35);
+            --accent-glow: rgba(59, 130, 246, 0.18);
+            
+            /* Tiers Palette */
             --coral: #f43f5e;
             --coral-bg: rgba(244, 63, 94, 0.12);
-            --coral-border: rgba(244, 63, 94, 0.35);
+            --coral-border: rgba(244, 63, 94, 0.4);
+            --coral-glow: rgba(244, 63, 94, 0.25);
+
+            --gold: #f59e0b;
+            --gold-bg: rgba(245, 158, 11, 0.12);
+            --gold-border: rgba(245, 158, 11, 0.4);
+            --gold-glow: rgba(245, 158, 11, 0.22);
+
+            --teal: #14b8a6;
+            --teal-bg: rgba(20, 184, 166, 0.12);
+            --teal-border: rgba(20, 184, 166, 0.4);
+            --teal-glow: rgba(20, 184, 166, 0.22);
+
             --purple: #a855f7;
             --purple-bg: rgba(168, 85, 247, 0.12);
-            --purple-border: rgba(168, 85, 247, 0.35);
+            --purple-border: rgba(168, 85, 247, 0.4);
+            --purple-glow: rgba(168, 85, 247, 0.22);
         }
 
         [data-theme="light"] {
@@ -58,18 +67,26 @@
             --text-dim: #94a3b8;
             --accent: #2563eb;
             --accent-glow: rgba(37, 99, 235, 0.08);
-            --gold: #d97706;
-            --gold-bg: rgba(217, 119, 6, 0.08);
-            --gold-border: rgba(217, 119, 6, 0.28);
-            --teal: #0d9488;
-            --teal-bg: rgba(13, 148, 136, 0.08);
-            --teal-border: rgba(13, 148, 136, 0.28);
+
             --coral: #e11d48;
             --coral-bg: rgba(225, 29, 72, 0.08);
-            --coral-border: rgba(225, 29, 72, 0.28);
+            --coral-border: rgba(225, 29, 72, 0.3);
+            --coral-glow: rgba(225, 29, 72, 0.15);
+
+            --gold: #d97706;
+            --gold-bg: rgba(217, 119, 6, 0.08);
+            --gold-border: rgba(217, 119, 6, 0.3);
+            --gold-glow: rgba(217, 119, 6, 0.15);
+
+            --teal: #0d9488;
+            --teal-bg: rgba(13, 148, 136, 0.08);
+            --teal-border: rgba(13, 148, 136, 0.3);
+            --teal-glow: rgba(13, 148, 136, 0.15);
+
             --purple: #9333ea;
             --purple-bg: rgba(147, 51, 234, 0.08);
-            --purple-border: rgba(147, 51, 234, 0.28);
+            --purple-border: rgba(147, 51, 234, 0.3);
+            --purple-glow: rgba(147, 51, 234, 0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -148,7 +165,7 @@
         .action-btn.active-notif { color: var(--teal); border-color: var(--teal-border); background: var(--teal-bg); }
 
         /* Hero */
-        .hero { margin-bottom: 28px; }
+        .hero { margin-bottom: 24px; }
 
         .kicker {
             display: inline-block;
@@ -228,7 +245,79 @@
         .stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); font-weight: 600; }
         .stat-stamp { display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--border); padding-left: 20px; }
 
-        /* Global Search Bar */
+        /* ========================================================
+           KNOWLEDGE GRAPH / NUBE DE PUNTOS INTERACTIVA
+           ======================================================== */
+        .graph-section {
+            background: radial-gradient(circle at 50% 30%, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .graph-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .graph-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+        }
+
+        .graph-caption {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        .canvas-wrap {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            overflow: hidden;
+        }
+
+        #graphCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: crosshair;
+        }
+
+        .graph-tooltip {
+            position: absolute;
+            pointer-events: none;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-accent);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: var(--text-main);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transform: translate(-50%, -120%);
+            white-space: nowrap;
+            display: none;
+            z-index: 10;
+        }
+
+        /* Search Container */
         .search-container { margin-bottom: 24px; }
         .search-box { position: relative; display: flex; align-items: center; }
         .search-icon { position: absolute; left: 16px; font-size: 16px; color: var(--text-dim); pointer-events: none; }
@@ -305,17 +394,8 @@
             color: var(--text-dim);
         }
 
-        .legend-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .legend-dot {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-        }
+        .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 9px; height: 9px; border-radius: 50%; }
         .dot-coral { background: var(--coral); box-shadow: 0 0 6px var(--coral); }
         .dot-gold { background: var(--gold); box-shadow: 0 0 6px var(--gold); }
         .dot-teal { background: var(--teal); box-shadow: 0 0 6px var(--teal); }
@@ -354,7 +434,7 @@
             box-shadow: 0 2px 10px var(--accent-glow);
         }
 
-        /* Two Column Layout (Main Papers + Sidebar) */
+        /* Two Column Layout */
         .layout-cols {
             display: grid;
             grid-template-columns: 1fr 360px;
@@ -368,13 +448,13 @@
         }
 
         /* ========================================================
-           BENTO COLLAGE (ASYMMETRIC DIVERSE SIZES)
+           BENTO COLLAGE (ORGANIC GRAPH-LIKE ASYMMETRIC GRID)
            ======================================================== */
         .bento-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
             grid-auto-flow: dense;
-            gap: 18px;
+            gap: 20px;
             margin-bottom: 32px;
         }
 
@@ -391,16 +471,28 @@
             overflow: hidden;
         }
 
-        .bento-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+            transition: background 0.2s ease;
         }
 
-        /* Asymmetric Size Variations */
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Dynamic Proportions */
         .bento-card.size-2x2 {
             grid-column: span 2;
-            min-height: 480px;
+            min-height: 490px;
         }
+        .bento-card.size-2x2 .paper-title { font-size: 21px; }
 
         .bento-card.size-2x1 {
             grid-column: span 2;
@@ -408,11 +500,11 @@
         }
 
         .bento-card.size-1x2 {
-            min-height: 490px;
+            min-height: 500px;
         }
 
         .bento-card.size-1x1 {
-            min-height: 410px;
+            min-height: 420px;
         }
 
         .bento-card.size-compact {
@@ -427,30 +519,34 @@
         /* Color Differentiation by Importance */
         .tier-critical {
             border-color: var(--coral-border);
-            background: linear-gradient(155deg, var(--coral-bg) 0%, var(--bg-card) 45%);
-            box-shadow: 0 4px 20px rgba(244, 63, 94, 0.08);
+            background: linear-gradient(155deg, var(--coral-bg) 0%, var(--bg-card) 55%);
+            box-shadow: 0 4px 20px var(--coral-glow);
         }
+        .tier-critical::before { background: var(--coral); }
         .tier-critical:hover { border-color: var(--coral); }
 
         .tier-high {
             border-color: var(--gold-border);
-            background: linear-gradient(155deg, var(--gold-bg) 0%, var(--bg-card) 45%);
-            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.08);
+            background: linear-gradient(155deg, var(--gold-bg) 0%, var(--bg-card) 55%);
+            box-shadow: 0 4px 20px var(--gold-glow);
         }
+        .tier-high::before { background: var(--gold); }
         .tier-high:hover { border-color: var(--gold); }
 
         .tier-medium {
             border-color: var(--teal-border);
-            background: linear-gradient(155deg, var(--teal-bg) 0%, var(--bg-card) 45%);
-            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.08);
+            background: linear-gradient(155deg, var(--teal-bg) 0%, var(--bg-card) 55%);
+            box-shadow: 0 4px 20px var(--teal-glow);
         }
+        .tier-medium::before { background: var(--teal); }
         .tier-medium:hover { border-color: var(--teal); }
 
         .tier-standard {
             border-color: var(--purple-border);
-            background: linear-gradient(155deg, var(--purple-bg) 0%, var(--bg-card) 45%);
-            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08);
+            background: linear-gradient(155deg, var(--purple-bg) 0%, var(--bg-card) 55%);
+            box-shadow: 0 4px 20px var(--purple-glow);
         }
+        .tier-standard::before { background: var(--purple); }
         .tier-standard:hover { border-color: var(--purple); }
 
         /* Card Elements */
@@ -483,6 +579,13 @@
         .tag-category { background: var(--accent-glow); color: var(--accent); border: 1px solid rgba(59, 130, 246, 0.25); }
         .tag-date { background: var(--bg-subtle); color: var(--text-dim); border: 1px solid var(--border); }
 
+        .node-pin {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+        }
+
         .paper-title {
             font-size: 17px;
             font-weight: 700;
@@ -490,8 +593,6 @@
             margin-bottom: 8px;
             color: var(--text-main);
         }
-
-        .size-2x2 .paper-title { font-size: 22px; line-height: 1.3; }
 
         .paper-author {
             font-size: 12px;
@@ -583,7 +684,7 @@
         .link-pill.primary { background: var(--accent); border-color: var(--accent); color: #ffffff; }
 
         /* ========================================================
-           CAROUSEL SWIPER VIEW
+           CAROUSEL SWIPER VIEW (COLOR-ENHANCED TIERS)
            ======================================================== */
         .carousel-container {
             display: none;
@@ -596,13 +697,42 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .carousel-indicator-wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
         }
 
         .carousel-indicator {
             font-family: 'JetBrains Mono', monospace;
             font-size: 13px;
-            color: var(--text-muted);
+            color: var(--text-main);
             font-weight: 600;
+        }
+
+        .carousel-dot-strip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .slide-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            opacity: 0.5;
+        }
+
+        .slide-dot.active {
+            transform: scale(1.35);
+            opacity: 1;
+            box-shadow: 0 0 8px currentColor;
         }
 
         .carousel-controls {
@@ -629,15 +759,16 @@
             border-color: var(--accent);
             background: var(--accent-glow);
             color: var(--accent);
+            transform: scale(1.05);
         }
 
         .carousel-track {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
-            padding: 6px 4px 20px;
+            padding: 8px 4px 24px;
             scrollbar-width: none;
         }
 
@@ -645,11 +776,13 @@
 
         .carousel-slide {
             flex: 0 0 100%;
-            max-width: 640px;
+            max-width: 660px;
             scroll-snap-align: center;
+            min-height: 480px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        @media (max-width: 680px) {
+        @media (max-width: 700px) {
             .carousel-slide { max-width: 100%; }
         }
 
@@ -738,11 +871,11 @@
         <section class="hero">
             <span class="kicker">RESEARCH & FRONTIER LABS · INTEL DIARIO</span>
             <h1 class="disp">La frontera de AI, antes de tu primer café.</h1>
-            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, estructurados en formato Bento collage interactivo y carrusel deslizable.</p>
+            <p>Monitoreo desatendido de papers de arXiv, lanzamientos de laboratorios frontier y movimientos clave de la industria, estructurados en una constelación de grafos y carrusel deslizable con acentos cromáticos.</p>
             <div class="pills">
                 <span class="pill live"><span class="live-dot"></span> Pipeline Activo · 7:30 AM Diario</span>
-                <span class="pill">Collage Asimétrico & Carrusel</span>
-                <span class="pill">Colores por Importancia</span>
+                <span class="pill">Red de Grafos & Nube de Puntos</span>
+                <span class="pill">Carrusel con Paleta Cromática</span>
             </div>
         </section>
 
@@ -766,6 +899,22 @@
             </div>
         </section>
 
+        <!-- Interactive Constellation Graph Section -->
+        <section class="graph-section" id="graphSection">
+            <div class="graph-header">
+                <div class="graph-title disp">
+                    <span>🕸️</span> Constelación de Nodos · Red de Research del Día
+                </div>
+                <div class="graph-caption">
+                    Puntos coloreados por impacto · Pasa el cursor o haz clic para enfocar
+                </div>
+            </div>
+            <div class="canvas-wrap" id="canvasWrap">
+                <canvas id="graphCanvas"></canvas>
+                <div id="graphTooltip" class="graph-tooltip"></div>
+            </div>
+        </section>
+
         <!-- Global Real-Time Search Bar -->
         <section class="search-container">
             <div class="search-box">
@@ -783,17 +932,17 @@
         <div class="toolbar" id="viewToolbar">
             <div class="view-switcher">
                 <button id="btnViewCollage" class="view-btn active" type="button">
-                    <span>⊞</span> Vista Collage
+                    <span>⊞</span> Vista Collage (Grafo)
                 </button>
                 <button id="btnViewCarousel" class="view-btn" type="button">
-                    <span>⇄</span> Vista Carrusel
+                    <span>⇄</span> Vista Carrusel (Swipe)
                 </button>
             </div>
 
             <div class="legend-bar">
                 <span class="legend-item"><span class="legend-dot dot-coral"></span> Crítico / Breakthrough</span>
                 <span class="legend-item"><span class="legend-dot dot-gold"></span> Alto Impacto</span>
-                <span class="legend-item"><span class="legend-dot dot-teal"></span> Impacto Medio</span>
+                <span class="legend-item"><span class="legend-dot dot-teal"></span> Visión & Agentes</span>
                 <span class="legend-item"><span class="legend-dot dot-purple"></span> Infraestructura</span>
             </div>
         </div>
@@ -849,6 +998,7 @@
             document.documentElement.setAttribute('data-theme', next);
             localStorage.setItem('ai-monitor-theme', next);
             updateThemeUI(next);
+            drawGraph(); // Redraw canvas on theme change
         };
 
         // --- View Switcher Logic (Collage vs Carousel) ---
@@ -860,9 +1010,7 @@
             currentViewMode = 'collage';
             btnViewCollage.classList.add('active');
             btnViewCarousel.classList.remove('active');
-            if (currentLoadedData) {
-                renderCurrentData();
-            }
+            if (currentLoadedData) renderCurrentData();
         };
 
         btnViewCarousel.onclick = () => {
@@ -870,19 +1018,14 @@
             currentViewMode = 'carousel';
             btnViewCarousel.classList.add('active');
             btnViewCollage.classList.remove('active');
-            if (currentLoadedData) {
-                renderCurrentData();
-            }
+            if (currentLoadedData) renderCurrentData();
         };
 
         // Keyboard navigation for Carousel
         window.addEventListener('keydown', (e) => {
             if (currentViewMode !== 'carousel') return;
-            if (e.key === 'ArrowRight') {
-                moveCarousel(1);
-            } else if (e.key === 'ArrowLeft') {
-                moveCarousel(-1);
-            }
+            if (e.key === 'ArrowRight') moveCarousel(1);
+            if (e.key === 'ArrowLeft') moveCarousel(-1);
         });
 
         // --- Web Push Notification Logic ---
@@ -974,18 +1117,21 @@
             document.getElementById('statUpdated').textContent = `${date} · 07:30 AM`;
         }
 
-        // --- Importance & Size Classifier ---
+        // --- Importance & Proportion Classifier ---
         function classifyPaper(paper, index, category, total) {
             const titleLower = (paper.title || '').toLowerCase();
             const descLower = (paper.description || '').toLowerCase();
 
-            // 1. Critical / Breakthrough
+            // 1. Critical / Breakthrough (Fiery Coral)
             if (index === 0 && (category === 'LLMs' || category === 'Agents & Reasoning')) {
                 return {
                     tierClass: 'tier-critical',
                     sizeClass: 'size-2x2', // Hero Big Square
                     tagClass: 'tag-critical',
-                    tagLabel: '🔥 SPOTLIGHT FRONTIER'
+                    tagLabel: '🔥 SPOTLIGHT FRONTIER',
+                    color: '#f43f5e',
+                    glow: 'rgba(244, 63, 94, 0.45)',
+                    radius: 12
                 };
             }
             if (titleLower.includes('breakthrough') || titleLower.includes('reasoning') || descLower.includes('redefine') || descLower.includes('10x')) {
@@ -993,47 +1139,61 @@
                     tierClass: 'tier-critical',
                     sizeClass: 'size-2x1', // Wide Rectangle
                     tagClass: 'tag-critical',
-                    tagLabel: '⚡ BREAKTHROUGH'
+                    tagLabel: '⚡ BREAKTHROUGH',
+                    color: '#f43f5e',
+                    glow: 'rgba(244, 63, 94, 0.45)',
+                    radius: 11
                 };
             }
 
-            // 2. High Impact
+            // 2. High Impact (Golden Amber)
             if (category === 'LLMs' || category === 'Agents & Reasoning') {
                 return {
                     tierClass: 'tier-high',
                     sizeClass: index % 2 === 1 ? 'size-1x2' : 'size-1x1', // Tall or Square
                     tagClass: 'tag-high',
-                    tagLabel: '⭐ ALTO IMPACTO'
+                    tagLabel: '⭐ ALTO IMPACTO',
+                    color: '#f59e0b',
+                    glow: 'rgba(245, 158, 11, 0.4)',
+                    radius: 9
                 };
             }
 
-            // 3. Medium Impact
+            // 3. Medium Impact (Cyan / Teal)
             if (category === 'Vision/Multimodal') {
                 return {
                     tierClass: 'tier-medium',
                     sizeClass: 'size-1x1',
                     tagClass: 'tag-medium',
-                    tagLabel: '👁️ VISIÓN & MULTIMODAL'
+                    tagLabel: '👁️ VISIÓN & MULTIMODAL',
+                    color: '#14b8a6',
+                    glow: 'rgba(20, 184, 166, 0.4)',
+                    radius: 8
                 };
             }
 
-            // 4. Standard / Infrastructure
+            // 4. Standard / Infrastructure (Purple / Indigo)
             return {
                 tierClass: 'tier-standard',
                 sizeClass: 'size-compact',
                 tagClass: 'tag-standard',
-                tagLabel: '⚙️ INFRAESTRUCTURA'
+                tagLabel: '⚙️ INFRAESTRUCTURA',
+                color: '#a855f7',
+                glow: 'rgba(168, 85, 247, 0.35)',
+                radius: 7
             };
         }
 
-        function createPaperCardHTML(p, tierInfo, isCarousel = false) {
+        function createPaperCardHTML(p, tierInfo, isCarousel = false, overallIdx = 0) {
             const slideClass = isCarousel ? 'carousel-slide' : '';
+            const nodeId = `node-card-${overallIdx}`;
             return `
-            <article class="bento-card ${tierInfo.tierClass} ${isCarousel ? '' : tierInfo.sizeClass} ${slideClass}">
+            <article id="${nodeId}" class="bento-card ${tierInfo.tierClass} ${isCarousel ? '' : tierInfo.sizeClass} ${slideClass}" data-idx="${overallIdx}">
                 <div class="card-top">
                     <div class="card-tags">
                         <span class="tag ${tierInfo.tagClass}">${tierInfo.tagLabel}</span>
                         <span class="tag tag-category">${escapeHtml(p._category)}</span>
+                        <span class="node-pin mono">● N-${String(overallIdx + 1).padStart(2, '0')}</span>
                         ${p._date ? `<span class="tag tag-date mono">📅 ${escapeHtml(p._date)}</span>` : ''}
                     </div>
                     <h3 class="paper-title">${escapeHtml(p.title)}</h3>
@@ -1069,7 +1229,6 @@
 
         // --- Render Functions ---
         function renderContent(data) {
-            // Flatten papers
             const allPapersWithCat = [];
             if (data.papers && Object.keys(data.papers).length > 0) {
                 for (const cat of Object.keys(data.papers)) {
@@ -1085,20 +1244,28 @@
 
             if (allPapersWithCat.length > 0) {
                 if (currentViewMode === 'collage') {
-                    // Bento Collage Mode
+                    // Bento Collage Asymmetric Grid
                     leftHtml += `<div class="bento-grid">`;
                     allPapersWithCat.forEach((p, overallIdx) => {
                         const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
-                        leftHtml += createPaperCardHTML(p, tier, false);
+                        leftHtml += createPaperCardHTML(p, tier, false, overallIdx);
                     });
                     leftHtml += `</div>`;
                 } else {
-                    // Carousel Swipe Mode
+                    // Carousel Swipe View
                     currentCarouselIndex = 0;
                     leftHtml += `
                     <div class="carousel-container" style="display: block;">
                         <div class="carousel-top-bar">
-                            <span class="carousel-indicator" id="carouselCounter">Paper 1 de ${allPapersWithCat.length}</span>
+                            <div class="carousel-indicator-wrap">
+                                <span class="carousel-indicator" id="carouselCounter">Paper 1 de ${allPapersWithCat.length}</span>
+                                <div class="carousel-dot-strip" id="carouselDots">
+                                    ${allPapersWithCat.map((p, idx) => {
+                                        const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
+                                        return `<span class="slide-dot ${idx === 0 ? 'active' : ''}" style="background-color: ${tier.color}; color: ${tier.color};" onclick="goToCarouselSlide(${idx})" title="Ir a Paper ${idx + 1}"></span>`;
+                                    }).join('')}
+                                </div>
+                            </div>
                             <div class="carousel-controls">
                                 <button class="carousel-arrow" onclick="moveCarousel(-1)" title="Anterior (←)">‹</button>
                                 <button class="carousel-arrow" onclick="moveCarousel(1)" title="Siguiente (→)">›</button>
@@ -1108,7 +1275,7 @@
                     `;
                     allPapersWithCat.forEach((p, overallIdx) => {
                         const tier = classifyPaper(p, p._index, p._category, allPapersWithCat.length);
-                        leftHtml += createPaperCardHTML(p, tier, true);
+                        leftHtml += createPaperCardHTML(p, tier, true, overallIdx);
                     });
                     leftHtml += `
                         </div>
@@ -1176,6 +1343,28 @@
             return `<div class="layout-cols">${leftHtml}${rightHtml}</div>`;
         }
 
+        function updateCarouselIndicators(idx) {
+            const counter = document.getElementById('carouselCounter');
+            const dots = document.querySelectorAll('.slide-dot');
+            if (counter) {
+                counter.textContent = `Paper ${idx + 1} de ${dots.length}`;
+            }
+            dots.forEach((d, i) => {
+                d.classList.toggle('active', i === idx);
+            });
+        }
+
+        function goToCarouselSlide(idx) {
+            const track = document.getElementById('carouselTrack');
+            if (!track) return;
+            const slides = track.querySelectorAll('.carousel-slide');
+            if (slides[idx]) {
+                currentCarouselIndex = idx;
+                slides[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                updateCarouselIndicators(idx);
+            }
+        }
+
         function moveCarousel(direction) {
             const track = document.getElementById('carouselTrack');
             if (!track) return;
@@ -1187,11 +1376,7 @@
             if (currentCarouselIndex >= slides.length) currentCarouselIndex = 0;
 
             slides[currentCarouselIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            
-            const counter = document.getElementById('carouselCounter');
-            if (counter) {
-                counter.textContent = `Paper ${currentCarouselIndex + 1} de ${slides.length}`;
-            }
+            updateCarouselIndicators(currentCarouselIndex);
         }
 
         function renderCurrentData() {
@@ -1199,7 +1384,7 @@
             const main = document.getElementById('mainGrid');
             main.innerHTML = renderContent(currentLoadedData);
 
-            // Add scroll listener to track for counter update
+            // Re-bind carousel scroll listener
             const track = document.getElementById('carouselTrack');
             if (track) {
                 track.addEventListener('scroll', () => {
@@ -1221,14 +1406,205 @@
                     });
 
                     currentCarouselIndex = closestIdx;
-                    const counter = document.getElementById('carouselCounter');
-                    if (counter) {
-                        counter.textContent = `Paper ${closestIdx + 1} de ${slides.length}`;
-                    }
+                    updateCarouselIndicators(closestIdx);
                 }, { passive: true });
             }
+
+            // Sync the interactive graph canvas with the current date's papers
+            initGraphNodes();
         }
 
+        // ========================================================
+        // LIVE KNOWLEDGE GRAPH / CONSTELLATION CANVAS
+        // ========================================================
+        let graphNodes = [];
+        let hoveredNode = null;
+        let animationFrameId = null;
+
+        function initGraphNodes() {
+            const canvas = document.getElementById('graphCanvas');
+            const wrap = document.getElementById('canvasWrap');
+            if (!canvas || !wrap || !currentLoadedData) return;
+
+            // Set high DPI canvas size
+            const rect = wrap.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            const ctx = canvas.getContext('2d');
+            ctx.scale(dpr, dpr);
+
+            const allPapers = [];
+            if (currentLoadedData.papers) {
+                for (const cat of Object.keys(currentLoadedData.papers)) {
+                    (currentLoadedData.papers[cat] || []).forEach((p, idx) => {
+                        allPapers.push({ ...p, _category: cat, _index: idx });
+                    });
+                }
+            }
+
+            const width = rect.width;
+            const height = rect.height;
+
+            // Distribute organically in a constellation
+            graphNodes = allPapers.map((p, idx) => {
+                const tier = classifyPaper(p, p._index, p._category, allPapers.length);
+                const angle = (idx / allPapers.length) * Math.PI * 2 + (Math.random() * 0.4 - 0.2);
+                const radius = Math.min(width, height) * 0.35 * (0.4 + Math.random() * 0.6);
+                
+                return {
+                    x: width / 2 + Math.cos(angle) * radius,
+                    y: height / 2 + Math.sin(angle) * radius * 0.75,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    baseRadius: tier.radius,
+                    color: tier.color,
+                    glow: tier.glow,
+                    title: p.title,
+                    category: p._category,
+                    idx: idx
+                };
+            });
+
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            animateGraph();
+        }
+
+        function animateGraph() {
+            const canvas = document.getElementById('graphCanvas');
+            const wrap = document.getElementById('canvasWrap');
+            if (!canvas || !wrap) return;
+
+            const ctx = canvas.getContext('2d');
+            const width = wrap.getBoundingClientRect().width;
+            const height = wrap.getBoundingClientRect().height;
+
+            ctx.clearRect(0, 0, width, height);
+
+            // Update particle drift
+            graphNodes.forEach(node => {
+                node.x += node.vx;
+                node.y += node.vy;
+
+                if (node.x < 20 || node.x > width - 20) node.vx *= -1;
+                if (node.y < 20 || node.y > height - 20) node.vy *= -1;
+            });
+
+            // Draw constellation lines between nearby nodes
+            for (let i = 0; i < graphNodes.length; i++) {
+                for (let j = i + 1; j < graphNodes.length; j++) {
+                    const a = graphNodes[i];
+                    const b = graphNodes[j];
+                    const dist = Math.hypot(a.x - b.x, a.y - b.y);
+
+                    if (dist < 180) {
+                        const alpha = (1 - dist / 180) * (a.category === b.category ? 0.35 : 0.12);
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y);
+                        ctx.lineTo(b.x, b.y);
+                        ctx.strokeStyle = a.category === b.category ? a.color : 'rgba(255, 255, 255, 0.2)';
+                        ctx.globalAlpha = alpha;
+                        ctx.lineWidth = a.category === b.category ? 1.2 : 0.7;
+                        ctx.stroke();
+                        ctx.globalAlpha = 1.0;
+                    }
+                }
+            }
+
+            // Draw nodes
+            graphNodes.forEach(node => {
+                const isHovered = hoveredNode === node;
+                const r = isHovered ? node.baseRadius * 1.4 : node.baseRadius;
+
+                // Ambient glow
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, r * 2.2, 0, Math.PI * 2);
+                ctx.fillStyle = node.glow;
+                ctx.fill();
+
+                // Core Node
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = node.color;
+                ctx.shadowColor = node.color;
+                ctx.shadowBlur = isHovered ? 15 : 8;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+
+                // Center highlight
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, r * 0.35, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffff';
+                ctx.fill();
+
+                // Small node label
+                ctx.font = '9px JetBrains Mono';
+                ctx.fillStyle = isHovered ? '#ffffff' : 'rgba(241, 245, 249, 0.6)';
+                ctx.fillText(`N-${String(node.idx + 1).padStart(2, '0')}`, node.x + r + 4, node.y + 3);
+            });
+
+            animationFrameId = requestAnimationFrame(animateGraph);
+        }
+
+        // Canvas mouse interactivity
+        const canvasWrap = document.getElementById('canvasWrap');
+        const graphCanvas = document.getElementById('graphCanvas');
+        const graphTooltip = document.getElementById('graphTooltip');
+
+        graphCanvas.addEventListener('mousemove', (e) => {
+            const rect = graphCanvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            hoveredNode = null;
+            for (const node of graphNodes) {
+                if (Math.hypot(node.x - mouseX, node.y - mouseY) < node.baseRadius * 2.5) {
+                    hoveredNode = node;
+                    break;
+                }
+            }
+
+            if (hoveredNode) {
+                graphCanvas.style.cursor = 'pointer';
+                graphTooltip.style.display = 'block';
+                graphTooltip.style.left = `${hoveredNode.x}px`;
+                graphTooltip.style.top = `${hoveredNode.y}px`;
+                graphTooltip.innerHTML = `<strong>N-${String(hoveredNode.idx + 1).padStart(2, '0')} · ${hoveredNode.category}</strong><br>${escapeHtml(hoveredNode.title).slice(0, 55)}...<br><span style="color: var(--accent); font-size: 11px;">Haz clic para enfocar</span>`;
+            } else {
+                graphCanvas.style.cursor = 'crosshair';
+                graphTooltip.style.display = 'none';
+            }
+        });
+
+        graphCanvas.addEventListener('mouseleave', () => {
+            hoveredNode = null;
+            graphTooltip.style.display = 'none';
+        });
+
+        graphCanvas.addEventListener('click', () => {
+            if (hoveredNode) {
+                if (currentViewMode === 'carousel') {
+                    goToCarouselSlide(hoveredNode.idx);
+                } else {
+                    const card = document.getElementById(`node-card-${hoveredNode.idx}`);
+                    if (card) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        card.style.transform = 'scale(1.03)';
+                        card.style.borderColor = 'var(--border-accent)';
+                        setTimeout(() => {
+                            card.style.transform = '';
+                            card.style.borderColor = '';
+                        }, 1200);
+                    }
+                }
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            initGraphNodes();
+        });
+
+        // --- Date Selection & Ingestion ---
         async function selectDate(date) {
             activeDate = date;
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -1239,6 +1615,7 @@
             document.getElementById('searchClear').style.display = 'none';
             document.getElementById('searchStatus').style.display = 'none';
             document.getElementById('viewToolbar').style.display = 'flex';
+            document.getElementById('graphSection').style.display = 'block';
             document.getElementById('tabsNav').style.display = 'flex';
 
             const main = document.getElementById('mainGrid');
@@ -1275,6 +1652,7 @@
             searchInput.value = '';
             searchClear.style.display = 'none';
             searchStatus.style.display = 'none';
+            document.getElementById('graphSection').style.display = 'block';
             if (activeDate) selectDate(activeDate);
         };
 
@@ -1288,6 +1666,7 @@
             clearTimeout(searchDebounce);
             if (!query) {
                 searchStatus.style.display = 'none';
+                document.getElementById('graphSection').style.display = 'block';
                 if (activeDate) selectDate(activeDate);
                 return;
             }
@@ -1350,6 +1729,7 @@
             });
 
             document.getElementById('tabsNav').style.display = 'none';
+            document.getElementById('graphSection').style.display = 'none';
             searchStatus.style.display = 'flex';
             searchResultCount.textContent = `${totalMatches} resultado(s) para "${query}"`;
 
