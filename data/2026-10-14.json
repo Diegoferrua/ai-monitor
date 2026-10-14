@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-14",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning",
+        "author": "Minghao Luo et al.",
+        "description": "Introduce un esquema de decodificación contrastiva libre de entrenamiento para modelos de razonamiento, suprimiendo tokens vacilantes y reduciendo la longitud de la cadena de pensamiento sin perder precisión deductiva.",
+        "analogy": "🎯 Como podar las ramas muertas de un árbol de pensamientos: en vez de permitir que el modelo titubee dando vueltas en círculos sobre dudas evidentes, contrasta hipótesis y corta los rodeos innecesarios sin tener que reentrenarlo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18862",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Read the Room Before Your Model Generates",
+        "author": "Muyao Kong et al.",
+        "description": "Propone calibrar dinámicamente la temperatura de muestreo evaluando la complejidad del contexto previo a la generación, evitando la rigidez de temperaturas heurísticas globales en tareas abiertas vs. cerradas.",
+        "analogy": "🌡️ Como un orador que mide la atmósfera de la sala antes de hablar: modula su tono con máxima precisión técnica cuando le exigen rigor matemático, y suelta la creatividad cuando el ambiente invita a explorar ideas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18820",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Two Clocks: Why Larger Rollout Batches Learn Slower but Fail on Schedule in Reinforcement Learning with Verifiable Rewards",
+        "author": "Yuante Li et al.",
+        "description": "Descubre una dinámica de doble escala temporal en RLVR (aprendizaje por refuerzo con recompensas verificables): el aumento masivo del lote de rollout ralentiza el aprendizaje de políticas y desencadena colapsos programados.",
+        "analogy": "⏱️ Como dos relojes que marchan desfasados en una expedición: mientras la exploración avanza despacio acumulando respuestas tentativas, la inestabilidad de gradiente llega puntual al límite de capacidad, demostrando por qué inflar los lotes no siempre acelera el razonamiento.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18853",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "OmniCompass: A Holistic Benchmark for Omni-Modal Video Grounding and Understanding",
+        "author": "Xuyang Liu et al.",
+        "description": "Presenta un benchmark integral para evaluar modelos multimodales en comprensión profunda de video, alineación audiovisual de grano fino y localización espacio-temporal en escenarios dinámicos del mundo real.",
+        "analogy": "🧭 Como una prueba de orientación para un copiloto de rally: no solo mira por la ventanilla, sino que procesa el sonido del motor, consulta la hoja de ruta temporal y coordina cada curva sin perder el hilo de la carrera.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18829",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts",
+        "author": "Wenxuan Guo et al.",
+        "description": "Desarrolla un marco de bucle cerrado que permite a políticas robóticas generalistas aprender y mejorar de forma continua a partir de despliegues reales, aprovechando tanto éxitos como desvíos subóptimos.",
+        "analogy": "🔄 Como un atleta de élite que graba cada uno de sus entrenamientos: analiza no solo sus mejores saltos sino también los tropiezos leves para pulir el equilibrio corporal sin memorizar vicios mecánicos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18873",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Dog-Breed Text-to-image Flow Matching from Pretraining to Fine-Tuning on 4 Consumer GPUs",
+        "author": "Reyhaneh Esmailizadeh et al.",
+        "description": "Demuestra que es posible entrenar y ajustar modelos de difusión mediante flow-matching de alta fidelidad desde cero utilizando únicamente 4 GPUs de consumo doméstico gracias a trayectorias de muestreo rectificadas.",
+        "analogy": "🏎️ Como ensamblar un bólido de carreras en el garage de tu casa usando herramientas estándar: demuestra que con matemática rigurosa y trayectorias óptimas de flujo, no requieres un clúster corporativo para generar arte fotorrealista.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18870",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Tev: Scaling Long-Horizon Agentic Environments with Dense Progress Rewards",
+        "author": "Wenbo Hu et al.",
+        "description": "Crea entornos escalables para agentes autónomos que operan durante horas o días en tareas de alto valor económico, superando la escasez de recompensas mediante puntos de control de progreso denso y verificable.",
+        "analogy": "🗺️ Como una carrera de aventura con puestos de control intermedios: en vez de premiar al explorador únicamente si alcanza la cima tras tres días, le marcan balizas claras para que el agente jamás pierda el rumbo en expediciones complejas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18868",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Hybrid Reasoning Agents",
+        "author": "Jiaru Zou et al.",
+        "description": "Propone una arquitectura híbrida donde los agentes realizan computaciones internas rápidas y densas en espacios latentes continuos, interactuando con el exterior y sus herramientas a través de lenguaje natural estructurado.",
+        "analogy": "♟️ Como un gran maestro de ajedrez que calcula en silencio cientos de combinaciones mentales en milisegundos, pero al mover la pieza anuncia verbalmente su jugada con absoluta claridad reglamentaria.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18861",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards",
+        "author": "Xin Gao et al.",
+        "description": "Genera artefactos visuales complejos (presentaciones, infografías, paneles) directamente en código ejecutable desacoplando las recompensas de compilación sintáctica de la evaluación estética multimodal.",
+        "analogy": "🎨 Como un programador web trabajando codo a codo con un director de arte: uno asegura que el código compile limpio y sin errores, mientras el otro ajusta la armonía visual y tipográfica hasta lograr una pieza impecable.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18860",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+        "author": "Yangchengyu Zhou et al.",
+        "description": "Estrategia de asignación de precisión consciente del presupuesto de memoria para compresión del KV Cache en LLMs, asignando bits altos a cabezas de atención críticas y bits ultra bajos a contextos redundantes.",
+        "analogy": "💼 Como un presupuesto de viaje de negocios inteligente: inviertes en habitaciones ejecutivas para las reuniones decisivas y ahorras al máximo en traslados secundarios, exprimiendo cada gigabyte de memoria VRAM.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18642",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SP^2ec: Adaptive Self-Speculative Decoding for Vision-Language Models",
+        "author": "Yuqi Huang et al.",
+        "description": "Acelera la inferencia en modelos multimodales mediante decodificación auto-especulativa adaptativa sin necesidad de entrenar un modelo borrador auxiliar, adaptándose a la heterogeneidad de tokens visuales.",
+        "analogy": "⚡ Como un comentarista deportivo de reflejos instantáneos: anticipa y pronuncia mentalmente la jugada previsible en tiempo real, confirmando con la transmisión visual solo los giros imprevistos para no frenar el relato.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18735",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Depth Memory",
+        "author": "David González-Martínez et al.",
+        "description": "Sustituye las conexiones residuales aditivas convencionales por memorias de profundidad estructuradas, mitigando la saturación de gradientes y el colapso representacional en redes de cientos de capas.",
+        "analogy": "📚 Como un archivador con pestañas independientes en vez de fotocopiar notas sobre la misma hoja: permite que las capas profundas consulten información prístina de etapas tempranas sin emborronar el contenido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.18809",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Gemini 4 Argon & Argon for Robotics",
+      "description": "Presentación oficial de la familia Gemini 4 Argon y su versión especializada para robótica. Integra capacidades avanzadas de deducción matemática y planificación de control motor continuo de baja latencia (sub-100ms) para robots de servicio.",
+      "links": [
+        {
+          "text": "DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/gemini-4-argon/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "GPT-6.1 Sol & OpenAI Daybreak Defense Platform",
+      "description": "Despliegue de GPT-6.1 Sol diseñado para ejecución ligera y reducción de hasta 76x en costes de inferencia web, junto al lanzamiento de OpenAI Daybreak para acelerar la detección y contención automatizada de amenazas de ciberseguridad.",
+      "links": [
+        {
+          "text": "OpenAI News",
+          "url": "https://openai.com/index/gpt-6-1-sol-daybreak/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Cyber Verification Program (CVP) & Frontier Science Lab Expansion",
+      "description": "Ampliación del programa de verificación de ciberseguridad con garantías formales de interpretabilidad en Claude, además de nuevas herramientas experimentales aplicadas al descubrimiento y optimización computacional de enzimas biológicas.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/cyber-verification-program",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Chameleon 2 & Open Dynamic World Models (ODWM)",
+      "description": "Liberación del modelo multimodal autorregresivo unificado Chameleon 2 junto al entorno de investigación ODWM, facilitando a agentes interactivos simular físicas continuas y predecir dinámicas espaciales 3D en tiempo real.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/research/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "European Commission",
+      "headline": "La Unión Europea publica directrices vinculantes sobre trazabilidad en IA agentica (EU Agentic AI Framework), exigiendo registros inmutables de auditoría en sistemas autónomos de producción industrial y financiera.",
+      "links": [
+        {
+          "text": "EU Press",
+          "url": "https://ec.europa.eu/commission/presscorner/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "NVIDIA & TSMC",
+      "headline": "NVIDIA y TSMC inician la producción piloto en el nodo de 1.6nm con empaquetado 3D CoWoS-L para abastecer la próxima generación de centros de datos de inferencia masiva y razonamiento continuo.",
+      "links": [
+        {
+          "text": "TechPulse",
+          "url": "https://nvidianews.nvidia.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Nordic Media Group / TV4",
+      "headline": "La emisora escandinava TV4 pospone hasta 2027 su producción estelar tras un fallo crítico en un agente de edición automatizada que borró metraje original irreversible durante una fase de postproducción con IA.",
+      "links": [
+        {
+          "text": "Sweden Herald",
+          "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Global Enterprise AI Consortium",
+      "headline": "Más de 40 multinacionales del Fortune 100 formalizan el consorcio GEAIC para regular cuotas de gasto computacional y auditorías de memoria persistente en agentes autónomos corporativos.",
+      "links": [
+        {
+          "text": "Reuters Technology",
+          "url": "https://www.reuters.com/technology/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
