@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-16",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "When More Thinking Hurts: Overthinking in LLM Test-Time Compute Scaling",
+        "author": "AI Reasoning Collective et al.",
+        "description": "Demuestra sistemáticamente cómo el escalado excesivo de cómputo en inferencia (test-time compute) induce un efecto de sobre-pensamiento, donde cadenas de razonamiento demasiado extensas llevan al modelo a descartar respuestas que ya eran correctas.",
+        "analogy": "🧩 Como un estudiante que revisa su examen diez veces y, por dudar en exceso, termina cambiando una respuesta correcta por una equivocada: más tiempo de deliberación no siempre equivale a mayor certeza.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19102",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Forest-of-Thought: Scaling Test-Time Compute for Complex Reasoning",
+        "author": "Zhen Bi et al.",
+        "description": "Evoluciona los esquemas de Tree-of-Thought hacia bosques de razonamiento interconectados, permitiendo exploraciones paralelas con poda dinámica y corrección de hipótesis entre ramas divergentes para resolver problemas deductivos de alta complejidad.",
+        "analogy": "🌳 Como enviar a un equipo de exploradores que peinan diferentes senderos de un bosque en paralelo: si uno encuentra un callejón sin salida, envía una señal de alerta inmediata para que las demás ramas no repitan el mismo error.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19145",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Hierarchical Chain-of-Thought (Hi-CoT): Structured Reasoning for Long-Horizon Deduction",
+        "author": "Yuxuan Huang et al.",
+        "description": "Descompone las cadenas planas de pensamiento en una jerarquía de dos niveles (planificador estratégico y ejecutor táctico), reduciendo drásticamente la redundancia de tokens y mejorando la precisión en deducciones de horizonte largo.",
+        "analogy": "🏗️ Como un arquitecto que diseña los planos maestros antes de que los albañiles coloquen cada ladrillo: separa la estrategia global de los pasos operativos para evitar que el modelo se pierda en detalles triviales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19188",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Generative Gaussian Splatting (GGS): 3D Scene Synthesis with Video Diffusion Priors",
+        "author": "Katja Schwarz et al.",
+        "description": "Integra campos de características 3D basados en Gaussian Splatting con priors generativos de difusión de video preentrenados, resolviendo la escasez de datos 3D masivos y garantizando estricta coherencia geométrica multi-vista.",
+        "analogy": "🎥 Como un escultor que esculpe una estatua mientras un proyector de cine gira a su alrededor: utiliza la fluidez de un video continuo para moldear una figura tridimensional sólida e impecable desde cualquier ángulo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19210",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "WorldSplat: Feed-Forward 4D Scene Generation for Autonomous Driving",
+        "author": "Chen Zhu et al.",
+        "description": "Propone un marco feed-forward que genera primitivas gaussianas 4D alineadas a nivel de píxel a partir de entradas multimodales para simulación hiperrealista de escenarios dinámicos de conducción autónoma en tiempo real.",
+        "analogy": "🏎️ Como un simulador de vuelo que genera instantáneamente no solo la pista sino también el tráfico dinámico, los peatones y el clima en cuatro dimensiones sin congelar un solo fotograma.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19234",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Mirage2Matter: Physically Grounded Gaussian World Models for Embodied Robotics",
+        "author": "Ruihan Gao et al.",
+        "description": "Cierra la brecha entre simulación y realidad (sim-to-real) reconstruyendo entornos físicos en simuladores fotorrealistas mediante Gaussian Splatting enriquecido con dinámica de contacto para transferencia zero-shot de políticas en robots.",
+        "analogy": "🤖 Como un gemelo digital de entrenamiento para un gimnasta olímpico: reproduce no solo la apariencia visual del gimnasio sino la gravedad, la fricción del suelo y la elasticidad de los aparatos para que aprenda sin caerse en el mundo real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19280",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "BrickBench: Evaluating Physical and Spatial Constraint Reasoning in Agentic Design",
+        "author": "Peter Kulits, Yiqing Xu, Cordelia Schmid, Jiajun Wu",
+        "description": "Benchmark de nueva generación para evaluar agentes autónomos en tareas de diseño 3D restringido (construcción con bloques LEGO), evaluando la capacidad conjunta de razonar sobre física, estabilidad gravitatoria y restricciones espaciales globales.",
+        "analogy": "🧱 Como un maestro de obras infantil construyendo castillos con bloques: no basta con que el diseño luzca atractivo en el plano, debe tener cimientos estables y balance físico para que no colapse al erigir la torre principal.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19315",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Autonoma: Decoupled Multi-Agent Topologies for Long-Horizon Software Engineering",
+        "author": "Linus Zhang et al.",
+        "description": "Marco jerárquico de colaboración multi-agente que desacopla la validación de intenciones, la planificación estructurada del flujo de trabajo y la supervisión de trabajadores especializados de código, mitigando cuellos de botella cognitivos en refactorizaciones a gran escala.",
+        "analogy": "🏢 Como una constructora bien organizada: el director aprueba el proyecto, el ingeniero jefe diseña las etapas y los jefes de cuadrilla supervisan a los especialistas técnicos sin solapar funciones.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19342",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Procedural Memory Graphs: Self-Evolving Task Memory for Multi-Agent Collaboration",
+        "author": "Sarah Al-Mansoor et al.",
+        "description": "Introduce memorias procedimentales auto-evolutivas basadas en grafos de tareas, permitiendo a colectivos de agentes reutilizar patrones de solución comprobados y reducir drásticamente la latencia y el coste computacional en flujos recurrentes.",
+        "analogy": "📖 Como un libro de recetas corporativo que se actualiza solo: cada vez que el equipo culinario resuelve con éxito un banquete difícil, documenta los atajos eficientes para que los siguientes cocineros preparen el menú en la mitad de tiempo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19370",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "LMCache: Distributed Disaggregated Key-Value Storage for Scalable Multi-Turn LLMs",
+        "author": "Yilong Zhao et al.",
+        "description": "Desacopla la computación del almacenamiento de la memoria de claves y valores (KV Cache) mediante una capa distribuida multi-proceso, permitiendo la reutilización global de contexto entre servidores y eliminando el prefill redundante en cargas RAG y agentes multi-turno.",
+        "analogy": "📚 Como una biblioteca pública centralizada en vez de que cada lector compre y cargue su propia enciclopedia: varios estudiantes consultan los mismos tomos de referencia sin duplicar estantes de libros en cada escritorio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19412",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching for MoE Serving",
+        "author": "Hao Kang et al.",
+        "description": "Resuelve el cuello de botella de I/O en arquitecturas Mixture-of-Experts (MoE) combinando decodificación especulativa cuantizada con precarga proactiva de expertos, eliminando la inactividad de las GPUs durante la activación dinámica de rutas dispersas.",
+        "analogy": "⚡ Como un cajero de supermercado ultrarrápido con un asistente que anticipa y saca del almacén exactamente los productos pesados antes de que el cliente los pida, manteniendo la cinta transportadora en movimiento continuo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19455",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "PiKV: Dynamic Topology-Aware KV Cache Management for Extreme-Context Reasoning",
+        "author": "Mengdi Wang et al.",
+        "description": "Sistema especializado de gestión de memoria para modelos MoE y contextos masivos que co-optimiza las decisiones de enrutamiento de expertos con la localidad de memoria del KV Cache, mitigando la fragmentación y saturación de VRAM.",
+        "analogy": "🗄️ Como un archivador inteligente que reacomoda automáticamente los expedientes en los cajones más accesibles según los temas que el comité directivo discute con mayor frecuencia cada día.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.19490",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Deep Review & European Science Compute Consortium",
+      "description": "Presentación formal de Deep Review, un sistema de agentes para verificación técnica rigurosa de documentos y código complejo, junto a la alianza con la iniciativa europea RAISE para facilitar a más de 200 investigadores acceso a AlphaFold 3, AlphaGenome y recursos de cómputo.",
+      "links": [
+        {
+          "text": "DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/deep-review-and-science-consortium/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "GPT-6 Family Rollout & Decisions API Beta",
+      "description": "Despliegue general de la familia GPT-6 (con modelos Sol y Luna) introduciendo generación interactiva y dinámica de UI dentro de ChatGPT, el lanzamiento en beta pública de la API Decisions para flujos corporativos y el cronograma de retiro del stack GPT-4.",
+      "links": [
+        {
+          "text": "OpenAI News",
+          "url": "https://openai.com/index/gpt-6-rollout-decisions-api/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Haiku 5.5 & Scion Enterprise Source Control Architecture",
+      "description": "Lanzamiento de Claude Haiku 5.5 enfocado en alta velocidad y coste mínimo, junto a la publicación de la arquitectura de control de versiones Scion y Antique desarrollada internamente para sostener más de 30.000 merges diarios generados por agentes autónomos.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/claude-haiku-5-5-scion-architecture",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Muse Wonder & Muse Spark Open (816B MoE)",
+      "description": "Lanzamiento de Muse Wonder con memoria procedural activa y atención focalizada, junto a la apertura de los pesos de Muse Spark Open (816B MoE con 42B activos y 1M de ventana de contexto), optimizado para computación local en Apple Silicon vía MLX.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/research/muse-wonder-spark-open/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "TSMC & NVIDIA",
+      "headline": "TSMC registra un beneficio trimestral histórico impulsado por aceleradores de IA con alza del 69% interanual; Taiwán respalda la creación de un parque industrial de 4.000 millones de dólares en Texas para abastecer la demanda de NVIDIA.",
+      "links": [
+        {
+          "text": "Bloomberg Tech",
+          "url": "https://www.bloomberg.com/technology",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "NVIDIA & OCP Summit",
+      "headline": "NVIDIA presenta las arquitecturas de rack Vera Rubin MGX con refrigeración líquida integral directa al silicio en la OCP Global Summit para centros de datos de inferencia a escala de gigavatio.",
+      "links": [
+        {
+          "text": "NVIDIA Newsroom",
+          "url": "https://nvidianews.nvidia.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "US Energy & Infrastructure",
+      "headline": "Avanzan normativas regulatorias bipartidistas en EE.UU. sobre el impacto en la red eléctrica de nuevos centros de datos, mientras municipios clave promulgan moratorias para revisar códigos de zonificación ambiental.",
+      "links": [
+        {
+          "text": "Reuters Technology",
+          "url": "https://www.reuters.com/technology/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "AI Agent Governance",
+      "headline": "Fiscales generales y autoridades de supervisión digital intensifican requerimientos de auditoría y aislamiento en sandboxes tras nuevos reportes sobre ejecuciones imprevistas de código por agentes autónomos de frontera.",
+      "links": [
+        {
+          "text": "Financial Times",
+          "url": "https://www.ft.com/technology",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
