@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-17",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "On Memorization of Large Language Models in Logical Reasoning",
+        "author": "Chulin Xie, Xilie Xu, Kenji Kawaguchi, Bo Li et al.",
+        "description": "Evalúa sistemáticamente si el rendimiento sobresaliente de los LLMs en benchmarks lógicos responde a deducción genuina o memorización superficial, introduciendo el benchmark dinámico Knights and Knaves (K&K) para delimitar la frontera crítica entre interpolación y generalización fuera de distribución.",
+        "analogy": "🎭 Como un estudiante que memoriza de memoria todas las respuestas de exámenes pasados: si el profesor solo cambia los nombres de los personajes o invierte el orden de las premisas, queda en evidencia al instante si comprendió los axiomas o si únicamente reconocía el patrón visual del enunciado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.23123",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Non-myopic Generation of Language Models for Reasoning and Planning",
+        "author": "Chang Ma, Haiteng Zhao, et al.",
+        "description": "Reformula la inferencia autorregresiva bajo la teoría de control óptimo e introduce Predictive-Decoding, un método inspirado en Model Predictive Control (MPC) que proyecta estados semánticos futuros para prevenir decisiones miopes en pasos tempranos durante deducciones matemáticas y algorítmicas.",
+        "analogy": "♟️ Como un gran maestro de ajedrez que no escoge apresuradamente la captura de pieza más atractiva del turno inmediato, sino que proyecta mentalmente cinco jugadas hacia adelante para evitar quedar atrapado en una celada posicional más adelante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.17195",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Graph-Constrained Reasoning: Faithful Reasoning on Knowledge Graphs with Large Language Models",
+        "author": "Linhao Luo, Zicheng Liu, et al.",
+        "description": "Introduce Graph-Constrained Reasoning (GCR) acoplado a la estructura KG-Trie para sincronizar la generación libre de los LLMs con la topología estricta de grafos de conocimiento, garantizando rutas de decodificación auditables con cero alucinaciones en deducciones multi-salto.",
+        "analogy": "🗺️ Como un tren bala que viaja a gran velocidad pero anclado a rieles de acero: el modelo aporta la potencia de procesamiento y fluidez en el lenguaje, pero el grafo de conocimiento traza los rieles exactos por donde puede circular sin descarrilarse en datos inventados.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.13080",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Pixtral 12B: Open Multimodal Model with Native Aspect Ratio and Arbitrary Resolution",
+        "author": "Pravesh Agrawal, Arthur Mensch et al. (Mistral AI)",
+        "description": "Presenta una arquitectura multimodal de 12.000 millones de parámetros con codificador visual nativo para procesar imágenes y documentos complejos en cualquier relación de aspecto y resolución sin distorsión por recorte o reescalado forzado, superando a modelos abiertos de mayor escala.",
+        "analogy": "🖼️ Como un marco fotográfico adaptativo que se estira y contrae elásticamente tanto para murales panorámicos como para rollos verticales antiguos, capturando cada milímetro de detalle sin recortar las esquinas ni deformar las proporciones originales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.07073",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DepthSplat: Connecting Gaussian Splatting and Depth Estimation for Unconstrained 3D Reconstruction",
+        "author": "Yushi Lan, Katja Schwarz, et al.",
+        "description": "Combina el renderizado rápido de Gaussian Splatting con priors geométricos de modelos preentrenados de profundidad multivista, logrando reconstrucción volumétrica fotorrealista y coherente a partir de secuencias de video monocular con trayectorias de cámara arbitrarias.",
+        "analogy": "📐 Como un topógrafo equipado con cámara fotográfica y telémetro láser simultáneo: la cámara captura las texturas de la fachada mientras el láser fija la posición y relieve tridimensional exacto para que el edificio virtual no quede torcido ni con huecos ciegos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.13862",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "VLM2Vec: Training Vision-Language Models for Massive Multimodal Embedding Tasks",
+        "author": "Boya Wu, Philipp Schaer, et al.",
+        "description": "Establece un esquema de entrenamiento contrastivo para transformar modelos fundacionales de visión y lenguaje en representaciones densas unificadas (embeddings), presentando el benchmark MMEB para indexación y recuperación cruzada de texto, esquemas técnicos e imágenes.",
+        "analogy": "🏷️ Como un catálogo de archivo universal que asigna una signatura comparable a fotos, partituras y ensayos escritos: permite buscar un plano de ingeniería complejo simplemente describiendo su función con palabras cotidianas y viceversa.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05160",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "BenchAgents: Multi-Agent Systems for Structured Benchmark Creation",
+        "author": "Natasha Butt, Varun Chandrasekaran, Neel Joshi, Besmira Nushi, Vidhisha Balachandran",
+        "description": "Sistema cooperativo multi-agente donde modelos especializados asumen roles de diseñadores pedagógicos, generadores de pruebas y validadores adversariales para sintetizar benchmarks rigurosos, reduciendo sesgos y controlando la diversidad sintáctica en dominios multimodales.",
+        "analogy": "⚖️ Como un comité de catedráticos que diseña un examen de admisión: mientras uno propone problemas creativos, otro revisa que cubran todo el programa y un tercer examinador intenta resolverlos buscando trampas o enunciados ambiguos antes de imprimirlos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.22584",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Benchmarking Agentic Workflow Generation (WorfBench & WorfEval)",
+        "author": "Ningyu Zhang, Bo Li, et al.",
+        "description": "Introduce WorfBench y la métrica WorfEval para evaluar cuantitativamente la capacidad de los agentes autónomos de concebir y orquestar grafos de ejecución acíclicos dirigidos (DAGs), analizando su precisión estructural y tolerancia a fallos en flujos de tareas complejas.",
+        "analogy": "🎼 Como juzgar a un director de orquesta no por cómo toca un solo instrumento, sino por su capacidad de distribuir la partitura general y marcar el compás exacto para que cada sección entre en el instante preciso sin pisarse.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.07869",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-Based Agents",
+        "author": "Hanrong Zhang, Chengyu Deng, et al.",
+        "description": "Marco integral para evaluar vulnerabilidades en agentes dotados de acceso a herramientas y terminales del sistema, analizando inyecciones indirectas de prompt, puertas traseras silenciosas y mecanismos de defensa en aislamiento sandbox.",
+        "analogy": "🛡️ Como una prueba de penetración en un banco automatizado: comprueba si un cajero robótico con llave de la bóveda puede ser manipulado mediante notas engañosas dejadas en los recibos de los clientes para entregar dinero sin autorización.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02644",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference",
+        "author": "Hanshi Sun, Zhuoming Chen, et al.",
+        "description": "Arquitectura de inferencia de contexto masivo que retiene representaciones de bajo rango (low-rank) de las claves en la memoria HBM de la GPU mientras descarga los valores pesados a almacenamiento secundario, multiplicando el throughput hasta 3 veces sin merma de precisión.",
+        "analogy": "👤 Como un secretario eficiente que mantiene en su libreta de mano un resumen de citas y referencias clave, recurriendo al archivador general del fondo solo cuando necesita leer un expediente completo, liberando su escritorio para atender a más personas a la vez.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.21465",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference",
+        "author": "Zhenghao Peng, Xuan Shen, et al.",
+        "description": "Planificador de tuberías (pipeline) para arquitecturas Mixture-of-Experts que solapa dinámicamente la computación de núcleos GroupGemm con la comunicación entre aceleradores, eliminando la inactividad de las GPUs y recortando la latencia en inferencia distribuida.",
+        "analogy": "🚚 Como una estación de transferencia logística donde los paquetes se cargan en los camiones de reparto en el segundo exacto en que salen de la cinta transportadora, eliminando tiempos muertos de espera en los muelles de carga.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.12247",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts",
+        "author": "Pengfei Zhou, Yuxuan Chen, et al.",
+        "description": "Incorpora expertos de coste computacional cero (omisión selectiva, descarte y sustitución estática) dentro de capas MoE, estabilizando el balanceo de carga y acelerando el rendimiento computacional directo con reducciones sustanciales en el consumo energético.",
+        "analogy": "🚦 Como un sistema de peaje que habilita carriles de telepeaje sin barreras para los autos sin infracciones, logrando que el tráfico fluya sin congestiones y reservando las cabinas con inspectores solo para transportes que exigen verificación minuciosa.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.07348",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Anthropic",
+      "name": "Claude 3.5 Sonnet Computer Use & Claude 3.5 Haiku",
+      "description": "Lanzamiento oficial de la capacidad de uso de computadora (Computer Use) en beta pública para Claude 3.5 Sonnet, permitiendo al modelo interpretar pantallas, mover el cursor, pulsar botones y ejecutar flujos de trabajo sobre interfaces de escritorio nativas, acompañado del anuncio de Claude 3.5 Haiku para operaciones de altísima velocidad y bajo coste.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "OpenAI Canvas & Experimental Multi-Agent Framework Swarm",
+      "description": "Despliegue general del entorno interactivo Canvas en ChatGPT para refactorización de código y redacción colaborativa en panel desacoplado, sumado a la publicación en código abierto de Swarm, un framework experimental educativo enfocado en patrones ergonómicos de coordinación y traspaso de contexto entre agentes autónomos.",
+      "links": [
+        {
+          "text": "OpenAI News",
+          "url": "https://openai.com/index/introducing-canvas/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google DeepMind",
+      "name": "SynthID Text Open Source & Nobel Prize in Chemistry for AlphaFold",
+      "description": "Liberación en código abierto del sistema SynthID Text para inserción de marcas de agua digitales imperceptibles e inalterables en los logits de modelos de lenguaje, tras la concesión del Premio Nobel de Química 2024 a Demis Hassabis y John Jumper por la revolución biológica de AlphaFold.",
+      "links": [
+        {
+          "text": "DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Movie Gen Suite & Media Foundation Research Architecture",
+      "description": "Presentación formal de Movie Gen, suite fundacional de generación de medios capaz de crear secuencias de video en alta definición (1080p) con audio cinematográfico sincronizado y edición precisa con lenguaje natural, respaldada por la publicación de su reporte técnico de investigación.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/research/movie-gen/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Google & Kairos Power",
+      "headline": "Google rubrica un acuerdo histórico para la adquisición de 500 MW de energía nuclear limpia generada por una flota de reactores modulares pequeños (SMR) de Kairos Power, con entregas programadas entre 2030 y 2035 para sostener el crecimiento de centros de datos de IA.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Amazon & X-energy",
+      "headline": "Amazon encabeza una ronda de financiación de 500 millones de dólares en X-energy y formaliza alianzas de infraestructura en los estados de Washington y Virginia para habilitar más de 5 gigavatios de proyectos nucleares SMR dedicados al cómputo de modelos fundacionales.",
+      "links": [
+        {
+          "text": "Amazon News",
+          "url": "https://www.aboutamazon.com/news/sustainability/amazon-nuclear-small-modular-reactors-clean-energy",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OCP Global Summit & AI Hyperscalers",
+      "headline": "Consorcios de centros de datos presentan especificaciones abiertas de refrigeración líquida directa al silicio y arquitecturas de distribución eléctrica de alta densidad para gabinetes de inferencia que sobrepasan los 120 kW de potencia por rack.",
+      "links": [
+        {
+          "text": "OCP Foundation",
+          "url": "https://www.opencompute.org",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "AI Safety Governance & Testing",
+      "headline": "Los Institutos de Seguridad de IA de EE.UU. y Reino Unido intensifican los protocolos conjuntos de evaluación previa al despliegue para modelos con capacidades de uso de computadoras (Computer Use) y ejecución directa de código en entornos de escritorio.",
+      "links": [
+        {
+          "text": "NIST AI Safety",
+          "url": "https://www.nist.gov/itl/ai-safety-institute",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
