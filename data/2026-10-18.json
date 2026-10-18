@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-18",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models",
+        "author": "Iman Mirzadeh, Keivan Alizadeh, Hooman Shahrokhi, Oncel Tuzel, Samy Bengio, Mehrdad Farajtabar (Apple)",
+        "description": "Introduce el benchmark GSM-Symbolic para evaluar el razonamiento matemático formal mediante plantillas simbólicas dinámicas, demostrando que variar números o añadir cláusulas distractivas irrelevantes degrada abruptamente el rendimiento de los LLMs, evidenciando que dependen de reconocimiento de patrones superficiales más que de lógica formal genuina.",
+        "analogy": "🧮 Como un estudiante que aprueba problemas de física porque memorizó la forma visual de la ecuación: en cuanto el profesor cambia la masa de un auto por la de una bicicleta o añade un comentario sobre el clima, se confunde y aplica la fórmula de manera incorrecta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05229",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Improving LLM Reasoning through Scaling Inference Computation with Collaborative Verification",
+        "author": "Zhenwen Liang, Rui Liu, Dongyeop Kang et al.",
+        "description": "Formaliza el escalado de cómputo en inferencia (test-time compute) mediante verificación colaborativa, combinando rutas deductivas en lenguaje natural (Chain-of-Thought) y código ejecutable (Program-of-Thought) asistidas por verificadores especializados que seleccionan y refinan iterativamente las trayectorias con menor entropía de error.",
+        "analogy": "⚖️ Como un tribunal técnico donde un ingeniero calcula la resistencia de una viga a mano y otro programa una simulación estructural independiente: un auditor compara ambos resultados y solo da el visto bueno cuando las dos soluciones convergen con exactitud.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05318",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Can Language Models Perform Robust Reasoning in Chain-of-thought Prompting with Noisy Rationales?",
+        "author": "Ting-Rui Chiang, Sheng-Min Shih et al.",
+        "description": "Presenta el benchmark NoRa para cuantificar la susceptibilidad de los LLMs ante razonamientos ruidosos, engañosos o redundantes intercalados en cadenas de pensamiento (CoT), demostrando que fallas menores en premisas intermedias suelen propagarse sin filtro hasta generar conclusiones totalmente erróneas.",
+        "analogy": "📻 Como intentar resolver un misterio deductivo mientras un testigo poco fiable intercala rumores y datos falsos: si el detective no tiene criterio crítico riguroso, terminará construyendo una teoría disparatada basada en una pista que debió haber descartado de inmediato.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.23856",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "3D Vision-Language Gaussian Splatting",
+        "author": "Angtian Wang, Jian Sun et al.",
+        "description": "Fusiona incrustaciones semánticas de modelos de visión y lenguaje directamente en representaciones de 3D Gaussian Splatting, habilitando segmentación semántica volumétrica, consultas abiertas en lenguaje natural y navegación espacial interactiva con renderizado en tiempo real.",
+        "analogy": "🏷️ Como recorrer una maqueta arquitectónica hiperrealista donde cada objeto tiene una etiqueta invisible que responde a preguntas cotidianas: puedes pedirle que 'resalte la cafetera sobre la mesa' y la maqueta ilumina el volumen exacto en 3D.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.07577",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MM-LDM: Multi-Modal Latent Diffusion Model for Sounding Video Generation",
+        "author": "Haoxin Zhang, et al.",
+        "description": "Introduce un modelo de difusión latente multimodal para la generación conjunta y sincronizada de video de alta definición y pistas de audio temporalmente coherentes, superando el desacoplamiento tradicional entre generadores visuales y sintetizadores acústicos independientes.",
+        "analogy": "🎬 Como un director de cine que graba la escena visual y los efectos de sonido en la misma toma directa: el trueno y el relámpago en el cielo ocurren con perfecta sincronización física, sin necesidad de editar y alinear el audio manualmente en postproducción.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.01594",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Stereo-Talker: Audio-driven 3D Human Synthesis with Prior-Guided Mixture-of-Experts",
+        "author": "Zhaoxiang Zhang, et al.",
+        "description": "Presenta un framework de difusión guiado por Mixture-of-Experts (MoE) que traduce características fonéticas y prosódicas de audio estéreo en movimiento 3D fotorrealista de rostro y gestos corporales, preservando la expresividad emocional y matices dinámicos de la voz humana.",
+        "analogy": "🎭 Como un marionetista virtuoso que mueve hilos independientes para los ojos, cejas y labios guiándose únicamente por el tono de una canción, logrando que el títere transmita alegría, duda o sorpresa según la intensidad de la voz.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.23836",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "SELA: Tree-Search Enhanced LLM Agents for Automated Machine Learning",
+        "author": "Yizhou Chi, Yizhang Lin et al.",
+        "description": "Combina agentes basados en modelos de lenguaje con Monte Carlo Tree Search (MCTS) para automatizar el diseño integral de pipelines de Machine Learning (limpieza, ingeniería de atributos y ajuste de hiperparámetros), superando las limitaciones de búsqueda miope de los agentes tradicionales con tasas de éxito de hasta 80%.",
+        "analogy": "🌲 Como un científico de datos que explora un árbol de experimentos: en lugar de frustrarse con el primer error de código, evalúa cada rama con métricas de validación, retrocede cuando un enfoque no rinde y ramifica las estrategias que mostraron mejor potencial.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.17238",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Scalable and Accurate Graph Reasoning with LLM-based Multi-Agents",
+        "author": "Xiangru Tang, Mark Gerstein et al.",
+        "description": "Presenta GraphAgent-Reasoner, una arquitectura inspirada en la computación distribuida de grafos que descompone deducciones sobre redes masivas en tareas centradas en nodos gestionadas por subagentes coordinados, resolviendo problemas de rutas y conectividad donde los LLMs individuales colapsan por ventana de contexto.",
+        "analogy": "🚇 Como planificar la ruta de entrega más eficiente en una red de metro gigantesca: en vez de que una sola persona memorice todo el mapa de estaciones, se asigna un inspector en cada intercambiador clave que se comunica con sus vecinos inmediatos para trazar el recorrido perfecto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05130",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "More Agents Is All You Need",
+        "author": "Junyou Li, Qin Zhang, Yang Liu et al.",
+        "description": "Formula leyes de escalado empíricas para ensamblados multi-agente, demostrando que incrementar el número de instancias de agentes LLM mediante esquemas de muestreo y votación estructurada (Agent Forest) eleva predeciblemente la precisión en problemas deductivos complejos, rivalizando con modelos de parámetros muy superiores.",
+        "analogy": "🐝 Como un enjambre de abejas exploradoras decidiendo la ubicación de una nueva colmena: ninguna abeja individual tiene una visión total del bosque, pero al sumar cientos de observaciones independientes y filtrar las coincidencias por consenso, la colonia siempre elige el sitio óptimo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.05120",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Cake: Compute Or Load KV Cache? Why Not Both?",
+        "author": "Shuowei Jin, Xueshen Liu, Qingzhao Zhang et al. (University of Michigan)",
+        "description": "Introduce un planificador bidireccional para inferencia con contextos masivos que solapa concurrentemente el cómputo de la GPU (desde el inicio del prompt) con la carga por I/O del KV cache prealmacenado (desde el final de la secuencia), recortando el tiempo hasta el primer token (TTFT) hasta 2.6 veces.",
+        "analogy": "🥪 Como dos cuadrillas construyendo un túnel ferroviario comenzando simultáneamente desde ambos extremos de la montaña: mientras los mineros taladran roca virgen por un lado, otra cuadrilla instala vías prefabricadas por el otro hasta encontrarse en el centro en la mitad del tiempo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.03065",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "KV-Compress: Paged KV-Cache Compression with Variable Compression Rates per Attention Head",
+        "author": "Isaac Rehg (Cloudflare)",
+        "description": "Desarrolla una técnica de desalojo de bloques contiguos de KV cache integrada con PagedAttention que permite tasas de compresión variables por cabezal de atención sin fragmentación física en memoria, aumentando el throughput de generación en vLLM hasta 5.18 veces con retención superior al 90% de exactitud en LongBench.",
+        "analogy": "🗄️ Como un archivador inteligente que no tira hojas sueltas al azar —lo que crearía un desorden imposible de ordenar— sino que retira carpetas completas y asigna cajones más amplios a los temas críticos y espacios compactos a los archivos de referencia secundaria.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.00161",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+        "author": "Juntao Zhao, Lingpeng Kong, Wenhao Lu, Sheng Wang, Chuan Wu",
+        "description": "Diseña un esquema de decodificación especulativa que combina cuantización conjunta de activaciones y pesos de baja precisión (para generación veloz de borradores de tokens) con cuantización de alta precisión weight-only (para verificación exacta), reutilizando pesos y KV cache sin costo de conmutación y acelerando la inferencia hasta 1.8x.",
+        "analogy": "✍️ Como un redactor veloz que escribe un borrador con lápiz y letra rápida en papel reciclado, y un editor riguroso que solo repasa y estampa con tinta indeleble las oraciones que cumplen con los estándares de estilo antes de enviarlas a imprenta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.11305",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "OpenAI",
+      "name": "Realtime API & Suite de Destilación de Modelos",
+      "description": "Despliegue en producción de la Realtime API para experiencias conversacionales de voz a voz con latencia ultrabaja mediante GPT-4o nativo multimodal vía WebSockets, complementado con herramientas de destilación integrada (Model Distillation) y ajuste fino visual (Vision Fine-Tuning) para optimizar modelos compactos y especializados.",
+      "links": [
+        {
+          "text": "OpenAI News",
+          "url": "https://openai.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Message Batches API con 50% de Descuento",
+      "description": "Lanzamiento oficial de la API de lotes asíncronos (Message Batches API) para toda la familia Claude 3.5 y Claude 3, habilitando procesamiento de hasta 10.000 consultas por lote con una reducción del 50% en tarifas de tokens y procesamiento en ventana garantizada de 24 horas sin penalizar los límites de tasa en tiempo real.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google DeepMind",
+      "name": "Gemini 1.5 Flash-8B Disponibilidad General",
+      "description": "Publicación para producción de Gemini 1.5 Flash-8B en Google AI Studio y Vertex AI, optimizado para operaciones multimodales masivas de baja latencia con ventana de contexto de 1 millón de tokens y la estructura de precios más económica de la familia Gemini ($0.0375 por millón de tokens de entrada).",
+      "links": [
+        {
+          "text": "DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Spirit LM: Modelo Fundacional Multimodal de Texto y Voz",
+      "description": "Liberación en código abierto para investigación de Spirit LM (versiones Base y Expressive), el primer modelo multimodal de Meta FAIR entrenado nativamente intercalando unidades fonéticas de habla y tokens de texto, preservando prosodia, tono y entonación emocional sin recurrir a transcripción intermedia ASR.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/research/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Microsoft & Constellation Energy",
+      "headline": "Microsoft formaliza un acuerdo de compra de energía a 20 años con Constellation Energy para restaurar y reactivar la unidad 1 de la central nuclear Three Mile Island (Crane Clean Energy Center), asegurando 835 MW de electricidad limpia ininterrumpida para centros de datos de IA.",
+      "links": [
+        {
+          "text": "Constellation News",
+          "url": "https://www.constellationenergy.com/newsroom.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "TSMC",
+      "headline": "TSMC supera proyecciones de mercado en el tercer trimestre con 23.500 millones de dólares en ingresos y un incremento del 54% interanual en beneficio neto, impulsado por una demanda insaciable de aceleradores de IA fabricados en nodos de vanguardia de 3nm y 5nm.",
+      "links": [
+        {
+          "text": "TSMC Investor Relations",
+          "url": "https://www.tsmc.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "headline": "Jensen Huang declara que la demanda corporativa por la arquitectura NVIDIA Blackwell es 'insana' y confirma que la producción en masa marcha a pleno ritmo, con despachos multimillonarios de aceleradores B200 proyectados para el último tramo del año.",
+      "links": [
+        {
+          "text": "NVIDIA News",
+          "url": "https://nvidianews.nvidia.com",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "US & UK AI Safety Institutes",
+      "headline": "Los Institutos de Seguridad de IA de EE.UU. y el Reino Unido establecen directrices conjuntas de auditoría y pruebas de intrusión para evaluar riesgos de ciberseguridad y autonomía en modelos fundacionales con soporte de llamadas a funciones y uso de herramientas de sistema.",
+      "links": [
+        {
+          "text": "NIST AI Safety",
+          "url": "https://www.nist.gov/itl/ai-safety-institute",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
