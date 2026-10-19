@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-19",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "MathHay: An Automated Benchmark for Long-Context Mathematical Reasoning in LLMs",
+        "author": "Lei Wang, Shan Dong, Yuhui Xu, Hanze Dong, Yalu Wang, Amrita Saha, Ee-Peng Lim, Caiming Xiong, Doyen Sahoo (Salesforce AI, SMU)",
+        "description": "Introduce el benchmark MathHay para evaluar el razonamiento matemático distribuido en contextos largos (hasta 128k tokens). A diferencia de las pruebas estándar de recuperación tipo 'aguja en un pajar', MathHay exige localizar variables cuantitativas dispersas y encadenar deducciones de múltiples pasos sin degradar la precisión numérica.",
+        "analogy": "🔍 Como un auditor contable que debe revisar cientos de páginas de balances de una década para encontrar tres cifras desglosadas y calcular la solvencia real de una empresa, en vez de limitarse a buscar una palabra resaltada con marcador fluorescente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.04698",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "WILT: A Multi-Turn, Memorization-Robust Inductive Logic Benchmark for LLMs",
+        "author": "Eryk Banatt, Jonathan Cheng, Skanda Vaidyanath, Tiffany Hwu",
+        "description": "Presenta WILT, un benchmark interactivo multi-turno derivado del clásico experimento 2-4-6 de Wason para evaluar el razonamiento inductivo. Diseñado para ser robusto ante la memorización del preentrenamiento, obliga al modelo a generar y validar hipótesis dinámicas mediante consultas secuenciales.",
+        "analogy": "🔬 Como un científico investigando un fenómeno desconocido en un laboratorio sellado: formula hipótesis, diseña pruebas sucesivas y ajusta su teoría según las respuestas de la naturaleza, en vez de recitar leyes aprendidas de memoria en un manual.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.10998",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TMGBench: A Systematic Game Benchmark for Evaluating Strategic Reasoning Abilities of LLMs",
+        "author": "Haochuan Wang, Xiachong Feng, Lei Li, Yu Guo, Zhanyue Qin, Dianbo Sui, Lingpeng Kong",
+        "description": "Evalúa exhaustivamente las capacidades de razonamiento estratégico y teoría de la mente en LLMs a través de 144 tipos de juegos formalizados de teoría de juegos, exponiendo limitaciones severas en modelos de vanguardia para inferir intenciones y modelar el comportamiento de agentes rivales.",
+        "analogy": "♟️ Como un jugador que intenta ganar una partida de póker o ajedrez contra oponentes astutos: no basta con mover las piezas respetando las reglas básicas, sino que debe anticipar si el adversario está simulando debilidad para tenderle una emboscada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.10479",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Pyramidal Flow Matching for Efficient Video Generative Modeling",
+        "author": "Yang Jin, Zhicheng Sun, Ningyuan Li, Kun Xu, Hao Jiang et al. (Peking University)",
+        "description": "Propone un framework de emparejamiento de flujo piramidal (Pyramidal Flow Matching) para la síntesis de video de alta resolución, modelando las representaciones espaciotemporales de forma jerárquica y comprimida, reduciendo drásticamente el coste computacional frente a los modelos de difusión tradicionales.",
+        "analogy": "📐 Como un escultor que primero desbasta un bloque de mármol con cincel grueso para definir la postura general y luego va usando cinceles progresivamente más finos solo para los detalles faciales, ahorrando semanas de trabajo respecto a esculpir cada milímetro al máximo detalle desde el inicio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05954",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Allegro: Open the Black Box of Commercial-Level Video Generation Model",
+        "author": "Yuan Zhou, Qiuyue Wang, Yuxuan Cai, Huan Yang",
+        "description": "Abre completamente la arquitectura y recetas de entrenamiento de modelos de generación de video de calibre comercial, detallando un transformador de difusión de video (DiT) capaz de producir secuencias continuas en 720p a 15 FPS con alta fidelidad cinemática y control semántico fino.",
+        "analogy": "🎞️ Como un estudio de animación de Hollywood que publica abiertamente todo el manual técnico de renderizado y el motor gráfico de sus películas taquilleras, permitiendo a directores independientes crear efectos visuales con calidad de cine en sus propias computadoras.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.15458",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "WorldSimBench: Towards Video Generation Models as World Simulators",
+        "author": "Yiran Qin, Zhelun Shi, Jiwen Yu, Xijun Wang, Enshen Zhou et al.",
+        "description": "Establece un benchmark riguroso de doble vía (perceptual y manipulativo) para auditar si los modelos generativos de video actúan como simuladores coherentes del mundo físico o meros sintetizadores visuales superficiales, cuantificando su comprensión de colisiones, gravedad y permanencia de objetos.",
+        "analogy": "🧪 Como someter un videojuego a pruebas de esfuerzo de física: empujar objetos para comprobar si caen respetando la gravedad o si flotan mágicamente en el aire, distinguiendo un motor físico realista de una simple ilusión óptica dibujada en pantalla.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.18072",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Agent S: An Open Agentic Framework that Uses Computers Like a Human",
+        "author": "Saaket Agashe, Jiuzhou Han, Shuyu Gan, Jiachen Yang, Ang Li, Xin Eric Wang",
+        "description": "Presenta Agent S, un framework agéntico de código abierto diseñado para operar computadoras mediante interfaces gráficas de usuario (GUI). Combina planificación jerárquica aumentada con experiencia y una interfaz agente-computadora (ACI) para resolver tareas complejas en múltiples aplicaciones de escritorio.",
+        "analogy": "🖥️ Como un asistente de oficina novato pero muy observador que mira la pantalla, mueve el mouse, hace clic en menús y escribe atajos de teclado exactamente igual que un humano, recordando qué flujos de trabajo funcionaron ayer para no repetir errores hoy.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.08164",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+        "author": "Xunjian Yin, Xinyi Wang, Liangming Pan, Li Lin, Xiaojun Wan, William Yang Wang",
+        "description": "Introduce Gödel Agent, un framework de razonamiento autorreferencial inspirado en la máquina de Gödel que permite a los agentes basados en LLM inspeccionar y reescribir dinámicamente sus propias rutinas lógicas y heurísticas de toma de decisiones para lograr auto-mejora recursiva en tareas desconocidas.",
+        "analogy": "🔧 Como un artesano que no solo fabrica herramientas, sino que diseña mejores herramientas para perfeccionar sus propias manos mecánicas, actualizando su forma de ensamblar piezas a medida que descubre técnicas más eficientes.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.04444",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AFlow: Automating Agentic Workflow Generation",
+        "author": "Jiayi Zhang, Jinyu Xiang, Zhaoyang Yu, Fengwei Teng, Xionghui Chen et al.",
+        "description": "Reformula el diseño de flujos de trabajo multi-agente como un problema de búsqueda en código utilizando Monte Carlo Tree Search (MCTS), descubriendo y optimizando automáticamente topologías de agentes sin requerir diseño manual humano y superando a los pipelines predefinidos.",
+        "analogy": "🏭 Como un ingeniero industrial automatizado que prueba cientos de configuraciones de cintas transportadoras y estaciones de ensamblaje en una maqueta virtual hasta encontrar la línea de producción más rápida y con menos cuellos de botella.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.10762",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "ParallelSpec: Parallel Drafter for Efficient Speculative Decoding",
+        "author": "Zilin Xiao, Hongming Zhang, Tao Ge, Siru Ouyang, Vicente Ordonez, Dong Yu",
+        "description": "Diseña un generador de borradores paralelo que elimina la sobrecarga secuencial autoregresiva en la decodificación especulativa, emitiendo ráfagas de tokens candidatos de forma concurrente para acelerar la tasa de aceptación sin modificar el modelo base.",
+        "analogy": "🖨️ Como un asistente de imprenta que compone una línea entera de letras metálicas en un solo golpe de prensa paralela en lugar de encajar letra por letra con pinzas, entregando el texto al maestro tipógrafo en una fracción del tiempo habitual.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05589",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "In-context KV-Cache Eviction for LLMs via Attention-Gate",
+        "author": "Zihao Zeng, Bokai Lin, Tianqi Hou, Hao Zhang, Zhijie Deng",
+        "description": "Propone un módulo ligero de compuerta de atención (Attention-Gate) que evalúa el contexto global para desalojar de manera dinámica e inteligente tokens irrelevantes del KV cache durante la inferencia, reduciendo significativamente la memoria requerida en secuencias extensas.",
+        "analogy": "🚪 Como un portero selectivo en una conferencia magistral que solo deja permanecer en la sala principal a los oyentes que intervienen activamente en el debate, liberando sillas para los recién llegados sin interrumpir la conversación del expositor.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.12876",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "KVSharer: Efficient Inference via Layer-Wise Dissimilar KV Cache Sharing",
+        "author": "Yifei Yang, Zouying Cao, Qiguang Chen, Libo Qin, Dongjie Yang, Hai Zhao, Zhi Chen",
+        "description": "Introduce KVSharer, un método para compartir selectivamente bloques de KV cache entre capas de transformadores con patrones de atención complementarios, reduciendo el consumo de memoria VRAM en servidores de inferencia sin requerir reentrenamiento del modelo.",
+        "analogy": "📚 Como dos departamentos de una biblioteca universitaria que deciden compartir un mismo fichero central de enciclopedias en lugar de comprar dos copias idénticas, liberando la mitad de las estanterías de sus oficinas para nuevos libros.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.18517",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "OpenAI",
+      "name": "ChatGPT Search (Búsqueda Web Nativa en Tiempo Real)",
+      "description": "Integración completa de capacidades de búsqueda web en tiempo real directamente dentro de ChatGPT, combinando respuestas conversacionales inmediatas con enlaces directos a fuentes fiables, pronósticos meteorológicos interactivos y mapas dinámicos sin salir de la interfaz.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-chatgpt-search/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Analysis Tool & Ejecución de Código en el Navegador",
+      "description": "Despliegue de la herramienta de análisis en Claude.ai, dotando a Claude de un entorno de ejecución de código interactivo capaz de procesar archivos de datos, realizar cálculos numéricos precisos y renderizar visualizaciones dinámicas directamente en tiempo de respuesta.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/analysis-tool",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google DeepMind",
+      "name": "NotebookLM Business y Controles de Guía para Audio Overviews",
+      "description": "Lanzamiento del programa piloto empresarial de NotebookLM junto con nuevos controles interactivos para personalizar las discusiones generadas por Audio Overviews, permitiendo a los usuarios orientar el enfoque, tono y nivel técnico de los podcasts sintéticos.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/technology/ai/notebooklm-audio-overviews-update/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Segment Anything Model 2.1 (SAM 2.1) & Suite FAIR de Código Abierto",
+      "description": "Liberación de SAM 2.1 con precisión mejorada para segmentación visual de objetos pequeños u ocluidos en video e imágenes, junto con herramientas de ajuste fino para desarrolladores y nuevas bibliotecas abiertas para descubrimiento de materiales inorgánicos.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/fair-open-source-sam-2-1-spirit-lm/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "AMD",
+      "headline": "AMD presenta el acelerador de IA Instinct MI325X con 256GB de memoria HBM3E ultrarrápida y procesadores EPYC 'Turin' de 5ª generación, intensificando la competencia directa en centros de datos frente a las arquitecturas H200 y Blackwell.",
+      "links": [
+        {
+          "text": "AMD Press Release",
+          "url": "https://www.amd.com/en/newsroom/press-releases.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "The White House",
+      "headline": "El gobierno de EE.UU. emite el primer Memorando de Seguridad Nacional sobre Inteligencia Artificial (NSM), estableciendo directrices formales para acelerar la adopción militar y de inteligencia de modelos de frontera protegiendo cadenas de suministro críticas.",
+      "links": [
+        {
+          "text": "White House Briefing",
+          "url": "https://www.whitehouse.gov/briefing-room/statements-releases/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Qualcomm",
+      "headline": "Qualcomm presenta el procesador móvil Snapdragon 8 Elite con CPU Oryon de 2ª generación y NPU Hexagon de alto rendimiento, optimizado para ejecutar modelos multimodales y agentes de IA generativa de forma totalmente local en smartphones.",
+      "links": [
+        {
+          "text": "Qualcomm Newsroom",
+          "url": "https://www.qualcomm.com/news/releases",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Cerebras Systems",
+      "headline": "Cerebras Systems registra formalmente su prospecto S-1 ante la SEC para su salida a bolsa en el Nasdaq, impulsada por la alta demanda de sus supercomputadoras de chip completo CS-3 y su servicio de inferencia ultrarrápida para modelos abiertos.",
+      "links": [
+        {
+          "text": "SEC Filings",
+          "url": "https://www.sec.gov",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
