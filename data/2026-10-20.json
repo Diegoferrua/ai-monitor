@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-20",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better, Even Mid-Generation",
+        "author": "Rohin Manvi, Anikait Singh, Stefano Ermon (Stanford University)",
+        "description": "Introduce un esquema de autoevaluación generativa que permite al LLM predecir a mitad de la generación (con el costo de un único token clave) si conviene abortar y reiniciar el muestreo o seguir adelante, podando ramas infructuosas y optimizando dinámicamente el cómputo de inferencia (test-time compute) sin requerir un modelo de recompensa externo pesado.",
+        "analogy": "🚦 Como un conductor con GPS inteligente que detecta a mitad de trayecto que la avenida principal está colapsada y da una vuelta en U de inmediato para tomar un atajo despejado, en lugar de manejar hasta el final del embotellamiento para recién ahí darse cuenta del error.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02725",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CLR-Bench: Evaluating Large Language Models in College-level Reasoning",
+        "author": "Junnan Dong, Zijin Hong, Yuanchen Bei, Feiran Huang, Xinrun Wang, Xiao Huang",
+        "description": "Presenta CLR-Bench, un benchmark riguroso de 1.018 problemas en 16 disciplinas avanzadas de computación e inteligencia artificial a nivel universitario. Evalúa tanto la respuesta final como la fundamentación paso a paso mediante la métrica estricta Q->AR, revelando que los modelos suelen adivinar opciones correctas sin poseer un razonamiento deductivo sólido subyacente.",
+        "analogy": "📝 Como un profesor universitario exigente que no califica con diez un examen de opción múltiple solo por acertar la letra correcta, sino que revisa el borrador en hoja aparte para comprobar si el estudiante dedujo el teorema paso a paso o si simplemente adivinó por suerte.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.17558",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TuringQ: Benchmarking AI Comprehension in Theory of Computation",
+        "author": "Pardis Sadat Zahraei, Ehsaneddin Asgari",
+        "description": "Introduce TuringQ, el primer benchmark formal enfocado en teoría de la computación, autómatas y lenguajes formales con más de 4.000 problemas estructurados en cuatro niveles de dificultad. Demuestra que la especialización en fundamentos teóricos mejora de forma transferible la capacidad de deducción lógica del modelo en dominios ajenos como el álgebra simbólica.",
+        "analogy": "📐 Como un entrenamiento intensivo de ajedrez a ciegas y lógica matemática pura para un atleta mental: dominar las reglas abstractas fundamentales le permite resolver problemas tácticos complejos en cualquier otro juego de mesa sin haberlo practicado previamente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.06547",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "ACDC: Autoregressive Coherent Multimodal Generation using Diffusion Correction",
+        "author": "Hyungjin Chung, Dohun Lee, Jong Chul Ye (KAIST)",
+        "description": "Propone un framework zero-shot que unifica la capacidad de planificación secuencial a largo plazo de los modelos autorregresivos (ARMs) con la alta fidelidad visual y corrección local de los modelos de difusión (DMs), mitigando la acumulación exponencial de errores en la generación coherente de video e historias continuas.",
+        "analogy": "🎬 Como una producción cinematográfica donde un guionista experimentado traza la trama global de toda la temporada para evitar agujeros de guion, mientras un director de efectos especiales en el set retoca meticulosamente cada toma cuadro por cuadro para que no haya fallas visuales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.04721",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TemporalBench: Benchmarking Fine-grained Temporal Understanding for Multimodal Video Models",
+        "author": "Mu Cai, Reuben Tan, Jianrui Zhang, et al. (UW-Madison, Boston University)",
+        "description": "Diseña un benchmark de más de 10.000 preguntas y respuestas sobre video anotadas por humanos para evaluar el entendimiento temporal fino (frecuencia de acciones, orden cronológico de eventos y magnitud de movimiento), evidenciando una brecha de rendimiento de más del 30% entre los humanos y los mejores modelos multimodales como GPT-4o.",
+        "analogy": "⏱️ Como un árbitro de videoarbitraje (VAR) analizando una jugada milimétrica: no le alcanza con ver una foto estática del choque, sino que debe rebobinar segundo a segundo para discernir exactamente qué jugador tocó primero la pelota y con qué intensidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.10818",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models",
+        "author": "Junyan Ye, Baichuan Zhou, Zilong Huang, Junan Zhang, Tianyi Bai, et al.",
+        "description": "Establece un benchmark holístico con 18.000 evaluaciones para medir la capacidad de los modelos multimodales de detectar y explicar datos sintéticos generados por IA a través de texto, imágenes, video, audio y geometría 3D, cuantificando su sensibilidad ante artefactos generativos sutiles en escenarios de seguridad digital.",
+        "analogy": "🔬 Como un perito forense de arte equipado con lupas ultravioleta y espectrómetros: examina cuadros, esculturas y grabados antiguos para descubrir si una obra renombrada es auténtica o una falsificación moderna creada con técnicas de impresión digital perfecta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.09732",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Agents Thinking Fast and Slow: A Talker-Reasoner Architecture",
+        "author": "Konstantina Christakopoulou, Shibl Mourad, Maja Matarić (Google DeepMind, USC)",
+        "description": "Formaliza una arquitectura agéntica dual inspirada en la psicología cognitiva de Kahneman, desacoplando un agente conversacional ágil y empático (Talker / Sistema 1) que interactúa en tiempo real con el usuario, de un planificador deliberativo en segundo plano (Reasoner / Sistema 2) que ejecuta razonamientos de múltiples pasos, uso de herramientas y llamadas al entorno.",
+        "analogy": "🎭 Como una obra teatral con un actor carismático en el escenario dialogando fluidamente con el público sin silencios incómodos, mientras tras bambalinas un equipo de ingenieros escénicos resuelve cálculos complejos y acciona tramoyas mecánicas pesadas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.08328",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Agent-as-a-Judge: Evaluate Agents with Agents",
+        "author": "Mingchen Zhuge, Changsheng Zhao, Dylan Ashley, Jürgen Schmidhuber, et al. (KAUST, Meta, IDSIA)",
+        "description": "Propone el framework Agent-as-a-Judge para superar las limitaciones de evaluación estática de LLM-as-a-Judge, desplegando agentes evaluadores dinámicos que monitorean pasos intermedios, uso de herramientas y cumplimiento jerárquico de requerimientos en benchmarks reales de desarrollo de software como DevAI.",
+        "analogy": "👨‍🏫 Como un instructor de vuelo sentado al lado del copiloto que no solo mira si el avión aterrizó sin romperse, sino que evalúa en tiempo real cada verificación de instrumentos, ángulo de descenso y decisión tomada durante una tormenta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.10934",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Agent-Oriented Planning in Multi-Agent Systems",
+        "author": "Ao Li, Yuexiang Xie, Songze Li, Fugee Tsung, Bolin Ding, Yaliang Li (Alibaba Group, HKUST)",
+        "description": "Formaliza los principios teóricos fundamentales para la planificación agéntica (solubilidad, completitud y no redundancia) en arquitecturas colaborativas de LLMs, optimizando la descomposición jerárquica de consultas complejas y la asignación dinámica de subtareas mediante bucles de retroalimentación en tiempo de ejecución.",
+        "analogy": "🏗️ Como el director de obra de un rascacielos que desglosa los planos maestros en órdenes precisas: se asegura de que a cada cuadrilla de plomeros y electricistas se le asigne trabajo ejecutable sin superponer tareas ni dejar cables sueltos en el camino.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02189",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management",
+        "author": "Yi Xiong, Hao Wu, Changxu Shao, Junping Zhao, et al. (Ant Group)",
+        "description": "Introduce LayerKV, un sistema de gestión y desalojo de bloques de KV cache a granularidad de capa individual acoplado a un planificador consciente de SLOs, eliminando la contención de memoria GPU y reduciendo el tiempo hasta el primer token (TTFT) hasta 69x en secuencias largas sin degradar la precisión del modelo.",
+        "analogy": "🏢 Como un ascensor inteligente en un edificio corporativo que no espera a vaciarse por completo para subir al siguiente piso, sino que descarga pasajeros piso por piso según la urgencia de su reunión, descongestionando el lobby de entrada al instante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.00428",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "VL-Cache: Sparsity and Modality-Aware KV Cache Compression for Vision-Language Model Inference Acceleration",
+        "author": "Dezhan Tu, Danylo Vashchilenko, Yuzhe Lu, Panpan Xu (Amazon Web Services)",
+        "description": "Diseña un algoritmo de compresión de KV cache consciente de la dispersión de atención y las diferencias intrínsecas entre tokens visuales y textuales en Vision-Language Models (VLMs), logrando comprimir hasta un 90% de la memoria de claves/valores sin sacrificar el rendimiento multimodal.",
+        "analogy": "🧳 Como un viajero experto empacando una valija: en lugar de doblar por igual ropa pesada y accesorios diminutos, guarda los abrigos en bolsas de compresión al vacío y deja los pasaportes a mano en un bolsillo exterior accesible.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.23317",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LoRC: Low-Rank Compression for LLMs KV Cache with a Progressive Compression Strategy",
+        "author": "Rongzhi Zhang, Kuang Wang, Liyuan Liu, Shuohang Wang, Hao Cheng, Chao Zhang, Yelong Shen (Georgia Tech, Microsoft)",
+        "description": "Propone una aproximación de bajo rango para las matrices de proyección de KV cache aplicable como módulo plug-in en modelos preentrenados (como LLaMA 8B-70B), respaldada por un análisis teórico de acumulación de error que comprime progresivamente capas más profundas sin requerir costoso reentrenamiento.",
+        "analogy": "📉 Como digitalizar un archivo de audio sinfónico convirtiendo las pistas de acompañamiento secundarias a un formato comprimido de bajo peso pero manteniendo la voz principal en alta definición sin pérdida, ahorrando gigabytes de almacenamiento con una diferencia acústica imperceptible.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.03111",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "OpenAI",
+      "name": "ChatGPT Desktop para Windows (Preview Oficial) & Prompt Caching API",
+      "description": "Lanzamiento oficial de la aplicación de escritorio nativa de ChatGPT para Windows con atajo instantáneo Alt+Espacio, soporte para carga de archivos y razonamiento multimodal sobre capturas de pantalla, junto con la disponibilidad general de Prompt Caching en la API con hasta un 50% de reducción en costos y 80% en latencia.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-chatgpt-desktop-for-windows/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Desktop App para macOS y Windows (Preview) & Expansión de Artifacts",
+      "description": "Despliegue de aplicaciones de escritorio dedicadas de Claude para macOS y Windows, optimizadas para flujos de trabajo profesionales sin fricción de pestañas de navegador, con visualización integrada de artefactos interactivos en pantalla completa y atajos globales de teclado.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/claude-desktop",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google DeepMind",
+      "name": "Expansión Global de AI Overviews a 100+ Países & Agentes Gemini en Google Maps",
+      "description": "Expansión masiva de AI Overviews con tecnología Gemini a más de 100 países y territorios alcanzando 1.000 millones de usuarios globales mensuales, complementada con la integración de agentes de Gemini en Google Maps para resolver consultas conversacionales complejas sobre actividades y exploración de lugares.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/products/search/ai-overviews-expansion-october-2024/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Suite Abierta FAIR: Layer Skip & Meta Lingua para Entrenamiento e Inferencia Eficiente",
+      "description": "Liberación de herramientas fundamentales de FAIR: Layer Skip, técnica de auto-decodificación especulativa que acelera la inferencia hasta 1.7x omitiendo capas selectivas, y Meta Lingua, un entorno de código modular diseñado para acelerar la investigación y entrenamiento reproducible de modelos de lenguaje.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/fair-open-source-research-october-2024/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "ASML",
+      "headline": "ASML reporta pedidos netos de €2.600M en el tercer trimestre frente a los €5.400M proyectados por el consenso, provocando una histórica corrección bursátil que evidencia la marcada divergencia entre la demanda insaciable de chips avanzados para IA y la persistente debilidad en el sector tradicional de semiconductores.",
+      "links": [
+        {
+          "text": "ASML Investor Relations",
+          "url": "https://www.asml.com/en/investors/financial-results/q3-2024",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "IBM",
+      "headline": "IBM presenta su familia de modelos abiertos de tercera generación Granite 3.0 bajo licencia permisiva Apache 2.0, integrando arquitecturas densas y MoE de 2B a 8B diseñadas para empresas junto con los modelos de seguridad y mitigación de alucinaciones Granite Guardian 3.0.",
+      "links": [
+        {
+          "text": "IBM Newsroom",
+          "url": "https://newsroom.ibm.com/2024-10-21-ibm-unveils-granite-3-0-most-advanced-enterprise-ai-models-to-date",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "BlackRock & Microsoft",
+      "headline": "BlackRock, Microsoft, MGX y Global Infrastructure Partners formalizan la alianza GAIIP para movilizar hasta $100.000 millones en capital de inversión destinado a expandir centros de datos de última generación e infraestructuras de energía descarbonizada para sostener la demanda global de IA.",
+      "links": [
+        {
+          "text": "Microsoft Press Center",
+          "url": "https://news.microsoft.com/2024/09/17/blackrock-global-infrastructure-partners-microsoft-and-mgx-form-new-partnership-to-invest-in-ai/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "European Commission",
+      "headline": "La Comisión Europea avanza en la definición de directrices operativas del EU AI Act vinculadas al impacto ambiental y eficiencia energética de centros de datos de IA, anticipando exigencias obligatorias de transparencia y auditoría en consumo hídrico y eléctrico para grandes proveedores de nube.",
+      "links": [
+        {
+          "text": "European Commission Digital Strategy",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
