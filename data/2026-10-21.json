@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-21",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models",
+        "author": "Junfeng Fang, Houcheng Jiang, Kun Wang, Yunshan Ma, Jie Shi, Xiang Wang, Xiangnan He, Tat-Seng Chua (National University of Singapore, USTC)",
+        "description": "Introduce AlphaEdit, un framework de edición precisa de conocimiento para LLMs que proyecta las perturbaciones de actualización de parámetros directamente sobre el espacio nulo (null space) del conocimiento existente. Demuestra matemática y empíricamente que preserva intactos hechos preexistentes durante ediciones secuenciales masivas, eliminando el colapso de capacidades y el olvido catastrófico de los métodos tradicionales.",
+        "analogy": "🧩 Como renovar una instalación eléctrica compleja pasando cables nuevos exclusivamente por canaletas vacías que no tocan ni alteran ningún circuito existente de la casa, asegurando que la luz del resto de las habitaciones nunca sufra un cortocircuito.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02355",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "VinePPO: Refining Credit Assignment in RL Training of LLMs",
+        "author": "Amirhossein Kazemnejad, Milad Aghajohari, Eva Portelance, Alessandro Sordoni, Siva Reddy (Mila, McGill University)",
+        "description": "Propone VinePPO, un algoritmo de aprendizaje por refuerzo diseñado para resolver el problema de asignación de créditos en razonamientos complejos de múltiples pasos. Al reemplazar las redes de valor ruidosas e inexactas de PPO tradicional por estimaciones insesgadas de Monte Carlo bifurcadas desde el entorno, logra una calibración de recompensas sustancialmente superior en problemas matemáticos y de deducción lógica.",
+        "analogy": "🧗 Como un entrenador de escalada que, cuando un alpinista no logra coronar la cima de una pared difícil, le pide descender solo un metro para probar rutas alternativas en el punto exacto donde falló el agarre, en lugar de obligarlo a empezar toda la montaña desde cero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.01679",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "OpenR: An Open Source Framework for Advanced Reasoning with Large Language Models",
+        "author": "Jun Wang, Meng Fang, Ziyu Wan, et al.",
+        "description": "Presenta OpenR, un framework modular de código abierto diseñado para implementar capacidades de razonamiento deliberativo tipo 'Sistema 2' en LLMs. Integra supervisión paso a paso mediante modelos de recompensa de proceso (PRM), algoritmos de búsqueda guiada en tiempo de inferencia (como MCTS y Beam Search) y políticas de post-entrenamiento para escalar el cómputo de inferencia en tareas formales.",
+        "analogy": "♟️ Como dotar a un jugador veloz de ajedrez relámpago con un cuaderno de notas y una sala de análisis en tiempo real, permitiéndole pausar el reloj, explorar visualmente las ramificaciones de cada jugada táctica y elegir la línea ganadora con rigor analítico.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.09671",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation",
+        "author": "Chengyue Wu, Xiaokang Chen, Ning Ding, Chong Ruan, et al. (DeepSeek-AI, Tsinghua University)",
+        "description": "Desarrolla Janus, una arquitectura autorregresiva unificada que desacopla el procesamiento visual en dos vías independientes: un codificador semántico de alta abstracción para la comprensión multimodal y un tokenizador discreto especializado para la generación de imágenes. Elimina el conflicto de gradientes intrínseco entre ambas tareas, superando a modelos multimodales previos y rivalizando con generadores dedicados como SDXL.",
+        "analogy": "🎨 Como un arquitecto consumado que utiliza lentes de lectura de alta graduación para analizar minuciosamente planos técnicos estructurales, pero cambia a pinceles y lienzos artísticos cuando proyecta representaciones visuales creativas, empleando el mismo intelecto rector para ambas funciones.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.13848",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MarDini: Masked Autoregressive Diffusion for Video Generation at Scale",
+        "author": "Haozhe Liu, Shikun Liu, Zijian Zhou, Mengmeng Xu, Jürgen Schmidhuber, Juan-Manuel Pérez-Rúa, et al. (Meta AI, KAUST)",
+        "description": "Introduce MarDini, un framework híbrido para síntesis de video a gran escala que combina modelado autorregresivo enmascarado (MAR) para la planificación temporal y causal de escenas con modelos de difusión (DM) asimétricos para la generación espacial de alta resolución. Permite generación flexible de texto a video, interpolación fluida y expansión temporal con una reducción notable del coste computacional.",
+        "analogy": "📽️ Como un equipo de filmación donde el director principal realiza un guion gráfico secuencial rápido para definir el ritmo y la transición temporal de cada escena, mientras el equipo de posproducción digital aplica capas de iluminación y efectos visuales hiperrealistas sobre cada cuadro.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.20280",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Chain-of-Sketch: Enabling Global Visual Reasoning",
+        "author": "Aryo Lotfi, Enrico Fini, Samy Bengio, Moin Nabi, Emmanuel Abbe (EPFL, Apple)",
+        "description": "Propone Chain-of-Sketch (CoS), el equivalente visual a la cadena de pensamiento (CoT) para modelos de visión. Permite a los modelos generar bocetos intermedios estructurados paso a paso para resolver problemas espaciales y topológicos globales (como laberintos complejos, análisis de grafos y navegación de cuadrículas), mitigando la miopía de las representaciones locales y elevando la generalización fuera de distribución.",
+        "analogy": "🗺️ Como resolver un laberinto enrevesado en una revista dibujando primero con un lápiz trazos suaves para marcar caminos tentativos e ir tachando esquinas sin salida, en vez de intentar adivinar mentalmente la salida exacta con una sola mirada general.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.08165",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement",
+        "author": "Antonis Antoniades, Albert Örwall, Kexun Zhang, Yuxiang Wei, Lingming Zhang, William Wang (UC Santa Barbara, UIUC)",
+        "description": "Diseña SWE-Search, un framework que acopla agentes de ingeniería de software a Monte Carlo Tree Search (MCTS) con mecanismos de autocrítica y refinamiento iterativo. Supera la fragilidad de las trayectorias secuenciales clásicas explorando múltiples ramas de solución y validando parches en entornos de ejecución antes de comprometer cambios, alcanzando una mejora relativa del 23% en SWE-bench.",
+        "analogy": "🛠️ Como un cirujano o mecánico maestro que antes de realizar una modificación delicada en el motor, simula mentalmente tres variantes de montaje, descarta las que presentan riesgo de atasco y ejecuta únicamente el procedimiento verificado como seguro.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.20285",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Asynchronous Tool Usage for Real-Time Agents",
+        "author": "Antonio A. Ginart, Naveen Kodali, Jason Lee, et al. (Salesforce AI Research)",
+        "description": "Rompe el paradigma de ejecución secuencial y síncrona en agentes conversacionales mediante una máquina de estados finitos (FSM) orientada a eventos. Permite a los agentes interactuar fluidamente en tiempo real con usuarios humanos mientras herramientas pesadas (consultas a bases de datos, simulaciones y compilaciones) se ejecutan de manera asíncrona en segundo plano sin congelar la conversación.",
+        "analogy": "🛎️ Como el recepcionista de un hotel que continúa conversando amablemente y entregando llaves a los huéspedes mientras en segundo plano un sistema automatizado valida reservas y procesa pagos con el banco, sin obligar al cliente a esperar en silencio frente al mostrador.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.21620",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML",
+        "author": "Patara Trirat, Wonyong Jeong, Sung Ju Hwang (KAIST)",
+        "description": "Establece un framework multi-agente asistido por planificación recuperativa (RAG) para automatizar el ciclo de vida completo del machine learning, desde exploración y preprocesamiento de datos hasta selección algorítmica, optimización de hiperparámetros y puesta en producción, superando a expertos humanos y herramientas clásicas de AutoML en bancos de pruebas tabulares y multimodales.",
+        "analogy": "🏎️ Como un equipo de ingenieros de boxes en Fórmula 1 donde el analista de telemetría, el técnico de neumáticos y el experto en motor se coordinan en tiempo real para optimizar la aerodinámica y estrategia del monoplaza durante la carrera, en lugar de depender de un solo mecánico intentando calcular todo manualmente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02958",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
+        "author": "Guangxuan Xiao, Jiaming Tang, Hanrui Wang, Song Han (MIT, NVIDIA)",
+        "description": "Revela que en secuencias ultralargas solo una pequeña fracción de cabezales de atención ('retrieval heads') requiere memoria completa de KV cache, mientras que la mayoría ('streaming heads') solo necesita una ventana fija de tokens locales. DuoAttention poda el 70-80% del KV cache aplicando longitud constante a los cabezales de streaming, acelerando el decodificado hasta 3.3x y reduciendo el consumo de VRAM en contextos de hasta 4 millones de tokens sin degradar la precisión.",
+        "analogy": "📚 Como un investigador que en su escritorio solo mantiene abiertos los índices temáticos clave de tres volúmenes principales y conserva únicamente un bloc de notas reciente para el borrador del día, guardando el resto de los tomos en el armario y liberando el 80% de su espacio de trabajo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.10819",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ALISE: Accelerating Large Language Model Serving with Speculative Scheduling",
+        "author": "Youpeng Zhao, Jun Wang (University of Central Florida)",
+        "description": "Formula un framework de serving para LLMs que ataca la congestión en el despacho de lotes mediante planificación especulativa acoplada a gestión adaptativa de memoria GPU por prioridades y compresión de KV cache. Minimiza los retrasos en cola y duplica el rendimiento de tokens por segundo al predecir la duración de las solicitudes entrantes y reconfigurar lotes dinámicamente.",
+        "analogy": "🛫 Como los controladores aéreos de un aeropuerto internacional concurrido que asignan turnos de pista y puertas de embarque de manera predictiva según la velocidad y tipo de cada avión, evitando que las aeronaves queden esperando en patrones de espera circulares sobre la terminal.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.23537",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
+        "author": "Yizhao Gao, Zhupeng Ma, Binfan Zheng, Guanyu Feng, et al. (Tsinghua University)",
+        "description": "Descubre que los patrones de atención en LLMs exhiben dispersión espacial 2D intrínseca predecible. Introduce SeerAttention, una compuerta liviana que estima de forma previa los bloques de atención bidimensionales no críticos antes de computar la atención densa, permitiendo a kernels de FlashAttention disperso omitir bloques vacíos y acelerar la inferencia hasta 5.67x en secuencias de 128k tokens.",
+        "analogy": "🔍 Como un lector veloz con visión de rayos X que al abrir un capítulo largo identifica de un vistazo qué páginas no contienen información útil para su examen, saltando directamente a los párrafos decisivos y leyendo el libro cinco veces más rápido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.13276",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Comprensión de Video en Vivo en Google Lens & Rediseño de Google Shopping con Gemini",
+      "description": "Google integra capacidades avanzadas de razonamiento visual temporal de Gemini en Google Lens, permitiendo a los usuarios grabar video de objetos en movimiento y formular consultas por voz en tiempo real con respuestas analíticas inmediatas, junto con la reconstrucción de Google Shopping impulsada por el Shopping Graph y modelos Gemini para generar guías de compra hiperpersonalizadas.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/products/search/search-lens-video-updates-october-2024/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "SimpleQA: Benchmark Abierto para Medir Factualidad y Calibración en LLMs de Frontera",
+      "description": "OpenAI lanza SimpleQA, un benchmark público diseñado para evaluar con exactitud quirúrgica la veracidad en respuestas fácticas cortas y la calibración epistémica en modelos avanzados (demostrando que modelos como o1-preview alcanzan solo ~42% de precisión), incentivando que los sistemas se abstengan de responder cuando carecen de certeza en vez de generar alucinaciones convincentes.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-simpleqa/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Prompt Improver en Anthropic Console para Optimización Automática de Instrucciones",
+      "description": "Despliegue de la herramienta interactiva Prompt Improver en la consola para desarrolladores de Anthropic, optimizando prompts de manera automatizada mediante la inyección de razonamiento paso a paso (CoT), estandarización de ejemplos en sintaxis XML y prefills de salida, logrando incrementos de precisión de hasta un 30% en flujos de producción.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/prompt-improver",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Modelos Cuantizados de Llama 3.2 (1B y 3B) con ExecuTorch para Dispositivos Móviles",
+      "description": "Publicación oficial de variantes cuantizadas ultraligeras de Llama 3.2 (1B y 3B) utilizando Quantization-Aware Training (QAT) con adaptadores LoRA y SpinQuant, reduciendo el tamaño del modelo en un 56% y acelerando la velocidad de inferencia hasta 4x en silicio Qualcomm, MediaTek y Arm mediante PyTorch ExecuTorch.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-3-2-quantized-models-executorch/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Arm & Qualcomm",
+      "headline": "Arm notifica formalmente la cancelación en 60 días del Acuerdo de Licencia Arquitectónica (ALA) de Qualcomm tras una disputa legal por los núcleos Oryon desarrollados originalmente por Nuvia, amenazando la producción de procesadores Snapdragon X Elite para PCs con IA y chips para smartphones en un enfrentamiento que sacude la industria de semiconductores.",
+      "links": [
+        {
+          "text": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/news/articles/2024-10-23/arm-to-cancel-qualcomm-chip-design-license-in-escalation-of-feud",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "The White House",
+      "headline": "La Casa Blanca emite el Memorando de Seguridad Nacional (NSM-25) sobre Inteligencia Artificial firmado por el presidente Biden, estableciendo la primera directiva formal para acelerar la adopción segura de modelos frontera en agencias de defensa e inteligencia mientras encomienda al U.S. AI Safety Institute la auditoría previa de riesgos cibernéticos y biológicos.",
+      "links": [
+        {
+          "text": "The White House Briefing Room",
+          "url": "https://www.whitehouse.gov/briefing-room/statements-releases/2024/10/24/fact-sheet-biden-harris-administration-issues-landmark-national-security-memorandum-on-artificial-intelligence/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "SK Hynix",
+      "headline": "SK Hynix registra un beneficio operativo trimestral récord de 7,03 billones de wones (~$5.100 millones de dólares) impulsado por un crecimiento interanual de más del 330% en ventas de memorias de alto ancho de banda HBM3e para aceleradores de Nvidia, confirmando que la capacidad de producción para 2025 está prácticamente agotada ante la demanda exponencial de IA.",
+      "links": [
+        {
+          "text": "SK Hynix Newsroom",
+          "url": "https://news.skhynix.com/sk-hynix-reports-third-quarter-2024-financial-results/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "News Corp & Perplexity AI",
+      "headline": "News Corp (propietaria de The Wall Street Journal y New York Post) demanda a Perplexity AI en tribunales federales de Nueva York por infracción masiva de derechos de autor, acusando a la startup de scraping ilegal de contenidos periodísticos para generar respuestas que desvían tráfico y monetización publicitaria de los medios originales.",
+      "links": [
+        {
+          "text": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/media/dow-jones-new-york-post-sue-ai-startup-perplexity-for-massive-copyright-infringement-15efef12",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
