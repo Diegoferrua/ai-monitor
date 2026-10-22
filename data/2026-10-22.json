@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-22",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+        "author": "Charlie Snell, Jaehoon Lee, Kelvin Xu, Aviral Kumar (UC Berkeley, Google DeepMind)",
+        "description": "Analiza rigurosamente la compensación matemática entre el cómputo de pre-entrenamiento y el cómputo en tiempo de inferencia (test-time compute). Demuestra que optimizar dinámicamente la asignación de cómputo en inferencia mediante modelos de recompensa de procesos (PRM) y búsquedas adaptativas permite a un modelo pequeño superar a modelos hasta 14 veces más grandes en tareas complejas de razonamiento formal y matemáticas.",
+        "analogy": "🧠 Como contratar a un estudiante brillante de grado y darle horas suficientes con lápiz y papel para verificar minuciosamente cada cálculo, logrando resolver un examen de física cuántica mejor que un profesor emérito apurado al que solo le dan cinco segundos para responder de memoria.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.03314",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Deliberate Reasoning in Language Models as Structure-Aware Planning with an Accurate World Model",
+        "author": "Siheng Xiong, Ali Payani, Yuan Yang, Faramarz Fekri (Georgia Institute of Technology)",
+        "description": "Presenta SWAP, un framework de planificación estructurada para LLMs que acopla representaciones explícitas de grafos de implicación lógica (entailment graphs) con un modelo de mundo calibrado mediante generador-discriminador. Transforma el razonamiento deliberativo de una generación textual secuencial en una búsqueda informada en espacios de estados, reduciendo drásticamente las contradicciones deductivas y alucinaciones lógicas.",
+        "analogy": "🗺️ Como un navegante que en lugar de avanzar de noche guiándose únicamente por intuición o memoria visual, consulta una carta náutica digital con sensores batimétricos en vivo para trazar rumbos verificados antes de mover el timón.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.03136",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TypedThinker: Diversify Large Language Model Reasoning with Typed Thinking",
+        "author": "Danqing Wang, et al.",
+        "description": "Introduce TypedThinker, un paradigma que expande el razonamiento en cadena de pensamiento más allá de la deducción lineal estándar. Clasifica y orquesta explícitamente cuatro modos de pensamiento complementarios (deductivo, inductivo, abductivo y analógico) según la topología del problema, superando los callejones sin salida cognitivos y mejorando el desempeño en enigmas lógicos y razonamiento causal.",
+        "analogy": "🧰 Como un detective experimentado que no se limita a seguir huellas lineales en la escena del crimen, sino que combina deducción forense, analogías con casos archivados del pasado e hipótesis abductivas sobre el motivo del sospechoso para resolver el misterio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.01952",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Loong: Generating Minute-level Long Videos with Autoregressive Language Models",
+        "author": "Yuqing Wang, et al. (University of Hong Kong, ByteDance)",
+        "description": "Desarrolla Loong, una arquitectura autorregresiva unificada que escala la generación de video condicionado por texto a duraciones de más de un minuto con alta coherencia temporal. Aborda la acumulación de errores y la degradación visual mediante un esquema de reponderación de pérdida entre cuadros tempranos y tardíos y un protocolo de entrenamiento progresivo de corto a largo plazo.",
+        "analogy": "🎞️ Como un animador tradicional que en lugar de dibujar cuadros sueltos que tiemblan con el tiempo, mantiene una línea de tiempo con fotogramas clave bien anclados y va rellenando las transiciones intermedias progresivamente, garantizando que el personaje conserve su forma exacta a lo largo de todo el cortometraje.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02757",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Towards World Simulator: Crafting Physical Commonsense-Based Benchmark for Video Generation",
+        "author": "Fanqing Meng, Jiaqi Liao, Xinyu Tan, Wenqi Shao, Yu Qiao, Ping Luo, et al. (Shanghai AI Lab, SJTU, CUHK)",
+        "description": "Establece PhyGenBench y PhyGenEval, un marco riguroso de evaluación diseñado para medir si los modelos generativos de video actúan como verdaderos simuladores del mundo físico. Evalúa 160 escenarios controlados que cubren 27 leyes físicas fundamentales (mecánica clásica, fluidos, termodinámica y colisiones), demostrando que el escalado de parámetros y el prompting tradicional aún no garantizan consistencia con las leyes de la física.",
+        "analogy": "🍎 Como someter a un dibujante prodigioso a un examen de balística y dinámica de fluidos: puede pintar una manzana cayendo con un hiperrealismo deslumbrante, pero si calcula mal la aceleración de la gravedad o hace que el agua rebote como una pelota de goma, la simulación de la realidad se desmorona.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05363",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Griffon-G: Bridging Vision-Language and Vision-Centric Tasks via Large Multimodal Models",
+        "author": "Jeffery Zhan, et al. (Chinese Academy of Sciences)",
+        "description": "Formula Griffon-G, un modelo multimodal unificado que resuelve el problema del colapso de entrenamiento al sincronizar tareas centradas en visión (detección de objetos finos y localización espacial de precisión) con tareas de visión y lenguaje (conversación y VQA). Emplea percepción visual de alta resolución para identificar detalles microscópicos en escenas densas sin degradar la fluidez lingüística.",
+        "analogy": "🔬 Como un cirujano robótico con cámaras de aumento que puede tanto explicar con fluidez diagnóstica el cuadro clínico al equipo médico en la sala, como apuntar con precisión micrométrica el láser sobre una lesión celular milimétrica sin desviar el pulso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.16163",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Cut the Crap: An Economical Communication Pipeline for LLM-based Multi-Agent Systems",
+        "author": "Guibin Zhang, Yanwei Yue, Zhixun Li, Sukwon Yun, Kun Wang, Dawei Cheng, Tianlong Chen",
+        "description": "Presenta AgentPrune, un framework de comunicación eficiente para sistemas multi-agente que poda de forma quirúrgica los mensajes redundantes e irrelevantes en el grafo espacio-temporal de paso de mensajes. Reduce el consumo de tokens entre un 28% y un 73% mientras preserva o incrementa la tasa de éxito de la tarea y fortalece la resistencia ante inyecciones maliciosas entre agentes.",
+        "analogy": "📻 Como una frecuencia de radio de control militar que filtra el ruido, los comentarios repetitivos y los saludos innecesarios entre los soldados en el terreno, dejando pasar únicamente las coordenadas y órdenes tácticas decisivas para evitar saturar el canal de comunicaciones.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02506",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AgentSquare: Automatic LLM Agent Search in Modular Design Space",
+        "author": "Yu Shang, Yu Li, Keyu Zhao, Likai Ma, Jiahe Liu, Fengli Xu, Yong Li (Tsinghua University)",
+        "description": "Formaliza la búsqueda automatizada de agentes LLM (MoLAS) estructurando el espacio de diseño en cuatro módulos estándar con interfaces uniformes: Planificación, Razonamiento, Uso de Herramientas y Memoria. A través de operadores de recombinación y predictores de rendimiento basados en modelos subrogados en contexto, descubre arquitecturas autónomas que superan en un 17.2% a los diseños artesanales desarrollados por humanos.",
+        "analogy": "🧩 Como una fábrica modular inteligente donde un algoritmo genético prueba y ensambla cientos de combinaciones de chasis, motores y sensores prefabricados para armar el vehículo todoterreno óptimo, en lugar de que un solo mecánico intente diseñar cada pieza a mano desde cero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.06153",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "EMOS: Embodiment-aware Heterogeneous Multi-robot Operating System with LLM Agents",
+        "author": "Ruochun Jin, et al.",
+        "description": "Construye EMOS, un sistema operativo multi-robot heterogéneo potenciado por agentes LLM que traduce la planificación de alto nivel en acciones físicas viables. Introduce el concepto de 'Robot Resume', donde cada robot parsea su archivo cinemático URDF para generar dinámicamente su perfil de capacidades físicas, permitiendo discusiones centralizadas eficaces para asignar subtareas según la anatomía de cada máquina.",
+        "analogy": "🏗️ Como el capataz de una gran obra de construcción que asigna tareas revisando la ficha técnica de cada maquinaria pesada: envía a la grúa telescópica a levantar vigas al quinto piso y al minicargador a limpiar escombros en los túneles angostos, garantizando que ninguna máquina intente maniobras para las que no está fabricada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.22662",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving",
+        "author": "Yifan Qiao, et al. (UCLA)",
+        "description": "Diseña ConServe, un sistema de serving conjunto que aprovecha los ciclos ociosos de GPU provocados por la fluctuación de tráfico en servicios conversacionales online para ejecutar tareas offline tolerantes a latencia. Mediante un planificador a nivel de token, apropiación a nivel de capa en sub-iteraciones y gestión incremental del KV cache, eleva el throughput hasta 2.2x y reduce la latencia de cola (tail latency) 2.9x sin violar los SLOs críticos.",
+        "analogy": "🚆 Como un sistema ferroviario de alta precisión que desliza trenes de carga en los pequeños huecos de 10 minutos entre el paso de dos trenes bala de pasajeros, desalojando la vía instantáneamente si el tren bala se adelanta, exprimiendo al 100% la capacidad de las vías sin provocar jamás un retraso a los pasajeros.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.01228",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference",
+        "author": "Shilin Zhu, et al. (Microsoft Research, University of Washington)",
+        "description": "Desarrolla POD-Attention, un kernel de GPU especializado para batches híbridos que supera la desincronización computacional entre las fases de prefill (limitada por cómputo) y decode (limitada por ancho de banda de memoria). Ejecuta ambas operaciones concurrentemente sobre los mismos multiprocesadores con balance dinámico de hardware, acelerando la computación de atención hasta en un 59% y reduciendo la latencia end-to-end.",
+        "analogy": "🍳 Como un chef de alta cocina que mientras espera que un guiso a fuego lento reduzca en una hornalla (operación de espera de memoria), utiliza la tabla contigua para picar verduras a toda velocidad (operación intensiva de cómputo), logrando que ambos platos salgan terminados en la mitad del tiempo total de cocina.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.18038",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "COMET: Towards Practical W4A4KV4 LLMs Serving",
+        "author": "Songyi Liu, et al.",
+        "description": "Introduce COMET, un framework de serving que hace viable la cuantización ultrabaja W4A4KV4 (4 bits en pesos, activaciones y KV cache) sin pérdida apreciable de precisión mediante cuantización mixta de grano fino (FMPQ). Incorpora kernels personalizados W4Ax con pipelining por software y balanceo fino de multiprocesadores (SM), alcanzando un throughput 2.02x superior a TensorRT-LLM en GPUs NVIDIA A100.",
+        "analogy": "🧳 Como comprimir al vacío todo el equipaje de una expedición en paquetes ultracompactos de 4 centímetros, diseñando al mismo tiempo estanterías modulares a medida en el baúl del auto para que se puedan cargar y descargar al instante sin frenar el viaje.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.12168",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Music AI Sandbox & MusicFX DJ: Nuevas Herramientas Generativas de Creación Musical con SynthID",
+      "description": "Google DeepMind presenta su suite de herramientas generativas de audio y música desarrolladas con artistas y YouTube, permitiendo composición multi-pista asistida, generación de loops dinámicos y mezclas en vivo mediante MusicFX DJ, incorporando marca de agua SynthID imperceptible para identificación y gobernanza responsable.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/transforming-the-creative-process-with-our-music-ai-tools/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "sCM: Simplificación y Escalado de Modelos de Consistencia en Tiempo Continuo en Solo 2 Pasos",
+      "description": "OpenAI simplifica, estabiliza y escala los modelos de consistencia en tiempo continuo (sCM) a miles de millones de parámetros, logrando generar imágenes, audio y video con una fidelidad visual equiparable a los mejores modelos de difusión pero requiriendo únicamente dos pasos de muestreo, lo que reduce el coste de inferencia en órdenes de magnitud.",
+      "links": [
+        {
+          "text": "OpenAI Research",
+          "url": "https://openai.com/index/simplifying-stabilizing-and-scaling-continuous-time-consistency-models/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude 3.5 Sonnet en GitHub Copilot & Expansión Multi-Modelo para Desarrolladores",
+      "description": "Anthropic y GitHub formalizan la llegada de Claude 3.5 Sonnet al ecosistema de GitHub Copilot en Visual Studio Code y GitHub.com, permitiendo a millones de programadores aprovechar el liderazgo de Claude en razonamiento arquitectónico, refactorización compleja y depuración profunda dentro de su entorno nativo de desarrollo.",
+      "links": [
+        {
+          "text": "GitHub Blog",
+          "url": "https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Llama para Seguridad Nacional: Apertura de Modelos Abiertos a Defensa de EE.UU. y Aliados",
+      "description": "Meta expande formalmente el acceso a sus modelos abiertos Llama a agencias de defensa nacional de EE.UU. y aliados democráticos, colaborando con contratistas como Lockheed Martin, Palantir, AWS, Microsoft y Oracle para aplicar IA en diagnósticos de aeronaves, análisis de señales, planificación operativa y protección de infraestructuras críticas.",
+      "links": [
+        {
+          "text": "Meta Newsroom",
+          "url": "https://about.fb.com/news/2024/11/open-source-ai-for-national-security/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Google (Alphabet)",
+      "headline": "Sundar Pichai revela en los resultados del tercer trimestre de 2024 que más del 25% de todo el código nuevo en Google ya es generado por IA y revisado por ingenieros humanos, mientras la división Google Cloud acelera sus ingresos un 35% interanual hasta los $11.350 millones de dólares gracias a la demanda corporativa de Gemini.",
+      "links": [
+        {
+          "text": "Alphabet Investor Relations",
+          "url": "https://blog.google/technology/ai/alphabet-q3-2024-earnings/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Apple",
+      "headline": "Apple lanza oficialmente Apple Intelligence para el público general con la publicación de iOS 18.1, iPadOS 18.1 y macOS Sequoia 15.1, desplegando herramientas de redacción en todo el sistema, resúmenes inteligentes de notificaciones, la función Clean Up en Fotos y una interfaz renovada de Siri.",
+      "links": [
+        {
+          "text": "Apple Newsroom",
+          "url": "https://www.apple.com/newsroom/2024/10/apple-intelligence-is-available-today-on-iphone-ipad-and-mac/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta",
+      "headline": "Meta reporta un crecimiento del 19% en ingresos durante el tercer trimestre de 2024 y anuncia que Meta AI se acerca a los 500 millones de usuarios activos mensuales, elevando su previsión de gasto de capital (CapEx) a $38.000-$40.000 millones para acelerar el despliegue de centros de datos y clústeres para entrenamiento de supermodelos en 2025.",
+      "links": [
+        {
+          "text": "Meta Investor Relations",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-Reports-Third-Quarter-2024-Results/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Microsoft & OpenAI",
+      "headline": "Microsoft y OpenAI contratan a los bancos de inversión Morgan Stanley y Goldman Sachs para estructurar y valuar la participación accionaria de Microsoft (estimada en decenas de miles de millones de dólares) de cara a la transición de OpenAI hacia una Corporación de Beneficio Público (PBC).",
+      "links": [
+        {
+          "text": "The Wall Street Journal",
+          "url": "https://www.wsj.com/tech/ai/microsoft-openai-partnership-investment-bankers-morgan-stanley-goldman-sachs-0e5c9b74",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
