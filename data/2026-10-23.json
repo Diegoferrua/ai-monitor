@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-23",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "s1: Simple test-time scaling",
+        "author": "Niklas Muennighoff, Zitong Yang, Weijia Shi, Xiang Lisa Li, Li Fei-Fei, Hannaneh Hajishirzi, Luke Zettlemoyer, Percy Liang, Emmanuel Candès, Tatsunori Hashimoto (Stanford, University of Washington, Allen Institute for AI)",
+        "description": "Presenta s1 y la técnica de budget forcing para escalar el razonamiento deliberativo en tiempo de inferencia de manera extraordinariamente simple. Con solo 1.000 ejemplos curados (s1K) y la inserción forzada de tokens de pausa ('Wait') cuando el modelo intenta emitir una respuesta precipitada, s1-32B supera a OpenAI o1-preview en un 27% en problemas matemáticos de nivel olímpico (MATH y AIME24) sin necesidad de aprendizaje por refuerzo masivo.",
+        "analogy": "⏱️ Como un tutor paciente que, cada vez que un estudiante brillante está a punto de entregar apresuradamente un examen difícil de matemáticas, le apoya suavemente la mano en el hombro y le susurra 'esperá, revisá el paso 3', obligándolo a repensar y detectar sus propios descuidos antes de dar la respuesta final.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2501.19393",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Rational Metareasoning for Large Language Models",
+        "author": "C. Nicolò De Sabbata, Theodore R. Sumers, Badr AlKhamissi, Antoine Bosselut, Thomas L. Griffiths (Princeton University, EPFL)",
+        "description": "Introduce un framework de metarrazonamiento racional inspirado en modelos computacionales de ciencias cognitivas para regular cuándo un LLM debe pensar paso a paso y cuándo debe responder de inmediato. Mediante una función de recompensa basada en el Valor de la Computación (Value of Computation) combinada con Expert Iteration, entrena al modelo para omitir cadenas de pensamiento en preguntas triviales y activarlas solo en encrucijadas lógicas complejas, reduciendo la generación de tokens entre un 20% y un 37% sin degradar la precisión.",
+        "analogy": "🚦 Como un conductor experto que maneja en piloto automático fluido por una autopista despejada pero baja la velocidad y analiza conscientemente cada espejo al ingresar a una rotonda caótica con lluvia, dosificando su esfuerzo mental exactamente donde aporta valor real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05563",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "The Role of Deductive and Inductive Reasoning in Large Language Models",
+        "author": "Chengkun Cai, Xu Zhao, Haoliang Liu, Zhongyu Jiang, Tianfang Zhang, Zongkai Wu, Jenq-Neng Hwang, Serge Belongie, Lei Li (University of Washington, University of Copenhagen)",
+        "description": "Formula el framework dinámico De-In-Ductive (DID), que descompone y equilibra el razonamiento deductivo (de reglas generales a casos particulares) y el inductivo (de patrones empíricos a hipótesis generales) en LLMs. Utilizando la dimensión de Littlestone y entropía de información para cuantificar la complejidad topológica del problema, orquesta bifurcaciones de inferencia híbridas que superan la rigidez lineal de Chain-of-Thought en acertijos formales y tareas matemáticas multi-paso.",
+        "analogy": "🔬 Como un científico forense que alterna metódicamente entre analizar las leyes físicas balísticas conocidas (deducción) y observar patrones inesperados de salpicaduras de pintura en la pared para formular nuevas hipótesis (inducción), uniendo ambas miradas para resolver el enigma.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02892",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "LongVILA: Scaling Long-Context Visual Language Models for Long Videos",
+        "author": "Yukang Chen, Song Han, Linxi Fan, Yuke Zhu, Pavlo Molchanov, Jan Kautz, et al. (NVIDIA, MIT, UC Berkeley, UT Austin)",
+        "description": "Desarrolla LongVILA, un sistema integral algorítmico y de infraestructura que escala modelos de visión y lenguaje (VLM) para procesar videos extremadamente largos de hasta miles de cuadros y contextos de millones de tokens. Introduce paralelismo de secuencias multimodal (MM-SP), compresión espacio-temporal selectiva y gestión asíncrona de I/O, resolviendo el cuello de botella de memoria en GPUs distribuidas y alcanzando precisión de estado del arte en Video-Needle-In-A-Haystack.",
+        "analogy": "🎬 Como una sala de montaje cinematográfico profesional con un equipo de editores sincronizados en red donde cada uno sostiene y analiza un carrete de película de una hora completa en paralelo, comunicándose al instante por intercomunicador para localizar un detalle de un segundo sin trabar el proyector ni saturar la mesa de trabajo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.10188",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AVID: Adapting Video Diffusion Models to World Models",
+        "author": "Marc Rigter, Tarun Gupta, Agrin Hilmkil, Chao Ma (Microsoft Research)",
+        "description": "Propone AVID, un método para transformar modelos de difusión de video pre-entrenados no supervisados en modelos de mundo interactivos y condicionados por acciones físicas para robótica y aprendizaje por refuerzo. Mediante un adaptador ligero entrenado con un esquema de enmascaramiento aprendido sobre un conjunto reducido de videos con etiquetas de acción, permite a agentes autónomos utilizar los poderosos priors visuales y físicos de modelos de difusión masivos para simular y predecir consecuencias de trayectorias sin modificar los parámetros base del modelo generativo.",
+        "analogy": "🕹️ Como conectar una palanca de control con acelerador y freno a una película de acción pregrabada hiperrealista, donde un chip traductor anticipa y reorienta la trayectoria del vehículo en tiempo real según cómo muevas la palanca, convirtiendo un film pasivo en un simulador de vuelo interactivo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.12822",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "VeGaS: Video Gaussian Splatting",
+        "author": "Weronika Smolak-Dyżewska, Dawid Malarz, Kornel Howil, Jan Kaczmarczyk, Marcin Mazur, Przemysław Spurek (Jagiellonian University)",
+        "description": "Introduce VeGaS, un modelo que traslada los 3D Gaussian Splattings al modelado continuo y edición dinámica de secuencias de video. Resuelve la rigidez de las representaciones neuronales implícitas tradicionales (INR) mediante una familia novedosa de distribuciones Folded-Gaussian que capturan deformaciones y dinámicas no lineales a lo largo del tiempo, facilitando la interpolación temporal de alta fidelidad, la eliminación de objetos en movimiento y la edición semántica cuadro a cuadro.",
+        "analogy": "✨ Como reemplazar una pila de diapositivas estáticas transparentes por una nube de pequeñas gotas de gel luminiscente elásticas que fluyen, se estiran y cambian de color orgánicamente al compás del viento, permitiendo retocar o quitar una gota individual sin que el movimiento del conjunto pierda continuidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2411.11024",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System",
+        "author": "Weize Chen, Jiarui Yuan, Chen Qian, Cheng Yang, Zhiyuan Liu, Maosong Sun (Tsinghua University)",
+        "description": "Presenta Optima, un framework de optimización y entrenamiento iterativo para sistemas multi-agente que aborda el colapso de eficiencia comunicativa y la redundancia verborrágica de tokens. Implementa un ciclo de Generación-Clasificación-Selección-Entrenamiento guiado por una función de recompensa multiobjetivo (tasa de éxito, brevedad de tokens y legibilidad) y exploración inspirada en Monte Carlo Tree Search (MCTS), logrando multiplicar el rendimiento de los agentes por 2.8x consumiendo menos del 10% de los tokens de comunicación estándar.",
+        "analogy": "🎙️ Como un entrenador de un equipo de respuesta a emergencias que entrena a los operarios para desterrar charlas vacías, monólogos y cortesías por la radio, enseñándoles un código conciso de 3 palabras clave que transmite la situación con total precisión y ahorra el 90% del tiempo de transmisión.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.08115",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SMoA: Improving Multi-agent Large Language Models with Sparse Mixture-of-Agents",
+        "author": "Dawei Li, Zhen Tan, Peijia Qian, Yifan Li, Kumar Satvik Chaudhary, Lijie Hu, Jiayi Shen (Arizona State University, KAUST)",
+        "description": "Formula SMoA (Sparse Mixture-of-Agents), extrapolando los principios de dispersión de Mixture-of-Experts (MoE) a la colaboración entre agentes autónomos. Incorpora módulos de Selección de Respuestas y Parada Temprana comandados por LLMs moderadores y jueces, permitiendo enrutar consultas únicamente a subconjuntos especializados de agentes y cortar deliberaciones redundantes cuando se alcanza consenso, logrando una precisión equivalente a Mixture-of-Agents densos con una reducción masiva en costo computacional y latencia.",
+        "analogy": "🏛️ Como un comité directivo ágil que en lugar de obligar a los 30 directores a deliberar y votar cada mínimo memorando administrativo, delega la decisión a los 2 ingenieros especializados en el tema y cierra la sesión en cuanto ambos llegan a un acuerdo técnico sólido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2411.03284",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use",
+        "author": "Siyuan Hu, Mingyu Ouyang, Difei Gao, Mike Zheng Shou (Show Lab, National University of Singapore)",
+        "description": "Realiza un estudio empírico exhaustivo y presenta un framework de evaluación de código abierto para agentes con capacidad de operar computadoras mediante interfaces gráficas de usuario (GUI) a partir de Claude 3.5 Computer Use. Analiza rigurosamente tareas complejas en sistemas operativos de escritorio, suites de productividad y navegación web, categorizando taxonomías de fallos en planificación jerárquica, bucles de corrección de errores visuales y mecanismos de teclado/ratón virtual, estableciendo las bases para la próxima generación de Large Action Models (LAMs).",
+        "analogy": "🖥️ Como sentar a un pasante novato pero hiperinteligente frente a una computadora de oficina con mouse y teclado físicos: comprende al instante qué documento de Excel debe completar, pero a veces tropieza al hacer doble clic en el ícono correcto o se confunde si una ventana emergente inesperada bloquea el botón de guardar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2411.10323",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications",
+        "author": "Gabriele Oliaro, Zhihao Jia, Daniel Campos, Aurick Qiao (Carnegie Mellon University, Scale AI)",
+        "description": "Diseña SuffixDecoding, un paradigma de decodificación especulativa libre de modelos auxiliares y sin entrenamiento que explota la redundancia y repetición estructural típica en flujos de trabajo agénticos (como SWE-Bench y AgenticSQL). Mediante árboles de sufijos eficientes que cachean secuencias largas de tokens entre turnos y un planificador de especulación adaptativo basado en probabilidad de aceptación, acelera la inferencia hasta 5.3x preservando de forma matemáticamente exacta la distribución de salida del modelo objetivo.",
+        "analogy": "⌨️ Como un sistema de autocompletado ultrarrápido para programadores que memoriza la estructura exacta de funciones y bucles que acabás de escribir en el archivo anterior, anticipando y rellenando 20 líneas de código repetitivo de un solo golpe en cuanto pulsás la primera tecla, sin equivocarse en una sola coma.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2411.04975",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration",
+        "author": "Heming Xia, Yongqi Li, Jun Zhang, Cunxiao Du, Wenjie Li (The Hong Kong Polytechnic University, Zhejiang University, Sea AI Lab)",
+        "description": "Introduce SWIFT, un framework de decodificación auto-especulativa plug-and-play que acelera la inferencia de LLMs sin necesidad de modelos auxiliares más pequeños ni reentrenamiento de pesos. Aprovecha la escasez latente en las capas del transformer identificando dinámicamente qué subconjuntos de capas intermedias pueden omitirse sobre la marcha según el contexto y la incertidumbre del token, alternando de manera fluida entre generación preliminar rápida y verificación profunda en una sola pasada de hardware.",
+        "analogy": "🏃 Como un atleta que corre una carrera de fondo dando zancadas dobles muy veloces en las rectas planas y despejadas (saltándose pasos redundantes), pero recuperando el paso firme y cauteloso únicamente en las curvas cerradas y con barro para no perder el equilibrio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.06916",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "BUZZ: Beehive-structured Sparse KV Cache with Segmented Heavy Hitters for Efficient LLM Inference",
+        "author": "Junqi Zhao, Zhijin Fang, Shu Li, Shaohui Yang, Shichao He (Institute of Computing Technology, Chinese Academy of Sciences)",
+        "description": "Desarrolla BUZZ, una arquitectura de KV cache dispersa inspirada en la estructura geométrica de un panal de abejas que optimiza drásticamente el consumo de memoria VRAM en inferencia de contextos masivos. Organiza los tokens históricos en celdas hexagonales segmentadas de Heavy Hitters que preservan la continuidad posicional y la atención cruzada crítica mientras desalojan la información residual de baja relevancia, disminuyendo la huella de memoria hasta en un 60% sin degradar la precisión en tareas de preguntas y respuestas sobre múltiples documentos.",
+        "analogy": "🐝 Como organizar el archivo documental de una biblioteca gigante en un panal de celdas modulares compactas: en lugar de apilar miles de folios desordenados en el escritorio, guardás únicamente los expedientes clave más consultados en los compartimentos hexagonales de acceso directo, encontrando la referencia al instante con una fracción del espacio de almacenamiento.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.23079",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaQubit: Decodificador Cuántico Basado en Inteligencia Artificial Publicado en Nature",
+      "description": "Google DeepMind y Google Quantum AI presentan en Nature su sistema AlphaQubit, un decodificador cuántico basado en redes neuronales tipo Transformer que resuelve el desafío crítico de corrección de errores en cúbits físicos de procesadores cuánticos como Sycamore. Entrenado con simulación cuántica y calibrado con datos reales, AlphaQubit supera a los decodificadores tradicionales por tensor networks y matching, reduciendo la tasa de errores de cálculo cuántico hasta en un 30% y marcando un hito hacia la computación cuántica tolerante a fallos.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/ai-for-quantum-computing-alphaqubit/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Predicted Outputs: Aceleración Extrema de Inferencia para Tareas de Edición y Refactorización de Código en la API",
+      "description": "OpenAI lanza Predicted Outputs en su API para los modelos GPT-4o y GPT-4o-mini, una funcionalidad orientada a reducir radicalmente la latencia de respuesta en escenarios donde gran parte del texto o código de salida ya se conoce de antemano (como refactorizaciones de código, corrección de bugs o edición de documentos). Al suministrar el fragmento de referencia, el modelo evalúa las predicciones en paralelo mediante decodificación especulativa interna, acelerando drásticamente el tiempo de respuesta en modificaciones puntuales.",
+      "links": [
+        {
+          "text": "OpenAI Research",
+          "url": "https://openai.com/index/predicted-outputs/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Model Context Protocol (MCP): Estándar Abierto Universal para Conectar Modelos y Agentes con Herramientas y Datos",
+      "description": "Anthropic presenta y libera como estándar de código abierto el Model Context Protocol (MCP), un protocolo universal y bidireccional diseñado para unificar la forma en que los asistentes de IA y agentes autónomos acceden a fuentes de datos seguras, herramientas locales y servicios en la nube. MCP resuelve la fragmentación de integraciones personalizadas punto a punto, permitiendo que clientes de IA (como Claude Desktop e IDEs) se conecten de manera estandarizada y segura a servidores MCP en repositorios de código, bases de datos empresariales y APIs corporativas.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/model-context-protocol",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Llama 3.3 70B: Nivel de Rendimiento de 405B en un Modelo Abierto de 70 Mil Millones de Parámetros",
+      "description": "Meta AI lanza oficialmente Llama 3.3 70B Instruct, una actualización fundamental de su familia de modelos abiertos que comprime las capacidades y el razonamiento de vanguardia de su predecesor de 405 mil millones de parámetros dentro de un tamaño compacto de 70B. Con soporte para ventanas de contexto de 128k tokens, capacidades multilingües nativas de alta precisión y licenciamiento permisivo, permite a investigadores y organizaciones ejecutar inferencia y ajuste fino de nivel de supermodelo en hardware de estación de trabajo y servidores estándar con costos operacionales drásticamente menores.",
+      "links": [
+        {
+          "text": "Meta Newsroom",
+          "url": "https://about.fb.com/news/2024/12/meta-llama-3-3/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "TSMC & US Semiconductor Fab",
+      "headline": "La planta Fab 21 de TSMC en Phoenix, Arizona, alcanza rendimientos de producción de chips utilizables en su nodo de 4 nanómetros que superan en aproximadamente 4 puntos porcentuales a los obtenidos en las fábricas insignia equivalentes de Taiwán, despejando dudas sobre la viabilidad operativa y la competitividad técnica de la fabricación avanzada de semiconductores en suelo estadounidense.",
+      "links": [
+        {
+          "text": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2024-10-24/tsmc-arizona-chip-production-yields-surpass-taiwan-facilities",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Amazon & Anthropic",
+      "headline": "Amazon formaliza una inversión adicional de .000 millones de dólares en Anthropic para elevar su participación total a .000 millones, consolidando a AWS como el socio principal de computación y entrenamiento donde los equipos de ingeniería de Claude co-desarrollarán kernels y optimizaciones de bajo nivel sobre los procesadores de silicio a medida AWS Trainium e Inferentia.",
+      "links": [
+        {
+          "text": "Amazon Newsroom",
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-anthropic-deepen-partnership",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "SoftBank & NVIDIA",
+      "headline": "Masayoshi Son y Jensen Huang anuncian en Tokio que SoftBank construirá la supercomputadora de IA más potente de Japón basada en la arquitectura NVIDIA Blackwell DGX B200, al tiempo que completan con éxito las primeras pruebas piloto mundiales de redes de telecomunicaciones AI-RAN (red de acceso por radio con IA integrada) para transformar las antenas 5G en centros de computación de IA distribuidos.",
+      "links": [
+        {
+          "text": "NVIDIA Newsroom",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-softbank-japan-ai-supercomputer-ai-ran",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI & Silicon Valley Financing",
+      "headline": "OpenAI cierra con éxito la mayor ronda de financiamiento de capital de riesgo en la historia del sector tecnológico por un importe de .600 millones de dólares a una valoración post-money de .000 millones, liderada por Thrive Capital con el respaldo estratégico de Microsoft, NVIDIA, SoftBank y Khosla Ventures para financiar la compra masiva de cómputo y el escalado de sus modelos de frontera.",
+      "links": [
+        {
+          "text": "The Wall Street Journal",
+          "url": "https://www.wsj.com/tech/ai/openai-fundraising-round-valuation-157-billion-6-6-billion-c222ff4b",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
