@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-24",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+        "author": "DeepSeek-AI (Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Ruoyu Zhang, Runxin Xu, Qihao Zhu, Shirong Ma, Peiyi Wang, Xiao Bi, et al.)",
+        "description": "Introduce DeepSeek-R1 y DeepSeek-R1-Zero, demostrando que capacidades avanzadas de razonamiento deliberativo (System 2), auto-reflexión, verificación y corrección de errores emergen de forma natural mediante aprendizaje por refuerzo a gran escala (RL) puro sobre el modelo base sin requerir datos de ajuste fino supervisado (SFT) masivos etiquetados por humanos. Mediante destilación a modelos densos más pequeños (1.5B a 70B), traslada capacidades de razonamiento de frontera a pesos abiertos con costo computacional drásticamente menor.",
+        "analogy": "🧗 Como enseñarle a un escalador novato dejándolo solo en la base de un muro complejo con una única regla: 'llega a la cima', permitiendo que caiga, descubra por sí mismo el equilibrio, intente rutas alternativas y desarrolle instinto corporal puro sin necesidad de que un guía le dicte cada paso en un manual.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2501.12948",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Training Large Language Models to Reason in a Continuous Latent Space",
+        "author": "Shibo Hao, Sainbayar Sukhbaatar, DiJia Su, Xian Li, Zhiting Hu, Jason Weston, Yuandong Tian (FAIR at Meta, UC San Diego)",
+        "description": "Propone Coconut (Chain of Continuous Thought), un paradigma disruptivo donde el LLM razona manipulando sus propios estados ocultos directamente en un espacio latente continuo, en lugar de decodificar forzosamente representaciones en palabras y tokens de lenguaje natural. Esto permite al modelo mantener múltiples hipótesis simultáneas, planificar en amplitud (breadth-first search) y resolver problemas lógicos complejos sin la rigidez secuencial ni la sobrecarga verborrágica del razonamiento textual.",
+        "analogy": "💭 Como un maestro ajedrecista que visualiza mentalmente tres variantes de jugadas y combinaciones geométricas en un instante sin pronunciar una sola palabra en voz alta, en contraste con un principiante que necesita narrar verbalmente cada movimiento para poder pensar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2412.06769",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking",
+        "author": "Xinyu Guan, Li Lyna Zhang, Yifei Liu, Ning Shang, Youran Sun, Yi Zhu, Fan Yang, Mao Yang (Microsoft Research)",
+        "description": "Presenta rStar-Math, demostrando que modelos de lenguaje pequeños (SLMs) pueden alcanzar y superar el rendimiento de modelos de frontera en razonamiento matemático olímpico mediante pensamiento profundo en tiempo de inferencia (test-time compute). Utiliza Monte Carlo Tree Search (MCTS) guiado por un modelo de recompensa de procesos (PRM) auto-evolucionado y generación de código como verificación formal, permitiendo que modelos de 3B y 7B compitan contra GPT-4o y OpenAI o1 en MATH sin recurrir a destilación de supermodelos propietarios.",
+        "analogy": "🔬 Como un joven matemático de secundaria equipado con un pizarrón, una calculadora precisa y un método metódico de árbol de decisiones que desglosa pacientemente cada ecuación en hipótesis comprobables, logrando resolver el problema de la olimpiada con mayor precisión que un doctor apurado que responde de un solo vistazo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2501.04519",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Cosmos World Foundation Model Platform for Physical AI",
+        "author": "Niket Agarwal, Arslan Basharat, Kevin Bergamin, et al. (NVIDIA)",
+        "description": "NVIDIA presenta la plataforma Cosmos, una familia de modelos fundacionales de mundo (World Foundation Models), tokenizadores espaciotemporales continuos y pipelines de curación diseñados específicamente para IA física, robótica y conducción autónoma. Combina modelos de predicción de video condicionados por físicas y transferencia sim-to-real, permitiendo simular dinámicas mecánicas, colisiones y trayectorias interactivas hiperrealistas con coherencia temporal a escala de clústeres de supercomputación.",
+        "analogy": "🌍 Como construir una réplica digital de la Tierra a escala atómica donde rigen con precisión absoluta las leyes de la gravedad, la fricción y la inercia, permitiendo que un robot ensaye millones de maniobras complejas en el simulador antes de encender sus motores en el mundo real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2501.03575",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "HunyuanVideo: A Systematic Framework For Large Video Generative Models",
+        "author": "Tencent Hunyuan Video Generation Team",
+        "description": "Formula un framework sistemático y de código abierto para modelos generativos de video de gran escala con más de 13 mil millones de parámetros (13B). Integra una arquitectura Dual-Stream Diffusion Transformer (DiT), un tokenizador de video 3D causal de ultra-alta compresión y un pipeline de entrenamiento multimodal progresivo que procesa dinámicas de movimiento complejas, iluminación cinemática y coherencia temporal en resoluciones de alta definición y 60 cuadros por segundo.",
+        "analogy": "🎥 Como una cámara de cine inteligente dotada de una lente multidimensional que no solo captura luz, sino que comprende la elasticidad de los tejidos, las sombras del sol en movimiento y la trayectoria del viento, componiendo tomas cinematográficas impecables a partir de un simple guion escrito.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2412.03603",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Movie Gen: A Cast of Media Foundation Models",
+        "author": "Adam Polyak, Amit Zohar, Andrew Brown, et al. (Meta AI)",
+        "description": "Introduce Movie Gen, una suite de modelos fundacionales de medios de 30 mil millones de parámetros (30B) capaces de generar videos de alta definición (1080p), sincronizar audio cinemático ambiental y diálogos, realizar edición precisa basada en instrucciones en lenguaje natural y generar videos personalizados preservando la identidad facial humana. Emplea transformers basados en Flow Matching y modelos de difusión de audio condicionados por fotogramas visuales.",
+        "analogy": "🎞️ Como tener un estudio de producción de Hollywood en un solo software: escribís la escena, y el sistema filma a los actores con iluminación 1080p, graba los pasos crujiendo sobre la hojarasca y añade la banda sonora orquestal sincronizada al milisegundo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.13720",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+        "author": "John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, Ofir Press (Princeton University, Stanford University)",
+        "description": "Introduce SWE-agent y el concepto pionero de Interfaz Agente-Computadora (Agent-Computer Interface, ACI), demostrando que el diseño ergonómico de comandos de terminal, visores de archivos paginados y herramientas de edición adaptadas a la atención de los LLMs es tan crítico para el rendimiento como los propios pesos del modelo. Al sustituir comandos genéricos de bash por herramientas especializadas de navegación de repositorios, eleva radicalmente la tasa de resolución autónoma de problemas de software reales en SWE-bench.",
+        "analogy": "🛠️ Como cambiarle a un cirujano experto una navaja de bolsillo tosca por un bisturí quirúrgico ergonómico con iluminación focalizada y sensores táctiles: el cirujano es el mismo, pero las herramientas adecuadas multiplican su precisión y eliminan errores involuntarios.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2405.15793",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Executable Code Actions Elicit Better LLM Agents",
+        "author": "Xingyao Wang, Yangyi Chen, Lifan Yuan, Yizhe Zhang, Yunzhu Li, Hao Peng, Heng Ji (University of Illinois Urbana-Champaign, Apple)",
+        "description": "Propone CodeAct, un paradigma que unifica el espacio de acción de los agentes de IA en código ejecutable de Python en lugar de llamadas a herramientas basadas en JSON o textos estáticos. Al ejecutar código en un intérprete aislado con bucles de retroalimentación en vivo, el agente puede componer múltiples herramientas dinámicamente, manejar bucles y estructuras de control, inspeccionar stack traces de error y auto-corregir sus scripts interactivamente, superando a los esquemas tradicionales de tool-calling por hasta un 20% en tasa de éxito.",
+        "analogy": "🧑‍💻 Como reemplazar un menú rígido de botones predefinidos en un microondas por una pequeña consola donde podés escribir un script de tres líneas que ajuste temperatura, gire el plato e inserte pausas dinámicas según lo que registre el termómetro interno.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.01030",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+        "author": "Tianbao Xie, Danyang Zhang, Jixuan Chen, Xiaochuan Li, Lin Lu, et al. (The University of Hong Kong, Carnegie Mellon University)",
+        "description": "Establece OSWorld, el primer entorno de evaluación multimodal y reproducible para agentes autónomos que interactúan directamente con sistemas operativos de escritorio completos (Ubuntu) mediante clics de ratón, pulsaciones de teclado e inspección de pantalla visual en aplicaciones reales como LibreOffice, VS Code, GIMP y Chrome. Proporciona una suite de 369 tareas complejas y abiertas, exponiendo las limitaciones de los agentes actuales en planificación de horizonte largo y robustez visual interactiva.",
+        "analogy": "🖱️ Como examinar la destreza de un asistente virtual no en una hoja de preguntas teóricas, sino soltándolo en una oficina real frente a una PC encendida con la orden de abrir una planilla de cálculo, descargar un extracto bancario en PDF, filtrar tres filas y enviar el gráfico por correo sin equivocarse de ventana.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.07972",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "DeepSeek-V3 Technical Report",
+        "author": "DeepSeek-AI (Aixin Liu, Bei Feng, Bin Wang, Bingxuan Wang, Bo Liu, Chenggang Zhao, Chengqi Deng, et al.)",
+        "description": "Presenta DeepSeek-V3, un modelo MoE de 671 mil millones de parámetros (37B activos por token) que redefine la eficiencia del entrenamiento e inferencia en supermodelos. Introduce la arquitectura Multi-head Latent Attention (MLA) para comprimir masivamente la memoria KV cache, un esquema de balanceo de carga sin pérdidas auxiliares (auxiliary-loss-free) y el algoritmo DualPipe para solapar completamente el cómputo y la comunicación inter-GPU, pre-entrenando 14.8 billones de tokens con solo 2.788 millones de horas de GPU H800.",
+        "analogy": "🏭 Como una fábrica automotriz automatizada donde una cinta transportadora de doble vía (DualPipe) entrega las piezas en la mano del robot ensamblador en la misma milésima de segundo en que termina de ajustar el perno anterior, eliminando cualquier tiempo muerto de espera en la línea de producción.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2412.19437",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+        "author": "Ruoyu Qin, Zheming Li, Weiran He, et al. (Moonshot AI, Tsinghua University)",
+        "description": "Desarrolla Mooncake, la arquitectura de servicio de inferencia desagregada centrada en KV-Cache que impulsa el servicio Kimi de Moonshot AI para contextos ultra-largos. Separa físicamente los clústeres de prefill (procesamiento inicial de prompts) y los de decoding (generación paso a paso de tokens), agregando la memoria DRAM de CPUs no utilizadas, SSDs NVMe y redes RDMA en un almacén de KV-cache distribuido que incrementa el rendimiento del sistema hasta en un 525% bajo cargas de trabajo pesadas.",
+        "analogy": "🥐 Como separar una panadería de alta demanda en dos sectores especializados: un gran horno industrial en el sótano que amasa y hornea lotes gigantescos de masa previa, y un mostrador ágil arriba donde los pasteleros solo se concentran en decorar y entregar cada medialuna al cliente sin bloquear el horno central.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.00079",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+        "author": "Shuming Ma, Hongyu Wang, Lingxiao Shen, Ting Song, Furu Wei, et al. (Microsoft Research)",
+        "description": "Formula BitNet b1.58, una arquitectura fundacional de 1-bit donde cada peso del transformer se cuantiza en un conjunto ternario {-1, 0, 1}, requiriendo exactamente 1.58 bits por parámetro. Reemplaza las costosas multiplicaciones de punto flotante de matriz por operaciones de suma básica en el hardware, igualando la perplejidad y capacidad de modelos FP16 mientras reduce drásticamente el consumo energético, la latencia de inferencia y la huella de memoria VRAM.",
+        "analogy": "⚡ Como sustituir una pesada y costosa calculadora científica de precisión infinita por un ábaco ultraliviano de tres posiciones que suma y resta a la velocidad de la luz, logrando exactamente el mismo resultado contable gastando una fracción insignificante de batería.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.17764",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Genie 2: Modelo Fundacional de Mundos 3D Interactivos y Jugables a partir de una Sola Imagen",
+      "description": "Google DeepMind presenta Genie 2, un modelo fundacional de mundos a gran escala capaz de generar y simular entornos 3D continuos, interactivos y controlables por acciones de teclado y ratón a partir de una única imagen de entrada. Diseñado como plataforma de entrenamiento y evaluación para la próxima generación de agentes corporizados (embodied AI), Genie 2 simula físicas de juego en tiempo real, colisiones volumétricas e iluminación dinámica sin depender de motores gráficos tradicionales.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "o3-mini: Modelo de Razonamiento Eficiente Optimizado para Ciencia, Matemáticas y Programación",
+      "description": "OpenAI anuncia o3-mini, un modelo de razonamiento deliberativo de alta velocidad y bajo costo optimizado específicamente para disciplinas STEM (ciencias, tecnología, ingeniería y matemáticas). Ofrece rendimiento de razonamiento comparable al de o1 con una reducción drástica en latencia y costo por token, incorporando niveles de esfuerzo de razonamiento configurables (low, medium, high), soporte nativo para function calling y búsqueda web integrada.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/openai-o3-mini/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Prompt Caching: Reducción del 90% en Costos y del 85% en Latencia para Contextos Largos en la API de Claude",
+      "description": "Anthropic lanza de manera general Prompt Caching para su familia de modelos Claude 3.5 en la API de Anthropic y plataformas cloud. Permite almacenar en memoria intermedia fragmentos de contexto largos y recurrentes (como bases de código completas, documentación técnica extensa o instrucciones de sistema complejas), reduciendo el costo de entrada de tokens en un 90% y acelerando el tiempo hasta el primer token (TTFT) en hasta un 85% para flujos de trabajo conversacionales y agénticos.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/prompt-caching",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Sapiens: Familia de Modelos Fundacionales de Visión para Detección de Postura, Segmentación y Profundidad Humana en Alta Resolución",
+      "description": "Meta Reality Labs y la división de investigación de visión de Meta presentan Sapiens, una suite de modelos fundacionales de visión basados en arquitecturas Vision Transformer (ViT de 0.3B a 2B parámetros) pre-entrenados sobre más de 300 millones de imágenes humanas (Humans-300M). Sapiens establece un nuevo estándar de precisión en cuatro tareas críticas en resolución 1K: estimación de postura 2D, segmentación de partes del cuerpo, mapas de profundidad métrica y predicción de normales de superficie en 3D.",
+      "links": [
+        {
+          "text": "Meta Research",
+          "url": "https://ai.meta.com/research/publications/sapiens-foundation-for-human-vision-models/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Crusoe Energy, Blue Owl & Oracle",
+      "headline": "Crusoe Energy y Blue Owl Capital cierran un acuerdo de financiación de $3.400 millones de dólares para desarrollar un campus de centros de datos de IA de 200 megavatios en Abilene, Texas, arrendado íntegramente a Oracle Cloud Infrastructure para alojar clústeres de supercómputo y entrenamiento de próxima generación de OpenAI.",
+      "links": [
+        {
+          "text": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2024-10-17/blue-owl-crusoe-agree-to-3-4-billion-joint-venture-for-data-center",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Broadcom & Hyperscaler AI Silicon",
+      "headline": "Broadcom eleva sus proyecciones de ingresos de semiconductores de IA por encima de los $12.000 millones de dólares anuales impulsada por la acelerada demanda de procesadores personalizados (XPUs / ASICs), consolidando su liderazgo en el diseño conjunto de procesadores TPU de Google y aceleradores MTIA de Meta para mitigar los costos de inferencia a escala global.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/broadcom-lifts-annual-ai-chip-revenue-forecast-2024-09-05/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "CoreWeave & AI Cloud Infrastructure",
+      "headline": "El proveedor especializado en infraestructura de nube de IA CoreWeave alcanza una valoración privada de $23.000 millones de dólares y avanza en los preparativos de su oferta pública inicial (IPO), impulsado por la expansión de centros de datos de GPUs a gran escala respaldados por contratos multimillonarios y el apoyo estratégico de NVIDIA y Cisco.",
+      "links": [
+        {
+          "text": "Financial Times",
+          "url": "https://www.ft.com/content/09041a94-4b53-40a2-b2d9-13e64f7b6058",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Samsung Electronics & NVIDIA",
+      "headline": "Samsung Electronics supera con éxito los ensayos críticos de calificación de calidad de NVIDIA para sus chips de memoria de alto ancho de banda HBM3E de 12 capas, abriendo la puerta a su suministro masivo en plataformas de computación acelerada y reequilibrando el mercado de semiconductores de memoria frente a SK Hynix.",
+      "links": [
+        {
+          "text": "The Korea Economic Daily",
+          "url": "https://www.kedglobal.com/semiconductors/newsView/ked202410240001",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
