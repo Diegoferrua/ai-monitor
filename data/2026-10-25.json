@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-25",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+        "author": "Kimi Team (Moonshot AI)",
+        "description": "Presenta Kimi k1.5, demostrando que el escalado de aprendizaje por refuerzo (RL) con ventanas de contexto ultra-largas (hasta 128k tokens) y un marco de recompensas basado únicamente en resultados (outcome-based) permite alcanzar razonamiento de frontera a la par de modelos como OpenAI o1, sin recurrir a búsquedas complejas en árbol (MCTS) ni modelos de recompensa de procesos intermedios. Introduce la técnica de destilación Long2Short, que transfiere las pautas de deliberación de cadenas de pensamiento largas a modelos de respuesta rápida, logrando un rendimiento sobresaliente en AIME (77.5) y MATH-500 (96.2) con sustancial ahorro en latencia de inferencia.",
+        "analogy": "🎓 Como un estudiante brillante de cálculo que primero aprende a resolver problemas extensos llenando cuadernos enteros de razonamiento minucioso paso a paso, y una vez que internaliza los patrones fundamentales, es capaz de condensar y aplicar esos mismos atajos de deducción en solo tres renglones limpios y precisos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2501.12599",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling",
+        "author": "Bradley Brown, Jordan Juravsky, Anthony Ryan, Clark Barrett, Christopher Ré (Stanford University)",
+        "description": "Investiga el escalado sistemático de cómputo en tiempo de inferencia mediante muestreo repetido (repeated sampling) en modelos de lenguaje. Descubre que la cobertura (fracción de problemas resueltos por al menos una de las soluciones generadas) escala linealmente con el logaritmo del número de muestras a lo largo de cuatro órdenes de magnitud siguiendo una ley de potencias exponenciada. Demuestra que en dominios con verificadores automáticos (como SWE-bench Lite y pruebas formales), modelos compactos como DeepSeek-Coder-V2 pasan del 15.9% al 56% de éxito con 250 intentos, superando a intentos únicos de modelos de frontera cerrados a un costo computacional muy inferior.",
+        "analogy": "🎯 Como darle a un tirador novato pero constante 100 flechas en lugar de una sola para acertar a una diana lejana equipada con un sensor de impacto: aunque muchos tiros se desvíen, con suficientes intentos casi con certeza logrará una flecha perfecta en el centro, superando al arquero olímpico limitado a un único disparo rápido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.21787",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Qwen2.5-Coder Technical Report",
+        "author": "Qwen Team, Alibaba Group (Binyuan Hui, Jian Yang, Zeyu Cui, Jiaxi Yang, Dayiheng Liu, Lei Zhang, et al.)",
+        "description": "Formula la serie Qwen2.5-Coder, una suite de modelos abiertos especializados en programación que abarca desde 0.5B hasta 32B parámetros, pre-entrenada con más de 5.5 billones de tokens de código fuente, datos matemáticos y lenguaje natural sintético curado. Establece el estado del arte en benchmarks de generación, edición, razonamiento y depuración de software (como EvalPlus, MultiPL-E y Aider), posicionando al modelo de 32B parámetros a la par de modelos propietarios como GPT-4o en habilidades de ingeniería de software real manteniendo licencia permisiva Apache 2.0.",
+        "analogy": "🔧 Como un aprendiz de taller que pasa años leyendo y practicando con millones de planos mecánicos y reparaciones reales de motores hasta convertirse en un maestro mecánico que diagnostica fallas sutiles en segundos, compitiendo de igual a igual con los ingenieros de las escuderías más costosas del mundo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.12186",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+        "author": "Peng Wang, Shuai Bai, Sinan Tan, Shijie Wang, Pengfei Wang, Baosong Yang, et al. (Qwen Team, Alibaba Group)",
+        "description": "Introduce Qwen2-VL, una arquitectura multimodal que rompe con la restricción de resoluciones visuales fijas predeterminadas al incorporar la técnica Naive Dynamic Resolution. Permite mapear imágenes de cualquier relación de aspecto y resolución arbitraria a un número dinámico de tokens visuales, e introduce RoPE rotacional 3D (3D-RoPE) para unificar la representación espacial y temporal en imágenes y secuencias de video de hasta 20 minutos de duración, logrando capacidades de percepción fina, lectura de documentos densos y localización de objetos que lideran benchmarks como MathVista, DocVQA y Video-MME.",
+        "analogy": "🔍 Como un ojo humano con zoom dinámico que adapta instantáneamente su foco: en vez de forzar una fotografía panorámica gigante dentro de un marco cuadrado pixelado, el ojo recorre libremente las letras diminutas de una etiqueta médica o abarca un paisaje en movimiento sin perder nitidez ni deformar proporciones.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.12191",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models",
+        "author": "Matt Deitke, Christopher Clark, Sangho Lee, Rohun Tripathi, Yue Yang, et al. (Allen Institute for AI)",
+        "description": "El Allen Institute for AI presenta Molmo y PixMo, una familia abierta de modelos fundacionales de visión y lenguaje (de 1B a 72B parámetros) entrenada íntegramente sobre un conjunto de datos multimodal abierto altamente depurado. Introduce una metodología pionera donde recolectores humanos apuntan y narran con voz elementos visuales específicos, produciendo anotaciones con coordenadas de puntos en lugar de cajas delimitadoras. Esta estrategia de alta densidad semántica permite que Molmo-72B iguale y supere a modelos propietarios como GPT-4o, Claude 3.5 Sonnet y Gemini 1.5 Pro en benchmarks académicos de visión y comprensión espacial.",
+        "analogy": "👆 Como enseñarle a un niño a reconocer objetos paseando juntos por un museo señalando directamente con el dedo índice cada detalle clave mientras se le explica en voz alta, en lugar de mostrarle fotografías borrosas encerradas en rectángulos toscos dentro de un catálogo viejo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.17146",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Emu3: Next-Token Prediction is All You Need",
+        "author": "Xinlong Wang, Xiaosong Zhang, Zhengxiong Luo, Quan Sun, Yufeng Cui, Jinsheng Wang, et al. (BAAI)",
+        "description": "Demuestra que el paradigma puro de predicción del siguiente token (Next-Token Prediction) es suficiente para unificar la comprensión y la generación multimodal sin depender de componentes de difusión visual (Diffusion Models) ni de arquitecturas híbridas complejas. Emu3 tokeniza imágenes, video y texto en un vocabulario discreto unificado, entrenando un único modelo autorregresivo a gran escala que rivaliza con SDXL y Flux en síntesis visual y supera a LLaVA-1.6 en comprensión multimodal, validando la hipótesis de que un transformer autorregresivo simple escala de forma óptima en todas las modalidades.",
+        "analogy": "📖 Como un políglota universal que concibe palabras escritas, pinceladas de pintura y fotogramas cinematográficos como simples sílabas de un único idioma universal, componiendo una novela o pintando un cuadro fluido pronunciando pacientemente una sola sílaba coherente a la vez.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.18869",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "OmniParser for Pure Vision Based GUI Agent",
+        "author": "Yadong Lu, Jianwei Yang, Yelong Shen, Ahmed Awadallah (Microsoft Research)",
+        "description": "Desarrolla OmniParser, un módulo de análisis de pantalla basado exclusivamente en visión que transforma capturas de pantalla de interfaces gráficas de usuario (GUIs) en representaciones estructuradas de elementos interactivos directamente accionables por modelos de visión y lenguaje. Supera las limitaciones de depender de árboles de accesibilidad u objetos DOM en sistemas operativos de escritorio y móviles al detectar iconos, botones interactivos y textos con modelos de detección especializados y anotaciones sintéticas, mejorando drásticamente el rendimiento de agentes en benchmarks de navegación de sistemas operativos como OSWorld y ScreenSpot.",
+        "analogy": "🧭 Como colocarle una cuadrícula transparente con coordenadas numeradas y etiquetas fluorescentes sobre la pantalla a un copiloto que no puede leer el código interno del programa: con solo mirar la superficie etiquetada, sabe exactamente dónde hacer clic y qué botón presionar sin tocar el motor de la aplicación.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.00203",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Cradle: Empowering Foundation Agents Towards General Computer Control",
+        "author": "Weihao Tan, Wentao Zhang, Xinrun Xu, Haochong Xia, Chitwan Saharia, et al. (Peking University, ByteDance)",
+        "description": "Propone el framework Cradle, diseñado para capacitar a agentes basados en modelos fundacionales hacia el Control General de Computadoras (General Computer Control, GCC). Cradle opera directamente a través del espacio universal de interacción humana: entradas visuales de pantalla y salidas de teclado y ratón, sin APIs auxiliares específicas de aplicación. Integra módulos de razonamiento autorreflexivo, memoria de tareas y auto-recuperación ante fallos, permitiendo al agente interactuar con videojuegos complejos en 3D (como Red Dead Redemption II), software de productividad comercial y navegadores web con coherencia temporal y adaptabilidad generalizada.",
+        "analogy": "🎮 Como sentar a un jugador novato frente a una consola y un monitor estándar con un joystick en la mano: sin tener acceso al código fuente del videojuego, aprende a explorar el mundo abierto, esquivar obstáculos y completar misiones complejas únicamente observando lo que ocurre en pantalla y corrigiendo sus movimientos sobre la marcha.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.03186",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AppAgent: Multimodal Agents as Smartphone Users",
+        "author": "Chi Zhang, Zhao Yang, Jiaxuan Liu, Yanda Li, Mengyin Liu, et al. (Tencent AI Lab)",
+        "description": "Formula AppAgent, un framework pionero de agentes multimodales autónomos que interactúan con aplicaciones de teléfonos inteligentes imitando el comportamiento de usuarios humanos mediante gestos táctiles (tocar, deslizar, arrastrar y escribir). Utiliza una fase de exploración autónoma o demostración humana para construir una base de conocimiento visual de la interfaz de la aplicación, lo que permite al agente ejecutar tareas complejas de múltiples pasos (como editar y publicar fotos, realizar compras y enviar mensajes de mensajería) en diversas aplicaciones de Android sin necesidad de acceso root ni llamadas a APIs backend de los desarrolladores.",
+        "analogy": "📱 Como un asistente personal que toma prestado tu teléfono por primera vez, navega por los menús deslizando el dedo sobre el vidrio, aprende qué ícono abre tu app de compras y completa tu pedido imitando con exactitud cada gesto y clic que haría una persona.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.13771",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+        "author": "Lianmin Zheng, Liangsheng Yin, Zhiqiang Xie, Chuyue Sun, Lingfan Yu, Cody Hao Yu, et al. (LMSYS Org, UC Berkeley)",
+        "description": "Presenta SGLang, un sistema integral para la ejecución eficiente y de alto rendimiento de programas estructurados de modelos de lenguaje (como flujos agénticos, decodificación restringida por JSON/gramática y llamadas multi-paso). Introduce RadixAttention, un mecanismo de gestión de KV-cache que almacena y reutiliza automáticamente prefijos de atención estructurados en un árbol de prefijos (radix tree), eliminando el cómputo redundante en cadenas conversacionales, árboles de razonamiento y validaciones sintácticas, incrementando el rendimiento del sistema hasta 5 veces en comparación con los motores de inferencia existentes.",
+        "analogy": "🌲 Como una biblioteca de referencia rápida con un índice en árbol inteligentemente organizado: en lugar de releer y resumir un libro de mil páginas cada vez que alguien hace una consulta derivada sobre un capítulo específico, el bibliotecario conserva las fichas de los capítulos previos ya analizados y solo lee la última página nueva.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.07104",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+        "author": "Yinmin Zhong, Shengyu Liu, Junda Chen, Jianbo Hu, Yibo Zhu, Xuanzhe Liu, Xin Jin (Peking University)",
+        "description": "Propone DistServe, una arquitectura pionera que desagrega físicamente las fases de prefill (procesamiento inicial del prompt intensivo en cómputo) y decoding (generación secuencial de tokens limitada por ancho de banda de memoria) en clústeres de GPUs independientes. Esta separación elimina la interferencia mutua entre ambas fases en el motor de inferencia, permitiendo optimizar el paralelismo, el tamaño de lote (batch size) y los presupuestos de latencia (TTFT y TBT) de forma independiente para cada etapa, logrando servir entre 2 y 4 veces más solicitudes cumpliendo estrictos Acuerdos de Nivel de Servicio (SLAs).",
+        "analogy": "🚦 Como separar una autopista congestionada en dos vías segregadas e independientes: un carril de alta velocidad sin semáforos para los camiones de carga pesada que ingresan mercancía al por mayor (prefill), y un carril ágil de flujo continuo para motos de entrega rápida urbana (decoding), evitando que un camión pesado bloquee a las motos en cada esquina.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.09670",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+        "author": "Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E. Gonzalez, Hao Zhang, Ion Stoica (UC Berkeley, LMSYS)",
+        "description": "Presenta PagedAttention y el motor vLLM, resolviendo el cuello de botella crítico de fragmentación de memoria en la caché de claves y valores (KV cache) de los transformers. Inspirándose en los esquemas de memoria virtual paginada de los sistemas operativos, PagedAttention divide la KV-cache en bloques de memoria fija no contigua, permitiendo asignar memoria bajo demanda con fragmentación cercana a cero y habilitando el uso compartido eficiente de memoria entre solicitudes paralelas y ramas de muestreo. Esta arquitectura cuadruplica el rendimiento (throughput) en comparación con sistemas como Hugging Face Text Generation Inference y FasterTransformer.",
+        "analogy": "📑 Como reemplazar un archivador rígido donde cada expediente nuevo reserva una carpeta entera de cien hojas aunque solo use dos (desperdiciando espacio libre), por un archivador de hojas sueltas numeradas donde se añaden páginas individuales exactamente cuando se escriben, compartiendo carátulas idénticas entre copias sin duplicar papel.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2309.06180",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaProteo: Sistema de Inteligencia Artificial para el Diseño de Proteínas Aglutinantes Dirigidas a Dianas Terapéuticas Complejas",
+      "description": "Google DeepMind presenta AlphaProteo, un sistema revolucionario de IA generativa para diseñar de novo proteínas aglutinantes de alta afinidad dirigidas a dianas moleculares biológicas y virales críticas, incluyendo el receptor del SARS-CoV-2 y proteínas implicadas en cáncer y enfermedades inflamatorias. Validado experimentalmente en laboratorio con tasas de éxito significativamente superiores a los métodos computacionales previos, AlphaProteo acelera radicalmente el desarrollo de terapias biológicas dirigidas, el diseño de fármacos y la ingeniería de biosensores.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Whisper large-v3-turbo: Modelo de Transcripción y Traducción Multilingüe de Audio Optimizado para Inferencia en Tiempo Real",
+      "description": "OpenAI publica de forma abierta los pesos de Whisper large-v3-turbo, una versión altamente optimizada de su modelo de reconocimiento automático del habla (ASR) Whisper large-v3. Mediante la reducción selectiva del número de capas en el decodificador de 32 a 4 sin sacrificar significativamente la precisión fonética ni la tasa de error de palabras (WER), logra una aceleración de inferencia de hasta 8x y un consumo de memoria notablemente reducido, permitiendo transcripción y traducción multilingüe de alta fidelidad en entornos de producción y streaming en tiempo real.",
+      "links": [
+        {
+          "text": "OpenAI Whisper Repository",
+          "url": "https://github.com/openai/whisper",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Contextual Retrieval: Innovación para Reducir Drásticamente las Fallas de Búsqueda en Arquitecturas RAG",
+      "description": "Anthropic presenta Contextual Retrieval, una metodología técnica para sistemas de Generación Aumentada por Recuperación (RAG) que reduce las fallas de recuperación entre un 49% y un 67%. Combina embeddings contextuales generados anteponiendo explicaciones contextuales a cada fragmento de documento mediante Claude, con búsqueda léxica BM25 contextualizada y re-ordenamiento (reranking), aprovechando Prompt Caching en la API de Claude para reducir el costo computacional del preprocesamiento en hasta un 90%.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/contextual-retrieval",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Llama Stack: API Abierta y Estandarizada para el Desarrollo de Aplicaciones Agénticas e Inferencia Distribuida",
+      "description": "Meta AI lanza la especificación y suite de código abierto Llama Stack, una interfaz estándar unificada para construir aplicaciones basadas en modelos Llama a través de múltiples entornos, desde clústeres cloud de alta disponibilidad hasta dispositivos móviles y edge con ExecuTorch. Llama Stack estandariza bloques de construcción clave que incluyen orquestación de agentes autónomos, llamadas a herramientas e intérpretes de código, pipelines de RAG, protocolos de seguridad con Llama Guard e integración con proveedores de computación de hardware y nube.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-stack-simplified-development-rag-agentic-ai/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "NVIDIA, Reliance Industries & Tata Group",
+      "headline": "Jensen Huang sella acuerdos estratégicos con Reliance Industries y Tata Consultancy Services (TCS) durante el NVIDIA AI Summit en Mumbai para desplegar clústeres de supercomputación de IA de escala gigavatio equipados con arquitecturas Blackwell, impulsando la soberanía tecnológica, centros de datos nacionales y modelos fundacionales multilingües para los más de 1.400 millones de habitantes de la India.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/nvidia-partners-with-reliance-tata-india-ai-push-2024-10-24/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Oracle Cloud Infrastructure & NVIDIA Blackwell",
+      "headline": "Larry Ellison anuncia la disponibilidad para pedidos del OCI Supercluster con hasta 131.072 GPUs NVIDIA Blackwell B200 conectadas mediante redes RDMA RoCEv2 de 800 Gbps, alcanzando una capacidad agregada sin precedentes de 2.4 zettaflops de cómputo en la nube para responder a la demanda de entrenamiento y servicio a gran escala de OpenAI y startups de IA de frontera.",
+      "links": [
+        {
+          "text": "Oracle Cloud News",
+          "url": "https://www.oracle.com/news/announcement/ocw-ai-infrastructure-supercluster-2024-09-10/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Alibaba Cloud & Qwen Ecosystem",
+      "headline": "Alibaba Cloud reporta en su cumbre tecnológica anual Apsara que la familia de modelos de código abierto Qwen supera los 40 millones de descargas globales y más de 90.000 clientes empresariales en producción, impulsando un crecimiento interanual de tres dígitos en los ingresos de servicios cloud relacionados con inteligencia artificial y aceleradores en la región de Asia-Pacífico.",
+      "links": [
+        {
+          "text": "CNBC",
+          "url": "https://www.cnbc.com/2024/09/19/alibaba-says-over-90000-companies-use-its-ai-model-pushes-open-source.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Cisco & NVIDIA Enterprise AI Networking",
+      "headline": "Cisco y NVIDIA presentan una arquitectura de infraestructura de red de centros de datos basada en conmutadores Nexus 800G y tarjetas DPU BlueField-3 con soporte para Silicon Photonics, diseñada para eliminar cuellos de botella de ancho de banda y latencia en clústeres empresariales privados dedicados a la inferencia distribuida y entrenamiento local de modelos generativos.",
+      "links": [
+        {
+          "text": "Cisco Newsroom",
+          "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2024/m06/cisco-and-nvidia-simplify-enterprise-ai.html",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
