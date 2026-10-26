@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-26",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+        "author": "Yu Meng, Mengzhou Xia, Danqi Chen (Princeton University, University of Virginia)",
+        "description": "Introduce SimPO (Simple Preference Optimization), un algoritmo de alineación de preferencias que simplifica drásticamente el marco de Direct Preference Optimization (DPO) eliminando por completo la necesidad de mantener un modelo de referencia activo en memoria GPU durante el entrenamiento. SimPO utiliza la probabilidad logarítmica promedio normalizada por longitud de secuencia como función de recompensa implícita e incorpora un margen de recompensa objetivo directamente en la función de pérdida Bradley-Terry. Esta formulación mitiga el sesgo de longitud, reduce el uso de memoria a la mitad y supera a DPO en benchmarks como AlpacaEval 2 y Arena-Hard evaluados sobre familias Llama-3 y Gemma-2.",
+        "analogy": "⚖️ Como un catador de café profesional que califica cada taza comparando directamente el aroma y balance contra una escala fija mental de estándares de calidad en lugar de tener que preparar y sorber simultáneamente una taza de referencia idéntica cada vez que juzga una muestra nueva.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2405.14734",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+        "author": "Shih-Yang Liu, Chien-Yi Wang, Hongxu Yin, Pavlo Molchanov, Yu-Chiang Frank Wang, Kwang-Ting Cheng, Min-Hung Chen (NVIDIA Research, HKUST)",
+        "description": "Presenta DoRA (Weight-Decomposed Low-Rank Adaptation), una técnica de ajuste fino eficiente en parámetros (PEFT) que cierra la brecha de rendimiento entre LoRA y el ajuste fino completo (Full Fine-Tuning). Al analizar la dinámica del aprendizaje, descubre que el fine-tuning completo actualiza simultáneamente la magnitud y la dirección de los pesos, mientras que LoRA sufre acoplamiento restrictivo; DoRA descompone los pesos preentrenados en magnitud (escalado vectorial) y dirección (matriz adaptada mediante LoRA de bajo rango). Una vez entrenado, los componentes se fusionan de nuevo en la matriz original sin introducir ninguna latencia adicional en inferencia, logrando mejoras consistentes en razonamiento y visión sobre arquitecturas LLaMA y LLaVA.",
+        "analogy": "🧭 Como ajustar una antena parabólica separando dos perillas independientes: una perilla telescópica para calibrar con precisión la fuerza de la señal (magnitud) y otra perilla giratoria para apuntar al satélite exacto (dirección), en lugar de forcejear con una sola palanca rígida que mueve ambas variables torpemente al mismo tiempo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.09353",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking",
+        "author": "Eric Zelikman, Georges Harik, Yijia Shao, Varuna Jayasiri, Nick Haber, Noah D. Goodman (Stanford University, Notbad AI)",
+        "description": "Formula Quiet-STaR, un método generalizado que permite a los modelos de lenguaje aprender a razonar de forma no supervisada generando pensamientos internos (cadenas de razonamiento latente) antes de emitir cada palabra sobre texto web arbitrario, en lugar de limitarse a conjuntos curados de preguntas y respuestas. Mediante un algoritmo de muestreo paralelo de pensamientos por token, tokens especiales aprendibles de inicio y fin de pensamiento, y una técnica de credit assignment basada en REINFORCE con teacher-forcing extendido, Quiet-STaR enseña al modelo a anticipar tokens complejos en internet, elevando el rendimiento de razonamiento zero-shot en GSM8K (de 5.9% a 10.9%) y CommonsenseQA sin entrenamiento supervisado específico.",
+        "analogy": "🗣️ Como un orador elocuente que, antes de articular la siguiente frase frente a una audiencia exigente, hace una pausa imperceptible de medio segundo para estructurar mentalmente los argumentos y evaluar posibles objeciones, logrando responder con mucha mayor precisión que quien habla por impulso sin reflexionar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.09629",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "LLaVA-OneVision: Easy Visual Task Transfer",
+        "author": "Bo Li, Yuanhan Zhang, Dong Guo, Renrui Zhang, Feng Li, Hao Zhang, Kaichen Zhang, Yanwei Li, Ziwei Liu, Chunyuan Li (LLaVA Team, ByteDance, NTU)",
+        "description": "Desarrolla la familia LLaVA-OneVision, un modelo multimodal de pesos abiertos (disponible en 0.5B, 7B y 72B parámetros) diseñado para unificar y transferir capacidades de visión de forma simultánea a través de tres escenarios esenciales: imagen única, múltiples imágenes y secuencias de video continuo. Implementa un diseño de empaquetado de tokens visuales balanceado y demuestra que la transferencia cruzada de tareas permite que el conocimiento adquirido en comprensión visual densa de imágenes enriquezca directamente el razonamiento temporal en video, alcanzando resultados de vanguardia que rivalizan con GPT-4V y Gemini Pro en benchmarks multimodales extensos como MMMU y Video-MME.",
+        "analogy": "🎥 Como un fotoperiodista experimentado que domina tanto el análisis microscópico de una fotografía estática como la narrativa cronológica de un reportaje en video completo: su ojo clínico para detectar detalles en una sola foto le permite comprender al instante el contexto y la trama de una película entera sin cambiar de método.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.03326",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Depth Anything V2",
+        "author": "Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, Hengshuang Zhao (University of Hong Kong, TikTok)",
+        "description": "Presenta Depth Anything V2, un modelo fundacional para estimación de profundidad monocular (MDE) que supera drásticamente a la versión previa y a modelos basados en difusión en nitidez geométrica, consistencia de bordes y velocidad de procesamiento. Al sustituir anotaciones reales ruidosas por datos sintéticos de alta fidelidad, entrenar un modelo maestro (teacher) de gran escala y generar pseudoetiquetas sobre imágenes no etiquetadas, produce mapas de profundidad extremadamente precisos en superficies transparentes, reflectantes y estructuras complejas delgadas, siendo más de 10 veces más rápido que modelos basados en difusión y ejecutándose en tiempo real en dispositivos estándar.",
+        "analogy": "👓 Como dotar a una cámara común de un sensor lidar virtual ultrarrápido: al mirar una escena plana a través de una ventana o un vaso de cristal, el sistema calcula de inmediato la distancia milimétrica exacta de cada objeto sin confundirse con reflejos ni perder el contorno de los cables más delgados.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.09414",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer",
+        "author": "Zhuoyi Yang, Jiayan Teng, Wendi Zheng, Ming Ding, Shiyu Huang, Jiazheng Xu, Yuanming Yang, Wenyi Hong, Xiaohan Zhang, Guanyu Feng, Da Yin, Yuxuan Zhang, Weihan Wang, Yean Cheng, Bin Xu, Xiaotao Gu, Yuxiao Dong, Jie Tang (Tsinghua University, Zhipu AI)",
+        "description": "Introduce CogVideoX, una arquitectura de difusión de texto a video de código abierto (en variantes de 2B y 5B parámetros) capaz de generar videos continuos de alta coherencia y resolución de hasta 10 segundos a 16 cuadros por segundo. Su núcleo radica en un Autoencoder Variacional Causal 3D (3D VAE) que comprime conjuntamente las dimensiones espaciales y temporales reduciendo drásticamente la longitud de secuencia de tokens, junto con un Expert Transformer equipado con normalización adaptativa por modalidad (Modality-Adaptive LayerNorm) que alinea de forma profunda las trayectorias semánticas del texto y la dinámica física del video.",
+        "analogy": "🎨 Como un animador tradicional maestro que, en lugar de pintar cada uno de los 160 fotogramas desde cero de forma aislada, diseña una estructura temporal tridimensional continua en arcilla y la proyecta en pantalla, manteniendo la fluidez natural del movimiento sin saltos abruptos ni distorsiones entre cuadros.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.06072",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+        "author": "Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik R. Narasimhan, Shunyu Yao (Princeton University, MIT)",
+        "description": "Propone el framework Reflexion, pionero en el paradigma de Aprendizaje por Refuerzo Verbal para agentes basados en modelos de lenguaje. En lugar de actualizar los pesos del modelo mediante gradientes computacionalmente prohibitivos tras un error, Reflexion convierte las señales de retroalimentación del entorno (como fallos en pruebas unitarias o respuestas incorrectas) en diagnósticos semánticos explícitos en lenguaje natural (autorreflexión) almacenados en un búfer de memoria episódica. En intentos subsiguientes, el agente consulta esta memoria como heurística correctora, elevando la tasa de resolución en HumanEval y tareas de navegación interactiva como AlfWorld sin modificar un solo parámetro de la red.",
+        "analogy": "📝 Como un programador que mantiene un diario técnico de errores en su escritorio: cada vez que su código falla un test, escribe una autocrítica explicando qué suposición lógica estuvo mal, de modo que al abordar la siguiente tarea consulta sus notas y evita caer exactamente en la misma trampa sin tener que volver a cursar la universidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2303.11366",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TravelPlanner: A Benchmark for Real-World Planning with Language Agents",
+        "author": "Jian Xie, Kai Zhang, Jiangjie Chen, Tinghui Zhu, Renze Lou, Yuandong Tian, Yanghua Xiao, Yu Su (Fudan University, The Ohio State University, Meta AI)",
+        "description": "Establece TravelPlanner, un benchmark riguroso de planificación de mundo abierto para agentes de lenguaje que simula entornos reales de viajes mediante acceso a herramientas de búsqueda sobre bases de datos con casi 4 millones de registros (vuelos, hoteles, restaurantes y transporte). Evalúa la capacidad de los modelos para satisfacer restricciones estrictas (presupuesto, fechas, cupos) y reglas de sentido común implícitas (viabilidad geográfica, tiempos de conexión y descansos). La evaluación expuso que incluso modelos de frontera como GPT-4 alcanzan una tasa de éxito inferior al 1%, subrayando los cuellos de botella críticos en retención de objetivos a largo plazo y orquestación multi-restricción.",
+        "analogy": "🗺️ Como encargarle a un asistente organizar unas vacaciones familiares de dos semanas con un presupuesto ajustado, conexiones de vuelos en tres ciudades y dietas especiales para cada integrante: una sola omisión de horarios o sobrecosto arruina todo el itinerario, demostrando que memorizar datos turísticos no equivale a saber coordinar la logística real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.01622",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models",
+        "author": "Zehui Chen, Kuikun Liu, Qiuchen Wang, Wenwei Zhang, Jiangning Liu, Dahua Lin, Kai Chen, Feng Zhao (University of Science and Technology of China, Shanghai AI Laboratory)",
+        "description": "Investiga y rediseña las metodologías de ajuste fino para agentes (Agent Tuning) identificando los problemas de desalineación en los conjuntos de datos actuales: la contaminación mutua entre formateo y razonamiento, las diferentes velocidades de aprendizaje de habilidades agénticas y el incremento indeseado de alucinaciones. Agent-FLAN descompone el corpus de entrenamiento desacoplando el seguimiento de formato de la lógica de decisión e introduce muestras negativas cuidadosamente curadas. Como resultado, modelos abiertos compactos como LLaMA-2-7B superan ampliamente a baselines agénticos previos e igualan a arquitecturas mayores sin deteriorar sus capacidades generales de lenguaje natural.",
+        "analogy": "🏋️ Como un entrenamiento deportivo de circuito donde el atleta practica por separado la técnica de postura, la fuerza muscular y la resistencia cardiovascular con descansos estratégicos, en lugar de lanzarse a competir una maratón desordenada desde el primer día agotándose y adoptando malos vicios posturales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.12881",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs",
+        "author": "Ziheng Jiang, Haibin Lin, Yinmin Zhong, Qi Huang, Yangrui Chen, Zhi Zhang, Yanghua Peng, Xiang Li, Cong Xie, Shibiao Nong, Yulu Jia, Libin Liu (ByteDance, Peking University)",
+        "description": "Detalla la arquitectura y lecciones operativas de producción de MegaScale, un sistema integral para el entrenamiento de modelos de lenguaje a escala extrema diseñado para clústeres de más de 10.000 GPUs. Mediante un co-diseño de stack completo que incluye solapamiento avanzado de computación y comunicación, optimización algorítmica de operadores, balanceo de tráfico de red y pipelines de datos de alto rendimiento, MegaScale logra una Utilización de FLOPs del Modelo (MFU) del 55.2% al entrenar un LLM de 175B parámetros en 12.288 GPUs, incorporando herramientas de diagnóstico en tiempo real para tolerancia automática a fallas de hardware y stragglers silenciosos.",
+        "analogy": "🚄 Como una red ferroviaria de alta velocidad con 10.000 vagones coordinados por un sistema de control centralizado y sensores en cada riel: si un vagón pierde tracción o una vía se calienta, el sistema desvía la carga instantáneamente sin detener la marcha de todo el convoy ni provocar atascos kilométricos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.15627",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
+        "author": "Ying Sheng, Shiyi Cao, Dacheng Li, Coleman Hooper, Nicholas Lee, Shuo Yang, Christopher Chou, Banghua Zhu, Lianmin Zheng, Kurt Keutzer, Joseph E. Gonzalez, Ion Stoica (UC Berkeley, LMSYS)",
+        "description": "Presenta S-LoRA, un sistema de servicio de inferencia de alto rendimiento diseñado para alojar y ejecutar concurrentemente miles de adaptadores LoRA sobre un único modelo base compartido en GPUs individuales o clústeres distribuidos. Introduce Unified Paging, un administrador de memoria unificado inspirado en paginación de sistemas operativos que gestiona dinámicamente pesos de adaptadores de rangos variables junto a tensores de KV-cache, kernels CUDA heterogéneos para lotes con múltiples adaptadores y paralelismo de tensores desacoplado, cuadruplicando el throughput de servicio en comparación con bibliotecas convencionales como Hugging Face PEFT.",
+        "analogy": "🏢 Como un rascacielos corporativo que comparte una única estructura sólida de columnas, elevadores y tuberías maestras (el modelo base), permitiendo que miles de empresas distintas personalicen únicamente la decoración interior y el mobiliario de sus oficinas alquiladas sin tener que construir un edificio entero para cada una.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.03285",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills",
+        "author": "Amey Agrawal, Ashish Panwar, Jayashree Mohan, Nipun Kwatra, Bhargav S. Gulavani, Ramachandran Ramjee (Microsoft Research, Georgia Institute of Technology)",
+        "description": "Formula SARATHI y el principio de Chunked-Prefills para resolver la ineficiencia estructural en el servicio de LLMs causada por la asimetría entre las fases de prefill (saturada de cómputo y paralelizable) y decode (limitada por ancho de banda de memoria y secuencial). SARATHI fragmenta las solicitudes de prefill largas en bloques homogéneos y acopla solicitudes de decode en las ranuras de cómputo restantes del mismo lote de ejecución (piggybacking). Esta técnica amortiza el costo de transferir los pesos del modelo a la memoria de la GPU, elimina las burbujas de ejecución en arquitecturas multi-GPU y multiplica el rendimiento de decodificación hasta por 10x.",
+        "analogy": "🚌 Como un servicio de autobús urbano que divide el transporte de un contingente masivo en grupos medianos regulares y aprovecha los asientos vacíos de cada viaje para subir a pasajeros individuales que viajan unas pocas paradas, asegurando que el autobús viaje siempre a plena capacidad sin dejar a nadie esperando en la acera.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2308.16369",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "SIMA: Agente Generalista Instruible en Lenguaje Natural para Mundos Virtuales y Videojuegos 3D",
+      "description": "Google DeepMind presenta SIMA (Scalable Instructable Multiworld Agent), un agente pionero de IA fundacional desarrollado en colaboración con múltiples estudios de videojuegos (incluyendo No Man's Sky, Valheim, Satisfactory y Teardown) capaz de comprender y ejecutar órdenes complejas en lenguaje natural en entornos virtuales 3D. A diferencia de agentes entrenados para maximizar puntuaciones en un único título, SIMA interactúa como un ser humano recibiendo únicamente entradas visuales de píxeles y emitiendo comandos directos de teclado y ratón sin APIs auxiliares, demostrando capacidades de transferencia y generalización hacia videojuegos nunca vistos en su entrenamiento y abriendo el camino hacia la inteligencia corporizada (Embodied AI).",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/sima-generalist-ai-agent-for-3d-virtual-environments/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Structured Outputs en la API: Garantía del 100% en Conformidad Estricta de Esquemas JSON para Modelos de Frontera",
+      "description": "OpenAI implementa de forma nativa la función de Salidas Estructuradas (Structured Outputs) en su plataforma API para GPT-4o y GPT-4o-mini, asegurando matemáticamente una tasa de adherencia del 100% a esquemas JSON suministrados por los desarrolladores mediante decodificación restringida por gramáticas formales. Al superar la fragilidad de las validaciones heurísticas y el modo JSON tradicional, Structured Outputs previene claves faltantes, tipos inválidos o alucinaciones estructurales en llamadas a funciones (Function Calling) y generación de datos tipados, desbloqueando flujos de trabajo agénticos de misión crítica completamente deterministas y confiables en producción.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-structured-outputs-in-the-api/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude for Enterprise: Entorno Empresarial con Ventana de Contexto de 500k Tokens e Integración Nativa con GitHub",
+      "description": "Anthropic lanza oficialmente el plan Claude for Enterprise, diseñado para grandes organizaciones que requieren colaborar a escala con modelos de frontera sobre activos internos protegidos. Expande la ventana de contexto utilizable de Claude a 500.000 tokens (permitiendo procesar código fuente integral, extensos informes financieros o cientos de documentos técnicos en un único prompt), incorpora sincronización e integración nativa con repositorios de GitHub, consola centralizada de administración con autenticación SSO y aprovisionamiento SCIM, y certificaciones estrictas de privacidad que garantizan que los datos organizacionales nunca son utilizados para el re-entrenamiento de modelos.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/claude-for-enterprise",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Llama Guard 3: Modelos Abiertos de Seguridad y Moderación Multimodal de Entradas y Salidas",
+      "description": "Meta AI publica de forma abierta la familia Llama Guard 3, que introduce el modelo de seguridad multimodal Llama Guard 3 11B-Vision y la versión compacta optimizada para edge Llama Guard 3 1B, orientados a moderar conversaciones complejas de texto e imagen en tiempo real. Alineados con la taxonomía de seguridad y riesgos estandarizada por MLCommons, estos clasificadores auditan bidireccionalmente los intercambios: detectan prompts maliciosos, inyecciones de instrucciones y solicitudes dañinas antes de ser procesadas por el modelo principal, e inspeccionan las respuestas generadas antes de entregarlas al usuario final, proporcionando guardrails reproducibles y auditables para la comunidad.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "AMD & ZT Systems",
+      "headline": "AMD anuncia la firma de un acuerdo definitivo para adquirir ZT Systems por 4.900 millones de dólares en efectivo y acciones, integrando sus equipos de diseño de sistemas de servidores y arquitectura de infraestructura de IA a escala de rack para hiperescaladores con el propósito de acelerar el despliegue de superclústeres basados en GPUs AMD Instinct MI300X y la futura serie MI350 frente a la competencia de NVIDIA.",
+      "links": [
+        {
+          "text": "AMD Press Release",
+          "url": "https://www.amd.com/en/newsroom/press-releases/2024-8-19-amd-to-significantly-expand-data-center-ai-syste.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Amazon Web Services (AWS) & Anthropic",
+      "headline": "AWS y Anthropic profundizan su alianza estratégica con el despliegue masivo de Project Rainier, un superclúster de cómputo de IA alimentado por cientos de miles de chips Trainium2 de segunda generación interconectados mediante EC2 UltraClusters, diseñado específicamente como plataforma de entrenamiento y servicio a gran escala para las próximas generaciones de la familia Claude con menores costos y latencia.",
+      "links": [
+        {
+          "text": "Amazon Press Release",
+          "url": "https://press.aboutamazon.com/2024/11/aws-and-anthropic-deepen-strategic-collaboration-to-accelerate-generative-ai",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Intel Foundry & AWS",
+      "headline": "Intel y Amazon Web Services formalizan un acuerdo de coinversión multimillonario y plurianual mediante el cual la división Intel Foundry fabricará un chip de tejido de red para inteligencia artificial (AI fabric chip) personalizado para AWS en el nodo de vanguardia Intel 18A (1,8 nm), junto a un procesador Xeon 6 personalizado en el nodo Intel 3, reforzando la cadena de suministro nacional estadounidense.",
+      "links": [
+        {
+          "text": "Intel Newsroom",
+          "url": "https://www.intc.com/news-events/press-releases/detail/1709/intel-and-aws-expand-strategic-collaboration",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Mistral AI",
+      "headline": "Mistral AI introduce Le Chat Enterprise, su plataforma integral de productividad y orquestación agéntica para el sector corporativo con conectores seguros a Google Drive, SharePoint y GitHub, integrando el espacio de trabajo Canvas para edición colaborativa en panel desacoplado, búsqueda web en tiempo real y soporte para despliegues locales (on-premise) y en nubes soberanas.",
+      "links": [
+        {
+          "text": "Mistral AI News",
+          "url": "https://mistral.ai/news/le-chat-enterprise/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
