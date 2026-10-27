@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-27",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+        "author": "Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Mingchuan Zhang, Y.K. Li, Y. Wu, Daya Guo (DeepSeek-AI)",
+        "description": "Introduce el modelo DeepSeekMath 7B y formula el algoritmo Group Relative Policy Optimization (GRPO), el marco de aprendizaje por refuerzo fundamental que elimina la necesidad de mantener un modelo crítico (value function) separado durante el entrenamiento RL. En lugar de estimar el valor absoluto de cada estado, GRPO calcula la ventaja comparativa normalizando las puntuaciones de recompensa obtenidas a través de un grupo de trayectorias muestreadas en paralelo para la misma pregunta, ahorrando drásticamente memoria GPU. Entrenado sobre DeepSeek-Coder-Base-v1.5 con 120 mil millones de tokens matemáticos curados desde Common Crawl (DeepSeekMath Corpus), alcanza 51.7% en el benchmark competitivo MATH sin herramientas externas, igualando el rendimiento de modelos propietarios cerrados de escala masiva.",
+        "analogy": "📊 Como un jurado en una competencia de debate que, en lugar de intentar calcular una puntuación abstracta e hipotética para cada orador contra un estándar perfecto imaginario, hace que un grupo de participantes exponga sus argumentos sobre el mismo tema y premia a quienes debatieron mejor en relación con sus pares del grupo, simplificando radicalmente la evaluación sin requerir un juez auxiliar permanente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.03300",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "BitNet a4.8: 4-bit Activations for 1-bit LLMs",
+        "author": "Hongyu Wang, Shuming Ma, Furu Wei (Microsoft Research)",
+        "description": "Presenta BitNet a4.8, un avance arquitectónico que resuelve el cuello de botella crítico en la compresión de activaciones para modelos de lenguaje con pesos ternarios de 1 bit ({-1, 0, 1}). Mientras que arquitecturas previas como BitNet b1.58 comprimían los pesos pero dependían de activaciones de 8 bits para evitar degradación cualitativa por valores atípicos (outliers), BitNet a4.8 introduce una estrategia de cuantización híbrida: aplica activaciones de 4 bits (INT4/FP4) a las entradas de atención y redes feed-forward, combinada con esparcificación TopK y cuantización de 8 bits para estados intermedios. Solo activa el 55% de los parámetros en inferencia y admite compresión de KV-cache a 3 bits, desbloqueando un throughput ultra-rápido en aceleradores de hardware sin pérdida de precisión.",
+        "analogy": "🎒 Como empacar una mochila de montaña reemplazando contenedores rígidos y pesados por bolsas de compresión al vacío ultra-ligeras: los objetos esenciales de uso frecuente se reducen a su volumen mínimo indispensable sin romperlos, y solo un puñado de piezas delicadas o de forma irregular conserva una protección extra, logrando que el excursionista viaje al doble de velocidad con la mitad de peso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2411.04965",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement",
+        "author": "Qwen Team, Alibaba Group (An Yang, Beichen Zhang, Binyuan Hui, Bofei Gao, Bowen Yu, Dayiheng Liu, et al.)",
+        "description": "Detalla el diseño y entrenamiento de la serie Qwen2.5-Math (disponible en 1.5B, 7B y 72B parámetros), la primera suite abierta especializada en matemáticas que implementa un pipeline integral de auto-mejora (self-improvement) a través de todas las fases de desarrollo: pre-entrenamiento con datos sintéticos filtrados, post-entrenamiento con un modelo de recompensa especializado (Qwen2.5-Math-RM-72B) y muestreo guiado en inferencia. Soporta tanto cadenas de razonamiento en lenguaje natural (Chain-of-Thought) como razonamiento integrado con código ejecutable (Tool-Integrated Reasoning) en inglés y chino. Su variante insignia Qwen2.5-Math-72B-Instruct alcanza un 84.4% en MATH y supera a modelos de frontera propietarios como GPT-4o en competiciones de élite (AIME y AMC).",
+        "analogy": "📐 Como un maestro de olimpiadas matemáticas que no solo resuelve problemas teóricos en la pizarra paso a paso con impecable claridad verbal, sino que simultáneamente abre una terminal para programar un script de verificación que corrobora numéricamente cada conjetura, detectando y corrigiendo instantáneamente cualquier desliz antes de dar su veredicto definitivo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.12122",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "SAM 2: Segment Anything in Images and Videos",
+        "author": "Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chay Ryali, Tengyu Ma, Haitham Khedr, Roman Rädle, Chloe Rolland, Laura Gustafson, Eric Mintun, Junting Pan, Kalyan Vasudev Alwala, Nicolas Carion, Chao-Yuan Wu, Ross Girshick, Piotr Dollar, Christoph Feichtenhofer (Meta AI)",
+        "description": "Desarrolla Segment Anything Model 2 (SAM 2), un modelo fundacional unificado para la segmentación de objetos interactiva guiada por prompts tanto en imágenes fijas como en secuencias de video continuo en tiempo real. Introduce una arquitectura basada en transformadores equipada con un módulo de memoria por streaming (memory encoder, memory attention y memory bank) que retiene información espacio-temporal de las características del objeto y las interacciones del usuario a través de fotogramas pasados y futuros. Respaldado por el dataset SA-V (que contiene más de 50.000 videos y 600.000 máscaras espacio-temporales), SAM 2 es 6 veces más rápido que SAM original en imágenes y triplica la precisión en video requiriendo un tercio de las interacciones humanas previas.",
+        "analogy": "🎯 Como un operador de cámara con visión térmica que, con solo señalar un vehículo en movimiento con un puntero láser en una sola toma, recuerda la silueta exacta, textura y trayectoria del coche a lo largo de toda una persecución cinematográfica, manteniendo el recorte perfecto incluso si el vehículo pasa momentáneamente detrás de un poste o dobla una esquina.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.00714",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Depth Pro: Sharp Monocular Metric Depth in Less Than a Second",
+        "author": "Aleksei Bochkovskii, Amaël Delaunoy, Hugo Germain, Marcel Santos, Yichao Zhou, Stephan R. Richter, Vladlen Koltun (Apple)",
+        "description": "Presenta Depth Pro, un modelo fundacional de estimación de profundidad monocular métrica en régimen zero-shot capaz de inferir distancias físicas absolutas en metros a partir de una única imagen RGB arbitraria, sin requerir metadatos de cámara, calibración ni distancia focal previa. Emplea un Vision Transformer multi-escala eficiente para predicción densa que combina parches a nivel de imagen completa con parches locales en alta resolución, produciendo mapas de profundidad métricos de 2.25 megapíxeles con bordes ultra-nítidos en tan solo 0.3 segundos en una GPU estándar. Además, estima de forma conjunta la distancia focal de la lente con precisión de vanguardia, facilitando aplicaciones inmediatas en fotografía 3D y realidad aumentada.",
+        "analogy": "📏 Como un maestro topógrafo que mira una fotografía común impresa de una habitación desconocida y, sin saber con qué lente se tomó, calcula en medio segundo la distancia exacta en centímetros desde el piso hasta cada pata de la mesa, el espesor de los cables del tendido eléctrico y la posición espacial de cada rincón con precisión milimétrica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.02073",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Chameleon: Mixed-Modal Early-Fusion Foundation Models",
+        "author": "Chameleon Team (FAIR at Meta)",
+        "description": "Introduce la familia de modelos Chameleon (en variantes de 7B y 34B parámetros), pionera en el paradigma de fusión temprana (early-fusion) unificada de tokens mixtos de texto e imagen. A diferencia de las arquitecturas multimodales convencionales que acoplan codificadores visuales externos a un LLM decodificador, Chameleon tokeniza texto e imágenes dentro de un espacio de vocabulario discreto común mediante un cuantizador vectorial (VQ-GAN), procesando secuencias intercaladas arbitrarias de ambos tipos de datos a través de una red Transformer decodificadora pura entrenada de principio a fin (from scratch). Supera la inestabilidad de entrenamiento con normalización de claves y consultas (QK-Norm), alcanzando paridad o superioridad frente a LLaVA y Gemini Pro en tareas complejas de razonamiento mixto e infografías.",
+        "analogy": "🎨 Como un autor que piensa y se expresa de forma bilingüe y simultánea en prosa poética e ilustraciones a lápiz: no escribe un párrafo y luego busca una foto externa en un archivo para pegarla abajo, sino que concibe cada página como un único tapiz continuo donde las palabras y los trazos emergen orgánicamente del mismo pensamiento.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2405.09818",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
+        "author": "Andy Zhou, Kai Yan, Michal Shlapentokh-Rothman, Haohan Wang, Yu-Xiong Wang (UIUC, Lapis Labs)",
+        "description": "Formula el marco Language Agent Tree Search (LATS), que unifica los tres pilares del comportamiento inteligente en modelos de lenguaje: razonamiento deliberado, toma de decisiones (acción) y planificación estratégica. LATS incorpora el algoritmo de Búsqueda en Árbol de Monte Carlo (MCTS) en el flujo de trabajo agéntico, utilizando el propio modelo de lenguaje para generar acciones candidatas, actuar como heurística de valor para evaluar estados intermedios y reflexionar verbalmente ante fallos reportados por el entorno. Al contrastar trayectorias frente a retroalimentación externa real (terminales de código, navegadores web o verificadores lógicos), LATS supera cualitativamente a Tree-of-Thoughts y ReAct, logrando 94.4% de éxito en HumanEval con GPT-4 y navegando eficientemente entornos interactivos como WebShop.",
+        "analogy": "♟️ Como un gran maestro de ajedrez que antes de tocar una pieza simula múltiples jugadas hacia adelante en su mente, evalúa las respuestas más probables del oponente apoyándose en su experiencia y, si detecta una variante con trampa oculta, retrocede mentalmente para elegir una línea de juego alternativa más segura y contundente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.04406",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+        "author": "Carlos E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, Karthik Narasimhan (Princeton University)",
+        "description": "Establece SWE-bench, el punto de referencia fundacional para evaluar la capacidad de agentes de inteligencia artificial para resolver problemas reales de ingeniería de software extraídos directamente de repositorios de código abierto de GitHub (como Django, SymPy, scikit-learn y requests). SWE-bench recopila 2.294 problemas con descripciones completas en lenguaje natural, bases de código complejas con decenas de miles de líneas y suites de pruebas unitarias ejecutadas en entornos Docker aislados. La evaluación expuso que incluso modelos de frontera como GPT-4 resolvían menos del 5% de los problemas en su formulación inicial, transformando la agenda de investigación global hacia arquitecturas agénticas con herramientas de edición contextual, búsqueda y verificación continua.",
+        "analogy": "🛠️ Como evaluar a un postulante a ingeniero de software entregándole una incidencia real reportada por un usuario en un software en producción con 100.000 líneas de código y pidiéndole que clone el repositorio, reproduzca el fallo, altere los archivos correctos y pase toda la suite de integración continua, en vez de tomarle una prueba teórica de pizarrón con algoritmos de juguete.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.06770",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+        "author": "Shuyan Zhou, Frank F. Xu, Hao Zhu, Xuhui Zhou, Robert Lo, Grayson Wentz, et al. (Carnegie Mellon University)",
+        "description": "Desarrolla WebArena, una plataforma y benchmark integral de simulación web autohospedada y reproducible diseñada para probar agentes autónomos en entornos dinámicos del mundo real. A diferencia de las evaluaciones sobre páginas web estáticas o interfaces simplificadas, WebArena despliega réplicas operativas completas de cuatro aplicaciones web fundamentales: comercio electrónico (plataforma de compras), foros de discusión (Reddit), desarrollo colaborativo (GitLab) y gestión de contenidos (CMS/Wikipedia), con soporte para navegación multitestaña y herramientas auxiliares (mapas, calculadoras). Evalúa a los agentes mediante corrección funcional sobre el estado final de la base de datos tras la ejecución, registrando tasas de éxito iniciales inferiores al 15% para GPT-4 frente al 78% alcanzado por humanos.",
+        "analogy": "🌐 Como construir una réplica a escala real de una ciudad digital completa con tiendas, foros de vecinos, juzgados y oficinas postales donde cada puerta abre de verdad y cada formulario modifica los registros comunales, evaluando si un asistente robótico es capaz de renovar una licencia comercial o tramitar una compra compleja sin perderse en los pasillos burocráticos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2307.13854",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+        "author": "Tim Dettmers, Artidoro Pagnoni, Ari Holtzman, Luke Zettlemoyer (University of Washington)",
+        "description": "Introduce QLoRA, un método pionero de ajuste fino eficiente en parámetros (PEFT) que permite entrenar modelos de lenguaje masivos de hasta 65.000 millones de parámetros en una única GPU de 48 GB sin degradación de rendimiento respecto al fine-tuning estándar en 16 bits. QLoRA se fundamenta en tres innovaciones clave: el tipo de datos 4-bit NormalFloat (NF4), teóricamente óptimo para pesos con distribución normal; la Doble Cuantización (Double Quantization), que cuantiza las constantes de cuantización ahorrando 0.37 bits por parámetro; y los Paged Optimizers, que utilizan la memoria unificada de CUDA para gestionar picos transitorios de memoria durante secuencias largas. La familia Guanaco entrenada con QLoRA demostró paridad competitiva con ChatGPT en benchmarks empíricos.",
+        "analogy": "🧊 Como esculpir una armadura personalizada sobre una estatua de hielo comprimido ultra-denso sin descongelarla ni deformar su estructura: la base maciza permanece inmóvil y congelada ocupando el mínimo espacio posible en la cámara frigorífica, mientras el artesano solo añade finas láminas metálicas de ajuste que transforman por completo su función.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.14314",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "FlashDecoding++: Faster Large Language Model Inference on GPUs",
+        "author": "Ke Hong, Guohao Dai, Jiaming Zou, Genghan Zhang, Guzhai Wang, Xiuhong Li, Wei-Wei Tu, Yu Wang (Tsinghua University, Infinigence AI, Peking University)",
+        "description": "Presenta FlashDecoding++, un framework de optimización de motores de inferencia para LLMs que acelera sustancialmente la fase de decodificación autorregresiva en GPUs NVIDIA y AMD al resolver tres cuellos de botella estructurales. Introduce la técnica Asynchronized Softmax con un valor máximo unificado derivado de distribuciones estadísticas, permitiendo calcular fragmentos de atención de forma totalmente asíncrona sin sobrecoste de sincronización entre hilos. Además, optimiza multiplicaciones de matrices aplanadas (Flat GEMMs) mediante relleno fino (padding de dimensión 8 en vez de 64) y doble búfer para evitar subutilización computacional, complementado con flujos de datos heurísticos dinámicos que equilibran Tensor Cores y núcleos CUDA según el tamaño de lote, logrando una aceleración media de 1.37x sobre motores líderes y hasta 4.86x sobre implementaciones base.",
+        "analogy": "⚡ Como una línea de ensamblaje en una fábrica automotriz donde cada operario en su estación conoce de antemano el tope de medidas toleradas para las piezas, pudiendo soldar y pulir su sector sin tener que silbarle a su compañero de enfrente para coordinar el ritmo en cada milímetro, eliminando las pausas de espera y duplicando la velocidad de salida de vehículos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.01282",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SpecInfer: Accelerating Generative LLM Serving with Tree-based Speculative Inference and Verification",
+        "author": "Xupeng Miao, Gabriele Oliaro, Zhihao Zhang, Xinhao Cheng, Zeyu Wang, Rae Ying Yee Wong, Zhuoming Chen, Daiyaan Arfeen, Reyna Abhyankar, Zhihao Jia (Carnegie Mellon University)",
+        "description": "Desarrolla SpecInfer, un sistema integral para acelerar el servicio de modelos de lenguaje generativos en producción mediante decodificación especulativa basada en árboles de tokens. Frente a la decodificación especulativa tradicional que genera una única secuencia lineal de conjeturas con un modelo borrador, SpecInfer coordina múltiples modelos pequeños y adaptados para proponer simultáneamente varias ramas de continuación estructuradas en un árbol de tokens colectivo. El modelo de lenguaje principal verifica en paralelo todas las trayectorias del árbol en un único pase hacia adelante (forward pass) sin alterar la distribución de probabilidad de salida exacta del modelo de destino, multiplicando el rendimiento de inferencia entre 1.5x y 2.8x en arquitecturas distribuidas y hasta 3.5x en sistemas con descarga a memoria RAM.",
+        "analogy": "🌳 Como un equipo de exploradores que envía a varios drones ágiles a mapear en paralelo tres senderos distintos en un bosque y dibuja un mapa ramificado; el comandante principal inspecciona todas las rutas en un solo vistazo simultáneo y aprueba de inmediato la senda más larga y segura recorrida, avanzando kilómetros en un solo salto sin tener que caminar paso a paso por cada sendero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.09781",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaFold 3: Predicción Integral de Estructuras y Complejos Biomoleculares (ADN, ARN, Ligandos e Iones) con AlphaFold Server",
+      "description": "Google DeepMind e Isomorphic Labs presentan AlphaFold 3 en Nature, un modelo revolucionario capaz de predecir la estructura tridimensional y las interacciones de prácticamente todas las moléculas biológicas que componen la vida celular: proteínas, cadenas de ADN, ARN, ligandos químicos, iones y modificaciones post-traduccionales. Al reemplazar los módulos tradicionales basados en Evoformer por una arquitectura basada en difusión generativa directa sobre coordenadas atómicas espaciales, AlphaFold 3 logra una precisión un 50% superior a los métodos previos en acoplamiento molecular y abre de forma gratuita el AlphaFold Server a la comunidad científica internacional para acelerar el diseño de fármacos y la biología computacional.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/alphafold-3-predicts-structure-and-molecules-of-life/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "OpenAI o1: Modelo de Razonamiento de Frontera con Cadena de Pensamiento Latente para Ciencia, Matemáticas y Programación Avanzada",
+      "description": "OpenAI presenta la serie OpenAI o1, una nueva generación de modelos fundacionales entrenados con aprendizaje por refuerzo a gran escala para deliberar y razonar internamente antes de generar una respuesta final. A través de una cadena de pensamiento latente no visible, el modelo explora diferentes caminos deductivos, reconoce errores intermedios y prueba estrategias alternativas, resolviendo problemas de nivel doctoral en física, química y biología, y alcanzando un rendimiento del 83% en el examen clasificatorio de las Olimpiadas Internacionales de Matemáticas (AIME), superando cualitativamente el paradigma de modelos de lenguaje autorregresivos estándar.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-openai-o1-preview/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Citations API: Citas Estructuradas Nativas y Verificación de Fuentes Documentales para la Familia Claude",
+      "description": "Anthropic lanza la función de Citaciones Nativas (Citations API) para toda la familia de modelos Claude 3 y Claude 3.5 en la API de Anthropic. Esta capacidad permite que el modelo devuelva referencias estructuradas exactas y delimitadas a nivel de oración o párrafo respecto a los documentos suministrados en el prompt de contexto, mitigando drásticamente el riesgo de alucinaciones en flujos de trabajo legales, financieros y médicos de alta responsabilidad. Al entregar citas verificables vinculadas directamente al texto fuente sin sobrecoste de ingeniería de prompts ni heurísticas frágiles, optimiza arquitecturas RAG empresariales con auditoría determinista.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/citations-api",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Llama 3.1 405B: El Primer Modelo de Frontera de Pesos Abiertos con Ventana de Contexto de 128k Tokens",
+      "description": "Meta AI lanza oficialmente Llama 3.1 405B, el modelo de inteligencia artificial de pesos abiertos más grande y capaz del mundo hasta la fecha, entrenado en un superclúster de más de 16.000 GPUs H100 sobre un corpus de 15 billones de tokens multilingües. Con soporte de contexto extendido de 128k tokens, capacidades avanzadas de uso de herramientas, programación y generación de datos sintéticos, Llama 3.1 405B compite directamente en igualdad de condiciones con los modelos propietarios más avanzados como GPT-4o y Claude 3.5 Sonnet, habilitando a desarrolladores y empresas a destilar y adaptar modelos de frontera bajo una licencia permisiva comunitaria.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Waymo (Alphabet)",
+      "headline": "Waymo cierra una ronda de financiamiento Serie C de 5.600 millones de dólares liderada por Alphabet con la participación de Andreessen Horowitz, Fidelity, Perry Creek, Silver Lake, Tiger Global y T. Rowe Price, elevando su valoración a más de 45.000 millones de dólares para acelerar el despliegue comercial y la cobertura geográfica de su flota de robotaxis autónomos Waymo One en San Francisco, Phoenix, Los Ángeles y Austin.",
+      "links": [
+        {
+          "text": "Waymo Blog",
+          "url": "https://waymo.com/blog/2024/10/growing-waymo-with-our-over-subscribed-5-6b-investment-round/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Foxconn (Hon Hai) & NVIDIA",
+      "headline": "Foxconn anuncia la construcción de la mayor planta de manufactura de servidores de inteligencia artificial del mundo en Guadalajara, México, dedicada exclusivamente al ensamblaje a escala masiva de racks NVIDIA GB200 NVL72 con refrigeración líquida integral para satisfacer los pedidos multimillonarios de los principales proveedores de nube e hiperescaladores globales.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/foxconn-building-worlds-largest-nvidia-gb200-chip-facility-mexico-2024-10-08/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Sakana AI & NVIDIA",
+      "headline": "La startup japonesa de investigación en inteligencia artificial Sakana AI alcanza una valoración superior a los 1.500 millones de dólares tras recaudar 214 millones en su ronda Serie A liderada por New Enterprise Associates, Khosla Ventures y Lux Capital, con la inversión estratégica y colaboración tecnológica de NVIDIA para co-diseñar clústeres optimizados y avanzar en el desarrollo de su metodología de ensamblaje evolutivo de modelos fundacionales (Evolutionary Model Merge).",
+      "links": [
+        {
+          "text": "Sakana AI Blog",
+          "url": "https://sakana.ai/series-a-fundraise/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "AWS & Databricks",
+      "headline": "Amazon Web Services y Databricks amplían su alianza estratégica mediante un acuerdo plurianual multimillonario enfocado en optimizar el framework Data Intelligence Platform y Mosaic AI sobre procesadores aceleradores AWS Trainium2 y AWS Inferentia, permitiendo a miles de clientes corporativos entrenar y desplegar modelos de lenguaje propietarios con reducciones de costo de hasta el 50% frente a arquitecturas GPU estándar.",
+      "links": [
+        {
+          "text": "AWS Press Release",
+          "url": "https://press.aboutamazon.com/2024/9/aws-and-databricks-announce-strategic-collaboration-to-help-customers-accelerate-generative-ai-development",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
