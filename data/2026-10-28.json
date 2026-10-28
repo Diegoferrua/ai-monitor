@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-28",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "The Llama 3 Herd of Models",
+        "author": "Meta Llama Team",
+        "description": "Detalla la arquitectura, infraestructura de entrenamiento y alineación de la familia de modelos Llama 3, destacando el modelo insignia denso de 405 mil millones de parámetros (405B) con una ventana de contexto nativa de 128k tokens. Entrenado en un superclúster de más de 16.000 GPUs H100 sobre 15 billones de tokens multilingües, introduce un riguroso pipeline de post-entrenamiento que combina SFT, Rejection Sampling y Direct Preference Optimization (DPO), democratizando por primera vez un modelo abierto con capacidades de razonamiento, código y uso de herramientas comparables a modelos propietarios de frontera.",
+        "analogy": "🏗️ Como levantar un rascacielos colosal de 100 pisos empleando una cuadrilla perfectamente coordinada de miles de grúas de precisión: en vez de improvisar planos sobre la marcha, los ingenieros calculan al milímetro la resistencia de cada viga de acero, purifican cada lote de hormigón y someten cada nivel a rigurosas pruebas de carga antes de inaugurar el edificio para el público.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.21783",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+        "author": "Rafael Rafailov, Archit Sharma, Eric Mitchell, Stefano Ermon, Christopher D. Manning, Chelsea Finn (Stanford University)",
+        "description": "Formula el algoritmo Direct Preference Optimization (DPO), un avance seminal en la alineación de modelos de lenguaje con preferencias humanas que elimina la necesidad de entrenar y mantener un modelo de recompensa separado, así como la inestabilidad del aprendizaje por refuerzo con PPO. Al derivar una correspondencia matemática exacta en forma cerrada entre la política óptima y la función de recompensa latente bajo el modelo Bradley-Terry, DPO optimiza las preferencias directamente sobre los pares de respuestas preferidas y rechazadas mediante una pérdida de entropía cruzada binaria simple, garantizando estabilidad matemática y reduciendo a la mitad los recursos computacionales en GPU.",
+        "analogy": "🧭 Como un entrenador de tenis que, en lugar de contratar a un árbitro auxiliar para que invente una puntuación numérica abstracta sobre cada golpe antes de corregir al tenista, le muestra directamente grabaciones de dos saques y le indica en el acto qué movimiento emular y cuál descartar, logrando que el alumno perfeccione su técnica sin intermediarios ni cálculos innecesarios.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.18290",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ORPO: Monolithic Preference Optimization without Reference Model",
+        "author": "Jiwoo Hong, Noah Lee, James Thorne (KAIST)",
+        "description": "Introduce ORPO (Odds Ratio Preference Optimization), un marco de alineación monolítico que unifica el ajuste fino supervisado (SFT) y la optimización de preferencias en una única función objetivo de pérdida sin requerir un modelo de referencia activo en memoria. ORPO penaliza directamente las probabilidades relativas (odds ratio) de generar estilos o respuestas desfavorables mientras maximiza la probabilidad logarítmica de las respuestas preferidas, evitando que el modelo adopte sesgos o degradación en distribuciones de salida sin el sobrecoste de memoria que imponen DPO o RLHF.",
+        "analogy": "🎯 Como un estudiante de dibujo que aprende a pintar una réplica exacta de una obra maestra y, en el mismo trazo de pincel, aprende a esquivar las mezclas de color pastosas y los errores de perspectiva sin tener que consultar a cada segundo un cuadro de referencia idéntico al lado de su caballete.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.07691",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Sigmoid Loss for Language Image Pre-Training",
+        "author": "Xiaohua Zhai, Basil Mustafa, Alexander Kolesnikov, Lucas Beyer (Google Research)",
+        "description": "Presenta SigLIP, un método fundamental de pre-entrenamiento de visión y lenguaje que reemplaza la función de pérdida contrastiva basada en softmax (utilizada en CLIP) por una pérdida de sigmoide por pares que opera de manera desacoplada e independiente sobre cada par imagen-texto. Esta reformulación elimina la necesidad de sincronizar y normalizar denominadores globales a través de todo el lote de procesamiento en clústeres distribuidos, reduciendo la huella de memoria y permitiendo escalar de forma eficiente a tamaños de lote masivos de hasta un millón de muestras con una precisión zero-shot superior en ImageNet.",
+        "analogy": "🎟️ Como un guardia de seguridad en la entrada de un festival que revisa la entrada de cada asistente individualmente diciendo 'pasa' o 'no pasa' con un escáner rápido, en vez de obligar a que se reúnan miles de personas en un vestíbulo para contar cuántos tienen boleto antes de autorizar a un solo grupo a ingresar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2303.15343",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks",
+        "author": "Bin Xiao, Haiping Wu, Weijian Xu, Xiyang Dai, Houdong Hu, Yumao Lu, Michael Zeng, Ce Liu, Lu Yuan (Microsoft)",
+        "description": "Desarrolla Florence-2, un modelo fundacional de visión unificado basado en secuencia a secuencia (seq2seq) capaz de resolver tareas visuales a nivel de imagen (subtitulado, VQA), región (detección de objetos, grounding visual) y píxel (segmentación detallada) mediante instrucciones en lenguaje natural. Apoyado en el conjunto de datos masivo FLD-5B (con 5.400 millones de anotaciones en 126 millones de imágenes), Florence-2 integra tokens de localización espacial directamente en su vocabulario textual, eliminando la necesidad de cabezales especializados para cada tarea y ofreciendo un rendimiento excepcional y ligero para aplicaciones embebidas y edge.",
+        "analogy": "🔬 Como una navaja suiza óptica ultra-versátil: con una única lente y un selector de comandos, permite al usuario pedir una descripción general del paisaje, ubicar las coordenadas exactas de un pájaro en una rama o recortar con precisión quirúrgica cada pétalo de una flor, todo a través de la misma herramienta compacta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.06242",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+        "author": "Adrien Bardes, Quentin Garrido, Jean Ponce, Emmanuel Dupoux, Yann LeCun, Assra Assran, Nicolas Ballas (Meta FAIR)",
+        "description": "Introduce V-JEPA (Video Joint-Embedding Predictive Architecture), un modelo de aprendizaje auto-supervisado no generativo para la comprensión de representaciones visuales en video. En lugar de gastar capacidad computacional en predecir o reconstruir píxeles crudos cuadro a cuadro (lo que atrapa al modelo en ruidos irrelevantes o texturas impredecibles), V-JEPA predice representaciones abstractas de características en un espacio latente para regiones espaciotemporales enmascaradas. Entrenado sobre 2 millones de videos sin texto ni etiquetas, sienta las bases para modelos de mundo capaces de capturar física de sentido común y dinámicas temporales para robótica y razonamiento de alto nivel.",
+        "analogy": "🎬 Como un director de cine que visualiza en su mente el arco dramático y los movimientos clave de los actores en una escena de acción, sin perder el tiempo intentando memorizar cada partícula de polvo que flota en el aire o cada destello fugaz de iluminación en el fondo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.08471",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+        "author": "Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths, Yuan Cao, Karthik Narasimhan (Princeton University, Google DeepMind)",
+        "description": "Formula el marco Tree of Thoughts (ToT), que generaliza los enfoques de Chain-of-Thought permitiendo a los modelos de lenguaje explorar múltiples ramas de razonamiento estructuradas en forma de árbol y evaluar deliberadamente pensamientos intermedios. ToT capacita al LLM para generar unidades coherentes de razonamiento, autoevaluar su viabilidad hacia la solución global y combinar algoritmos de búsqueda sistemática (como BFS o DFS) con retroceso (backtracking) cuando detecta callejones sin salida, disparando la tasa de éxito de un 4% (con prompting estándar) a un 74% en el juego matemático del 24 y resolviendo crucigramas complejos.",
+        "analogy": "🗺️ Como un explorador en un laberinto desconocido que en cada bifurcación marca el camino con tiza, avanza unos pasos para inspeccionar la ruta y, si comprueba que el sendero termina en una pared de roca, regresa sobre sus pasos para explorar la siguiente galería en vez de seguir corriendo a ciegas en línea recta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.10601",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+        "author": "Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, Anima Anandkumar (NVIDIA, Caltech, Stanford, UT Austin)",
+        "description": "Desarrolla Voyager, el primer agente encarnado de aprendizaje continuo impulsado por LLMs en Minecraft capaz de explorar el mundo de forma abierta sin intervención humana. Voyager consta de tres componentes principales: un currículo automatizado que maximiza la exploración proponiendo tareas acordes al estado actual, una biblioteca de habilidades ejecutables en código que almacena y reutiliza programas exitosos para tareas cada vez más complejas, y un mecanismo de retroalimentación iterativa que corrige errores de ejecución a partir de las respuestas del entorno. Voyager obtiene 3.3 veces más ítems únicos, desbloquea el árbol tecnológico de madera a diamante y navega distancias 2.3 veces mayores que agentes previos.",
+        "analogy": "🎮 Como un hábil jugador autodidacta en un videojuego de supervivencia que, tras descubrir cómo encender una fogata o fabricar un pico de hierro, anota la receta en su libreta de trucos para no tener que reinventarla desde cero, permitiéndole construir herramientas cada vez más sofisticadas y conquistar regiones lejanas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.16291",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+        "author": "Sirui Hong, Mingchen Zhuge, Jonathan Chen, Xiawu Zheng, Yuheng Cheng, Ceyao Zhang, Jinlin Wang, Zili Wang, Steven Hoi, Chenglin Wu (DeepWisdom)",
+        "description": "Presenta MetaGPT, un marco colaborativo multi-agente que incorpora procedimientos operativos estándar (SOPs) basados en ingeniería de software para estructurar la comunicación entre agentes LLM. Al asignar roles especializados (Product Manager, Arquitecto de Software, Project Manager, Ingeniero de Software y QA) y exigir salidas estructuradas como documentos de requerimientos de producto (PRD), diagramas de diseño de sistemas y especificaciones de APIs, MetaGPT previene la dispersión del diálogo y las alucinaciones en cascada, logrando automatizar el ciclo completo de desarrollo de software desde una sola línea de instrucción con una tasa de éxito de tareas del 100% en proyectos de código.",
+        "analogy": "🏢 Como una empresa tecnológica de élite donde cada empleado tiene un rol nítido y se comunica mediante especificaciones técnicas formales y tableros de gestión, evitando el desorden de una sala de reuniones caótica donde todos hablan al mismo tiempo sin una metodología clara de trabajo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2308.00352",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "FlashAttention-2: Faster Attention with Better Work-Partitioning and Parallelism",
+        "author": "Tri Dao (Princeton University)",
+        "description": "Diseña FlashAttention-2, un algoritmo de atención exacta consciente de la jerarquía de memoria (SRAM vs HBM) que optimiza la partición del trabajo y el paralelismo de hilos en GPUs modernas. Al reestructurar el bucle externo sobre la dimensión de la secuencia de salida en lugar de la entrada, reducir las operaciones no matriciales (GEMM) en un factor de 2x y sincronizar la paralelización a nivel de bloques de hilos (thread blocks) dentro de los Streaming Multiprocessors (SM), FlashAttention-2 alcanza hasta un 73% de la utilización máxima teórica de cálculo en GPUs A100 (superando 225 TFLOPs/s), duplicando la velocidad del algoritmo FlashAttention original y acelerando radicalmente el entrenamiento y la inferencia de contextos largos.",
+        "analogy": "📦 Como un centro de distribución ultra-optimizado donde los operarios organizan los paquetes en estanterías de acceso ultrarrápido junto a sus manos en vez de viajar constantemente al almacén central en montacargas para cada pedido, eliminando los cuellos de botella de transporte y multiplicando al doble el ritmo de despacho.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2307.08691",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+        "author": "Ji Lin, Jiaming Tang, Haotian Tang, Shang Yang, Xingyu Dang, Song Han (MIT, NVIDIA)",
+        "description": "Desarrolla AWQ (Activation-aware Weight Quantization), un método de cuantización de pesos a 4 bits para compresión y aceleración de LLMs premiado como Best Paper en MLSys 2024. AWQ parte del descubrimiento de que no todos los pesos son igualmente críticos: solo el 1% de los pesos que corresponden a canales de activación con magnitudes extremas determina la precisión del modelo. Mediante una transformación matemática equivalente de escalado por canal que protege estos pesos sobresalientes sin requerir backpropagation ni tipos de datos mixtos ineficientes, AWQ preserva la capacidad de generalización zero-shot del modelo original y triplica el throughput de inferencia frente a implementaciones en FP16.",
+        "analogy": "🛡️ Como empacar una vajilla de porcelana para una mudanza: en lugar de intentar acolchar por igual cada plato común o gastar en cajas blindadas para toda la cocina, los embaladores identifican el 1% de piezas de cristal fino más valiosas y las refuerzan con doble capa protectora, logrando que todo quepa en camiones compactos sin que se rompa nada valioso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2306.00978",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+        "author": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao (Princeton University, Together AI, UIUC)",
+        "description": "Introduce Medusa, un marco de aceleración de inferencia para LLMs que resuelve el cuello de botella de ancho de banda de memoria sin requerir un modelo borrador (draft model) separado como en la decodificación especulativa clásica. Medusa añade múltiples cabezales de decodificación ligeros entrenados sobre la última capa oculta del modelo congelado para predecir en paralelo varios tokens subsecuentes simultáneos. Luego, utiliza un mecanismo de atención basado en árboles para evaluar y aceptar múltiples candidatos en un único pase hacia adelante (forward pass), logrando una aceleración entre 2.2x y 3.6x en la velocidad de generación con total fidelidad en la distribución del modelo.",
+        "analogy": "✍️ Como un autor que escribe al teclado con una mente ágil que, mientras teclea la palabra presente, ya tiene en la punta de los dedos las siguientes tres palabras de la frase listas para estamparlas en un solo golpe coordinado, revisándolas de un vistazo antes de continuar el párrafo a triple velocidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.10774",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaProof y AlphaGeometry 2: Razonamiento Matemático Formal de Nivel Medalla de Plata en la Olimpiada Internacional (IMO 2024)",
+      "description": "Google DeepMind alcanza un hito histórico en razonamiento formal avanzado combinando AlphaProof (un sistema de aprendizaje por refuerzo autorreflexivo entrenado para demostrar teoremas en el lenguaje formal Lean) y AlphaGeometry 2 (un motor neurosimbólico optimizado para resolver geometría euclidiana en segundos). Evaluados conjuntamente en los 6 problemas oficiales de la Olimpiada Internacional de Matemáticas 2024 (IMO 2024), lograron resolver 4 problemas con rigor matemático verificado, obteniendo 28 de 42 puntos posibles y alcanzando el umbral equivalente a una medalla de plata olímpica.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Canvas: Nuevo Espacio de Trabajo Interactivo para Escritura y Programación con GPT-4o",
+      "description": "OpenAI lanza Canvas en ChatGPT, una interfaz de colaboración lado a lado diseñada para proyectos de texto y desarrollo de software que trascienden el chat lineal conversacional. Canvas se despliega en una ventana dedicada donde el usuario y el modelo pueden editar directamente bloques de código o prosa; incluye herramientas automatizadas de revisión de código, depuración de errores, traducción entre múltiples lenguajes de programación, ajuste del nivel de lectura y sugerencias inline contextualizadas impulsadas por una variante de GPT-4o adaptada específicamente para colaborar en tiempo real.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-canvas/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Computer Use en Claude 3.5 Sonnet & Lanzamiento de Claude 3.5 Haiku",
+      "description": "Anthropic presenta en fase beta pública la capacidad 'Computer Use' (uso de computadora) en la API de Claude 3.5 Sonnet actualizado, permitiendo que el modelo interactúe de forma autónoma con una computadora de la misma forma que un usuario humano: observando la pantalla mediante capturas, moviendo el cursor, haciendo clics en botones y tecleando texto en interfaces gráficas complejas. Paralelamente, introduce Claude 3.5 Haiku, su modelo rápido de última generación que iguala el rendimiento del modelo insignia previo Claude 3 Opus con la latencia y el bajo costo de la familia Haiku, estableciendo un nuevo estándar en automatización agéntica de tareas de escritorio.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Llama 3.2: Modelos Fundacionales Multimodales (11B y 90B) y Modelos Ligeros para Dispositivos Móviles (1B y 3B)",
+      "description": "Meta presenta oficialmente en Meta Connect 2024 la familia Llama 3.2, que incorpora por primera vez modelos multimodales de visión abiertos (en tamaños de 11B y 90B parámetros) capaces de razonar conjuntamente sobre texto e imágenes, analizar diagramas técnicos y comprender documentos con alta resolución. Simultáneamente, lanza modelos ultraligeros de 1B y 3B parámetros altamente optimizados con ExecuTorch y soporte para chips Qualcomm, Arm y MediaTek, permitiendo inferencia privada y de alta velocidad directamente en teléfonos inteligentes y dispositivos de borde con una ventana de contexto de 128k tokens.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "OpenAI, Broadcom & TSMC",
+      "headline": "OpenAI se alía con Broadcom y TSMC para diseñar y fabricar sus primeros chips propietarios dedicados a la aceleración de inferencia a partir de 2026, mientras pospone sus planes iniciales de construir una red de fundiciones propia y diversifica su suministro de hardware integrando aceleradores AMD MI300X junto a su infraestructura masiva de NVIDIA.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/artificial-intelligence/openai-working-with-broadcom-tsmc-build-first-in-house-chip-2024-10-29/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google & Kairos Power",
+      "headline": "Google firma el primer acuerdo corporativo del mundo para la compra a gran escala de energía nuclear limpia proveniente de reactores modulares pequeños (SMRs) con Kairos Power, asegurando 500 MW de capacidad eléctrica continua libre de carbono entre 2030 y 2035 para abastecer el vertiginoso consumo energético de sus centros de datos de inteligencia artificial.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/outreach-initiatives/sustainability/google-kairos-power-nuclear-energy/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Amazon & X-energy",
+      "headline": "Amazon lidera una ronda de financiamiento de 500 millones de dólares y sella acuerdos estratégicos con X-energy y American Electric Power (AEP) para desarrollar y desplegar hasta 5 gigavatios de energía nuclear mediante reactores modulares avanzados Xe-100 en Indiana y Washington, garantizando suministro energético continuo para los clústeres de IA y computación en la nube de AWS.",
+      "links": [
+        {
+          "text": "Amazon Press",
+          "url": "https://www.aboutamazon.com/news/sustainability/amazon-nuclear-energy-small-modular-reactor",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "GitHub Universe 2024 (Microsoft)",
+      "headline": "Microsoft y GitHub transforman GitHub Copilot en una plataforma multi-modelo abierta en GitHub Universe 2024, permitiendo a los desarrolladores elegir dinámicamente entre Claude 3.5 Sonnet de Anthropic, Gemini 1.5 Pro de Google y los modelos o1/GPT-4o de OpenAI, al tiempo que introducen GitHub Spark para la creación de micro-apps con lenguaje natural y Copilot Workspace para flujos agénticos de desarrollo.",
+      "links": [
+        {
+          "text": "GitHub Blog",
+          "url": "https://github.blog/news-insights/product-news/github-universe-2024-copilot-multi-model-spark/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
