@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-29",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+        "author": "Albert Gu, Tri Dao (Carnegie Mellon University, Princeton University)",
+        "description": "Introduce la arquitectura Mamba basada en modelos de espacio de estados estructurados selectivos (Selective State Space Models o S6). Supera la complejidad cuadrática en longitud de contexto O(N^2) inherente a la atención de los Transformers mediante un mecanismo de parametrización dependiente de la entrada que permite al modelo comprimir y propagar selectivamente la información relevante a lo largo del tiempo en complejidad lineal O(N). Mamba integra una implementación de hardware optimizada para SRAM que fusiona operaciones en memoria GPU, logrando una velocidad de inferencia hasta 5 veces más rápida y una reducción drástica de memoria KV-cache en secuencias extensas de más de un millón de tokens.",
+        "analogy": "🚂 Como un revisor de tren que, en lugar de consultar una lista con el historial completo de cada pasajero que subió en cada estación anterior cada vez que valida un boleto (lo que colapsaría el vagón si el viaje dura miles de paradas), anota únicamente en una pequeña tarjeta de control los cambios de asiento esenciales y descarta lo redundante, avanzando a velocidad constante sin importar cuán largo sea el trayecto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.00752",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Mixtral of Experts",
+        "author": "Albert Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas, et al. (Mistral AI)",
+        "description": "Presenta Mixtral 8x7B, una red de transformador basada en mezcla dispersa de expertos (Sparse Mixture-of-Experts o SMoE) con pesos abiertos y una ventana de contexto nativa de 32k tokens. Para cada token generado, una red de enrutamiento (router) selecciona dinámicamente los 2 mejores expertos entre 8 redes feed-forward disponibles, utilizando solo 13 mil millones de parámetros activos de un total de 47 mil millones de parámetros por token. Mixtral iguala o supera a Llama 2 70B y GPT-3.5 en la mayoría de los benchmarks de razonamiento, matemáticas y código con una velocidad de inferencia hasta 6 veces superior a modelos densos de capacidad equivalente.",
+        "analogy": "🏥 Como un gran hospital de especialidades donde cada paciente que entra no es examinado por los 100 médicos de la plantilla a la vez, sino que una recepcionista de triaje ultra-rápida identifica el problema y deriva a la persona con los dos especialistas exactos más capacitados para atender su síntoma, resolviendo el caso con máxima precisión sin saturar al resto del equipo médico.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.04088",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Gemma 2: Improving Open Language Models at a Practical Size",
+        "author": "Gemma Team, Google DeepMind (Thomas Mesnard, Cassidy Hardin, Robert Dadashi, Surya Bhupatiraju, Shreya Pathak, et al.)",
+        "description": "Detalla la arquitectura y metodología de entrenamiento de Gemma 2 (en tamaños de 2B, 9B y 27B parámetros), diseñada por Google DeepMind para maximizar la eficiencia y rendimiento por parámetro en hardware común. Introduce una combinación de atención local deslizante (sliding window attention) y atención global intercalada capa por capa, log-logit soft-capping para evitar divergencias numéricas en capas profundas y un pipeline de destilación de conocimiento masivo desde modelos de frontera de mayor escala hacia los modelos más pequeños durante el pre-entrenamiento y post-entrenamiento. Su modelo de 27B supera a modelos abiertos que duplican su tamaño de parámetros en Chatbot Arena.",
+        "analogy": "🎒 Como un estudiante brillante que se prepara para un examen nacional sintetizando directamente las notas magistrales y resúmenes de los profesores eméritos más laureados de la universidad: en lugar de memorizar enciclopedias infinitas palabra por palabra, asimila las conexiones lógicas esenciales y las técnicas de razonamiento más depuradas, alcanzando las mejores calificaciones de la clase con un cuaderno de bolsillo liviano.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.00118",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "DINOv2: Learning Robust Visual Features without Supervision",
+        "author": "Maxime Oquab, Timothée Darcet, Théo Moutakanni, Huy V. Vo, Marc Szafraniec, Vasil Khalidov, Patrick Labatut, Armand Joulin, Piotr Bojanowski (Meta AI)",
+        "description": "Desarrolla DINOv2, un modelo fundacional de visión auto-supervisado a gran escala entrenado sin supervisión textual ni etiquetas humanas sobre un conjunto de datos curado de 142 millones de imágenes (LVD-142M). Utilizando una arquitectura Vision Transformer (ViT) escalada hasta 1.100 millones de parámetros con destilación auto-supervisada y pérdidas combinadas a nivel de parche e imagen, DINOv2 extrae representaciones visuales universales y detalladas que sobresalen de forma 'out-of-the-box' en segmentación semántica, estimación de profundidad monocular y correspondencia visual de partes entre objetos de la misma categoría sin necesidad de fine-tuning adicional.",
+        "analogy": "👁️ Como una persona que aprende a comprender la forma geométrica, texturas y proporciones del mundo observando millones de paisajes y objetos desde su infancia sin que nadie le pegue etiquetas con nombres a las cosas: al entender intrínsecamente cómo se componen y diferencian los cuerpos en el espacio, puede distinguir instantáneamente la silueta de un gato entre la maleza o calcular la distancia a un edificio sin necesidad de leer una sola palabra descriptiva.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2304.07193",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks",
+        "author": "Zhe Chen, Jiannan Wu, Wenhai Wang, Weijie Su, Guo Chen, Sen Xing, Zhong Muyan, Qinglong Zhang, Xizhou Zhu, Lewei Lu, Tong Lu, Ping Luo, Yu Qiao, Jifeng Dai (OpenGVLab, Shanghai AI Laboratory, Tsinghua University)",
+        "description": "Presenta InternVL, un modelo fundacional de visión y lenguaje que escala el codificador visual hasta 6 mil millones de parámetros (InternViT-6B) alineándolo progresivamente con modelos de lenguaje de gran escala mediante una estrategia de entrenamiento en tres fases. InternVL implementa un mecanismo dinámico de partición de imágenes en mosaicos de alta resolución que preserva la fidelidad visual de textos diminutos, gráficos estadísticos y documentos densos sin distorsionar la relación de aspecto original, superando a CLIP-ViT en transferencia visual y ofreciendo una base de percepción de vanguardia para tareas multimodales complejas.",
+        "analogy": "🔍 Como un restaurador de arte que utiliza una lente microscópica de aumento para examinar un mural inmenso: en vez de reducir la obra maestra a una postal borrosa para abarcarla toda de golpe, divide el cuadro en una cuadrícula de secciones nítidas en alta definición, analizando con detalle milimétrico cada trazo de pincel y firma diminuta antes de recomponer la vista de conjunto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.14238",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+        "author": "Yuan Yao, Tianyu Yu, Ao Zhang, Chongyi Wang, Junbo Cui, Hongji Zhu, Tianchi Cai, Haoye Lu, Weilin Zhao, Yushi Hu, Zhi Zheng, Chaojia Deng, et al. (ModelBest Inc., Tsinghua University)",
+        "description": "Diseña la serie MiniCPM-V (en su versión 2.6 con 8 mil millones de parámetros totales), un modelo multimodal de pesos abiertos altamente eficiente optimizado para ejecutarse localmente en dispositivos móviles y hardware de consumo. MiniCPM-V 2.6 admite procesamiento de imágenes de alta resolución arbitraria y secuencias de video en tiempo real comprimiendo tokens visuales mediante un muestreador perceptual denso y cuantización avanzada de pesos a 4 bits. Supera a modelos propietarios masivos como GPT-4V y Gemini 1.5 Pro en benchmarks integrales como OpenCompass, OCRBench y Video-MME consumiendo una fracción del ancho de banda y memoria.",
+        "analogy": "📱 Como un laboratorio de análisis fotográfico profesional condensado en el chip de un teléfono de bolsillo: en vez de enviar imágenes pesadas a través de internet a un supercomputador central para que interprete un documento o video, el dispositivo procesa, lee y razona sobre cada cuadro en milisegundos directamente en la palma de la mano, sin conexión y sin consumir datos de red.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.01800",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "author": "Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao (Princeton University, Google Research)",
+        "description": "Formula el paradigma fundamental ReAct (Reason + Act), que entrelaza la generación de trazas de razonamiento en lenguaje natural ('pensamientos') con la ejecución de acciones específicas en un entorno externo ('acciones' como consultas a APIs o motores de búsqueda). Al intercalar sistemáticamente la deliberación reflexiva con la observación de resultados empíricos ('observaciones'), ReAct mitiga radicalmente las alucinaciones factuales y los bucles de error ciego presentes en métodos que solo razonan o solo actúan de forma aislada, sentando el estándar arquitectónico fundacional para el desarrollo de agentes autónomos y sistemas de toma de decisiones.",
+        "analogy": "🕵️ Como un detective en una escena del crimen que, antes de tocar cualquier evidencia, verbaliza en voz alta su hipótesis deductiva ('El sospechoso huyó por la ventana'), ejecuta una acción precisa para verificarla ('Inspeccionar el alféizar con luz ultravioleta') y analiza el resultado antes de formular su siguiente deducción, evitando acusaciones apresuradas basadas en suposiciones no verificadas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2210.03629",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "author": "Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, Michael S. Bernstein (Stanford University, Google Research)",
+        "description": "Desarrolla una arquitectura computacional para agentes generativos capaces de simular comportamientos humanos creíbles en entornos sociales interactivos multi-agente (como una comunidad virtual en Smallville). La arquitectura se fundamenta en tres pilares: un flujo de memoria exhaustivo que almacena y recupera observaciones pasadas mediante ponderaciones de recencia, importancia y relevancia; un módulo de reflexión periódica que sintetiza recuerdos en abstracciones conceptuales de alto nivel; y un motor de planificación recursiva que traduce intenciones generales en cronogramas diarios ejecutables que se adaptan dinámicamente ante imprevistos sociales.",
+        "analogy": "🏘️ Como un diario personal inteligente con memoria eidética: cada noche el agente no solo repasa lo vivido durante el día, sino que extrae conclusiones sobre sus relaciones interpersonales, actualiza sus metas a largo plazo y reorganiza su agenda para el día siguiente, permitiéndole asistir puntualmente a una fiesta de cumpleaños que un vecino le mencionó de pasada semanas atrás.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2304.03442",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+        "author": "Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, Roberta Raileanu, Maria Lomeli, Luke Zettlemoyer, Nicola Cancedda, Thomas Scialom (Meta AI)",
+        "description": "Introduce Toolformer, un modelo de lenguaje que aprende de forma auto-supervisada a invocar herramientas externas (calculadoras matemáticas, sistemas de control de versiones, motores de búsqueda de preguntas y respuestas, traductores y calendarios) a través de llamadas a APIs textuales discretas intercaladas en el flujo de texto. Mediante un mecanismo de generación y filtrado de datos sintéticos guiado por pérdidas (loss-guided filtering), el modelo aprende por sí mismo qué herramienta utilizar, cuándo llamarla, qué argumentos pasar y cómo incorporar el resultado retornado en su respuesta final, superando ampliamente a modelos densos de escala diez veces mayor en razonamiento aritmético y precisión temporal.",
+        "analogy": "🧰 Como un artesano en su taller que, al leer un manual de ensamblaje, sabe instintivamente en qué momento exacto de la frase debe soltar el lápiz para tomar el taladro, perforar el orificio necesario y luego retomar la madera para continuar el armado sin necesidad de que nadie le ordene cuándo utilizar cada herramienta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2302.04761",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+        "author": "Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen (Microsoft Corporation)",
+        "description": "Formula Low-Rank Adaptation (LoRA), el método de ajuste fino eficiente en parámetros (PEFT) más influyente en la computación moderna de LLMs. LoRA congela los pesos preentrenados del modelo original e introduce matrices de descomposición de bajo rango (B x A, donde el rango r << d) en paralelo a las capas de atención. Al reducir el número de parámetros entrenables en hasta 10.000 veces y el requerimiento de memoria en GPU en un factor de 3x, LoRA elimina la necesidad de almacenar copias completas de modelos de cientos de miles de millones de parámetros para cada tarea, permitiendo fusionar las matrices adaptadas de nuevo a los pesos base sin incurrir en latencia adicional en tiempo de inferencia.",
+        "analogy": "📄 Como un lector que añade notas adhesivas transparentes y firmas de corrección en los márgenes de una enciclopedia encuadernada en cuero: en lugar de reimprimir y empastar los 20 tomos enteros cada vez que desea incorporar una pequeña actualización, solo intercambia unas pocas fichas livianas que se superponen a la perfección sobre la página original.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2106.09685",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+        "author": "Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, Yuxiong He (Microsoft)",
+        "description": "Diseña ZeRO (Zero Redundancy Optimizer), un avance seminal en sistemas distribuidos que elimina la redundancia de memoria en el entrenamiento de modelos de lenguaje masivos bajo paralelismo de datos. ZeRO descompone y particiona los tres componentes principales del consumo de memoria en optimizadores (estados del optimizador, gradientes y parámetros del modelo) a través de todos los nodos de GPU del clúster (ZeRO-Stage 1, Stage 2 y Stage 3), manteniendo la misma eficiencia de comunicación que el paralelismo de datos estándar. ZeRO permite entrenar modelos de más de 100 mil millones de parámetros sin recurrir a complejas particiones de paralelismo de modelos en GPUs comunes.",
+        "analogy": "📚 Como una orquesta sinfónica donde los músicos, en vez de obligar a que cada violinista cargue con las partituras completas de todos los instrumentos de la orquesta en su atril, se reparten las páginas por secciones y se comunican las notas exactas en el compás preciso en que las necesitan, aligerando el peso en cada atril sin desfasar la interpretación.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/1910.02054",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+        "author": "Elias Frantar, Saleh Ashkboos, Torsten Hoefler, Dan Alistarh (IST Austria, ETH Zurich)",
+        "description": "Desarrolla GPTQ, un algoritmo de cuantización posterior al entrenamiento (PTQ) de segundo orden altamente eficiente basado en la inversión aproximada de la matriz Hessiana para modelos autorregresivos a escala de cientos de miles de millones de parámetros. Al resolver el problema de cuantización fila por fila mediante una formulación exacta de corrección de errores residuales en un tiempo de cómputo de pocas horas sobre una única GPU, GPTQ comprime modelos como OPT-175B y LLaMA a representaciones de 3 y 4 bits (INT3/INT4) con una pérdida casi nula de perplejidad y capacidad de razonamiento, permitiendo ejecutar modelos de escala masiva en hardware de inferencia accesible.",
+        "analogy": "🎨 Como un maestro del grabado que reduce una fotografía a todo color a una litografía en tinta con solo 4 tonos de gris: en lugar de redondear toscamente cada píxel al color más cercano (lo que arruinaría las sombras sutiles), calcula matemáticamente la dispersión del contraste en cada zona contigua para compensar la pérdida de tonalidad, logrando una imagen reconocible y nítida con una fracción de la tinta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2210.17323",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Veo: Modelo Generativo de Video de Alta Definición (1080p) con Comprensión Cinemática Avanzada y Coherencia Física",
+      "description": "Google DeepMind presenta Veo, su modelo generativo de video más avanzado capaz de sintetizar clips de alta definición en resolución 1080p con duración superior a un minuto a partir de texto, imágenes y video previo. Veo comprende conceptos cinematográficos sofisticados (como paneos, tomas aéreas 'timelapse' y planos de seguimiento con lentes anamórficos), respeta de forma fidedigna las leyes de la física y la consistencia espacial de objetos y personajes, y ofrece soporte para edición localizada mediante máscaras e indicaciones de estilo visual.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/veo-our-most-capable-generative-video-model/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Sora: Plataforma de Generación de Video Fotorrealista y Simulador de Mundos Físicos",
+      "description": "OpenAI abre el acceso general a Sora, su modelo fundacional generativo capaz de producir secuencias de video hiperrealistas de hasta un minuto conservando coherencia visual meticulosa, movimientos de cámara dinámicos y múltiples personajes con emociones complejas. Diseñado como una arquitectura de transformador de difusión (Diffusion Transformer) que opera sobre parches espacio-temporales en un espacio latente comprimido, Sora no solo genera imágenes en movimiento sino que actúa como un simulador del mundo físico, comprendiendo interacciones dinámicas de iluminación, colisiones y persistencia de objetos en el entorno tridimensional.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/sora/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Code: Herramienta de Agente de Terminal para Ingeniería de Software Autónoma",
+      "description": "Anthropic lanza Claude Code en vista previa técnica, una herramienta CLI interactiva de agente de código basada en terminal que interactúa directamente con los repositorios locales del desarrollador. Impulsada por Claude 3.5 Sonnet, Claude Code comprende la arquitectura completa del proyecto mediante indexación semántica, ejecuta comandos de shell, edita y refactoriza múltiples archivos en paralelo, ejecuta y depura pruebas automatizadas de forma iterativa y prepara commits convencionales listos para revisión en Git, transformando la terminal en un entorno de desarrollo aumentado.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/claude-code",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "SeamlessM4T v2: Modelo Fundacional Multimodal y Multilingüe para Traducción de Voz a Voz con Expresividad Natural",
+      "description": "Meta presenta SeamlessM4T v2 (junto con los sistemas SeamlessExpressive y SeamlessStreaming), la mayor actualización de su marco unificado para la comunicación multilingüe fluida. Basado en la arquitectura UnitY2 entrenada sobre un corpus de casi un millón de horas de audio, SeamlessM4T v2 permite la traducción instantánea de voz a voz y voz a texto en cerca de 100 idiomas con una latencia de apenas dos segundos, preservando la entonación vocal, el ritmo de habla y la carga emocional del hablante original sin requerir cadenas intermedias de transcripción textual.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/seamless-multilingual-speech-translation/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Meta & Reuters",
+      "headline": "Meta formaliza un histórico acuerdo multianual de licenciamiento de contenidos con la agencia de noticias Reuters, permitiendo que el asistente Meta AI integre respuestas fácticas en tiempo real con atribución directa a cables de prensa verídicos en WhatsApp, Instagram y Facebook.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/meta-strikes-multi-year-ai-content-deal-with-reuters-2024-10-25/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "NVIDIA & Wall Street",
+      "headline": "NVIDIA supera a Apple y Microsoft para consolidarse como la empresa cotizada más valiosa del mundo con una capitalización bursátil de 3,43 billones de dólares, impulsada por la aceleración en la entrega de sistemas basados en la arquitectura Blackwell a hiperescaladores y centros de datos de IA.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/nvidia-briefly-dethrones-apple-worlds-most-valuable-company-2024-11-05/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Amazon Web Services (AWS)",
+      "headline": "AWS presenta la disponibilidad general de sus aceleradores propietarios Trainium2 desarrollados por Annapurna Labs, ofreciendo un rendimiento hasta 4x superior en entrenamiento de modelos fundacionales frente a la generación previa con una reducción proyectada del 40% en costos de cómputo para clientes empresariales como Databricks y Anthropic.",
+      "links": [
+        {
+          "text": "AWS News",
+          "url": "https://press.aboutamazon.com/2024/12/aws-announces-general-availability-of-aws-trainium2-chips",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "U.S. Department of Energy (DOE) & Lawrence Livermore",
+      "headline": "El Departamento de Energía de EE.UU. y Lawrence Livermore National Laboratory inauguran oficialmente El Capitan, la supercomputadora más rápida del mundo alcanzando 1,742 exaflops en el benchmark Top500 equipada con APUs AMD Instinct MI300A para investigación nuclear y modelos de ciencia avanzada.",
+      "links": [
+        {
+          "text": "HPCwire",
+          "url": "https://www.hpcwire.com/2024/11/18/el-capitan-achieves-1-742-exaflops-takes-no-1-spot-on-top500/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
