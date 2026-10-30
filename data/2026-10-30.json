@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-30",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+        "author": "Jianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha, Bo Wen, Yunfeng Liu (Zhuiyi Technology)",
+        "description": "Introduce Rotary Position Embedding (RoPE), un método elegante y fundamental para codificar información posicional en modelos de lenguaje autorregresivos. A diferencia de las codificaciones posicionales absolutas o aditivas, RoPE aplica una rotación compleja directamente sobre los vectores de consulta (query) y clave (key) en el espacio euclidiano, preservando de forma natural la distancia relativa entre tokens mediante propiedades trigonométricas invariantes a traslaciones. RoPE se ha consolidado como el estándar arquitectónico de facto en las familias Llama, Mistral, Gemma y Qwen por su extraordinaria capacidad para generalizar de forma consistente a secuencias de contexto significativamente más largas que las observadas durante el entrenamiento.",
+        "analogy": "🧭 Como calcular la posición y distancia entre los barcos de una flota utilizando las manecillas giratorias de una brújula en lugar de fijar una regla rígida de madera en el mapa: al girar los ángulos relativos entre cada navío conforme navegan, cualquier barco puede determinar con precisión matemática cuán cerca o lejos está de otro sin importar si la flota navega en un puerto pequeño o en medio de un océano inmenso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2104.09864",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Constitutional AI: Harmlessness from AI Feedback",
+        "author": "Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, et al. (Anthropic)",
+        "description": "Desarrolla el paradigma Constitutional AI (CAI), pionero en la técnica de Aprendizaje por Refuerzo a partir de Retroalimentación de IA (RLAIF). El método entrena modelos de lenguaje para que sean útiles e inofensivos sin necesidad de que evaluadores humanos etiqueten manualmente miles de ejemplos tóxicos o peligrosos. Durante una fase de aprendizaje supervisado, el modelo evalúa y reescribe sus propias respuestas basándose en una breve lista de principios rectores ('constitución'); posteriormente, un modelo de retroalimentación interna califica las preferencias entre alternativas, logrando un alineamiento robusto y transparente que reduce los sesgos humanos y el riesgo de evasión de restricciones ('jailbreaks').",
+        "analogy": "⚖️ Como un estudiante de derecho al que se le entrega una copia de la constitución y un código de ética antes de redactar un ensayo: en lugar de requerir que un profesor se siente a su lado a tachar con tinta roja cada palabra inadecuada, el propio estudiante revisa su borrador, detecta las cláusulas dudosas y las corrige por sí mismo siguiendo los principios establecidos antes de entregar el trabajo final.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2212.08073",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Qwen2.5 Technical Report",
+        "author": "Qwen Team, Alibaba Group",
+        "description": "Documenta el avance integral de la familia de modelos de lenguaje Qwen2.5, que abarca modelos densos desde 0.5B hasta 72B parámetros y variantes Mixture-of-Experts (MoE). Preentrenado sobre un corpus colosal de más de 18 billones de tokens con un enfoque riguroso en sintaxis de código, razonamiento matemático y comprensión multilingüe en más de 29 idiomas, Qwen2.5 introduce soporte nativo para ventanas de contexto de hasta 128k tokens y esquemas de generación de hasta 8k tokens. Su modelo insignia de 72B Instruct iguala o supera a modelos comerciales propietarios en evaluaciones de programación, benchmarks de razonamiento formal y alineación de instrucciones complejas.",
+        "analogy": "🏛️ Como una biblioteca pública milenaria que no solo almacena millones de libros en treinta idiomas distintos, sino que renueva por completo su sistema de indexación y archivistas: ante cualquier consulta técnica intrincada de cálculo o ingeniería de software, los bibliotecarios son capaces de contrastar referencias dispersas en tomos lejanos con rigor matemático impecable y responder en el idioma exacto del visitante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2412.15115",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Visual Instruction Tuning",
+        "author": "Haotian Liu, Chunyuan Li, Qingyang Wu, Yong Jae Lee (University of Wisconsin-Madison, Microsoft Research, Columbia University)",
+        "description": "Formula LLaVA (Large Language and Vision Assistant), el marco fundacional que democratizó el ajuste de instrucciones visuales (Visual Instruction Tuning). LLaVA conecta un codificador visual preentrenado (CLIP ViT-L/14) con un modelo de lenguaje autorregresivo (Vicuna/LLaMA) a través de una sencilla matriz de proyección lineal. Utilizando un pipeline automatizado impulsado por GPT-4 para transformar descripciones de imágenes en conjuntos de datos sintéticos de preguntas, respuestas y razonamientos multimodales complejos, LLaVA demostró por primera vez que un diseño desacoplado y ligero puede dotar a un LLM de capacidades conversacionales visuales de vanguardia con un entrenamiento sorprendentemente rápido.",
+        "analogy": "👓 Como colocarle un par de gafas inteligentes con cámara a un erudito lingüista que hasta ese momento solo leía libros impresos: en lugar de someterlo a años de entrenamiento cerebral para reconstruir su mente, un simple adaptador visual traduce en segundos lo que la cámara enfoca en descripciones conceptuales que el lingüista ya domina y comprende a la perfección.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2304.08485",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "author": "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer (LMU Munich, Runway)",
+        "description": "Presenta los Modelos de Difusión en Espacio Latente (Latent Diffusion Models o LDM), la arquitectura seminal que dio origen a Stable Diffusion. Al trasladar el proceso de difusión generativa y eliminación de ruido desde el espacio de píxeles de alta dimensión hacia un espacio latente de baja dimensión comprimido mediante un autoencoder perceptualmente entrenado, LDM reduce drásticamente los requerimientos de cálculo y memoria GPU preservando una fidelidad visual exquisita. Incorpora además capas de atención cruzada (cross-attention) flexibles que permiten condicionar la síntesis con texto, mapas de segmentación y bocetos con control milimétrico.",
+        "analogy": "🎨 Como un escultor que primero modela con agilidad y rapidez una maqueta pequeña en arcilla suave antes de esculpir un bloque macizo de mármol de tres toneladas: al resolver la forma, proporciones y detalles principales en la versión liviana y manejable, solo traslada el molde definitivo a la obra final sin desgastar herramientas ni perder semanas picando piedra a ciegas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2112.10752",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+        "author": "Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, Neil Houlsby (Google Research, Brain Team)",
+        "description": "Publica Vision Transformer (ViT), el trabajo revolucionario que demostró que la arquitectura Transformer estándar, sin componentes convolucionales especializados ni sesgos inductivos locales, puede alcanzar resultados sobresalientes en reconocimiento y clasificación visual a gran escala. ViT divide cada imagen en una secuencia de parches discretos de 16x16 píxeles, los proyecta linealmente como si fueran incrustaciones de tokens léxicos ('palabras') y los procesa con capas estándar de autoatención. Cuando se preentrena sobre conjuntos de datos masivos (como JFT-300M o ImageNet-21k), ViT supera a las mejores redes convolucionales (ResNet) con una eficiencia computacional notablemente superior.",
+        "analogy": "🧩 Como resolver un rompecabezas fotográfico dividiendo la imagen en pequeñas cuadrículas numeradas de cartón: en lugar de pasar una lupa deslizable punto por punto por toda la mesa para buscar patrones continuos, examinas todas las piezas sobre la mesa a la vez y dejas que la mirada relacione instantáneamente qué trozo de cielo conecta con la esquina del edificio o el reflejo del río.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2010.11929",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "ChatDev: Communicative Agents for Software Development",
+        "author": "Chen Qian, Wei Liu, Hongzhi Gao, Dang Sheng, Cheng Yang, Linfeng Zhang, Chi-Min Chan, Guanyu Shen, Yufan Dang, et al. (Tsinghua University)",
+        "description": "Propone ChatDev, un marco virtual colaborativo donde múltiples agentes de software impulsados por LLM asumen roles profesionales diferenciados (CEO, CPO, CTO, Programador, Revisor y Diseñador) dentro de una simulación estructurada según el modelo de cascada para el desarrollo de software. Al interactuar mediante conversaciones guiadas y protocolos de verificación recíproca en fases secuenciales (diseño, codificación, pruebas y documentación), los agentes identifican errores lógicos, debaten arquitecturas y generan aplicaciones completas ejecutables en cuestión de minutos con mínima intervención humana, demostrando el poder del consenso social multi-agente para mitigar fallos individuales.",
+        "analogy": "🏢 Como una pequeña oficina de desarrollo ágil donde el director de producto redacta la idea del cliente, el arquitecto técnico define la estructura del código, el programador escribe los módulos y el especialista en control de calidad prueba cada botón antes del lanzamiento, reuniéndose en mesas redondas rápidas para pulir el producto y evitar que un solo empleado sobrecargado cometa errores por despiste.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2307.07924",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines",
+        "author": "Omar Khattab, Arnav Singhvi, Paridhi Maheshwari, Zhiyuan Zhang, Keshav Santhanam, Sri Vardhamanan, Saiful Haq, Ashutosh Sharma, Thomas T. Joshi, Hanna Moazam, Heather Miller, Matei Zaharia, Christopher Potts (Stanford University)",
+        "description": "Introduce DSPy (Declarative Self-improving Python), un marco de programación que sustituye la frágil manipulación manual de prompts ('prompt engineering') por módulos algorítmicos declarativos, firmas tipadas y optimizadores automáticos ('teleprompters'). DSPy compone tuberías complejas de modelos de lenguaje abstrayendo la lógica del flujo de ejecución; luego, su compilador optimiza sistemáticamente las instrucciones y selecciona los mejores ejemplos demostrativos (few-shot) o ajusta los pesos de modelos pequeños para maximizar métricas de evaluación específicas, reduciendo la fragilidad ante cambios de modelo y garantizando reproducibilidad en pipelines de razonamiento y RAG.",
+        "analogy": "⚙️ Como programar en un lenguaje de alto nivel como Rust o Python con un compilador optimizador moderno, en lugar de escribir a mano miles de líneas en lenguaje ensamblador para un procesador específico: tú solo defines las reglas y los tipos de datos que esperas que entren y salgan, y el compilador se encarga de ajustar los registros internos para que el programa corra a la máxima velocidad y precisión en cualquier chip.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.03714",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+        "author": "Yongliang Shen, Kaitao Song, Xu Tan, Dongsheng Li, Weiming Lu, Yueting Zhuang (Zhejiang University, Microsoft Research Asia)",
+        "description": "Desarrolla HuggingGPT, un marco de control agéntico en el que un modelo de lenguaje de frontera (como ChatGPT) actúa como planificador maestro y despachador de tareas para orquestar cientos de modelos de aprendizaje automático especializados del repositorio de Hugging Face. El sistema opera en un ciclo de cuatro fases: planificación de tareas a partir de la intención del usuario, selección de modelos en función de sus tarjetas descriptivas de capacidades, ejecución de inferencia distribuida sobre las modalidades requeridas (visión, voz, texto o video) y síntesis integradora de las respuestas retornadas para generar el resultado final unificado.",
+        "analogy": "🎬 Como el director de una producción cinematográfica de Hollywood que recibe el guión de una película: el director no maneja personalmente las cámaras ni cose los vestidos ni mezcla la banda sonora, sino que descompone la escena en tareas específicas, asigna cada toma al director de fotografía, al equipo de efectos especiales y a los músicos, y luego coordina el montaje final para que la obra se estrene con fluidez impecable.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2303.17580",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+        "author": "Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper, Bryan Catanzaro (NVIDIA)",
+        "description": "Establece los principios fundacionales del paralelismo de modelos tensorial (Tensor Parallelism) para el entrenamiento eficiente de modelos de lenguaje que superan la capacidad de memoria de una única GPU. Al dividir de forma ortogonal las matrices de pesos en las capas de atención multi-cabezal (repartiendo columnas en la proyección inicial y filas en la proyección final) y en las redes feed-forward mediante operaciones 'all-reduce' de comunicación mínima, Megatron-LM demostró cómo entrenar arquitecturas de decenas de miles de millones de parámetros con una escalabilidad casi lineal en clústeres masivos de GPUs, sentando la base de la infraestructura moderna de entrenamiento a escala de frontera.",
+        "analogy": "🏭 Como una línea de ensamblaje industrial donde un motor colosal de barco no cabe en el banco de trabajo de un solo mecánico: dos técnicos expertos se colocan frente a frente en lados opuestos del bloque motor y atornillan piezas de forma simultánea y perfectamente sincronizada, comunicándose únicamente con un gesto de cabeza al terminar cada rotación sin que ninguno tenga que levantar el bloque entero en solitario.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/1909.08053",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation",
+        "author": "Jason Ansel, Edward Yang, Horace He, Natalia Gimelshein, Animesh Jain, Michael Voznesensky, Bin Bao, Peter Bell, David Berard, Evgeni Burovski, Geeta Chauhan, Anjali Chourdia, Will Constable, Alban Desmaison, Zachary DeVito, et al. (Meta)",
+        "description": "Introduce PyTorch 2.0 y su compilador integrado 'torch.compile', transformando el ecosistema de aprendizaje automático al combinar la agilidad y ergonomía del modo imperativo ('eager mode') con la velocidad y optimización de ejecución de gráficos compilados. Mediante tres tecnologías centrales—TorchDynamo para la intercepción segura del bytecode de Python a nivel de marco de ejecución, AOTAutograd para capturar gráficos hacia adelante y hacia atrás antes de la ejecución, e Inductor como generador de código de backend con fusión de núcleos en OpenAI Triton—PyTorch 2.0 acelera la inferencia y el entrenamiento de modelos de frontera entre un 30% y un 100% sin requerir reescrituras de código por parte del usuario.",
+        "analogy": "🏎️ Como instalar un turbo compresor inteligente en el motor de un automóvil de carreras que se activa solo cuando entras a la pista recta: puedes seguir conduciendo con la misma dirección suave y caja manual habitual por las calles de la ciudad sin notar cambios, pero en cuanto aceleras a fondo, el motor detecta la trayectoria, fusiona los tiempos de combustión y desata el doble de potencia sin que tengas que cambiar de vehículo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.16439",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DeepSpeed: System Optimizations Enable Training Deep Learning Models with Over 100 Billion Parameters",
+        "author": "Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, Yuxiong He (Microsoft)",
+        "description": "Presenta la biblioteca y marco de sistemas DeepSpeed, diseñada para superar las barreras de memoria y comunicación en el entrenamiento y servicio de modelos masivos de aprendizaje profundo. DeepSpeed integra el optimizador ZeRO (Zero Redundancy Optimizer) junto con kernels optimizados para hardware, gestión de memoria heterogénea en CPU/NVMe offload y algoritmos avanzados de paralelismo de tuberías (pipeline parallelism). Al democratizar el acceso a infraestructuras de ultra-escala, DeepSpeed permitió por primera vez que investigadores e instituciones académicas entrenasen modelos de más de 100 mil millones de parámetros en clústeres modestos de hardware comercial con un rendimiento computacional sobresaliente.",
+        "analogy": "🚛 Como un sistema logístico inteligente de transporte de carga pesada que, en lugar de obligar a que un único camión transporte un cargamento gigante y reviente sus neumáticos, divide el peso entre remolques auxiliares conectados, descarga transitoriamente lo que no se usa en depósitos intermedios al costado de la ruta y ensambla todo justo al llegar a destino sin detener la marcha.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2005.10826",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "GraphCast: Modelo de Inteligencia Artificial para Predicción Meteorológica Global a Medio Plazo de Alta Precisión publicado en Nature",
+      "description": "Google DeepMind presenta en detalle GraphCast, un sistema de pronóstico meteorológico basado en redes neuronales de grafos (GNN) y aprendizaje automático entrenado sobre cuatro décadas de datos históricos del ECMWF. GraphCast genera predicciones del tiempo a 10 días para cientos de variables atmosféricas en todo el planeta a una resolución de 0,25 grados en menos de un minuto en una sola TPU v4, superando al modelo numérico estándar más avanzado del mundo (HRES de ECMWF) en más del 90% de las variables evaluadas y permitiendo alertar con días de anticipación la trayectoria de ciclones y olas de calor extremas.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/graphcast-ai-model-for-faster-and-more-accurate-global-weather-forecasting/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Modo de Voz Avanzado (Advanced Voice Mode) con Procesamiento de Audio Nativo Multimodal de Extremo a Extremo en ChatGPT",
+      "description": "OpenAI despliega de forma generalizada el Modo de Voz Avanzado impulsado por las capacidades de audio nativas de GPT-4o para usuarios de ChatGPT. A diferencia de las arquitecturas tradicionales que encadenan modelos separados de transcripción de voz a texto, procesamiento de lenguaje y síntesis de voz (TTS), GPT-4o procesa y genera directamente el flujo de audio en una única red neuronal. Esto permite conversaciones con latencias naturales de solo 232 milisegundos, capacidad para captar y modular entonaciones emocionales, respetar interrupciones en tiempo real y responder a susurros o cambios de ritmo espontáneos.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-advanced-voice-mode/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude 3.7 Sonnet: El Primer Modelo de Razonamiento Híbrido Capaz de Alternar Dinámicamente entre Respuesta Inmediata y Pensamiento Extendido",
+      "description": "Anthropic presenta Claude 3.7 Sonnet, su modelo fundacional más avanzado que introduce una arquitectura de razonamiento híbrido unificada. En una única interfaz y llamada a API, el modelo puede responder al instante o producir cadenas de pensamiento extendidas transparentes cuyo presupuesto de tokens de deliberación puede ser controlado de forma granular por el desarrollador. Claude 3.7 Sonnet alcanza rendimientos líderes a nivel mundial en SWE-bench Verified para resolución autónoma de problemas de software, depuración de arquitecturas complejas y análisis de código en repositorios masivos.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Code Llama: Modelos de Lenguaje Abiertos de Vanguardia para Generación, Completado y Depuración de Código",
+      "description": "Meta AI lanza Code Llama, una familia de modelos de pesos abiertos especializados en código basados en Llama 2, disponibles en tamaños de 7B, 13B y 34B parámetros, así como variantes especializadas (Code Llama - Python e Instruct). Entrenado sobre 500 mil millones de tokens de código y datos en lenguaje natural con soporte para secuencias de hasta 100k tokens mediante relleno infill (Fill-in-the-Middle), Code Llama democratiza herramientas avanzadas de generación de código, refactorización y documentación para entornos locales y corporativos sin dependencia de servicios de nube propietarios.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Micron Technology & NVIDIA",
+      "headline": "Micron anuncia la entrega a gran escala de sus módulos de memoria HBM3E de 24 GB y 36 GB de 12 capas para plataformas de aceleración de IA, reportando el agotamiento total de su capacidad de producción para 2024 y 2025 impulsada por la demanda de clústeres de inferencia y entrenamiento masivo.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/micron-shares-rise-strong-demand-hbm-chips-used-ai-2024-09-25/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google & Fervo Energy",
+      "headline": "Google y Fervo Energy celebran el primer año de operación continua comercial de su proyecto pionero de energía geotérmica de nueva generación en Nevada, inyectando electricidad 100% libre de carbono las 24 horas del día a la red eléctrica que alimenta sus centros de datos dedicados a inteligencia artificial.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/outreach-initiatives/sustainability/google-fervo-geothermal-energy-milestone/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Snowflake & Mistral AI",
+      "headline": "Snowflake y Mistral AI amplían su alianza estratégica para integrar modelos multimodales de frontera y ajuste fino gestionado directamente dentro de Snowflake Cortex AI, permitiendo a miles de organizaciones empresariales construir aplicaciones de IA generativa sobre sus propios datos corporativos con soberanía total.",
+      "links": [
+        {
+          "text": "Snowflake News",
+          "url": "https://www.snowflake.com/en/newsroom/press-releases/snowflake-and-mistral-ai-partner-to-bring-generative-ai-to-the-data-cloud/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Groq & Cloud Inference",
+      "headline": "Groq completa una ronda de financiación Serie D de 640 millones de dólares liderada por BlackRock para acelerar el despliegue de su arquitectura de procesador de unidad de procesamiento de lenguaje (LPU), ofreciendo velocidades de inferencia deterministas de más de 500 tokens por segundo en modelos de código abierto a hiperescaladores y desarrolladores globales.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/ai-chip-startup-groq-raises-640-million-led-by-blackrock-2024-08-05/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
