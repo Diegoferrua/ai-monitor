@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-31",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Training Compute-Optimal Large Language Models",
+        "author": "Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, et al. (DeepMind)",
+        "description": "Determina las leyes de escalado empíricas de cómputo óptimo para el entrenamiento de grandes modelos de lenguaje, reevaluando la hipótesis clásica de Kaplan et al. Demuestra que para un presupuesto de cálculo fijado, los parámetros del modelo y la cantidad de tokens de preentrenamiento deben escalarse en proporciones idénticas (1:1). Presenta Chinchilla (70B entrenado sobre 1.4 billones de tokens), un modelo significativamente más pequeño y eficiente que supera holgadamente a arquitecturas masivas como Gopher (280B) y GPT-3 (175B), reduciendo sustancialmente los costos de memoria e inferencia en producción.",
+        "analogy": "🏋️ Como preparar a un deportista para una maratón de alto rendimiento: no sirve de nada aumentar desmedidamente la masa muscular si no se dedica el mismo tiempo proporcional a correr kilómetros en la pista; el rendimiento óptimo se consigue cuando el desarrollo físico del atleta y sus horas de entrenamiento práctico crecen en una proporción perfectamente balanceada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2203.15556",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+        "author": "DeepSeek-AI (Chenggang Zhao, Shengfeng Pan, Fuli Luo, Damai Dai, Huazuo Gao, Haowei Zhang, Liang Zhao, et al.)",
+        "description": "Presenta DeepSeek-V2, un modelo de mezcla de expertos (MoE) de 236 mil millones de parámetros totales con 21 mil millones de parámetros activos por token. Introduce dos innovaciones clave: Multi-head Latent Attention (MLA), que proyecta los vectores de atención en un espacio latente de baja dimensión para comprimir la caché KV hasta en un 93%, y DeepSeekMoE, un enrutamiento disperso de grano fino con expertos aislados y compartidos. Esta combinación logra paridad competitiva con los modelos de frontera más potentes de la industria mientras reduce drásticamente el costo de computación y memoria durante la inferencia.",
+        "analogy": "🗜️ Como una centralita telefónica corporativa que atiende a doscientas sucursales: en lugar de mantener líneas físicas abiertas y gruesos cables dedicados con cada oficina ocupando todo el edificio, codifica digitalmente cada llamada en un paquete ultraligero y enruta la conversación únicamente a los dos especialistas exactos requeridos, ahorrando el 93% del espacio de cables sin que se pierda una sola palabra.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2405.04434",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+        "author": "Yizhong Wang, Yeganeh Kordi, Swaroop Mishra, Alisa Liu, Noah A. Smith, Daniel Khashabi, Hannaneh Hajishirzi (University of Washington, Allen Institute for AI)",
+        "description": "Formula Self-Instruct, un marco metodológico pionero para alinear modelos de lenguaje con la intención humana mediante la autogeneración de datos de instrucción sintéticos. Comenzando con un conjunto mínimo de 175 instrucciones semilla curadas manualmente, el modelo genera iterativamente nuevas tareas, entradas de contexto y respuestas esperadas, aplicando filtros heurísticos de similitud y calidad para purgar duplicados. El posterior ajuste fino supervisado (SFT) sobre este corpus sintético de más de 50.000 ejemplos eleva el seguimiento de instrucciones a un nivel prácticamente equiparable al obtenido con costosos datasets anotados por humanos.",
+        "analogy": "📚 Como un estudiante autodidacta que compra un libro básico con solo diez ejercicios resueltos y, a partir de ese patrón pedagógico, redacta por su cuenta cincuenta exámenes de práctica con sus respectivas soluciones detalladas, corrigiendo sus propios errores hasta dominar la materia completa sin depender de un tutor particular diario.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2212.10560",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+        "author": "Junnan Li, Dongxu Li, Silvio Savarese, Steven C.H. Hoi (Salesforce Research)",
+        "description": "Introduce BLIP-2, una estrategia genérica y altamente eficiente para el preentrenamiento multimodal que aprovecha modelos de visión y lenguaje congelados de última generación. Para cerrar la brecha modal sin incurrir en el prohibitivo costo de reentrenar arquitecturas completas, BLIP-2 introduce el Q-Former (Querying Transformer), un módulo ligero de atención cruzada entrenado en dos fases sucesivas: aprendizaje de representación visual-lingüística mediante consultas aprendidas y aprendizaje generativo de visión a lenguaje conectado al LLM congelado, logrando rendimiento líder en tareas de VQA, subtitulado y diálogo visual con una fracción del costo computacional.",
+        "analogy": "🌉 Como un diplomático políglota altamente capacitado que se coloca entre un fotógrafo que solo habla mediante imágenes y un novelista que solo piensa en palabras escritas: sin necesidad de enviar al novelista a la escuela de arte ni al fotógrafo a la facultad de letras, el intérprete hace las preguntas precisas sobre cada foto y le describe al escritor exactamente lo que necesita saber para redactar el capítulo correspondiente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2301.12597",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+        "author": "Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng (UC Berkeley, Google Research, UC San Diego)",
+        "description": "Propone Neural Radiance Fields (NeRF), el enfoque seminal que transformó la síntesis de vistas novedosas y la reconstrucción 3D al modelar escenas continuas como campos de radiancia neuronales dentro de los pesos de una red perceptrón multicapa (MLP). NeRF recibe como entrada una posición tridimensional espacial y una dirección de visión bidimensional, prediciendo la densidad volumétrica y el color RGB emitido en ese punto. Mediante un codificador posicional de alta frecuencia y funciones de renderizado volumétrico clásicas diferenciables a lo largo de rayos de luz, NeRF reconstruye escenas tridimensionales hiperrealistas con transparencias y reflejos especulares complejos a partir de un puñado de fotos estáticas.",
+        "analogy": "📸 Como un ilustrador con memoria eidética que observa diez fotos de una catedral gótica tomadas desde la plaza y, en lugar de modelar una maqueta rígida de yeso, memoriza en su mente cómo viaja y se dispersa la luz en cada milímetro cúbico del aire interior, permitiéndole pintar con fidelidad hiperrealista una postal exacta de la catedral vista desde una ventana alta donde nunca nadie puso una cámara.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2003.08934",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+        "author": "Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis (Inria, Université Côte d'Azur, Max-Planck-Institut Informatik)",
+        "description": "Desarrolla 3D Gaussian Splatting (3DGS), superando las limitaciones intrínsecas de lentitud de renderizado y muestreo estocástico asociadas a los métodos basados en mallas implícitas o NeRF. 3DGS representa el entorno tridimensional mediante millones de elipsoides gaussianos 3D continuos y diferenciables, definidos por posición, matriz de covarianza anisotrópica 3D, opacidad y armónicos esféricos para capturar la radiancia dependiente de la dirección. Apoyado en un algoritmo de rasterización acelerado por hardware en GPU con ordenamiento rápido de teselas (tile-based sorting), alcanza renderizado fotorrealista a más de 100 cuadros por segundo en resolución 1080p con tiempos de optimización sustancialmente menores que NeRF.",
+        "analogy": "🎆 Como recrear una escena tridimensional en el aire utilizando millones de microgotas de cristal brillante y translúcido flotando en el espacio: en lugar de disparar rayos virtuales invisibles a través de una red neuronal para calcular cada punto de luz, la tarjeta gráfica estampa directamente todas las gotas sobre la pantalla como motas de pintura instantáneas, obteniendo un escenario de calidad cinematográfica que puedes recorrer a 100 cuadros por segundo sin la menor pausa.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2308.04079",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+        "author": "Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, Denny Zhou (Google Research)",
+        "description": "Introduce Self-Consistency, una técnica de decodificación en tiempo de inferencia que reemplaza la búsqueda codiciosa estándar (greedy decoding) en cadenas de pensamiento (Chain of Thought). Basándose en el principio intuitivo de que un problema de razonamiento complejo suele admitir múltiples rutas lógicas válidas que convergen hacia una misma conclusión correcta, el método muestrea una variedad diversa de cadenas de razonamiento mediante decodificación estocástica y selecciona la respuesta final con mayor consenso a través de un esquema de votación mayoritaria, mejorando notablemente el rendimiento en aritmética, razonamiento simbólico y sentido común sin alterar los pesos del modelo.",
+        "analogy": "🗳️ Como convocar a una mesa redonda a diez detectives experimentados para resolver un misterio financiero: cada detective sigue pistas y deduce hipótesis por senderos diferentes en sus cuadernos de notas, pero si ocho de ellos señalan de forma independiente al mismo sospechoso, el juez puede proceder con total certeza de que el veredicto es correcto en lugar de arriesgarse con la primera teoría improvisada de un solo investigador.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2203.11171",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors in Agents",
+        "author": "Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, Chenfei Yuan, Chen Qian, Hao Peng, Cheng Yang, Zhiyuan Liu, Maosong Sun (Tsinghua University)",
+        "description": "Diseña AgentVerse, un marco unificado y modular para el diseño, coordinación y evaluación de sistemas multi-agente basados en modelos de lenguaje. AgentVerse estructura la dinámica colaborativa en cuatro fases consecutivas: reclutamiento selectivo de agentes en función de perfiles y habilidades requeridas, planificación conjunta de estrategias, ejecución distribuida con protocolos de comunicación y debate inter-agente, y evaluación iterativa con retroalimentación para reconfigurar el grupo dinámicamente si los resultados no alcanzan el estándar esperado. El marco demuestra que la división del trabajo y el debate multi-agente mitigan las alucinaciones individuales y elevan drásticamente la tasa de éxito en tareas complejas.",
+        "analogy": "🎭 Como el director de una prestigiosa compañía teatral que monta una obra compleja: primero selecciona minuciosamente a los actores ideales para cada papel (el galán, el antagonista, el cómico), organiza los ensayos para coordinar el libreto en equipo y, si detecta durante una escena que el diálogo pierde fuerza o ritmo, reasigna las réplicas en tiempo real para que la puesta en escena termine en ovación unánime del público.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2308.10848",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SayCan: Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",
+        "author": "Michael Ahn, Anthony Brohan, Noah Brown, Yevgen Chebotar, Omar Cortes, Byron David, Chelsea Finn, Keerthana Gopalakrishnan, Karol Hausman, Alex Herzog, et al. (Google Research, Everyday Robots)",
+        "description": "Presenta el marco pionero SayCan, que aborda el problema fundamental del anclaje a tierra (grounding) de modelos de lenguaje en plataformas robóticas que interactúan con el mundo físico. SayCan combina dos factores probabilísticos complementarios mediante una regla de producto: la probabilidad de que una sub-tarea sea semánticamente relevante para cumplir el objetivo del usuario (evaluada por el LLM como 'lo que se dice'), multiplicada por la probabilidad de que la política motriz del robot pueda ejecutar con éxito esa destreza física en el entorno observado (evaluada mediante funciones de valor de aprendizaje por refuerzo como 'lo que se puede hacer'). Este enfoque previene planes impracticables o peligrosos en robótica móvil manipuladora.",
+        "analogy": "🤖 Como un guía turístico muy entusiasta acompañado por un capitán de barco veterano en un archipiélago rocoso: cuando el guía sugiere 'desembarquemos en aquella cala escondida para ver el atardecer', el capitán evalúa de inmediato la profundidad del fondo marino y la fuerza de las corrientes; el barco solo vira hacia la playa si la emocionante recomendación del guía coincide exactamente con lo que el barco puede navegar de manera segura sin encallar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2204.01691",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+        "author": "Guangxuan Xiao, Ji Lin, Mickael Seznec, Hao Wu, Julien Demouth, Song Han (MIT, NVIDIA)",
+        "description": "Desarrolla SmoothQuant, un método seminal de cuantización posterior al entrenamiento (PTQ) sin pérdida de precisión que permite cuantizar a enteros de 8 bits (INT8) tanto los pesos como las activaciones (W8A8) en modelos de lenguaje con más de 100.000 millones de parámetros. Al descubrir que las activaciones presentan canales atípicos sistemáticos difíciles de cuantizar pero con dispersión homogénea entre tokens, SmoothQuant transfiere matemáticamente la dificultad de cuantización desde las activaciones hacia los pesos mediante una transformación de escalado por canal invertible y computacionalmente neutra. Esto permite desplegar núcleos de cómputo matricial INT8 estándar (GEMM), duplicando el rendimiento de inferencia y reduciendo la memoria GPU a la mitad en comparación con FP16.",
+        "analogy": "⚖️ Como empacar dos maletas para un viaje en avión donde una lleva piedras puntiagudas irregulares que rompen la tela de cualquier bolsillo y la otra lleva barras de cera moldeable: al transferir una capa de volumen proporcional desde las piedras difíciles hacia la cera maleable, ambas maletas quedan perfectamente rectangulares y cierran con el candado estándar sin exceder los límites de peso ni romper el equipaje.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2211.10438",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+        "author": "Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia Xu Chen, Dehao Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc V. Le, Yonghui Wu, Zhifeng Chen (Google Brain)",
+        "description": "Presenta GPipe, la biblioteca fundacional que formalizó y popularizó el paralelismo de tuberías (Pipeline Parallelism) con micro-lotes para el entrenamiento escalable de modelos de redes neuronales gigantes en aceleradores con memoria limitada. GPipe particiona las capas del modelo a lo largo de múltiples dispositivos de procesamiento y divide cada mini-lote de datos en micro-lotes más pequeños transmitidos en canalización continua; combinando este flujo con la técnica de recomputación de activaciones intermedias durante la retropropagación (gradient checkpointing), GPipe logra una aceleración de entrenamiento casi lineal con respecto al número de particiones, sentando las bases de la infraestructura de entrenamiento a gran escala.",
+        "analogy": "🏭 Como una línea de montaje industrial de alta velocidad dividida en cuatro estaciones sucesivas (chasis, motor, pintura e interiores): en lugar de esperar a que un automóvil pase por las cuatro estaciones antes de iniciar el siguiente (lo que dejaría a tres cuartas partes de los operarios con los brazos cruzados), se alimenta un nuevo vehículo a la primera estación cada cinco minutos, logrando que todas las estaciones operen al 100% de su capacidad en un flujo continuo y perfecto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/1811.06965",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning",
+        "author": "Lianmin Zheng, Hao Zhang, Jiawei Jiang, Chenguang Shen, Kevin Lin, Shenggui Li, Christos Kozyrakis, Joseph E. Gonzalez, Ion Stoica, Peng Cheng, Hao Zhou (UC Berkeley, Google, Amazon, Tsinghua University)",
+        "description": "Crea Alpa, el primer marco compilador distribuido que automatiza por completo la búsqueda y generación de estrategias de paralelismo para modelos masivos de aprendizaje profundo unificando dos dimensiones ortogonales: paralelismo intra-operador (particionamiento matricial y tensorial en mallas de procesadores con alta interconexión como NVLink) y paralelismo inter-operador (particionamiento en etapas de tubería sobre conexiones de menor ancho de banda como Ethernet cross-node). Al estructurar la optimización mediante una jerarquía de programación entera lineal (ILP) y programación dinámica, Alpa genera automáticamente planes de ejecución que igualan o superan la eficiencia de sistemas paralelizados manualmente por expertos humanos.",
+        "analogy": "🧭 Como un despachador de logística de mercancías que coordina una flota mixta de aviones de carga pesada y camiones de reparto urbano: en lugar de que un operador trace rutas a mano con mapas de papel cometiendo errores de cálculo, un sistema computarizado optimiza matemáticamente el peso exacto y la ruta de cada paquete para que ningún avión vuele semivacío ni ningún camión quede atascado en un peaje, entregando toda la carga en tiempo récord al menor costo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2201.12023",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "GNoME: Descubrimiento de 2.2 Millones de Nuevas Estructuras Cristalinas y Materiales Inorgánicos mediante Aprendizaje Profundo a Gran Escala",
+      "description": "Google DeepMind publica en Nature su innovador sistema GNoME (Graph Networks for Materials Exploration), una red neuronal de grafos entrenada para predecir la estabilidad cuántica de compuestos inorgánicos. GNoME multiplica por diez el catálogo histórico de materiales conocidos por la humanidad al descubrir más de 2.2 millones de nuevas estructuras cristalinas estables, de las cuales 380.000 son termodinámicamente prometedoras para acelerar el desarrollo de baterías de estado sólido, células solares y superconductores de nueva generación.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/millions-of-new-materials-discovered-with-deep-learning/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "GPT-4o mini: Modelo Multimodal Compacto de Alta Velocidad y Rentabilidad para la Democratización de la Inteligencia Artificial a Escala",
+      "description": "OpenAI lanza GPT-4o mini, su modelo fundacional multimodal más eficiente y accesible hasta la fecha, diseñado para reemplazar a GPT-3.5 Turbo en tareas de texto y visión. Con un costo de inferencia un 60% más bajo y una latencia significativamente inferior a la de modelos de escala completa, GPT-4o mini soporta una ventana de contexto de 128k tokens y salidas estructuradas JSON nativas, superando a GPT-4 en razonamiento matemático (82% en GSM8K) y situándose a la vanguardia de modelos ligeros para integraciones empresariales de alta concurrencia.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Projects: Espacios de Trabajo Colaborativos con Bases de Conocimiento Compartidas y Memoria de Contexto en Claude.ai",
+      "description": "Anthropic introduce Claude Projects para suscriptores Pro y Team en Claude.ai, transformando las sesiones individuales de chat en entornos de trabajo persistentes y colaborativos. Cada proyecto permite vincular una base de conocimiento curada de hasta 200.000 tokens de documentación técnica, código fuente y pautas de estilo, garantizando que cada consulta reciba respuestas contextualizadas con máxima fidelidad sin necesidad de reintroducir instrucciones complejas en cada nuevo hilo de conversación.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/projects",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "AudioCraft y MusicGen: Suite Abierta de Aprendizaje Profundo para Generación de Música y Efectos de Audio Controlada por Texto",
+      "description": "Meta AI presenta y libera bajo licencia de código abierto AudioCraft, un marco fundacional unificado para la síntesis de audio y música fotorrealista basado en modelos de difusión y autorregresivos (MusicGen, AudioGen y el códec neuronal EnCodec). MusicGen permite a investigadores, artistas y desarrolladores componer pistas musicales completas en alta fidelidad estéreo a partir de descripciones textuales o melodías de referencia, estableciendo un nuevo estándar en controlabilidad y fidelidad acústica en audio generativo de código abierto.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/audiocraft-musicgen-audiogen-audiomldel-open-source/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Apple & Security Research",
+      "headline": "Apple abre públicamente la arquitectura y el entorno de investigación de seguridad de Private Cloud Compute (PCC), publicando una Virtual Research Environment (VRE) para macOS y ofreciendo recompensas de hasta 1 millón de dólares a investigadores independientes para auditar y verificar las garantías de privacidad y aislamiento criptográfico de Apple Intelligence.",
+      "links": [
+        {
+          "text": "Apple Security Research",
+          "url": "https://security.apple.com/blog/towards-robustly-verifying-pcc-security-claims/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "SoftBank & Graphcore",
+      "headline": "SoftBank Group completa la adquisición formal del pionero británico de semiconductores de IA Graphcore, integrando su equipo de arquitectura de Unidades de Procesamiento de Inteligencia (IPU) en su estrategia global de infraestructura de supercomputación y centros de datos de IA liderada por Masayoshi Son.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/markets/deals/softbank-acquires-british-ai-chip-maker-graphcore-2024-07-11/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Cohere, Cisco & AMD",
+      "headline": "Cohere cierra una ronda de financiamiento Serie D de 500 millones de dólares alcanzando una valoración de 5.500 millones de dólares, respaldada por inversores estratégicos como Cisco, AMD, Fujitsu y EDC, para acelerar la adopción de sus modelos multilingües de frontera Command R+ y sistemas RAG seguros en entornos corporativos.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.reuters.com/technology/ai-startup-cohere-raises-500-mln-55-bln-valuation-2024-07-22/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Databricks & Tabular",
+      "headline": "Databricks concreta la adquisición estratégica de Tabular por más de 1.000 millones de dólares, uniendo a los creadores originales de Apache Iceberg y Delta Lake bajo una visión común para unificar el almacenamiento de datos en Lakehouse y optimizar el entrenamiento de modelos fundacionales sobre grandes volúmenes de datos abiertos.",
+      "links": [
+        {
+          "text": "Databricks News",
+          "url": "https://www.databricks.com/blog/databricks-announces-agreement-acquire-tabular",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
