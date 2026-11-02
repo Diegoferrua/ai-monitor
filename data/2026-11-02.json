@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-02",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
+        "author": "David Raposo, Sam Ritter, Blake Richards, Timothy Lillicrap, Peter C. Humphreys, Adam Santoro (Google DeepMind)",
+        "description": "Introduce Mixture-of-Depths (MoD), un paradigma de cómputo condicional que permite a los modelos Transformer asignar capacidad de procesamiento de forma dinámica y no uniforme por cada token. En lugar de forzar a cada token a pasar invariablemente por todos los bloques de atención y redes feedforward, un enrutador ligero aprende a seleccionar qué tokens requieren cómputo intensivo y cuáles pueden omitir capas mediante conexiones residuales dentro de un presupuesto fijo de FLOPs. Esta estrategia permite mantener o incluso superar la precisión del modelo base consumiendo más de un 50% menos de cómputo en inferencia y acelerando significativamente el paso de entrenamiento.",
+        "analogy": "🏫 Como una aduana internacional inteligente con un carril exprés y un carril de inspección profunda: los viajeros con pasaporte biométrico verificado y sin equipaje sospechoso cruzan de inmediato sin demoras por un arco electrónico, permitiendo que el cuerpo de inspectores concentre todo su tiempo y recursos en analizar minuciosamente los cargamentos complejos y las declaraciones dudosas sin colapsar el aeropuerto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.02258",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+        "author": "Zechun Liu, Changsheng Zhao, Forrest Iandola, Chen Lai, Yuandong Tian, Igor Fedorov, Yunyang Xiong, Ernie Chang, Raghuraman Krishnamoorthi, Liangzhen Lai, Vikas Chandra (Meta Reality Labs, Meta AI)",
+        "description": "Investiga los principios de diseño arquitectónico para modelos de lenguaje con menos de mil millones de parámetros (125M a 350M) destinados a despliegues locales en dispositivos móviles y wearables con recursos de memoria y batería estrictos. Demuestra empíricamente que para modelos de escala reducida la profundidad de capas es significativamente más crítica que la anchura, e incorpora técnicas como el compartimiento de embeddings, atención de consulta agrupada (GQA) y compartimiento inmediato de bloques residuales. MobileLLM supera ampliamente a modelos previos de escala equivalente (como Pythia y MobileBERT) en razonamiento formal, seguimiento de instrucciones y chat.",
+        "analogy": "📱 Como diseñar el motor de un coche deportivo ultraligero que debe caber en el maletero de una motocicleta: en lugar de simplemente encoger un motor V8 a escala en miniatura perdiendo potencia útil en cada cilindro, los ingenieros aumentan el número de marchas finas de la transmisión y reutilizan engranajes maestros para lograr una aceleración sorprendente con un consumo mínimo de combustible.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.14905",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+        "author": "Marah Abdin, Jyoti Aneja, Hany Awadalla, Ahmed Awadallah, Ammar Ahmad Awan, Nguyen Bach, Amit Bahree, Arash Bakhtiari, Harkirat Behl, et al. (Microsoft GenAI)",
+        "description": "Presenta la familia Phi-3 (Phi-3-mini de 3.8B, Phi-3-small de 7B y Phi-3-medium de 14B), demostrando que la calidad curada de los datos de entrenamiento ('textbook quality') permite a modelos compactos competir de igual a igual o superar a modelos de lenguaje el doble de grandes como Llama-3-8B y Mixtral 8x7B. Utilizando datos sintéticos altamente educativos generados bajo rigurosa supervisión algorítmica y filtrado semántico estricto de la web, Phi-3-mini ofrece capacidades de razonamiento matemático, codificación y comprensión textual de vanguardia, cuantizándose de forma nativa a 4 bits para ejecutarse fluidamente de manera local en procesadores móviles de consumo masivo.",
+        "analogy": "📚 Como un estudiante prodigio que, en lugar de pasar años devorando millones de páginas caóticas, desordenadas y con errores de foros de internet, aprende directamente de una colección de enciclopedias y manuales de física escritos a medida por los mejores catedráticos del mundo: asimila conceptos profundos en una fracción del tiempo y rinde exámenes universitarios compitiendo de igual a igual con veteranos que tienen el doble de su edad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.14219",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Show-o: One Single Transformer to Unify Multimodal Understanding and Generation",
+        "author": "Jinheng Xie, Weijia Mao, Zechen Bai, David Junhao Zhang, Weihao Wang, Kevin Qinghong Lin, Yuchao Gu, Zhijie Chen, Zhenheng Yang, Mike Zheng Shou (Show Lab, National University of Singapore)",
+        "description": "Formula Show-o, una arquitectura basada en un único transformador unificado capaz de abordar simultáneamente la comprensión multimodal (texto guiado por imagen/video) y la generación multimodal (síntesis de texto a imagen y generación condicionada). A diferencia de los enfoques existentes que requieren pipelines fragmentados con modelos de lenguaje acoplados a backbones de difusión externos, Show-o unifica el modelado autorregresivo para tokens de texto y el modelado de difusión discreta para tokens visuales dentro de una única secuencia de atención, demostrando un rendimiento competitivo o superior en evaluación visual zero-shot y síntesis de imágenes de alta fidelidad.",
+        "analogy": "🎭 Como un políglota y pintor renacentista que utiliza el mismo cerebro y la misma mano tanto para leer manuscritos antiguos y explicar su significado en prosa elocuente como para tomar el óleo y pintar desde cero la escena descrita en el lienzo, alternando con total naturalidad entre interpretar palabras y trazar pinceladas sin cambiar de personalidad ni recurrir a un asistente externo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.12528",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Ferret: Refer and Ground Anything Anywhere at Any Granularity",
+        "author": "Haoxuan You, Han-Jia Ye, Zhengyuan Yang, Luowei Zhou, Xiyang Dai, Yuan Shen, Zicheng Liu, Shih-Fu Chang (Columbia University, Apple)",
+        "description": "Desarrolla Ferret, un modelo multimodal de visión y lenguaje concebido para unificar las tareas de referencia espacial ('referring') y anclaje visual ('grounding') en cualquier nivel de granularidad. Ferret introduce una representación espacial híbrida continua-discreta que procesa puntos, cajas delimitadoras y formas geométricas libres (polígonos complejos y máscaras), combinada con un muestreador visual consciente del espacio (Spatial-Aware Visual Sampler). Esto le permite identificar, describir y localizar objetos o partes minúsculas de una escena con precisión sub-objeto, superando ampliamente a los VLMs convencionales en benchmarks de comprensión espacial detallada.",
+        "analogy": "🎯 Como un guía turístico equipado con un puntero láser de ultra alta precisión: en lugar de limitarse a señalar vagamente 'hacia la izquierda de la plaza', puede trazar en el aire el contorno exacto de una pequeña moldura barroca en la cornisa de una catedral, explicar su historia al detalle, o pedirle que ilumine de inmediato cada una de las gárgolas esculpidas en el campanario sin confundirlas con las columnas vecinas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.07704",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CogVLM: Visual Expert for Pretrained Language Models",
+        "author": "Weihan Wang, Qingsong Lv, Wenyi Yu, Wenmeng Yu, Zihan Wang, Jiayan Teng, Junhui Guo, Boji Guan, Yuxiao Dong, Jie Tang, et al. (Tsinghua University, Zhipu AI)",
+        "description": "Propone CogVLM, un modelo fundacional de visión y lenguaje que resuelve el problema de alineación superficial presente en modelos multimodales convencionales mediante la introducción de módulos de expertos visuales integrados profundamente en cada capa del transformador. En lugar de proyectar las características de la imagen únicamente como tokens de prefijo en la entrada del LLM, CogVLM añade matrices de atención cruzada (QKV) y redes de alimentación hacia adelante (FFN) especializadas en cada bloque de cómputo. Esta integración profunda maximiza la sinergia entre visión y lenguaje sin degradar las capacidades preentrenadas del modelo base de texto, liderando múltiples benchmarks de razonamiento visual complejo.",
+        "analogy": "👓 Como colocar lentes de realidad aumentada directamente conectados a los centros visuales del cerebro de un brillante académico: en lugar de hacer que alguien le describa por teléfono en voz alta lo que ocurre en una pintura para que él lo imagine con palabras, los impulsos visuales se integran directamente en cada una de sus neuronas de razonamiento, permitiéndole analizar símbolos, diagramas y detalles sutiles con toda su sabiduría preexistente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.03079",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents",
+        "author": "Harsh Trivedi, Tushar Khot, Ashish Sabharwal, Niranjan Balasubramanian (Stony Brook University, Allen Institute for AI)",
+        "description": "Presenta AppWorld, un entorno de simulación interactivo y benchmark de alta fidelidad diseñado para evaluar rigurosamente agentes autónomos en tareas del mundo real mediante ejecución interactiva de código. AppWorld recrea un ecosistema digital compuesto por 9 aplicaciones funcionales (comercio, mensajería, correo, banca, etc.) con 457 APIs REST ejecutables y 220 usuarios sintéticos con rutinas cotidianas. Las tareas requieren que el agente explore dependencias complejas, valide restricciones temporales y sincronice estados entre múltiples servicios. Los modelos más avanzados (incluyendo GPT-4o) alcanzan apenas una tasa de éxito de ~30%, revelando desafíos fundamentales en razonamiento causal y tolerancia a fallos.",
+        "analogy": "🏙️ Como una maqueta a escala 1:1 de una ciudad inteligente en miniatura habitada por actores interactivos: en lugar de pedirle a un conserje robótico que responda preguntas teóricas sobre cómo organizar una fiesta, se le da acceso libre a un teléfono simulado con cuentas de correo, agendas, tiendas y bancos, y se le pide que reserve el restaurante preferido del invitado, pague la fianza y envíe las invitaciones respetando los gustos y presupuestos de cada asistente; si confunde una fecha o transfiere fondos a la persona equivocada, el experimento se cancela.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.18901",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
+        "author": "Yujia Qin, Shihao Liang, Yining Ye, Kunlun Zhu, Lan Yan, Yaxi Lu, Yankai Lin, Xin Cong, Xiangru Tang, Bill Qian, Sihan Zhao, Lauren Hong, Runchu Tian, Ruobing Xie, Jie Zhou, Mark Gerstein, Dahua Lin, Ying Shen, Jie Tang, Chi Wang, Maosong Sun (Tsinghua University, ModelBest, Yale University)",
+        "description": "Desarrolla ToolLLM, un marco integral para capacitar a modelos de lenguaje en el uso autónomo de más de 16.000 APIs del mundo real procedentes de RapidAPI. Introduce ToolBench, un conjunto masivo de datos de instrucciones multiherramienta generado mediante búsqueda en árbol de decisión primero en profundidad (DFSDT - Depth-First Search-based Decision Tree), y entrena ToolLLaMA junto a un evaluador automático (ToolEval). El sistema exhibe una capacidad de generalización zero-shot sin precedentes ante APIs no vistas durante el entrenamiento, equiparando el rendimiento de llamada a funciones de modelos propietarios de frontera en entornos de ingeniería complejos.",
+        "analogy": "🛠️ Como un taller industrial automatizado que capacita a un brazo robótico entregándole no solo diez llaves inglesas estándar, sino el catálogo entero de dieciséis mil herramientas electromecánicas especializadas de todo el mundo junto con sus esquemas de conexión: al practicar explorando ramificaciones de prueba y error en simulaciones controladas, el robot aprende a diagnosticar qué herramienta exacta tomar y cómo combinarla con otras sin confundir los voltajes ni quemar los motores.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2307.16789",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Gorilla: Large Language Model Connected with Massive APIs",
+        "author": "Shishir G. Patil, Tianjun Zhang, Xin Wang, Joseph E. Gonzalez (UC Berkeley)",
+        "description": "Formula Gorilla, un modelo de lenguaje de código abierto ajustado específicamente para invocar herramientas y APIs a gran escala de forma precisa y reproducible. Mediante un esquema de entrenamiento consciente de recuperadores (retriever-aware training) sobre bases de documentación dinámicas de TorchHub, HuggingFace y TensorHub, Gorilla reduce drásticamente las alucinaciones habituales en nombres de librerías, parámetros desactualizados y dependencias rotas. Demuestra una robustez notable ante cambios frecuentes en las firmas y especificaciones de las APIs, sentando las bases para agentes orientados a la automatización de flujos de trabajo de ingeniería de software.",
+        "analogy": "🧰 Como un maestro instalador de software que consulta la documentación oficial y los repositorios actualizados antes de escribir una sola línea de comando: en lugar de confiar ciegamente en recuerdos vagos de versiones antiguas o inventar banderas de configuración inexistentes, coteja la firma exacta de cada función y ensambla la tubería de procesamiento sin romper la compatibilidad con el sistema operativo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.15334",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Lookahead Decoding: Faster Generation by Parallel Drafting without A Draft Model",
+        "author": "Yichao Fu, Peter Bailis, Ion Stoica, Hao Zhang (UC Berkeley, LMSYS Organization)",
+        "description": "Introduce Lookahead Decoding, un algoritmo de decodificación acelerada que prescinde por completo de un modelo borrador auxiliar (draft model) en esquemas de muestreo especulativo. Lookahead Decoding fragmenta la generación autorregresiva en dos ramas concurrentes: una rama de anticipación que produce en paralelo candidatos de secuencias de n-gramas a partir de la memoria caché de activación del propio modelo, y una rama de verificación que valida simultáneamente múltiples hipótesis mediante una máscara de atención 2D especializada. Logra aceleraciones de 1.5x a 2.3x en modelos LLaMA y Vicuna sin pérdida de fidelidad en la distribución probabilística y con sobrecarga de memoria insignificante.",
+        "analogy": "♟️ Como un maestro de ajedrez jugando una partida rápida: mientras mueve la mano para desplazar un peón en el tablero (rama de verificación), su mente ya proyecta y descarta mentalmente de forma simultánea las tres jugadas subsiguientes basándose en patrones habituales de partidas anteriores (rama de anticipación), ejecutando secuencias enteras de movimientos sin esperar a que el rival toque el reloj.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.02057",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CacheGen: Fast Large Language Model Serving with Context Streaming",
+        "author": "Yuhan Liu, Hanchen Li, Kuntai Du, Jiayi Yao, Yihua Cheng, Yuyang Huang, Shan Lu, Michael Maire, Henry Hoffmann, Ari Holtzman, Ganesh Ananthanarayanan (University of Chicago, Microsoft)",
+        "description": "Desarrolla CacheGen, un sistema integral de compresión y transmisión de contexto diseñado para reducir el tiempo hasta el primer token (TTFT) en servidores de LLMs que operan con ventanas de contexto masivas. Al constatar que la transferencia de tensores KV sin procesar satura el ancho de banda de red y el canal PCIe, CacheGen comprime la caché KV en flujos de bits ultra densos utilizando cuantización adaptativa por capas y codificación aritmética basada en anclajes contextuales. CacheGen reduce el tamaño de la caché en hasta 4.3x y multiplica la velocidad de carga de contexto hasta 3.5x manteniendo la degradación de precisión por debajo del 1% en tareas complejas de recuperación y razonamiento.",
+        "analogy": "📦 Como un servicio de streaming de video de ultra alta definición que transmite una película completa en segundos comprimiendo drásticamente las escenas estáticas de fondo y reservando el ancho de banda solo para los cambios sutiles de luz y movimiento de los personajes principales: la pantalla del espectador comienza a reproducir el metraje de inmediato sin esperar a descargar gigabytes enteros de datos en bruto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.07240",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling",
+        "author": "Sanchit Gandhi, Patrick von Platen, Alexander M. Rush (Hugging Face, Cornell Tech)",
+        "description": "Propone Distil-Whisper, un marco de destilación de conocimiento a escala masiva para modelos de reconocimiento automático del habla (ASR) que comprime la arquitectura Whisper de OpenAI en 5.8 veces su número de parámetros y multiplica por hasta 6 veces su velocidad de inferencia. Empleando seudoetiquetado masivo sobre más de 22.000 horas de audio no anotado y una formulación de pérdida dual que transfiere tanto representaciones del codificador como la distribución de tokens del decodificador, Distil-Whisper preserva más del 99% de la precisión (WER) del modelo Whisper original, mitigando de forma radical los bucles de repetición y las alucinaciones en segmentos prolongados de silencio.",
+        "analogy": "🎙️ Como un tribunal que capacita a un joven taquígrafo asignándole como mentor al estenógrafo más prestigioso del juzgado: al entrenar transcribiendo casos modelo donde el mentor ya depuró los tartamudeos y ruidos acústicos confusos, el nuevo taquígrafo redacta actas judiciales seis veces más rápido sin perder ni una coma de precisión legal y sin quedarse atascado repitiendo palabras en testimonios interminables.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.05665",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaChip: Diseño de Aceleradores y Microchips mediante Aprendizaje por Refuerzo",
+      "description": "Google DeepMind publica y libera el código fuente de AlphaChip, su sistema pionero de aprendizaje por refuerzo capaz de diseñar la distribución física y el trazado de bloques lógicos (floorplanning) en microchips avanzados en cuestión de horas, optimizando longitud de interconexión, área y consumo de energía. Utilizado internamente por Google para acelerar el diseño de varias generaciones de Unidades de Procesamiento Tensorial (TPU v5e y TPU v6 Trillium), AlphaChip supera los diseños realizados por ingenieros humanos veteranos y algoritmos EDA tradicionales, democratizando el co-diseño de hardware asistido por IA.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/alphachip-reinforcement-learning-chip-design/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "CriticGPT: Modelo de Aprendizaje por Refuerzo para Detección de Errores y Vulnerabilidades en Código Generado por LLMs",
+      "description": "OpenAI presenta en vista previa de investigación CriticGPT, un modelo especializado basado en la familia GPT-4 entrenado mediante RLHF para analizar código generado por modelos de lenguaje e identificar fallos de lógica, vulnerabilidades sutiles y alucinaciones sintácticas. En evaluaciones exhaustivas con anotadores humanos, las revisiones conjuntas asistidas por CriticGPT superaron en más de un 60% a las inspecciones humanas independientes, facilitando la supervisión escalable de modelos avanzados y proporcionando un mecanismo crítico para elevar los estándares de fiabilidad en desarrollo de software impulsado por IA.",
+      "links": [
+        {
+          "text": "OpenAI Research",
+          "url": "https://openai.com/index/criticgpt-finding-bugs-in-code/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Scaling Monosemanticity: Mapeo de Conceptos e Interpretabilidad Mecanicista en Claude 3 Sonnet",
+      "description": "Anthropic publica un avance seminal en interpretabilidad mecanicista al aplicar autoencoders dispersos (Sparse Autoencoders - SAE) sobre las representaciones internas de Claude 3 Sonnet. El equipo logró extraer y aislar millones de características 'monosemánticas' independientes que se activan ante conceptos humanos precisos (desde entidades geográficas y sesgos hasta errores de software y conceptos éticos), demostrando empíricamente que las redes neuronales profundas no son cajas negras inescrutables y sentando las bases científicas para mitigar alucinaciones y prevenir conductas adversariales mediante manipulación directa de características.",
+      "links": [
+        {
+          "text": "Anthropic Research",
+          "url": "https://www.anthropic.com/research/mapping-mind-language-model",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Prompt Guard & CyberSecEval 3: Suite Abierta de Seguridad y Defensas contra Inyecciones de Prompts y Jailbreaks",
+      "description": "Meta AI lanza públicamente Prompt Guard y la tercera generación de su suite CyberSecEval, ofreciendo a desarrolladores e investigadores herramientas de código abierto para proteger sistemas basados en modelos de lenguaje contra ciberamenazas. Prompt Guard es un clasificador compacto de 86M parámetros calibrado para detectar e interceptar intentos de inyección de prompt directo e indirecto con latencia ultrabaja, mientras que CyberSecEval 3 incorpora benchmarks automatizados para cuantificar la resistencia de los LLMs ante el jailbreaking, la ingeniería social ofensiva y la asistencia en explotación de vulnerabilidades informáticas.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/meta-llama-prompt-guard-cyberseceval-3/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Poolside AI",
+      "headline": "La startup de modelos fundacionales de código Poolside asegura 500 millones de dólares en su ronda Serie B liderada por Bain Capital Ventures y DST Global con una valuación de 3.000 millones de dólares, acelerando la construcción de clusters de cómputo dedicados al entrenamiento de modelos orientados a resolver ingeniería de software a escala de AGI.",
+      "links": [
+        {
+          "text": "Poolside AI Announcement",
+          "url": "https://poolside.ai/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Black Forest Labs",
+      "headline": "Black Forest Labs, los creadores de los modelos generativos FLUX.1, asegura una ronda de inversión estratégica respaldada por Andreessen Horowitz y General Catalyst para escalar sus arquitecturas de difusión y flujo hacia la síntesis fotorrealista de video y contenido visual tridimensional en tiempo real.",
+      "links": [
+        {
+          "text": "Black Forest Labs",
+          "url": "https://blackforestlabs.ai/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Nebius Group & NVIDIA",
+      "headline": "Nebius Group compromete una inversión de más de 1.000 millones de dólares para desplegar decenas de miles de GPUs NVIDIA Blackwell en nuevos centros de datos hiper-eficientes en Finlandia, Francia y EE.UU., consolidándose como uno de los principales proveedores de infraestructura especializada de nube de IA para laboratorios y empresas de vanguardia.",
+      "links": [
+        {
+          "text": "Nebius Infrastructure",
+          "url": "https://nebius.com/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Glean Technologies",
+      "headline": "Glean cierra una ronda de financiamiento Serie E de más de 260 millones de dólares liderada por Altimeter Capital y Coatue a una valuación de 4.600 millones de dólares, expandiendo su plataforma de búsqueda empresarial y agentes de trabajo autónomos basados en IA generativa a más de 500 corporaciones multinacionales.",
+      "links": [
+        {
+          "text": "Glean Press",
+          "url": "https://www.glean.com/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
