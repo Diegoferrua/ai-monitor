@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-03",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Nemotron-4 340B Technical Report",
+        "author": "Bo Li, Xianchao Wu, et al. (NVIDIA)",
+        "description": "Presenta la familia Nemotron-4 340B (compuesta por modelos Base, Instruct y Reward), diseñada específicamente por NVIDIA para generar y filtrar datos sintéticos masivos con los que entrenar modelos de lenguaje de próxima generación. Utilizando un pipeline de alineamiento iterativo basado en optimización de preferencias directas (DPO) y aprendizaje por refuerzo con retroalimentación de IA (RLAIF), el modelo Instruct genera respuestas complejas y el modelo Reward las califica en atributos multifactoriales (veracidad, utilidad, seguridad y estilo). El informe demuestra que el 98% de los datos sintéticos generados por Nemotron-4 son indistinguibles en calidad de anotaciones humanas expertas, superando en benchmarks de razonamiento general a competidores abiertos de tamaño equivalente.",
+        "analogy": "🎓 Como un consejo de catedráticos eméritos que redacta libros de texto, diseña exámenes rigurosos y corrige las respuestas de miles de estudiantes con una rúbrica milimétrica: en lugar de contratar a miles de tutores privados dispersos con criterios dispares, el consejo genera planes de estudio perfectos y ejercicios autocalificados que elevan exponencialmente el nivel académico de cualquier escuela.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.11704",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TinyLlama: An Open-Source Small Language Model",
+        "author": "Peiyuan Zhang, Guangtao Zeng, Tianduo Wang, Wei Lu (Singapore University of Technology and Design)",
+        "description": "Introduce TinyLlama, un modelo de lenguaje ultracompacto de 1.1 mil millones de parámetros preentrenado sobre 3 billones de tokens basados en la arquitectura Llama 2. Inspirado en el régimen de sobre-entrenamiento de las leyes de escalado de Chinchilla, TinyLlama demuestra que los modelos sub-mil millones pueden alcanzar una sorprendente capacidad de razonamiento formal, seguimiento de instrucciones y completado de código cuando se exponen a volúmenes masivos de datos diversos. Su reducido tamaño de memoria y baja latencia de cómputo permiten ejecutar inferencia local fluida en microcontroladores, teléfonos móviles y dispositivos de borde sin recurrir a servidores en la nube.",
+        "analogy": "🔪 Como una navaja suiza de bolsillo forjada en titanio aeroespacial: aunque cabe en la palma de la mano y casi no pesa, la precisión y resistencia de sus pequeñas hojas y destornilladores permiten realizar reparaciones complejas de campo que antes obligaban a cargar una pesada caja de herramientas de taller.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.02385",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "StarCoder 2 and The Stack v2: The Next Generation",
+        "author": "Anton Lozhkov, Raymond Li, Loubna Ben Allal, et al. (BigCode, ServiceNow, Hugging Face)",
+        "description": "Desarrolla la familia StarCoder 2 (modelos de 3B, 7B y 15B parámetros) entrenada sobre The Stack v2, un corpus público y curado de más de 4 billones de tokens que abarca 619 lenguajes de programación. Introduce innovaciones como entrenamiento con relleno intermedio (Fill-in-the-Middle), ventanas de contexto ampliadas de 16k tokens con interpolación posicional RoPE y un riguroso marco de gobernanza y atribución que respeta licencias de código abierto y derechos de exclusión voluntaria. StarCoder 2 de 15B supera a CodeLlama de 34B en benchmarks de síntesis de código (HumanEval, MBPP) y resolución de problemas algorítmicos.",
+        "analogy": "📐 Como una biblioteca magna de planos de ingeniería que cataloga las normas de construcción y diseños estructurales de 600 civilizaciones: un arquitecto principiante puede consultarla para redactar planos de edificios impecables, verificar en qué normativa exacta se basa cada viga y garantizar que ninguna columna viole los códigos de seguridad civil.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.19173",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+        "author": "Shilong Liu, Zhaoyang Zeng, Tianhe Ren, Feng Li, Hao Zhang, Jie Yang, Chunyuan Li, Jianwei Yang, Hang Su, Jun Zhu, Lei Zhang (IDEA Research, Tsinghua University)",
+        "description": "Propone Grounding DINO, una arquitectura fundacional que fusiona el detector basado en transformadores DINO con esquemas de preentrenamiento de anclaje de lenguaje y visión (phrase grounding). Al integrar módulos de fusión cruzada temprana, intermedia y tardía entre los extractores de características de imagen y texto, el modelo es capaz de detectar y delimitar con precisión cajas de cualquier objeto mencionado en lenguaje natural libre (detección open-set), superando los límites de los vocabularios cerrados tradicionales y alcanzando un rendimiento zero-shot sobresaliente en COCO y LVIS.",
+        "analogy": "🐕 Como un perro detector de aduanas que no solo reconoce olores entrenados de antemano, sino que comprende órdenes complejas habladas en cualquier idioma como \"busca la caja de terciopelo azul con un broche metálico en el bolsillo lateral\", rastreándola de inmediato entre miles de maletas sin equivocarse de bulto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2303.05499",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LLaVA-NeXT: Improved Reasoning, OCR, and World Knowledge",
+        "author": "Haotian Liu, Chunyuan Li, Yuheng Li, Bo Li, Yuanhan Zhang, Sheng Shen, Yong Jae Lee (University of Wisconsin-Madison, Microsoft Research, Columbia University)",
+        "description": "Presenta LLaVA-NeXT (LLaVA-1.6), una evolución sustancial de la arquitectura de modelos multimodales abiertos que introduce soporte dinámico de alta resolución mediante división adaptativa de cuadrículas (AnyRes). Esta técnica permite procesar imágenes de hasta 4 veces mayor resolución nativa sin perder detalles espaciales sutiles ni distorsionar la relación de aspecto. Acompañado de un ajuste fino de instrucciones visuales enriquecido con datos de OCR complejos y razonamiento documental, LLaVA-NeXT exhibe capacidades excepcionales en comprensión de gráficos, diagramas técnicos y matemáticas multimodales, reduciendo alucinaciones visuales.",
+        "analogy": "🔬 Como equipar a un perito forense con un microscopio digital de zoom adaptativo continuo: en lugar de forzarlo a examinar una fotografía reducida y borrosa de una escena del crimen, puede inspeccionar la panorámica completa y hacer zoom instantáneo para leer la letra pequeña de un contrato o contar los surcos de una huella dactilar sin perder el contexto de la habitación.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.16420",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning",
+        "author": "Yuwei Guo, Ceyuan Yang, Anyi Rao, Yaohui Wang, Yu Qiao, Dahua Lin, Bo Dai (The Chinese University of Hong Kong, Shanghai AI Laboratory)",
+        "description": "Introduce AnimateDiff, un módulo general de modelado de movimiento que permite animar directamente cualquier modelo de difusión de texto a imagen personalizado sin requerir reentrenamiento individual ni ajuste fino específico. Al insertar capas de atención temporal en un modelo base congelado y entrenarlas exclusivamente sobre clips de video para aprender dinámicas cinemáticas y coherencia temporal, el módulo transfiere automáticamente la capacidad de generar secuencias de video fluidas y consistentes a miles de variantes personalizadas de Stable Diffusion manteniendo intactos sus estilos estéticos.",
+        "analogy": "🎞️ Como un mecanismo de motor y engranajes universales que se puede acoplar a cualquier juguete o maqueta estática: sin necesidad de esculpir ni repintar el juguete, encajar el mecanismo hace que los brazos se muevan, los engranajes giren y la figura cobre vida caminando con suavidad y respetando su diseño artesanal.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2307.04725",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "author": "Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Shaokun Zhang, Erkang Zhu, Beibin Li, Li Jiang, Xiaoyun Zhang, Chi Wang (Microsoft Research, Penn State, University of Washington)",
+        "description": "Formula AutoGen, un marco de código abierto para orquestar agentes conversacionales autónomos y colaborativos capaces de interactuar entre sí y con humanos mediante paso de mensajes. Cada agente es modular y parametrizable con roles específicos, acceso a herramientas (intérpretes de código Python, búsqueda web, APIs) y memorias de contexto, permitiendo automatizar flujos complejos de ingeniería de software, análisis cuantitativo y resolución de problemas matemáticos. Las interacciones multi-agente demuestran cómo la deliberación iterativa y la crítica cruzada superan sustancialmente a las llamadas aisladas a modelos de frontera.",
+        "analogy": "👥 Como una mesa redonda de ingeniería donde se sientan un arquitecto jefe, un revisor de código escéptico, un auditor de seguridad y un gestor de proyecto: en lugar de esperar que una sola persona resuelva todo de golpe, los cuatro especialistas debaten alternativas, ejecutan pruebas en un entorno aislado, se corrigen los errores mutuamente y entregan un producto robusto y verificado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2308.08155",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CAMEL: Communicative Agents for \"Mind\" Exploration of Large Language Model Society",
+        "author": "Guohao Li, Hasan Abed Al Kader Hammoud, Hani Itani, Dmitrii Khizbullin, Bernard Ghanem (King Abdullah University of Science and Technology - KAUST)",
+        "description": "Desarrolla CAMEL, un marco pionero de comunicación multi-agente basado en juego de roles (role-playing) diseñado para explorar la cooperación autónoma y la resolución de tareas complejas sin supervisión humana constante. Introduce la técnica de \"inception prompting\" para inicializar y alinear dinámicamente dos agentes que asumen identidades complementarias (por ejemplo, un programador de software y un asesor bursátil) con el objetivo mutuo de concebir, codificar y depurar una aplicación financiera. CAMEL proporciona una metodología sistemática para estudiar comportamientos emergentes, coordinación conversacional y generación de datos instructivos sintéticos de alta fidelidad.",
+        "analogy": "🎭 Como dos actores de improvisación teatral consagrados a los que solo se les entrega su tarjeta de personaje y el objetivo final de la escena: al subir al escenario entablan un diálogo fluido, superan giros imprevistos de la trama y completan la historia con total coherencia dramática sin que el director tenga que dictarles cada parlamento.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2303.17760",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+        "author": "Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Peter Clark, et al. (Carnegie Mellon University, Allen Institute for AI, University of Washington)",
+        "description": "Propone Self-Refine, un paradigma que capacita a los modelos de lenguaje para mejorar iterativamente sus propios resultados mediante ciclos alternados de generación, retroalimentación crítica propia y refinamiento. Al prescindir de modelos de recompensa externos, anotaciones humanas o entrenamiento supervisado adicional, un único LLM asume el rol de creador y evaluador, identificando deficiencias lógicas o estilísticas en su respuesta inicial y reescribiéndola para corregirlas. En evaluaciones empíricas sobre 7 tareas diversas (optimización de código, razonamiento matemático, resolución de acrónimos), Self-Refine logra mejoras relativas del 20% al 40% respecto a la generación directa.",
+        "analogy": "✍️ Como un escritor riguroso que redacta el primer borrador de un capítulo, se toma una pausa reflexiva y vuelve con un bolígrafo rojo para anotar en los márgenes frases confusas y fallos de coherencia, para luego redactar un segundo borrador impecable que corrige sistemáticamente cada punto observado antes de enviarlo a imprenta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2303.17651",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+        "author": "Tim Dettmers, Mike Lewis, Younes Belkada, Luke Zettlemoyer (University of Washington, Meta AI, Hugging Face)",
+        "description": "Resuelve el colapso de precisión que impedía cuantizar a 8 bits modelos de lenguaje a gran escala (superiores a 6.7B parámetros) debido a la emergencia de características atípicas extremas (\"outlier features\"). LLM.int8() introduce la descomposición de precisión mixta combinada con cuantización por vector: detecta el diminuto porcentaje de dimensiones atípicas (~0.1%) y las procesa mediante multiplicación de matrices en alta precisión (FP16), mientras calcula el 99.9% restante de las activaciones y pesos en INT8 estándar. Esta innovación reduce a la mitad los requisitos de memoria de GPU en inferencia sin ninguna pérdida en perplejidad ni rendimiento de tareas.",
+        "analogy": "📦 Como un almacén de logística que procesa paquetes frágiles de cristal junto a cajas estándar de cartón: en lugar de enviar todo por cintas transportadoras industriales toscas arriesgando romper el cristal, o transportar a mano cada caja encareciendo la operación, el sistema desvía el 0.1% de paquetes ultra delicados a operarios con guantes de seda y envía el 99.9% restante por cintas rápidas y compactas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2208.07339",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel",
+        "author": "Yanli Zhao, Andrew Gu, Rohan Varma, Liang Luo, Less Wright, Hamid Shojanazeri, Alban Desmaison, Shen Li, et al. (Meta AI, PyTorch Team)",
+        "description": "Documenta el diseño, la optimización y la puesta en producción de PyTorch Fully Sharded Data Parallel (FSDP), el framework nativo de paralelismo de datos fragmentados para entrenamiento e inferencia de modelos a escala de cientos de miles de millones de parámetros. FSDP fragmenta los parámetros del modelo, los gradientes y los estados del optimizador entre todas las GPUs del clúster, solapando las operaciones de comunicación colectiva (all-gather y reduce-scatter) con el cómputo de las fases forward y backward. Esto elimina la redundancia de memoria del paralelismo tradicional y permite entrenar modelos gigantes en infraestructuras estándar sin recurrir a complejas particiones de modelo manuales.",
+        "analogy": "🎼 Como una gran orquesta sinfónica donde, en lugar de obligar a cada músico a cargar con la partitura maestra completa de 500 páginas en su atril, cada intérprete sostiene solo las hojas exactas de su instrumento y las intercambia en silencio y de fondo entre movimientos musicales, permitiendo ejecutar la sinfonía entera sin que ningún atril colapse por el peso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2304.11277",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression",
+        "author": "Tim Dettmers, Ruslan Svirschevski, Vage Egiazarian, Denis Kuznitskiy, Alexander Borzunov, Torsten Hoefler, Dan Alistarh (University of Washington, Yandex, IST Austria, ETH Zurich)",
+        "description": "Introduce SpQR (Sparse-Quantized Representation), un algoritmo de compresión post-entrenamiento de pesos que logra cuantizaciones extremas a 3 y 4 bits con pérdidas de perplejidad prácticamente nulas respecto a los modelos originales de 16 bits. SpQR identifica los pesos anómalos sensibles que concentran la mayor parte del error de reconstrucción y los preserva en una matriz dispersa de precisión completa, mientras cuantiza la inmensa mayoría de los pesos a 3 bits mediante esquemas de agrupación microscópica en dos niveles. Esto permite desplegar modelos de 70B parámetros en tarjetas gráficas de gama de consumo manteniendo íntegra su capacidad de razonamiento.",
+        "analogy": "🎻 Como digitalizar una grabación analógica de un concierto en vinilo: en lugar de reducir bruscamente la resolución de audio en toda la pista arruinando los solos acústicos de violín y los matices sutiles, el algoritmo comprime intensamente los tonos de fondo continuos a paquetes ligeros y reserva la máxima fidelidad sonora para los instrumentos solistas clave.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2306.03078",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Project Astra: Asistente Multimodal Universal en Tiempo Real con Percepción Continua de Video y Voz",
+      "description": "Google DeepMind presenta en detalle y demuestra las capacidades de Project Astra, su visión hacia un asistente de inteligencia artificial universal para la vida diaria impulsado por la familia Gemini. Astra combina procesamiento multimodal continuo de video en vivo (24-30 fps) y audio bidireccional con latencia prácticamente imperceptible a través de streaming en tiempo real. Es capaz de rastrear objetos en el entorno físico, recordar dónde el usuario dejó sus pertenencias, analizar código y diagramas manuscritos en una pizarra, y responder preguntas contextuales con entonación natural y empatía conversacional.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/technologies/gemini/project-astra/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Voice Engine: Modelo de Síntesis y Clonación de Voz de Alta Fidelidad a partir de Muestras de 15 Segundos",
+      "description": "OpenAI desvela Voice Engine, su modelo fundacional para la síntesis de voz fotorrealista capaz de reproducir con extrema fidelidad el timbre, la cadencia y el acento de un hablante humano a partir de un fragmento de audio de apenas 15 segundos y texto. Diseñado con salvaguardas avanzadas que incluyen marcas de agua audibles e inaudibles para trazabilidad forense, Voice Engine abre aplicaciones críticas en accesibilidad para personas con trastornos del habla, traducción multilingüe con preservación de la voz original del creador, y soporte conversacional interactivo.",
+      "links": [
+        {
+          "text": "OpenAI Research",
+          "url": "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Anthropic Evaluator & Model Evaluation Suite en Developer Console para Benchmarks Personalizados",
+      "description": "Anthropic lanza en su Developer Console una suite integral para la evaluación sistemática y cuantitativa de modelos de lenguaje, permitiendo a equipos de ingeniería diseñar bancos de pruebas personalizados (evals) con métricas objetivas antes de desplegar agentes en producción. La plataforma integra generación automática de casos de prueba adversariales, comparación ciega A/B de versiones de prompts, y calificación automatizada asistida por Claude 3.5 Sonnet como juez, reduciendo semanas de testing manual a flujos de trabajo iterativos continuos.",
+      "links": [
+        {
+          "text": "Anthropic Research",
+          "url": "https://www.anthropic.com/news/evaluating-ai-systems",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Meta MMS (Massively Multilingual Speech): Reconocimiento y Síntesis de Voz en Más de 1.100 Idiomas",
+      "description": "Meta AI publica y libera como código abierto el proyecto Massively Multilingual Speech (MMS), ampliando drásticamente el soporte de tecnologías de voz desde un centenar de idiomas tradicionales hasta más de 1.100 lenguas vivas (reconocimiento automático y texto a voz) y más de 4.000 para identificación de idioma. Entrenado sobre grabaciones de lectura religiosa y textos comunitarios globales mediante arquitecturas wav2vec 2.0 auto-supervisadas, MMS reduce la tasa de error a la mitad en comparación con Whisper de OpenAI en idiomas de bajos recursos, preservando la diversidad lingüística global.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/multilingual-model-speech-recognition/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Character.AI & Google",
+      "headline": "Google y Character.AI formalizan un acuerdo estratégico de licenciamiento no exclusivo de su tecnología fundacional por 2.700 millones de dólares, marcando el retorno de los pioneros del Transformer Noam Shazeer y Daniel De Freitas a Google DeepMind para liderar la arquitectura de modelos de próxima generación mientras Character.AI continúa operando de forma independiente.",
+      "links": [
+        {
+          "text": "Character.AI Announcement",
+          "url": "https://blog.character.ai/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Physical Intelligence (π)",
+      "headline": "La startup de inteligencia artificial encarnada y robótica Physical Intelligence asegura 400 millones de dólares en una ronda de financiamiento liderada por Jeff Bezos, OpenAI y Thrive Capital con una valuación de 2.400 millones de dólares, acelerando el desarrollo de modelos fundacionales universales capaces de controlar cualquier cuerpo robótico físico en tareas complejas no estructuradas.",
+      "links": [
+        {
+          "text": "Physical Intelligence",
+          "url": "https://www.physicalintelligence.company/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Harvey AI",
+      "headline": "Harvey, la plataforma de modelos de lenguaje e inteligencia artificial agéntica especializada en el sector legal y financiero corporativo, cierra una ronda Serie C de 100 millones de dólares liderada por GV (Google Ventures) y OpenAI Startup Fund a una valuación de 1.500 millones de dólares, impulsando la adopción de agentes automatizados en las principales firmas legales globales.",
+      "links": [
+        {
+          "text": "Harvey Announcement",
+          "url": "https://www.harvey.ai/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Figure AI & BMW",
+      "headline": "Figure AI culmina con éxito el primer despliegue comercial y fase de pruebas de su robot humanoide Figure 02 en la planta automotriz de BMW en Spartanburg (EE.UU.), demostrando operaciones autónomas de inserción y manipulación de piezas de chapa metálica mediante visión multimodal y redes neuronales end-to-end integradas en la línea de montaje real.",
+      "links": [
+        {
+          "text": "Figure AI Operations",
+          "url": "https://www.figure.ai/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
