@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-04",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence",
+        "author": "Qihao Zhu, Daya Guo, Zhihong Shao, Dejian Yang, Peiyi Wang, Runxin Xu, Y. Wu, Yukun Li, Huazuo Gao, Shirong Ma, Wangding Zeng, Xiao Bi, Z. F. Wu, Xingkai Yu, Liang Zhao, et al. (DeepSeek-AI)",
+        "description": "Presenta DeepSeek-Coder-V2, un modelo de lenguaje de código abierto basado en una arquitectura Mixture-of-Experts (MoE) que activa únicamente 16 mil millones de parámetros de un total de 236 mil millones para cada token. Entrenado a partir del checkpoint intermedio de DeepSeek-V2 sobre un corpus masivo de 6 billones de tokens adicionales centrados en código y matemáticas, el modelo expande el soporte de lenguajes de programación de 86 a 338 y amplía la ventana de contexto hasta 128k tokens mediante la atención latente multi-cabeza (MLA). En benchmarks estandarizados de síntesis y depuración algorítmica como HumanEval (90.2%), MBPP+ y LiveCodeBench, DeepSeek-Coder-V2 iguala o supera a modelos propietarios de frontera como GPT-4 Turbo, Claude 3 Opus y Gemini 1.5 Pro.",
+        "analogy": "🛠️ Como un gremio global de 338 maestros artesanos de software de élite supervisados por un conserje ultrarrápido: en lugar de forzar a un solo ingeniero a memorizar todas las herramientas del planeta, cuando entra un encargo el conserje convoca instantáneamente a los tres especialistas exactos en ese lenguaje de programación y estructura de datos, entregando una solución perfecta en tiempo récord y consumiendo una fracción mínima de energía.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.11931",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Jamba: A Hybrid Transformer-Mamba Language Model",
+        "author": "Opher Lieber, Barak Lenz, Hofit Bata, Gal Cohen, Jhonathan Osin, Itay Dalmedigos, Erez Safahi, Shaked Meirom, Yonatan Belinkov, Shai Shalev-Shwartz, Omri Abend, Nir Ratner, Amnon Shashua, Kevin Leyton-Brown, Yoav Shoham (AI21 Labs)",
+        "description": "Introduce Jamba, la primera arquitectura híbrida a gran escala lista para producción que entrelaza capas de atención basadas en Transformer con bloques de modelos de espacio de estados (SSM Mamba) y redes feedforward dispersas de tipo Mixture-of-Experts (MoE). Con un total de 52 mil millones de parámetros y 12 mil millones activos por token, Jamba procesa ventanas de contexto de hasta 256k tokens en una única GPU de 80 GB. Al sustituir la mayor parte de las capas cuadráticas de atención por bloques lineales Mamba, logra un rendimiento de inferencia 3 veces superior en secuencias largas en comparación con Mixtral 8x7B, manteniendo una precisión perfecta en pruebas de recuperación de información crítica a lo largo de todo el contexto.",
+        "analogy": "🚆 Como un tren expreso de mercancías con vagones aerodinámicos diseñados para avanzar miles de kilómetros en línea recta sin fricción, pero que incorpora en puntos estratégicos grúas telescópicas de precisión milimétrica: la mayor parte del recorrido se realiza a toda velocidad en tiempo lineal sin sobrecalentamiento, recurriendo al mecanismo pesado de atención únicamente cuando es imprescindible cruzar datos dispersos en la distancia.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.19887",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "KTO: Model Alignment as Prospect Theoretic Optimization",
+        "author": "Kawin Ethayarajh, Winnie Xu, Niklas Muennighoff, Dan Jurafsky, Christopher D. Manning (Stanford University, Contextual AI)",
+        "description": "Formula Kahneman-Tversky Optimization (KTO), un marco algorítmico de alineamiento de modelos de lenguaje fundamentado en la teoría prospectiva y la economía del comportamiento. A diferencia de DPO o RLHF, que dependen estrictamente de pares de preferencias relativas (respuesta elegida frente a respuesta rechazada), KTO optimiza la función de pérdida del modelo a partir de señales de retroalimentación binarias directas (deseable o indeseable) modelando la aversión a la pérdida humana, donde evitar un resultado desfavorable tiene el doble de valor que obtener una ganancia equivalente. KTO alcanza un rendimiento comparable o superior al de DPO en modelos de 7B a 30B parámetros, reduciendo sustancialmente el coste de recolección de datos en entornos reales donde los usuarios solo califican con votos positivos o negativos.",
+        "analogy": "⚖️ Como un juez deportivo de tenis que arbitra cada jugada en tiempo real señalando si la pelota picó \"adentro\" o \"afuera\" conociendo a fondo la psicología de los jugadores: en lugar de obligar a dos tenistas a repetir idénticamente cada golpe para determinar cuál fue marginalmente mejor, el juez evalúa cada impacto individual penalizando con mayor severidad las faltas graves para que el atleta internalice de inmediato los límites exactos de la cancha.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.01306",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "PixArt-alpha: Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis",
+        "author": "Junsong Chen, Jincheng Yu, Chongjian Ge, Lewei Yao, Enze Xie, Yue Wu, Zhongdao Wang, James Kwok, Ping Luo, Huchuan Lu, Zhenguo Li (Huawei Noah's Ark Lab, Dalian University of Technology, HKU)",
+        "description": "Propone PixArt-α, un modelo generativo basado en transformadores de difusión (Diffusion Transformer - DiT) capaz de sintetizar imágenes fotorrealistas de alta resolución (1024x1024) con apenas el 10% del coste de cómputo de entrenamiento requerido por Stable Diffusion v1.5 o SDXL. Su metodología descompone el aprendizaje en tres etapas pedagógicas progresivas: preentrenamiento de dependencias espaciales de píxeles desde mapas de baja frecuencia, alineamiento semántico texto-imagen guiado por incrustaciones de lenguaje de T5-XXL, y ajuste fino de alta resolución enriquecido con leyendas densas y detalladas autogeneradas con LLaVA, democratizando el entrenamiento de modelos fundacionales de difusión.",
+        "analogy": "🎨 Como un pintor hiperrealista en una academia clásica de arte que primero domina la geometría y la perspectiva básica en carboncillo monocromático, luego asimila con rigor las descripciones narrativas de los textos históricos y finalmente aplica capas de barniz al óleo sobre lienzos gigantes: al estructurar el estudio en fases nítidas y didácticas, crea lienzos magistrales en una décima parte del tiempo que un aficionado improvisando a ciegas en un taller desordenado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.00426",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CogAgent: A Visual Language Model for GUI Agents",
+        "author": "Wenyi Hong, Weihan Wang, Qingsong Lv, Jiazheng Xu, Wenmeng Yu, Junhui Ji, Yan Wang, Zihan Wang, Yuxiao Dong, Ming Ding, Jie Tang (Tsinghua University)",
+        "description": "Desarrolla CogAgent, un modelo de lenguaje y visión de 18 mil millones de parámetros optimizado específicamente para interactuar de forma autónoma con interfaces gráficas de usuario (GUIs) en sistemas operativos móviles (Android) y de escritorio (PC). Incorpora una arquitectura visual de doble rama que procesa en paralelo una vista global de contexto y una rama de atención cruzada de alta resolución nativa (1120x1120 píxeles) capaz de distinguir botones diminutos, cuadros de diálogo e iconos sutiles. CogAgent supera a GPT-4V en los bancos de pruebas Mind2Web y AITW, prediciendo con precisión milimétrica coordenadas de pantalla y secuencias complejas de acciones de navegación interactiva.",
+        "analogy": "🖱️ Como un piloto de control aéreo con visión periférica y binoculares de aumento operando frente a una pared de pantallas complejas: con un ojo observa la distribución general de los paneles y ventanas del sistema, mientras con el otro enfoca de inmediato las etiquetas diminutas, deslizadores y botones críticos, haciendo clic y tecleando en las coordenadas exactas sin cometer errores ni perder el control del vuelo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.08914",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Video-LLaVA: Learning United Visual Representation by Alignment Before Projection",
+        "author": "Bin Lin, Yang Ye, Bin Zhu, Jiaxi Gu, Munan Ning, Peng Jin, Li Yuan (Peking University, Peng Cheng Laboratory)",
+        "description": "Formula Video-LLaVA, un modelo fundacional multimodal que unifica el aprendizaje de representaciones visuales para imágenes estáticas y secuencias de video antes de su proyección al espacio latente del LLM. A diferencia de las aproximaciones convencionales que entrenan codificadores visuales independientes o capas de proyección inconexas provocando fragmentación representacional, Video-LLaVA realiza un preentrenamiento conjunto de alineamiento cruzado entre imágenes y clips dinámicos utilizando un codificador unificado LanguageBind. Esta sinergia bidireccional demuestra que la solidez espacial de las imágenes potencia el razonamiento temporal en video, y viceversa, superando a modelos especializados en 13 benchmarks multimodales de video e imagen.",
+        "analogy": "📽️ Como un director de cine de renombre internacional formado tanto en fotografía fija de retrato como en dirección de cámara cinematográfica continua: su mente no concibe una película como una simple sucesión atropellada de fotos fijas ni ve un cuadro como un fotograma aislado, sino que comprende la iluminación, la profundidad y el movimiento temporal bajo un mismo lenguaje visual orgánico y armónico.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.10122",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback",
+        "author": "John Yang, Akshara Prabhakar, Karthik Narasimhan, Shunyu Yao (Princeton University)",
+        "description": "Propone InterCode, un entorno estandarizado de evaluación y entrenamiento para agentes basados en modelos de lenguaje centrado en programación interactiva mediante retroalimentación en tiempo de ejecución. Formulando la programación como un proceso de decisión de Markov parcialmente observable (POMDP) en entornos interactivos de terminal Bash, SQL y Python REPL, los agentes ejecutan comandos, inspeccionan mensajes de error de sintaxis y estado devueltos por compiladores y depuran su propio código de manera iterativa. Las evaluaciones demuestran que la retroalimentación interactiva incrementa la tasa de resolución de problemas hasta en un 20% en comparación con la generación estática de código de un solo intento.",
+        "analogy": "💻 Como un ingeniero de software trabajando dentro de una terminal interactiva con intérprete en vivo y depurador activo: en lugar de escribir 500 líneas de código a ciegas en un bloc de notas e imprimirlas esperando que compilen a la primera, ejecuta una instrucción, observa de inmediato el mensaje de error del sistema operativo, corrige la sintaxis y avanza paso a paso hasta que el programa corre de manera impecable.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2306.14898",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Mind2Web: Towards a Generalist Agent for the Web",
+        "author": "Xiang Deng, Yu Gu, Boyuan Zheng, Shijie Chen, Samuel Stevens, Boshi Wang, Huan Sun, Yu Su (The Ohio State University)",
+        "description": "Construye Mind2Web, el primer conjunto de datos y entorno de evaluación a gran escala para entrenar agentes autónomos generalistas capaces de navegar por sitios web del mundo real sin adaptaciones sintéticas. Con más de 2.000 tareas distribuidas en 137 sitios web reales de 31 industrias (reservas hoteleras, plataformas de comercio electrónico, herramientas empresariales y servicios públicos), Mind2Web introduce un pipeline de filtrado y reranking de elementos DOM que permite a los agentes mapear intenciones en lenguaje natural a elementos interactivos del HTML y emitir acciones precisas (clics, mecanografía, selección), abordando los desafíos del diseño dinámico y el ruido estructural de la web moderna.",
+        "analogy": "🌐 Como un asistente ejecutivo veterano que aterriza en una ciudad extranjera y realiza trámites en sitios web locales sin necesidad de que nadie le prepare interfaces simplificadas ni accesos directos: abre el navegador comercial, esquiva ventanas emergentes, identifica los menús desplegables pertinentes y completa compras o reservas complejas con la misma destreza y rapidez que un usuario nativo experimentado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2306.06070",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models",
+        "author": "Huaixiu Steven Zheng, Swaroop Mishra, Xinyun Chen, Heng-Tze Cheng, Ed H. Chi, Quoc V. Le, Denny Zhou (Google DeepMind)",
+        "description": "Desarrolla Step-Back Prompting, una técnica de inducción de razonamiento por inferencia que capacita a los LLMs para realizar abstracciones conceptuales antes de abordar preguntas complejas de ciencia, matemáticas y lógica. Al enfrentarse a un desafío intrincado con múltiples variables, el modelo formula primero una \"pregunta de paso atrás\" para identificar los conceptos fundamentales, leyes físicas o principios rectores aplicables, recupera o razona sobre dicho marco teórico y posteriormente lo utiliza para guiar la resolución del problema original. Este método reduce drásticamente las alucinaciones de razonamiento, logrando mejoras de hasta un 27% en precisión en PaLM-2L sobre MMLU, TimeQA y MuSiQue.",
+        "analogy": "🧗 Como un gran maestro de ajedrez o un físico distinguido que, ante una posición caótica y enmarañada del tablero con decenas de opciones confusas, da un paso atrás y se pregunta en voz alta: \"¿Cuál es el principio estructural fundamental que rige este tablero?\": al clarificar la ley general y la posición de las piezas clave, el resto de jugadas tácticas y cálculos numéricos fluyen de forma natural y transparente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.06117",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+        "author": "Jiawei Zhao, Zhenyu Zhang, Beidi Chen, Ji Liu, Anima Anandkumar (Caltech, Meta AI, CMU, Kwai)",
+        "description": "Introduce GaLore (Gradient Low-Rank Projection), una técnica pionera de entrenamiento eficiente que posibilita el preentrenamiento completo de modelos de lenguaje masivos en hardware de consumo reduciendo drásticamente la memoria ocupada por los estados del optimizador. A diferencia de LoRA, que restringe los pesos a matrices fijas de bajo rango limitando la capacidad del modelo, GaLore descubre que los gradientes de las matrices de pesos exhiben una estructura de bajo rango durante la retropropagación, permitiendo proyectar dichos gradientes en un subespacio dinámico compacto y reduciendo el consumo de memoria de optimizadores como Adam en hasta un 65.5%. GaLore permite preentrenar un modelo LLaMA de 7B desde cero en una sola tarjeta gráfica NVIDIA RTX 4090 de 24 GB de VRAM.",
+        "analogy": "📦 Como un escultor monumental que talla una estatua de mármol gigante: en lugar de rodear la montaña entera con toneladas de andamios pesados y estáticos que bloquean el taller, utiliza un brazo mecánico articulado y ultraligero que va orientando únicamente hacia las zonas y ángulos exactos donde debe dar los golpes de cincel en cada jornada, logrando una escultura colosal con una mínima fracción del espacio y la inversión logística.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.03507",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "RingAttention with Blockwise Transformers for Near-Infinite Context",
+        "author": "Hao Liu, Matei Zaharia, Pieter Abbeel (UC Berkeley)",
+        "description": "Formula RingAttention, un mecanismo de atención distribuida que escala la longitud de contexto de los modelos Transformer a millones de tokens eliminando la saturación de memoria de GPU individual. Al solapar la comunicación entre dispositivos con el cómputo de atención en una topología de anillo circular, RingAttention transfiere los bloques de claves y valores (KV) de forma secuencial de un dispositivo al siguiente mientras calcula concurrentemente la atención local sobre segmentos de consultas (queries). Este esquema suprime la barrera de memoria cuadrática inherente a secuencias extensas, posibilitando el entrenamiento e inferencia sobre corpus bibliográficos completos, repositorios masivos de código fuente y horas de video sin sobrecostes apreciables de latencia.",
+        "analogy": "⭕ Como una ronda circular sincronizada de archivistas expertos que se pasan carpetas de notas de mano en mano mientras revisan una biblioteca de millones de expedientes: en vez de exigir que cada archivista apile la biblioteca entera sobre su propio pupitre (haciendo que la mesa se quiebre por el peso), cada uno estudia un folio específico y entrega las notas al colega de al lado en un ciclo fluido y continuo, procesando archivos monumentales sin que ningún escritorio colapse jamás.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.01889",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SnapKV: LLM Knows What You Are Looking for Before Generation",
+        "author": "Yuhong Li, Yingbing Huang, Bowen Deng, Hao Zhang, Zhijian Liu, Chuang Gan (UMass Amherst, MIT)",
+        "description": "Desarrolla SnapKV, un algoritmo de compresión post-entrenamiento para la caché de Clave-Valor (KV Cache) en modelos de contexto largo que no requiere reentrenamiento ni ajuste fino de parámetros. SnapKV comprueba que durante la fase inicial de procesamiento del prompt (prefill), las cabezas de atención concentran sistemáticamente su peso sobre patrones de tokens críticos (\"ventanas de observación\"). Analizando estas firmas de atención al término del prompt, el algoritmo selecciona y preserva exclusivamente los pares KV esenciales para cada cabeza y descarta los tokens redundantes, alcanzando una aceleración de inferencia de 3.3x, un ahorro de memoria del 8.2x y reteniendo el 99.8% de precisión en benchmarks de contexto largo como LongBench.",
+        "analogy": "📌 Como un lector veloz de informes corporativos de cientos de páginas que lee con agudeza la introducción y conclusiones de cada sección y coloca marcadores adhesivos de colores en los párrafos exactos con cifras y cláusulas decisivas, desechando las hojas de relleno: cuando luego el directorio le hace preguntas puntuales sobre el texto, sus ojos viajan directo a los post-its marcados respondiendo con exactitud en segundos sin releer todo el tomo ni sobrecargar la memoria.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.14469",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Gemini 1.5 Pro: Modelo Fundacional Multimodal con Ventana de Contexto Extendido de 2 Millones de Tokens y Razonamiento Nativo de Audio, Video y Código",
+      "description": "Google DeepMind expande radicalmente las capacidades de su modelo insignia Gemini 1.5 Pro al habilitar de forma general una ventana de contexto de 2 millones de tokens a través de Google AI Studio y Vertex AI. Desarrollado sobre una arquitectura Transformer Mixture-of-Experts (MoE) de alta eficiencia computacional, Gemini 1.5 Pro procesa de extremo a extremo hasta 2 horas de video continuo a 1 fps, 22 horas de grabaciones de audio o más de 60.000 líneas de código en una única consulta, logrando una tasa de recuperación del 99.2% en pruebas complejas de \"aguja en un pajar\" multimodal y fijando nuevos récords en comprensión documental y razonamiento cruzado.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/technologies/gemini/gemini-1-5/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "GPT-4o: Modelo Insignia Omnimodal con Integración Nativa de Texto, Visión y Audio en Tiempo Real y Rendimiento a Nivel GPT-4 Turbo",
+      "description": "OpenAI presenta GPT-4o (\"omni\"), su modelo fundacional diseñado desde cero para razonar de forma nativa a través de audio, visión y texto dentro de una única red neuronal unificada de extremo a extremo. Al eliminar la concatenación de modelos intermedios (reconocimiento de voz + LLM + síntesis de voz), GPT-4o responde a señales de audio en apenas 320 milisegundos (emulando la cadencia conversacional de un diálogo humano real), comprende modulaciones tonales y afectivas, interpreta transmisiones de video en vivo y reduce el coste por token en la API a la mitad en comparación con GPT-4 Turbo con el doble de velocidad de generación.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/hello-gpt-4o/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Tool Use en la API de Anthropic: Disponibilidad General para Integración de Funciones Externas y Agentes Autónomos con Validación Estricta de Esquemas",
+      "description": "Anthropic oficializa la disponibilidad general de Tool Use (llamadas a funciones) en la API de Claude para toda la familia de modelos Claude 3 y Claude 3.5, facilitando la conexión directa de los modelos con herramientas de software externas, APIs REST y bases de datos empresariales. El sistema incorpora validación rigurosa de esquemas JSON, soporte nativo para invocaciones paralelas a múltiples herramientas en un mismo turno conversacional y un modo de ejecución forzada que garantiza que el agente invoque las herramientas necesarias antes de emitir respuestas finales, potenciando la autonomía y fiabilidad de los flujos agénticos.",
+      "links": [
+        {
+          "text": "Anthropic Research",
+          "url": "https://www.anthropic.com/news/tool-use-ga",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Segment Anything Model (SAM): Modelo Fundacional para Segmentación Visual Zero-Shot con el Dataset SA-1B de 1.000 Millones de Máscaras",
+      "description": "Meta AI desvela y libera bajo licencia de código abierto el proyecto Segment Anything (SAM), un modelo fundacional para visión artificial capaz de generar máscaras de segmentación visual de alta precisión para cualquier objeto dentro de cualquier imagen con un solo clic, delimitación de caja o prompt textual en lenguaje natural. Entrenado sobre el corpus SA-1B (que comprende más de 11 millones de imágenes y 1.100 millones de máscaras de segmentación de alta resolución), SAM demuestra capacidades zero-shot sin precedentes, completando la inferencia de máscaras en apenas 50 milisegundos en el navegador y transformando áreas de edición visual, robótica y realidad virtual.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/segment-anything-foundation-model-image-segmentation/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Databricks",
+      "headline": "Databricks presenta DBRX, su modelo de lenguaje fundacional de arquitectura Mixture-of-Experts (MoE) de 132.000 millones de parámetros (36B activos) entrenado sobre 12 billones de tokens con un coste de cómputo de 10 millones de dólares, superando a Mixtral 8x7B y Llama 2 70B en generación de código, matemáticas y comprensión lógica, y liberando sus pesos de forma abierta bajo la licencia Databricks Open Model License.",
+      "links": [
+        {
+          "text": "Databricks Announcement",
+          "url": "https://www.databricks.com/blog/introducing-dbrx-new-state-of-the-art-open-llm",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Magic AI",
+      "headline": "La startup de inteligencia artificial para ingeniería de software Magic asegura 335 millones de dólares en una nueva ronda de financiamiento liderada por Eric Schmidt, Jane Street, Atlassian y Sequoia Capital a una valuación superior a 1.500 millones de dólares, acelerando el desarrollo de sus modelos de razonamiento LTM-2-mini dotados de una ventana de contexto récord de 100 millones de tokens para síntesis y refactorización autónoma de repositorios de software completos.",
+      "links": [
+        {
+          "text": "Magic AI Blog",
+          "url": "https://magic.dev/blog/335m-to-build-safe-superhuman-agi",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Abridge",
+      "headline": "La plataforma de inteligencia artificial clínica generativa Abridge cierra una ronda Serie C de 150 millones de dólares liderada conjuntamente por Lightspeed Venture Partners y Redpoint Ventures a una valuación de 850 millones de dólares, para expandir su tecnología de transcripción médica y estructuración automatizada de historias clínicas electrónicas en tiempo real en las principales redes hospitalarias de EE.UU.",
+      "links": [
+        {
+          "text": "Abridge Announcement",
+          "url": "https://www.abridge.com/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Writer",
+      "headline": "La compañía de inteligencia artificial generativa empresarial Writer completa una ronda Serie C de 200 millones de dólares liderada por Premji Invest, Radical Ventures e ICONIQ Growth a una valuación de 1.900 millones de dólares, para impulsar el despliegue de su familia de modelos fundacionales Palmyra y su plataforma de agentes autónomos empresariales integrados en flujos corporativos de marketing, finanzas y operaciones.",
+      "links": [
+        {
+          "text": "Writer Announcement",
+          "url": "https://writer.com/blog/series-c/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
