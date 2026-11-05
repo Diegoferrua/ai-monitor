@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-05",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Apple Intelligence Foundation Language Models",
+        "author": "Apple",
+        "description": "Presenta el informe técnico de los modelos de lenguaje fundacionales de Apple Intelligence, diseñados para ejecutarse de manera privada y altamente eficiente tanto en dispositivos de borde (un modelo de ~3.000 millones de parámetros) como en servidores en la nube dedicados (Private Cloud Compute). Incorpora una arquitectura Transformer densa con Grouped-Query Attention (GQA), incrustaciones compartidas de entrada y salida, normalización RMSNorm y una ventana de contexto de alta velocidad optimizada mediante cuantización de pesos y activaciones a bajo bit (4-bit/2-bit). En benchmarks de seguimiento de instrucciones, privacidad y resistencia a inyecciones de prompts adversariales, los modelos de Apple demuestran una fidelidad superior y una experiencia de usuario sin fricción en tareas de redacción, síntesis de notificaciones y automatización de acciones del sistema operativo.",
+        "analogy": "🔒 Como un mayordomo y asesor legal privado que vive de forma permanente dentro de una caja fuerte de titanio en tu propia oficina: en lugar de enviar tus cartas confidenciales, contratos y correspondencia bancaria a un consorcio distante a través del correo postal, el asesor lee, resume y redacta las respuestas al instante a puerta cerrada sin que una sola página de información privada abandone la habitación jamás.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.21075",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SmolLM: Blazing Fast and Remarkably Powerful Small Language Models",
+        "author": "Loubna Ben Allal, Anton Lozhkov, Elie Bakouch, Gabriel Martin Blazquez, Lewis Tunstall, Leandro von Werra, Thomas Wolf (Hugging Face)",
+        "description": "Introduce la familia SmolLM, una serie de modelos de lenguaje ultracompactos (135 millones, 360 millones y 1.700 millones de parámetros) preentrenados sobre SmolLM-Corpus, una selección rigurosa de datos educativos de alta calidad sintéticos y curados (Cosmopedia v2, FineWeb-Edu y Python-Edu). El trabajo demuestra empíricamente que la curaduría pedagógica del contenido de entrenamiento supera con creces la simple acumulación ciega de datos web crudos, permitiendo que SmolLM-1.7B supere holgadamente a modelos fundacionales consolidados de 2 a 3 veces su tamaño (como MobileLLM, Qwen2-1.5B y Phi-1.5) en razonamiento formal (GSM8K), conocimiento general (MMLU) y pruebas de sentido común (ARC).",
+        "analogy": "📚 Como educar a un joven prodigio desde la infancia exclusivamente con los libros de texto más claros y pedagógicos de la humanidad, enciclopedias científicas depuradas y lecciones universitarias magistrales: en lugar de dejar que aprenda divagando entre rumores ruidosos y discusiones caóticas de la calle, el estudiante asimila las leyes de la lógica y la gramática con tal rigor y pureza mental que supera resolviendo problemas a adultos que tienen el doble de edad y experiencia empírica dispersa.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.13679",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Yi: Open Foundation Models by 01.AI",
+        "author": "Alex Young, Bei Chen, Chao Li, Chengen Huang, Ge Zhang, Guanwei Zhang, Heng Zhao, et al. (01.AI)",
+        "description": "Presenta la serie de modelos fundacionales bilingües (inglés-chino) Yi (6B y 34B parámetros), preentrenados sobre un corpus de 3.1 billones de tokens de alta fidelidad filtrados mediante pipelines de deduplicación en cascada y clasificadores basados en calidad semántica. Destaca por extender de forma nativa la ventana de contexto a 200.000 tokens mediante la ampliación de la base de frecuencia de RoPE (Rotary Position Embeddings), permitiendo un análisis exhaustivo y sin degradación de bibliotecas de código y documentos monumentales. En evaluaciones estandarizadas de razonamiento matemático, comprensión lógica y evaluación ciega en Chatbot Arena, Yi-34B se posicionó como el modelo abierto más potente de su categoría, superando a LLaMA-2 70B con la mitad de parámetros.",
+        "analogy": "📖 Como un distinguido políglota y archivista histórico que domina fluidamente dos idiomas y tiene la capacidad extraordinaria de desplegar sobre una mesa de lectura una hilera de 20 tomos enciclopédicos completos abiertos en paralelo: puede conectar una frase leída en el primer tomo con una cita del último sin olvidar una sola coma, respondiendo preguntas minuciosas con una exactitud y elocuencia impecables.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.04652",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data",
+        "author": "Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, Hengshuang Zhao (HKUST, TikTok)",
+        "description": "Propone Depth Anything, un modelo fundacional de estimación monocular de profundidad de alta precisión diseñado para resolver la escasez de datos tridimensionales etiquetados. Aprovechando más de 62 millones de imágenes no etiquetadas del mundo real mediante un esquema semi-supervisado de destilación estudiante-profesor con perturbaciones deliberadas en el espacio visual, el modelo aprende a inferir mapas de profundidad densos con contornos afilados y gradientes continuos sobre cualquier escena arbitraria sin requerir sensores LiDAR ni calibraciones de cámara previas. Depth Anything supera radicalmente a los modelos supervisados tradicionales como MiDaS, exhibiendo capacidades de generalización zero-shot formidables para vehículos autónomos, reconstrucción 3D y videojuegos.",
+        "analogy": "📐 Como un virtuoso pintor renacentista que, sin haber tocado jamás un telémetro láser ni una cinta métrica en su vida, es capaz de contemplar cualquier cuadro o fotografía plana e intuir instantáneamente con precisión matemática la distancia exacta, el volumen y el relieve de cada piedra, rama o edificio en el horizonte, comprendiendo el espacio tridimensional de forma innata y orgánica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.10891",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "InternVL 1.5: Analyzing and Improving Vision-Language Models with Open-Source Data",
+        "author": "Zhe Chen, Weiyun Wang, Hao Tian, Shenglong Ye, Zhangwei Gao, Erfei Cui, Wenwen Peng, Zixuan Chen, et al. (OpenGVLab, Shanghai AI Laboratory)",
+        "description": "Desarrolla InternVL 1.5, un modelo multimodal de código abierto diseñado para cerrar la brecha de rendimiento entre los modelos abiertos y los gigantes comerciales propietarios como GPT-4V. Introduce una estrategia dinámica de recorte en mosaicos de alta resolución (Dynamic High-Resolution) capaz de procesar imágenes de hasta resolución 4K dividiéndolas en cuadrículas adaptativas según su relación de aspecto nativa, preservando detalles microscópicos en texto OCR, gráficos técnicos y planos esquemáticos. Respaldado por el codificador visual InternViT-6B y un pipeline de entrenamiento bilingüe de datos sintéticos enriquecidos, InternVL 1.5 logra el primer puesto en benchmarks de reconocimiento documental y razonamiento multimodal como MathVista, OCRBench y DocVQA.",
+        "analogy": "🔍 Como un perito inspector equipado con una lente de aumento fotográfica inteligente: en lugar de aplastar y deformar un plano de ingeniería o un contrato manuscrito de alta resolución para que entre en una pequeña pantalla borrosa, el perito divide la imagen en cuadrículas nítidas individuales, analizando con la misma lucidez la composición arquitectónica general y la letra chica diminuta de las notas al pie sin perder ningún píxel.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.16821",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "InstantID: Zero-shot Identity-Preserving Generation in Seconds",
+        "author": "Qixun Wang, Xu Bai, Haofan Wang, Zekui Qin, Anthony Chen (InstantX Team)",
+        "description": "Formula InstantID, una metodología de difusión generativa para síntesis visual que preserva con fidelidad absoluta la identidad fisonómica de un individuo a partir de una única imagen de referencia en cuestión de segundos. A diferencia de técnicas convencionales como LoRA o DreamBooth que demandan decenas de fotos y costosas sesiones de ajuste fino por usuario, InstantID desacopla el condicionamiento facial mediante una arquitectura IdentityNet que fusiona incrustaciones semánticas de rostro profundo con señales estructurales de puntos clave (landmarks) en una sola pasada de inferencia, permitiendo modificar estilos artísticos, fondos y poses corporales sin alterar jamás los rasgos fisonómicos distintivos de la persona.",
+        "analogy": "🎭 Como un retratista de élite que con solo echar un vistazo de tres segundos a una foto de tu documento de identidad puede pintarte de inmediato como un astronauta en Marte, un caballero templario o un detective futurista, capturando a la perfección la forma inconfundible de tu mirada, pómulos y sonrisa en cada lienzo sin hacerte posar durante horas en el taller.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.07519",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+        "author": "Zhibin Gou, Zhihong Shao, Yeyun Gong, Yelong Shen, Yujiu Yang, Nan Duan, Weizhu Chen (Tsinghua University, Microsoft)",
+        "description": "Introduce el marco CRITIC, un protocolo interactivo que dota a los modelos de lenguaje de la habilidad de evaluar, contrastar y autocorregir de manera iterativa sus propias respuestas interactuando activamente con herramientas y entornos externos (como motores de búsqueda web, intérpretes interactivos de Python y comprobadores sintácticos de código). Inspirado en el proceso cognitivo humano de contrastar borradores frente a fuentes fidedignas antes de emitir un veredicto, CRITIC identifica inconsistencias fácticas, errores de cálculo aritmético y excepciones en tiempo de ejecución, retroalimentando el razonamiento del modelo y elevando drásticamente la tasa de éxito en resolución de problemas en HotpotQA, GSM8K y HumanEval.",
+        "analogy": "📝 Como un redactor de investigación riguroso que no se limita a entregar su primer borrador de memoria a la editorial, sino que se sienta frente a un navegador web abierto, una calculadora científica y un compilador de código para verificar metódicamente cada afirmación, dato y fórmula antes de enviar el manuscrito final a imprenta, garantizando una publicación impecable y libre de errores.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.11738",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AgentGym: An Open-Access Gymnasium for Training Language Agents",
+        "author": "Zhiheng Xi, Wentao Li, Jiazhan Feng, Yiwen Ding, Wei He, Boyang Hong, Dingnan Lu, Junzhe Chen, Rui Zheng, Tao Gui, Qi Zhang, Xuanjing Huang (Fudan University)",
+        "description": "Construye AgentGym, una plataforma integral y modular de código abierto diseñada para el entrenamiento, evaluación y evolución continua de agentes de inteligencia artificial generalistas a través de múltiples entornos interactivos (navegación web, videojuegos de estrategia, herramientas de sistemas operativos y manipulación encarnada). AgentGym estandariza los espacios de acción y observación mediante un protocolo unificado, registra trayectorias completas de exploración y retroalimentación ambiental, e introduce la suite AgentEval junto con el algoritmo AgentTraj para optimizar la toma de decisiones secuencial y la generalización de agentes ante tareas y mundos virtuales nunca antes vistos.",
+        "analogy": "🏋️ Como un centro de alto rendimiento olímpico y pista de obstáculos multidisciplinaria para atletas digitales: en lugar de evaluar la destreza de un deportista mediante un simple examen teórico escrito, lo sumerge sucesivamente en pruebas de natación, escalada en roca, navegación en kayak y carreras con vallas bajo condiciones climáticas cambiantes, obligándolo a desarrollar reflejos, resistencia y capacidad de adaptación integral en tiempo real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.04151",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+        "author": "John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, Ofir Press (Princeton University)",
+        "description": "Desarrolla SWE-agent, un sistema autónomo de ingeniería de software estructurado en torno al concepto pionero de Interfaz Agente-Computadora (Agent-Computer Interface - ACI). Reconociendo que las herramientas convencionales de terminal y sistemas de archivos fueron diseñadas para la interacción visual humana y resultan ineficientes para los LLMs, SWE-agent diseña herramientas de terminal ergonómicas específicas para modelos (visualización de código por ventanas acotadas, comandos de búsqueda de funciones estructurados, linters automáticos previos al guardado y scripts de reproducción de errores). SWE-agent iguala el rendimiento de sistemas comerciales en el benchmark SWE-bench, resolviendo de forma autónoma el 12.5% de los problemas de software del mundo real en repositorios reales de GitHub.",
+        "analogy": "🛠️ Como diseñar una cabina de control y herramientas ergonómicas especializadas para un robot industrial de precisión: en vez de forzar al robot a utilizar torpemente un destornillador manual para humanos y mirar monitores con letras diminutas, se le instala un sistema de telemetría directa, sensores de torque y guías magnéticas que le permiten localizar una pieza defectuosa, reemplazarla y calibrar el motor con absoluta fluidez sin cometer fallas mecánicas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2405.15793",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+        "author": "Jay Shah, Ganesh Bikshandi, Ying Zhang, Vijay Thakkar, Pradeep Ramani, Tri Dao (Together AI, NVIDIA, Princeton University)",
+        "description": "Rediseña el algoritmo fundamental de atención FlashAttention para exprimir al máximo la arquitectura Hopper (GPUs NVIDIA H100), alcanzando una aceleración de 1.5x a 2x sobre FlashAttention-2 y operando a más del 75% del rendimiento teórico máximo en punto flotante FP16 (hasta 740 TFLOPS) y superando 1.2 PFLOPS con precisión FP8. Introduce tres innovaciones arquitectónicas clave: pipelining asíncrono de software que solapa transferencias de memoria con Tensor Memory Accelerator (TMA) y cálculo GEMM en Tensor Cores, un pipeline entrelazado de GEMM y Softmax especializado por warps que oculta la latencia de normalización exponencial, y procesamiento incoherente de matrices para reducir drásticamente los errores de cuantización en representaciones de baja precisión.",
+        "analogy": "🏎️ Como reinventar por completo la parada en boxes de un equipo campeón de Fórmula 1: en lugar de esperar a que el monoplaza se detenga para que los mecánicos tomen las llaves inglesas y busquen los neumáticos, un sistema automatizado de rieles magnéticos impulsa las ruedas de recambio a toda velocidad en el aire de forma sincronizada, de modo que en el microsegundo exacto en que el auto frena las cuatro tuercas ya han sido aflojadas y aseguradas, pulverizando los tiempos de servicio en pista.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.08608",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Splitwise: Efficient Generative LLM Serving Using Phase Splitting",
+        "author": "Pratyush Patel, Esha Choukse, Chaojie Zhang, Aashaka Shah, Íñigo Goiri, Saeed Maleki, Ricardo Bianchini (Microsoft Research)",
+        "description": "Propone Splitwise, una arquitectura de despliegue e inferencia de modelos de lenguaje a gran escala que desacopla físicamente la fase de procesamiento inicial del prompt (prefill) de la fase de generación recurrente de tokens (decoding) en clústeres independientes de hardware. Al reconocer que la fase de prefill está fuertemente limitada por la capacidad de cómputo (compute-bound) y la de decoding por el ancho de banda de memoria (memory bandwidth-bound), Splitwise transfiere de forma transparente el estado de la memoria intermedia de claves y valores (KV Cache) a través de interconexiones de alta velocidad, eliminando interferencias entre peticiones, reduciendo la latencia de generación hasta en un 2.3x y disminuyendo los costes de infraestructura operativa en un 20%.",
+        "analogy": "🍳 Como reorganizar un prestigioso restaurante de alta cocina separando la nave industrial de preparación previa (donde brigadas enteras de cocineros hornean masas y reducen caldos en hornos gigantes) de la barra elegante de emplatado final (donde los chefs decoran y entregan cada plato al comensal a ritmo constante): los cocineros pesados nunca tropiezan con los camareros y cada mesa recibe sus platos en una cadencia perfecta sin interrupciones ni demoras.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.18677",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Fast Inference from Transformers via Speculative Decoding",
+        "author": "Yaniv Leviathan, Matan Kalman, Yossi Matias (Google Research)",
+        "description": "Formula el marco seminal de Decodificación Especulativa (Speculative Decoding), una técnica matemática de inferencia acelerada para modelos autorregresivos que reduce sustancialmente el cuello de botella del ancho de banda de memoria de la GPU sin ninguna pérdida de calidad matemática o distributiva en el texto generado. Empleando un modelo de lenguaje ligero y veloz (modelo borrador) para especular secuencias cortas de tokens consecutivos, el modelo fundacional masivo objetivo evalúa y valida todos los tokens candidatos en paralelo en un único pase de atención hacia adelante, aceptando ráfagas de múltiples tokens correctos por iteración y alcanzando aceleraciones de inferencia de 2x a 3x en hardware estándar.",
+        "analogy": "⚡ Como un escribano o taquígrafo judicial ultrarrápido que va redactando borradores de las frases predecibles unos segundos antes de que el magistrado termine de hablar: el juez solo necesita echar un vistazo fugaz para aprobar con un asentimiento cinco palabras de golpe en vez de tener que articular penosamente cada sílaba una por una, triplicando la velocidad de transcripción de la sentencia sin cambiar ni un ápice de la ley.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2211.17192",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaDev: Descubrimiento de Algoritmos de Ordenación y Hashing más Rápidos mediante Aprendizaje por Refuerzo Profundo en Nivel Ensamblador",
+      "description": "Google DeepMind publica en Nature su sistema AlphaDev, un agente basado en aprendizaje por refuerzo profundo que opera directamente sobre instrucciones de ensamblador de bajo nivel para descubrir algoritmos computacionales fundamentales más eficientes. AlphaDev descubrió rutinas de ordenación hasta un 70% más rápidas para secuencias cortas y un 1.7% más rápidas para secuencias de más de 250.000 elementos, siendo integrado oficialmente en la biblioteca estándar de C++ (LLVM libc++), la primera actualización estructural a dicho componente central de la infraestructura de software global en más de una década.",
+      "links": [
+        {
+          "text": "Google DeepMind Research",
+          "url": "https://deepmind.google/discover/blog/alphadev-discovers-faster-sorting-algorithms/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Assistants API v2: Expansión de Búsqueda Vectorial con File Search, Ejecución Paralela de Herramientas y Streaming Nativo",
+      "description": "OpenAI lanza la versión 2 de su Assistants API, incorporando la herramienta File Search con gestión automatizada de Vector Stores capaz de indexar hasta 10.000 archivos por asistente con estrategias de chunking personalizadas y búsqueda híbrida. La actualización introduce streaming en tiempo real para eventos de ejecución y respuestas de texto, soporte de ejecución concurrente de funciones y herramientas de Code Interpreter, simplificando drásticamente el desarrollo y despliegue de agentes inteligentes empresariales sin infraestructura externa compleja.",
+      "links": [
+        {
+          "text": "OpenAI Platform",
+          "url": "https://openai.com/index/new-embedding-models-and-api-updates/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Prompt Generator & Workbench en Anthropic Console: Optimización Guiada y Metaprompting Automático para Claude",
+      "description": "Anthropic introduce el Generador de Prompts y un renovado Workbench interactivo en su consola de desarrolladores. Utilizando técnicas avanzadas de metaprompting y evaluación semántica, el sistema permite a los ingenieros describir una tarea en lenguaje natural cotidiano y recibir automáticamente un prompt de grado de producción minuciosamente estructurado, con delimitadores XML, variables dinámicas y ejemplos few-shot adaptados específicamente a las directivas de razonamiento de Claude 3 y Claude 3.5.",
+      "links": [
+        {
+          "text": "Anthropic Console Update",
+          "url": "https://www.anthropic.com/news/prompt-generator",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "DINOv2: Modelos Fundacionales de Visión por Computadora Auto-supervisados para Extracción Universal de Características Visuales",
+      "description": "Meta AI libera DINOv2, una familia de modelos de visión basados en Vision Transformers (ViT) entrenados íntegramente mediante aprendizaje auto-supervisado sin necesidad de etiquetas humanas ni texto emparejado sobre un corpus curado de 142 millones de imágenes (LVD-142M). DINOv2 genera representaciones visuales densas de altísima fidelidad que transfieren directamente a tareas como estimación de profundidad monocular, segmentación semántica y correspondencia espacial sin ningún ajuste fino específico, superando a métodos supervisados tradicionales y modelos multimodales débilmente supervisados.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/blog/dino-v2-computer-vision-self-supervised-learning/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Cognition AI",
+      "headline": "Cognition AI, los creadores de Devin —el primer ingeniero de software totalmente autónomo—, completa una ronda de financiación Serie A de 175 millones de dólares liderada por Founders Fund a una valuación de 2.000 millones de dólares, expandiendo el acceso empresarial a Devin para automatizar tareas complejas de refactorización de bases de código, corrección de bugs y migración de dependencias en producción.",
+      "links": [
+        {
+          "text": "Cognition AI Announcement",
+          "url": "https://www.cognition.ai/blog/introducing-devin",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Runway",
+      "headline": "La plataforma de medios generativos Runway anuncia una alianza estratégica multimillonaria con los principales estudios cinematográficos y productoras globales para integrar su modelo fundacional Gen-3 Alpha, dotando a directores de cine y diseñadores de efectos visuales de control milimétrico sobre trayectorias de cámara, iluminación cinemática y consistencia temporal de escenas.",
+      "links": [
+        {
+          "text": "Runway Blog",
+          "url": "https://runwayml.com/blog/introducing-gen-3-alpha/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Perplexity AI",
+      "headline": "Perplexity AI cierra una ronda de financiación de 500 millones de dólares liderada por Institutional Venture Partners (IVP) a una valuación de 9.000 millones de dólares, acelerando la expansión global de su motor de búsqueda empresarial Perplexity Enterprise Pro y consolidando su programa de monetización compartida para publicaciones periodísticas de prestigio.",
+      "links": [
+        {
+          "text": "Perplexity Hub",
+          "url": "https://www.perplexity.ai/hub/blog",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "SambaNova Systems",
+      "headline": "SambaNova Systems presenta su plataforma de inferencia SN40L a escala de centro de datos, demostrando la capacidad de ejecutar modelos fundacionales masivos de más de 400.000 millones de parámetros como Llama 3.1 405B a una velocidad de procesamiento sin precedentes de 132 tokens por segundo por usuario, desafiando el monopolio de las GPUs convencionales con su arquitectura Reconfigurable Dataflow Unit (RDU).",
+      "links": [
+        {
+          "text": "SambaNova Press Release",
+          "url": "https://sambanova.ai/press-releases/sambanova-inference-sn40l",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
