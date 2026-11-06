@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-06",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "LLaMA: Open and Efficient Foundation Language Models",
+        "author": "Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, Guillaume Lample (Meta AI)",
+        "description": "Presenta la serie de modelos fundacionales de pesos abiertos LLaMA (de 7B a 65B parámetros), demostrando empíricamente que es posible entrenar modelos con rendimiento de vanguardia utilizando exclusivamente conjuntos de datos de acceso público (1.0 a 1.4 billones de tokens) sin depender de datos propietarios o no reproducibles. El trabajo demostró que LLaMA-13B superaba a GPT-3 (175B) en la gran mayoría de benchmarks consumiendo una fracción del cómputo de inferencia, y que LLaMA-65B era competitivo con Chinchilla-70B y PaLM-540B. LLaMA sentó las bases de la revolución del código abierto en inteligencia artificial moderna.",
+        "analogy": "🏎️ Como publicar los planos completos y la fórmula de afinación de un motor de carreras ultraliviano y de alto rendimiento para que cualquier taller mecánico independiente del mundo pueda construirlo, inspeccionarlo y optimizarlo en su garaje, en lugar de obligar a todos los conductores a rentar automóviles cerrados con el capó sellado de fábrica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2302.13971",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Gemma: Open Models Based on Gemini Research and Technology",
+        "author": "Gemma Team, Thomas Mesnard, Cassidy Hardin, Robert Dadashi, Surya Bhupatiraju, Shreya Pathak, Laurent Sifre, Morgane Rivière, Mihir Sanjay Kale, Juliette Love, Pouya Tafti, Léonard Hussenot et al. (Google DeepMind)",
+        "description": "Introduce Gemma (en variantes de 2.000 y 7.000 millones de parámetros), una familia de modelos de pesos abiertos construida sobre los mismos avances arquitectónicos, infraestructura de entrenamiento en TPU v4/v5e y recetas de datos de Gemini. Incorpora innovaciones como Rotary Position Embeddings (RoPE), activaciones GeGLU no lineales, normalización RMSNorm en cada subcapa y un riguroso post-entrenamiento de alineación mediante aprendizaje por refuerzo con retroalimentación humana (RLHF). Gemma supera a otros modelos abiertos de escala similar en 11 de 18 pruebas estándar académicas de razonamiento, matemáticas, código y comprensión lingüística general.",
+        "analogy": "⌚ Como un maestro relojero suizo que toma los engranajes microscópicos de titanio, los escapes de alta frecuencia y los cálculos de precisión calibrados de un monumental reloj astronómico de torre y los sintetiza con maestría en un cronómetro de pulsera compacto que no pierde un solo milisegundo al llevarlo a cualquier lugar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.08295",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Zephyr: Direct Distillation of LM Alignment",
+        "author": "Lewis Tunstall, Edward Beeching, Nathan Lambert, Nazneen Rajani, Kashif Rasul, Younes Belkada, Shengyi Huang, Leandro von Werra, Clémentine Fourrier, Nathan Habib, Nathan Sarrazin, Omar Sanseviero, Alexander M. Rush, Thomas Wolf (Hugging Face)",
+        "description": "Presenta el protocolo distilled Direct Preference Optimization (dDPO), demostrando que es posible alinear eficazmente modelos de lenguaje de 7.000 millones de parámetros para alcanzar un comportamiento conversacional indistinguible de modelos diez veces mayores (como LLaMA2-70B Chat) sin necesidad de recurrir al costoso y complejo entrenamiento de modelos de recompensa PPO. Al filtrar iterativamente datos de preferencia sintéticos destilados (UltraFeedback) y optimizar directamente la política del modelo frente al feedback humano, Zephyr-7B estableció un hito en alineación abierta de alta eficiencia.",
+        "analogy": "♟️ Como un joven aprendiz de ajedrez que, en lugar de memorizar cientos de manuales enciclopédicos o perder años jugando millones de partidas a ciegas por ensayo y error, estudia metódicamente los cuadernos de anotaciones y correcciones tácticas exactas de un gran maestro mundial, absorbiendo su juicio posicional y reflejos en tiempo récord.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.16944",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Learning Transferable Visual Models From Natural Language Supervision (CLIP)",
+        "author": "Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever (OpenAI)",
+        "description": "Introduce CLIP (Contrastive Language-Image Pre-training), un paradigma transformador que entrena simultáneamente un codificador visual y un codificador de texto mediante una función de pérdida contrastiva simétrica InfoNCE sobre 400 millones de pares (imagen, texto) extraídos de la web. En lugar de predecir clases cerradas y artificiales como en ImageNet, CLIP aprende a proyectar conceptos visuales y oraciones descriptivas en un espacio latente compartido común. Esto permite una clasificación visual zero-shot con una robustez excepcional ante cambios de distribución, convirtiéndose en el pilar fundacional de la visión multimodal moderna.",
+        "analogy": "🖼️ Como juntar en una misma galería a un crítico de arte y a un literato políglota para que recorran 400 millones de pinturas con sus comentarios al pie, aprendiendo un vocabulario universal donde cualquier lienzo visual y cualquier metáfora escrita apuntan exactamente a las mismas coordenadas conceptuales sin requerir etiquetas rígidas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2103.00020",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Adding Conditional Control to Text-to-Image Diffusion Models (ControlNet)",
+        "author": "Lvmin Zhang, Anyi Rao, Maneesh Agrawala (Stanford University)",
+        "description": "Desarrolla ControlNet, una arquitectura neuronal de extremo a extremo que permite condicionar de forma precisa y estructurada la generación de modelos de difusión de texto a imagen sin destruir sus pesos fundacionales originales. ControlNet bloquea los pesos preentrenados del modelo base y duplica sus capas de codificación mediante conexiones residuales iniciadas con convoluciones de peso cero (zero convolutions). Esto permite guiar la síntesis espacialmente mediante bordes Canny, mapas de profundidad, poses corporales humanas (OpenPose), trazos de boceto o segmentaciones semánticas, dotando a la IA generativa de control geométrico milimétrico.",
+        "analogy": "📐 Como colocarle a un pintor expresionista una serie de plantillas transparentes y reglas milimétricas sobre el lienzo en blanco: el artista conserva intacto todo su talento de color, textura y estilo, pero sus trazos quedan perfectamente gobernados por la silueta, postura y perspectiva física que le impone la guía.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2302.05543",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Flamingo: a Visual Language Model for Few-Shot Learning",
+        "author": "Jean-Baptiste Alayrac, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, Arthur Mensch, Katherine Millican, Malcolm Reynolds, Roman Ring, Eliza Rutherford, Serkan Cabi, Hanxiao Liu, Aäron van den Oord et al. (Google DeepMind)",
+        "description": "Presenta Flamingo, un modelo multimodal pionero diseñado para procesar secuencias entrelazadas arbitrarias de imágenes, videos y texto, resolviendo tareas complejas de comprensión visual en régimen few-shot con solo un par de ejemplos ilustrativos. Flamingo congela modelos de lenguaje y codificadores visuales consolidados de gran escala, interconectándolos mediante un Perceiver Resampler que transforma cuadrículas densas de píxeles en un número fijo de tokens visuales y capas de atención cruzada compuertas (gated cross-attention), logrando un razonamiento fluido sobre contenidos visuales dinámicos sin degradar la capacidad lingüística previa.",
+        "analogy": "👁️ Como conectarle un nervio óptico de ultra-alta velocidad y un intérprete visual instantáneo a un sabio enciclopédico ciego: sin necesidad de reeducar ni formatear su vasta memoria lingüística, el intérprete proyecta descripciones conceptuales directas de lo que ocurre en video ante sus ojos, permitiéndole responder preguntas complejas al instante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2204.14198",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+        "author": "Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Florencia Leal, Ed Chi, Quoc Le, Denny Zhou (Google Research)",
+        "description": "Descubre que inducir a los modelos de lenguaje a generar secuencias intermedias y explícitas de razonamiento deductivo paso a paso (Chain-of-Thought o CoT) antes de proporcionar la respuesta final desbloquea de manera espectacular capacidades latentes de resolución de problemas aritméticos, lógica simbólica y sentido común. El estudio demostró empíricamente que el razonamiento encadenado es una propiedad emergente que surge con el escalado de parámetros y cómputo, transformando radicalmente la evaluación de modelos y cimentando las bases de los paradigmas contemporáneos de inferencia reflexiva y test-time compute.",
+        "analogy": "📝 Como un estudiante que deja de intentar adivinar mentalmente la respuesta de un problema algebraico complejo y, en su lugar, escribe con lápiz en el margen del examen cada paso aritmético intermedio, despejando variables una por una hasta llegar con certeza inquebrantable a la solución correcta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2201.11903",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "STaR: Bootstrapping Reasoning With Reasoning",
+        "author": "Eric Zelikman, Yuhai Jia, Nicholas Roberts, Nick Haber (Stanford University)",
+        "description": "Propone el método STaR (Self-Taught Reasoner), un bucle algorítmico auto-supervisado en el cual un modelo de lenguaje genera de forma autónoma justificaciones paso a paso para resolver problemas; cuando la respuesta producida es correcta, esa trayectoria de razonamiento se incorpora de inmediato a los datos de reentrenamiento del modelo. Para los casos donde falla, el sistema proporciona una pista correctiva (racionalización) para inducir al modelo a reconstruir el camino lógico adecuado. De este modo, el agente perfecciona progresivamente su capacidad de razonamiento formal sin requerir inmensos volúmenes de anotaciones humanas manuales.",
+        "analogy": "🔬 Como un investigador autodidacta en un laboratorio que ensaya miles de hipótesis complejas: cada vez que un experimento arroja un resultado empíricamente verificado, documenta el procedimiento paso a paso en su bitácora personal y estudia sus propios aciertos para resolver enigmas científicos cada vez más desafiantes.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2203.14465",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "WebGPT: Browser-assisted question-answering with human feedback",
+        "author": "Reiichiro Nakano, Jacob Hilton, Suchir Balaji, Jeff Wu, Long Ouyang, Christina Kim, Christopher Hesse, Shantanu Jain, Vineet Kosaraju, William Saunders, Xu Jiang, Karl Cobbe, Tyna Eloundou, Gretchen Krueger, Kevin Button, Matthew Knight, Benjamin Chess, John Schulman (OpenAI)",
+        "description": "Desarrolla WebGPT, un sistema pionero de agente de respuesta a preguntas complejas basado en la interacción directa con la web mediante un navegador en modo texto. Utilizando clonación de comportamiento y aprendizaje por refuerzo a partir de retroalimentación humana (RLHF), el agente aprende a formular consultas de búsqueda eficaces en Google, desplazarse por páginas web, hacer clic en hipervínculos relevantes y extraer citas textuales verificables como evidencia. Esta arquitectura redujo sustancialmente las alucinaciones fácticas en preguntas abiertas y sentó las bases operativas de herramientas como SearchGPT y Perplexity.",
+        "analogy": "📰 Como un periodista de investigación riguroso que, en vez de escribir un reportaje de memoria arriesgándose a cometer errores fácticos, abre su navegador, busca fuentes primarias oficiales, contrasta datos en vivo y redacta cada párrafo con citas y enlaces exactos a los documentos originales que respaldan sus afirmaciones.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2112.09332",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "author": "Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré (Stanford University)",
+        "description": "Presenta FlashAttention, un algoritmo de atención exacta consciente de las operaciones de entrada/salida (IO-aware) que optimiza radicalmente la transferencia de datos entre la memoria de alto ancho de banda (HBM) de la GPU y la memoria estática ultra-rápida en chip (SRAM). Al dividir la matriz de atención en bloques mediante técnicas de tiling y fusionar el cómputo de la función softmax sin materializar nunca la pesada matriz cuadrática N x N en la memoria HBM, FlashAttention logra una reducción del consumo de memoria de cuadrático a lineal y acelera el entrenamiento e inferencia de 2 a 4 veces, convirtiéndose en el estándar universal de la infraestructura moderna de Transformers.",
+        "analogy": "⚡ Como un chef de alta cocina que organiza todos los ingredientes picados en pequeños recipientes justo sobre su mesa de trabajo en la cocina, cocinando el plato de principio a fin allí mismo en lugar de correr mil veces ida y vuelta al almacén subterráneo a buscar cada pizca de sal, eliminando por completo los cuellos de botella de transporte.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2205.14135",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale",
+        "author": "Samyam Rajbhandari, Conglong Li, Zhewei Yao, Minjia Zhang, Reza Yazdani Aminabadi, Ammar Ahmad Awan, Jeff Rasley, Yuxiong He (Microsoft)",
+        "description": "Presenta DeepSpeed-MoE, una arquitectura de software integral para entrenamiento e inferencia masiva y ultra-eficiente de modelos Mixture-of-Experts (MoE) a escala de cientos de miles de millones de parámetros. Introduce optimizaciones algorítmicas como MoE residual y gating top-1 con balanceo de carga, junto con un motor de inferencia altamente optimizado y kernels CUDA especializados que reducen el tamaño de los modelos MoE hasta 3.7x y quintuplican la velocidad de inferencia (5x throughput) a un tercio del costo de infraestructura de modelos densos convencionales.",
+        "analogy": "🏢 Como un departamento de consultoría multidisciplinario de élite compuesto por cientos de especialistas temáticos (abogados, químicos, economistas, programadores): en lugar de convocar a los cientos de expertos a cada reunión para responder cualquier consulta básica, un recepcionista inteligente canaliza cada pregunta estrictamente hacia los dos especialistas exactos en la materia, reduciendo drásticamente las horas de trabajo, costos de oficina y tiempos de espera sin perder un ápice de rigurosidad técnica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2201.05596",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Punica: Multi-Tenant LoRA Serving",
+        "author": "Lequn Chen, Zihao Ye, Yonghao Zhuang, Sizhe Chen, Tianqi Chen, Arvind Krishnamurthy (University of Washington, OctoML, Carnegie Mellon University)",
+        "description": "Desarrolla Punica, un sistema pionero para el servicio multi-inquilino de miles de adaptadores LoRA sobre un único modelo fundacional congelado en clústeres de GPUs. Introduce un nuevo diseño de kernel de GPU denominado Segmented Gather Matrix-Vector Multiplication (SGMV), que permite agrupar en un único lote unificado solicitudes concurrentes destinadas a adaptadores LoRA independientes sin duplicar los pesos del modelo base en memoria, multiplicando el throughput del sistema hasta por 12x y reduciendo drásticamente los costos de infraestructura para aplicaciones multi-inquilino.",
+        "analogy": "🏢 Como un rascacielos corporativo que comparte una misma estructura física de cimientos, columnas maestras y red eléctrica para todos los pisos, pero donde cada empresa instala sus propios paneles modulares, decoración de oficina y cerraduras biométricas personalizadas sin necesidad de edificar un rascacielos independiente para cada inquilino.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.18547",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "FunSearch: Descubrimiento de Nuevo Conocimiento Matemático y Algorítmico mediante LLMs Evolutivos en Código",
+      "description": "Google DeepMind publica en Nature su sistema FunSearch, el primer método impulsado por modelos de lenguaje capaz de generar descubrimientos matemáticos comprobables sobre problemas abiertos de la ciencia que eludían a los matemáticos humanos (como el problema de los límites de conjuntos cap-set y algoritmos de empaquetamiento en línea). FunSearch empareja un modelo de lenguaje que formula hipótesis creativas en código Python con un evaluador algorítmico formal automatizado que verifica y califica rigurosamente las soluciones, retroalimentando evolutivamente los mejores programas sin intervención humana.",
+      "links": [
+        {
+          "text": "Google DeepMind Research",
+          "url": "https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "GPT Store y Ecosistema de Custom GPTs: Creación y Despliegue de Asistentes Especializados sin Código",
+      "description": "OpenAI lanza oficialmente la GPT Store y la plataforma de Custom GPTs, permitiendo a desarrolladores, investigadores y empresas construir versiones personalizadas de ChatGPT adaptadas a flujos de trabajo e industrias específicas mediante instrucciones en lenguaje natural, bases de conocimiento indexadas y llamadas a APIs externas. La plataforma introduce esquemas de monetización para creadores, controles avanzados de privacidad y seguridad empresarial, y la posibilidad de invocar agentes especializados contextualmente dentro de cualquier espacio de trabajo interactivo.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-the-gpt-store/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude 3 Opus: Modelo Insignia de Frontera para Razonamiento Complejo, Codificación Avanzada y Análisis Multimodal",
+      "description": "Anthropic presenta Claude 3 Opus, el modelo insignia de máxima inteligencia de la familia Claude 3, superando a GPT-4 en las principales evaluaciones estandarizadas de razonamiento de posgrado (GPQA), matemáticas avanzadas (GSM8K, MATH) y generación de código (HumanEval). Diseñado con una ventana de contexto de 200.000 tokens de fidelidad absoluta (con capacidad de recuperar información con más del 99% de precisión en needle-in-a-haystack), Opus establece un nuevo estándar en comprensión multimodal y análisis de sistemas complejos con mínimas tasas de alucinación.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "ImageBind: Modelo Fundacional Multimodal Holístico con Alineación Conjunta de 6 Modalidades Sensoriales",
+      "description": "Meta AI presenta ImageBind, el primer modelo fundacional capaz de vincular y unificar seis modalidades sensoriales distintas (imágenes/videos, texto, audio, profundidad tridimensional, imágenes térmicas de infrarrojos y datos de sensores de movimiento IMU) en un único espacio latente compartido. ImageBind aprovecha la presencia natural de las imágenes como puente vinculante para alinear las demás modalidades sin necesidad de que todas aparezcan conjuntamente en los datos de entrenamiento, permitiendo búsquedas semánticas cruzadas y generación multimodal inmersiva.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/imagebind-six-modalities-binding-ai/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Cursor (Anysphere)",
+      "headline": "Cursor, el entorno de desarrollo integrado (IDE) nativo de inteligencia artificial desarrollado por Anysphere, consolida una valuación de más de 2.500 millones de dólares tras rondas de financiación respaldadas por Andreessen Horowitz (a16z) y OpenAI Startup Fund, registrando un crecimiento vertiginoso en adopción empresarial al transformar los flujos de trabajo de ingeniería de software con edición contextual multi-archivo, indexación semántica local y generación de código guiada por modelos de frontera.",
+      "links": [
+        {
+          "text": "Cursor Announcement",
+          "url": "https://www.cursor.com/blog",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Sierra AI",
+      "headline": "Sierra, la plataforma de agentes conversacionales empresariales cofundada por el expresidente de OpenAI Bret Taylor y el exvicepresidente de Google Clay Bavor, cierra una ronda de financiamiento de 175 millones de dólares liderada por Greenoaks Capital a una valuación de 4.500 millones de dólares, escalando el despliegue de agentes autónomos con razonamiento contextual, integración profunda con sistemas corporativos y garantías deterministas de cumplimiento.",
+      "links": [
+        {
+          "text": "Sierra News",
+          "url": "https://sierra.ai/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "ElevenLabs",
+      "headline": "ElevenLabs, la compañía pionera en investigación de audio y síntesis de voz generativa ultrarrealista, alcanza el estatus de unicornio con una valuación de más de 1.100 millones de dólares tras una ronda Serie B de 80 millones de dólares liderada por Andreessen Horowitz, Nat Friedman y Daniel Gross, expandiendo sus modelos de clonación de voz multilingüe de ultra-baja latencia, aislamiento acústico y doblaje cinematográfico automatizado.",
+      "links": [
+        {
+          "text": "ElevenLabs Blog",
+          "url": "https://elevenlabs.io/blog",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Lambda Labs",
+      "headline": "Lambda asegura una línea de financiamiento respaldada por activos de 500 millones de dólares y una ronda Serie C de 320 millones de dólares liderada por US Innovative Technology Fund, multiplicando drásticamente su capacidad de centros de datos de inteligencia artificial y nube de supercomputación GPU bajo demanda equipada con clústeres NVIDIA H100 y Blackwell para entrenamiento e inferencia masiva a gran escala.",
+      "links": [
+        {
+          "text": "Lambda Labs Blog",
+          "url": "https://lambdalabs.com/blog",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
