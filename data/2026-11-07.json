@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-07",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Mistral 7B",
+        "author": "Albert Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, Lélio Renard Lavaud, Marie-Anne Lachaux, Pierre Stock, Teven Le Scao, Thibaut Lavril, Thomas Wang, Timothée Lacroix, William El Sayed (Mistral AI)",
+        "description": "Introduce Mistral 7B, un modelo de lenguaje de pesos abiertos cuidadosamente optimizado que supera a todos los modelos de 13B existentes (incluido Llama 2 13B) y compite con modelos de 34B en razonamiento, matemáticas y código. Incorpora innovaciones arquitectónicas clave como Grouped-Query Attention (GQA) para acelerar drásticamente los tiempos de inferencia y reducir el consumo de memoria KV-cache, y Sliding Window Attention (SWA) con una ventana de atención de 4.096 tokens y un campo receptivo teórico de 128k tokens, logrando procesar secuencias arbitrariamente largas con costo computacional lineal. Liberado bajo licencia Apache 2.0, redefinió la frontera de eficiencia en modelos abiertos compactos.",
+        "analogy": "🚀 Como diseñar un monoplaza de carreras ultraliviano con una aerodinámica tan sofisticada y un motor tan perfectamente calibrado que derrota sistemáticamente en la pista a camiones pesados y vehículos con motores del triple de cilindrada, gastando apenas una pequeña fracción del combustible por vuelta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.06825",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Orca: Progressive Learning from Complex Explanation Traces of GPT-4",
+        "author": "Subhabrata Mukherjee, Arindam Mitra, Ganesh Jawahar, Sahaj Agarwal, Hamid Palangi, Kumar Chellapilla (Microsoft Research)",
+        "description": "Aborda las limitaciones de la imitación superficial en la destilación de modelos de lenguaje pequeños, demostrando que entrenar modelos estudiantiles únicamente con pares simples de pregunta y respuesta final genera una falsa ilusión de competencia que falla estrepitosamente en razonamientos complejos. Orca supera esta barrera al utilizar trazas de razonamiento ricas y detalladas generadas por GPT-4 (explicaciones paso a paso, reflexiones intermedias, descarte de hipótesis y justificaciones explícitas). Con un modelo de 13B parámetros basado en LLaMA, Orca retuvo el 95% del rendimiento de ChatGPT en razonamiento zero-shot complejo y superó a modelos de código abierto como Vicuna por más del 100% en benchmarks desafiantes como Big-Bench Hard y AGIEval.",
+        "analogy": "👨‍🏫 Como un alumno de física que, en lugar de intentar aprender copiando solo el resultado numérico final del profesor en la última página del examen, asiste a clases magistrales donde observa cada cálculo intermedio en la pizarra, comprende los callejones sin salida descartados y asimila la forma exacta en que la mente del experto formula y descompone las hipótesis.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2306.02707",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Qwen2 Technical Report",
+        "author": "Qwen Team, An Yang, Baosong Yang, Binyuan Hui, Bo Zheng, Bowen Yu, Chang Zhou, Chengpeng Li, Chengyuan Li, Dayiheng Liu, Fei Huang, Guanting Dong, Haoran Wei, Huan Lin, Jialong Tang, Jialin Wang, Jian Yang, Jianhong Tu, Jianwei Zhang, Jianxin Ma et al. (Alibaba Group)",
+        "description": "Presenta la familia fundacional de modelos Qwen2, que abarca modelos densos y Mixture-of-Experts (MoE) desde 0.5B hasta 72B parámetros (con Qwen2-57B-A14B activando 14B por token). Preentrenados sobre un corpus masivo y multilingüe de más de 7 billones de tokens que cubre 29 idiomas, código y matemáticas formales, incorporan Grouped-Query Attention (GQA) en todas sus variantes y Dual-Chunk Attention con interpolación YARN para extender la longitud de contexto nativa hasta 128.000 tokens sin degradación en recuperación. En benchmarks estandarizados (MMLU, GSM8K, MATH, HumanEval y MT-Bench), Qwen2-72B-Instruct superó a Llama-3-70B-Instruct y se consolidó como uno de los modelos abiertos más potentes del mundo.",
+        "analogy": "🌐 Como construir una red ferroviaria de alta velocidad con vagones modulares inteligentes que transportan carga a través de 29 países sin perder velocidad en curvas pronunciadas ni atascarse al cruzar puentes de cientos de kilómetros, gestionando de forma fluida y balanceada tanto viajes locales instantáneos como expediciones transcontinentales masivas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.10671",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "InternVideo2: Scaling Video Foundation Models for Multimodal Video Understanding",
+        "author": "Yi Wang, Kunchang Li, Xinhao Li, Jiashuo Yu, Yinan He, Guo Chen, Baoqi Pei, Rongkun Zheng, Jilan Xu, Zun Wang, Yifei Huang, Haisheng Su, Jiajun He, Chenting Wang, Junke Wang, Limin Wang, Yu Qiao (OpenGVLab, Shanghai AI Laboratory)",
+        "description": "Desarrolla InternVideo2, un modelo fundacional de video a gran escala que integra aprendizaje auto-supervisado enmascarado de video (VideoMAE), alineación contrastiva video-texto y generación condicionada por lenguaje en una arquitectura unificada con codificador ViT de 6.000 millones de parámetros. Introduce un mecanismo de tokenización espacio-temporal jerárquico y un protocolo de entrenamiento progresivo sobre conjuntos masivos de video sin procesar y anotaciones detalladas generadas por LLMs. InternVideo2 estableció nuevos estados del arte en más de 60 benchmarks de video multimodales, incluyendo comprensión de acciones, preguntas y respuestas sobre videos extensos, localización temporal y razonamiento visual causal en tiempo real.",
+        "analogy": "🎬 Como un experimentado director de cine y crítico visual dotado de memoria fotográfica absoluta, capaz de mirar una película de cuatro horas y percibir simultáneamente cada microexpresión emocional en el rostro de los actores, la trayectoria de una bala en el fondo de una escena y la estructura narrativa completa del filme sin perder jamás el hilo conductor.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.15377",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
+        "author": "Boyuan Chen, Zhuo Xu, Sean Kirmani, Brian Ichter, Danny Driess, Pete Florence, Dorsa Sadigh, Fei Xia (Google DeepMind)",
+        "description": "Introduce SpatialVLM, una investigación pionera que resuelve una de las mayores falencias de los modelos de visión y lenguaje: su incapacidad innata para realizar razonamientos espaciales cuantitativos y tridimensionales en el mundo físico. El equipo desarrolló un pipeline escalable de generación sintética de datos espaciales capaz de etiquetar millones de imágenes reales con pares de preguntas y respuestas 3D métricas precisas (distancias absolutas y relativas, volúmenes de objetos, posiciones cartesianas y relaciones geométricas complejas). Al realizar un ajuste instruccional sobre estos datos, SpatialVLM no solo demuestra una comprensión espacial métrica cualitativa y cuantitativa sin precedentes, sino que desbloquea capacidades de sentido común espacial transferibles de forma directa a la robótica encarnada y la navegación autónoma.",
+        "analogy": "📏 Como dotar a un crítico de arte que solo sabía contemplar retratos planos de una cinta métrica invisible y un sensor de profundidad estereoscópico en su retina, permitiéndole no solo admirar la estética de un cuadro, sino decirte con exactitud cuántos centímetros separan la taza del borde de la mesa y si la tetera cabe dentro de la alacena.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.12168",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Improved Baselines with Visual Instruction Tuning",
+        "author": "Haotian Liu, Chunyuan Li, Yuheng Li, Bo Li, Yuanhan Zhang, Sheng Shen, Yong Jae Lee (University of Wisconsin-Madison, Microsoft Research, Columbia University)",
+        "description": "Presenta LLaVA-1.5, demostrando que modificaciones arquitectónicas mínimas pero de alto impacto sobre el marco conceptual original de LLaVA permiten alcanzar un rendimiento de frontera en razonamiento visual conversacional sin requerir arquitecturas exorbitantes. Al reemplazar el proyector lineal simple por un Perceptrón Multicapa (MLP) de dos capas, escalar la resolución de imagen de entrada mediante CLIP-ViT-L-336px y enriquecer los datos de ajuste instruccional con formatos orientados a respuesta concisa y conocimiento académico (GQA, TextVQA, ShareGPT), LLaVA-1.5 superó holgadamente a métodos propietarios y modelos multimodales mucho más complejos en 11 benchmarks estándar, entrenándose en apenas un solo día sobre 8 GPUs A100.",
+        "analogy": "👓 Como sustituir una lupa de vidrio corriente y rayada por un lente bifocal de cristal de roca de alta refracción en un telescopio clásico, logrando de pronto que el astrónomo distinga los cráteres diminutos de la Luna y los anillos de Saturno sin necesidad de reemplazar el cuerpo principal del telescopio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.03744",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Least-to-Most Prompting Enables Complex Reasoning in Large Language Models",
+        "author": "Denny Zhou, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, Claire Cui, Olivier Bousquet, Quoc Le, Ed Chi (Google Research)",
+        "description": "Propone la técnica fundacional 'Least-to-Most Prompting', un paradigma de descomposición algorítmica estructurada que supera una de las limitaciones críticas del Chain-of-Thought tradicional: la incapacidad de resolver problemas cuya complejidad o longitud supera a los ejemplos demostrados en el contexto. El método opera en dos fases deterministas: primero, descompone una tarea compleja en una secuencia ordenada de subproblemas más sencillos; segundo, resuelve secuencialmente cada subproblema, acumulando las respuestas previas como contexto enriquecido para abordar el siguiente. El trabajo demostró una generalización composicional formidable, logrando una precisión casi perfecta en problemas de manipulación de cadenas de texto y resolución matemática multipartes que hacían colapsar al prompting estándar.",
+        "analogy": "🧱 Como desarmar un castillo monumental de piezas de Lego en grupos lógicos de ladrillos básicos ordenados en el suelo, construyendo primero la base sólida, luego las murallas y finalmente las torres, en lugar de intentar erigir la estructura completa de golpe en el aire arriesgándose a que se derrumbe por su propio peso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2205.10625",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Large Language Models as Tool Makers",
+        "author": "Tianle Cai, Xuezhi Wang, Tengyu Ma, Xinyun Chen, Denny Zhou (Princeton University, Google DeepMind)",
+        "description": "Introduce el marco LATM (Large Language Models as Tool Makers), un paradigma bi-etápico revolucionario para sistemas de agentes donde los modelos de lenguaje no actúan meramente como consumidores pasivos de herramientas prediseñadas, sino como creadores activos y reutilizadores de nuevo software. Un LLM de frontera altamente capaz (como GPT-4) asume el rol de 'Tool Maker', sintetizando utilidades modulares y verificables en código Python para resolver tipos específicos de tareas recurrentes; posteriormente, un modelo mucho más ligero y económico (como GPT-3.5 o modelos abiertos pequeños) actúa como 'Tool User', invocando la herramienta construida de manera repetida para procesar solicitudes similares a una fracción mínima del costo y la latencia computacional.",
+        "analogy": "🛠️ Como una fábrica donde un ingeniero maestro senior forja y calibra herramientas y moldes de precisión especializados a medida, para luego entregárselos a los operadores de la línea de ensamblaje, quienes producen miles de piezas idénticas y perfectas a gran velocidad sin necesidad de llamar al ingeniero principal para cada tuerca.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.17126",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimization",
+        "author": "Dong Huang, Qingwen Bu, Jie M. Zhang, Michael Luck, Heming Cui (The University of Hong Kong, King's College London)",
+        "description": "Propone AgentCoder, un marco multiagente colaborativo que resuelve la propensión de los modelos de lenguaje a generar código con defectos sutiles o alucinaciones sintácticas cuando operan en régimen monológico. AgentCoder desacopla el ciclo de vida del desarrollo en tres agentes especializados: un Programador que genera el código candidato, un Diseñador de Pruebas que analiza la especificación del problema e implementa casos de prueba exhaustivos y agnósticos al código propuesto, y un Ejecutor de Pruebas que ejecuta el código contra los tests en un entorno aislado, devolviendo diagnósticos y stack traces estructurados para que el programador refine iterativamente la solución. En HumanEval, MBPP y HumanEval-ET, AgentCoder superó sustancialmente a modelos individuales de frontera y a métodos convencionales de autorreflexión.",
+        "analogy": "👥 Como estructurar un equipo de software profesional de alto rendimiento con un desarrollador dedicado, un ingeniero de control de calidad (QA) exigente y un pipeline automatizado de integración continua: el programador nunca despliega a ciegas, sino que el QA escribe pruebas implacables y el pipeline exige que todas pasen en verde antes de dar por buena la tarea.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.13010",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Sarathi-Serve: Pipelined Execution for Low-Latency LLM Serving",
+        "author": "Amey Agrawal, Nitin Kedia, Ashish Panwar, Jayashree Mohan, Nipun Kwatra, Bhargav S. Gulavani, Alexey Tumanov, Ramachandran Ramjee (Georgia Tech, Microsoft Research)",
+        "description": "Desarrolla Sarathi-Serve, un motor de inferencia de alto rendimiento que aborda el fenómeno de la interferencia y el desbalance computacional entre las fases de prefill (procesamiento masivo del prompt, limitado por cómputo) y decodificación (generación autoregresiva token por token, limitada por ancho de banda de memoria) en el servicio de LLMs. Introduce la técnica 'chunked-prefills' y la ejecución paralelizada 'pipelined chunked-prefill with decoding', dividiendo los prompts largos en fragmentos uniformes del tamaño de la fase de decodificación y co-programándolos de manera coordinada. Esto erradica los picos catastróficos de latencia, reduce el tiempo por token de salida (Time-Per-Output-Token o TPOT) hasta en un 80% y maximiza el throughput sin degradar la precisión numérica.",
+        "analogy": "🚦 Como organizar el tráfico en una autopista congestionada donde conviven camiones de carga pesada y motocicletas veloces: en lugar de frenar a todos los autos cada vez que un camión entra al carril, se divide la carga del camión en entregas moduladas en horarios sincronizados, permitiendo que el tráfico ligero fluya a velocidad constante sin detenciones sorpresivas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.02310",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations",
+        "author": "Philippe Tillet, H. T. Kung, David Cox (OpenAI, Harvard University)",
+        "description": "Presenta Triton, un lenguaje de programación de dominio específico (DSL) basado en Python y un compilador de código abierto diseñado para maximizar la productividad y el rendimiento en el desarrollo de kernels para aceleradores de hardware como GPUs de NVIDIA. Triton abstrae la abrumadora complejidad de la programación en CUDA (como la gestión manual de memoria compartida, sincronización de warps y prevención de conflictos de bancos de memoria) mediante un paradigma de computación orientada a bloques (tile-based execution). El compilador analiza los bloques a nivel intermedio y optimiza automáticamente la vectorización, el encolado asíncrono y la jerarquía de memoria física, permitiendo a los investigadores de IA escribir kernels personalizados (como variantes de FlashAttention) en apenas unas pocas líneas de código Python con un rendimiento a la par o superior a los kernels de CUDA artesanales.",
+        "analogy": "🎛️ Como un teclado de sintetizador modular de estudio profesional programado con perillas intuitivas de alto nivel: en lugar de obligar al músico a soldar a mano circuitos electrónicos y condensadores de silicio para cada nota o reverberación, le permite componer melodías sónicas prodigiosas y complejas tocando notas en un teclado que traduce todo instantáneamente en impulsos eléctricos con fidelidad analógica perfecta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2112.01394",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Vector Quantization",
+        "author": "Albert Tseng, Jerry Chee, Qinghao Hu, Nicolaas Burger, Zhaozhuo Xu, Christopher De Sa (Cornell University)",
+        "description": "Introduce QuIP#, un algoritmo de cuantización post-entrenamiento (PTQ) de vanguardia para modelos de lenguaje masivos que logra comprimir pesos a 2 bits por peso con una pérdida de precisión prácticamente imperceptible. QuIP# combina dos innovaciones matemáticas fundamentales: la utilización de transformaciones ortogonales aleatorias de Hadamard para dispersar la incoherencia de activaciones y pesos en los ejes de la matriz neuronal, erradicando los valores atípicos (outliers) que tradicionalmente destruyen la cuantización de bajo bit, junto con cuantización vectorial mediante retículos E8 (E8 lattice vector quantization). Este enfoque permite ejecutar modelos masivos como Llama 2 70B en GPUs de consumo de 24GB de VRAM preservando su capacidad de razonamiento con una fidelidad superior a los métodos de cuantización escalar de 3 y 4 bits.",
+        "analogy": "🧩 Como comprimir una fotografía panorámica de altísima resolución en un archivo diminuto sin pixelarla: en lugar de recortar bruscamente los colores y quemar los contrastes, se aplica una transformación matemática que distribuye suavemente la luz por toda la imagen y agrupa los píxeles en patrones geométricos multidimensionales que encajan a la perfección con mínima pérdida visual.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.04396",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "RT-2 (Robotic Transformer 2): Modelo Visión-Lenguaje-Acción (VLA) para Transferencia Directa de Razonamiento Web a Control Robótico",
+      "description": "Google DeepMind presenta Robotic Transformer 2 (RT-2), un modelo fundacional Visión-Lenguaje-Acción (VLA) pionero que traduce el conocimiento semántico, el razonamiento multimodal y el sentido común adquirido de miles de millones de páginas de internet en acciones físicas motoras de bajo nivel para brazos robóticos. A diferencia de los enfoques tradicionales que requieren entrenar a los robots mediante demostraciones físicas tediosas para cada nueva tarea, RT-2 procesa trayectorias de acción directamente como tokens dentro de un modelo de lenguaje y visión preentrenado (PaLI-X y PaLM-E), permitiendo a los robots interpretar órdenes abstractas, reconocer objetos desconocidos y ejecutar generalizaciones físicas complejas en entornos reales sin reentrenamiento específico.",
+      "links": [
+        {
+          "text": "Google DeepMind Research",
+          "url": "https://deepmind.google/discover/blog/rt-2-new-model-translates-vision-and-language-into-action/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Function Calling en la API de OpenAI: Invocación Determinista de Herramientas y Estructuración de Parámetros JSON para Conectar Modelos con APIs Externas",
+      "description": "OpenAI introduce de forma nativa la capacidad de Function Calling en sus modelos de lenguaje GPT-4 y GPT-3.5-turbo, transformando a los LLMs de meros generadores de texto conversacional en orquestadores deterministas capaces de interconectarse con herramientas del mundo real, bases de datos relacionales y servicios web. Al ser ajustados para detectar de manera autónoma cuándo una consulta requiere auxilio externo y emitir de forma rigurosa argumentos conformes a especificaciones JSON Schema, Function Calling sentó el estándar de facto para el desarrollo de flujos agénticos, recuperación aumentada por generación (RAG) estructurada y automatización de software.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/function-calling-and-other-api-updates/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude 2: Salto a 100.000 Tokens de Contexto, Razonamiento Mejorado en Código y Filosofía de IA Constitucional",
+      "description": "Anthropic lanza oficialmente Claude 2, su modelo de frontera de segunda generación que democratizó el análisis de documentos monumentales al habilitar de forma general una ventana de contexto de 100.000 tokens (equivalente a cientos de páginas técnicas o libros completos en una sola consulta). Claude 2 exhibe saltos cuantitativos en razonamiento técnico y programación, alcanzando un 71.2% en HumanEval y superando la prueba de opción múltiple del examen de abogacía (Bar Exam) en el percentil 90. Desarrollado bajo la metodología de IA Constitucional (Constitutional AI), Claude 2 redujo sustancialmente la propensión a generar contenido tóxico o alucinaciones frente a su predecesor.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/claude-2",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Llama 2: Modelos Fundacionales de Pesos Abiertos (7B, 13B y 70B) con Licencia Comercial Gratuita y Asociación Estratégica con Microsoft",
+      "description": "Meta AI presenta la familia de modelos de pesos abiertos Llama 2 (en escalas de 7B, 13B y 70B parámetros), entrenada sobre 2 billones de tokens y con una ventana de contexto extendida a 4.096 tokens con Grouped-Query Attention (GQA) en la versión de 70B. Por primera vez en la industria, Meta incluye una licencia explícita para investigación y uso comercial gratuito en alianza con Microsoft como socio preferente. Las variantes afinadas mediante Reinforcement Learning from Human Feedback (RLHF) con más de un millón de anotaciones humanas mostraron una alineación de seguridad y fidelidad conversacional a la par de alternativas propietarias cerradas, impulsando un ecosistema global sin precedentes de desarrollo abierto.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-2/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Codeium",
+      "headline": "Codeium, la plataforma de desarrollo de software acelerado por inteligencia artificial creada por Exafunction, cierra una ronda de financiamiento Serie C de 150 millones de dólares liderada por General Catalyst a una valuación de 1.250 millones de dólares, logrando el estatus de unicornio y acelerando la expansión de su asistente multi-IDE empresarial y su motor de contexto local de código abierto Cortex.",
+      "links": [
+        {
+          "text": "Codeium Blog",
+          "url": "https://codeium.com/blog/serie-c-announcement",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Hebbia",
+      "headline": "Hebbia, la plataforma de búsqueda e inteligencia documental impulsada por agentes para banca de inversión, firmas legales y fondos de capital privado, levanta 130 millones de dólares en una ronda Serie B liderada por Andreessen Horowitz (a16z) con participación de Index Ventures y Peter Thiel a una valuación de 700 millones de dólares, escalando su motor de razonamiento matricial 'Matrix' para procesamiento masivo de millones de documentos no estructurados.",
+      "links": [
+        {
+          "text": "Hebbia News",
+          "url": "https://www.hebbia.ai/blog/series-b",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Fireworks AI",
+      "headline": "Fireworks AI asegura una ronda de inversión Serie B de 52 millones de dólares liderada por Sequoia Capital con el respaldo estratégico de NVIDIA y AMD a una valuación de 552 millones de dólares, consolidando su plataforma de inferencia de modelos de lenguaje de código abierto de ultra-baja latencia y su motor de microajuste LoRA bajo demanda en producción con optimizaciones a nivel de kernel CUDA.",
+      "links": [
+        {
+          "text": "Fireworks AI Blog",
+          "url": "https://fireworks.ai/blog/series-b",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Decagon",
+      "headline": "Decagon, la plataforma de agentes conversacionales autónomos para operaciones de soporte y experiencia de cliente empresarial impulsada por modelos fundacionales, completa una ronda Serie B de 65 millones de dólares liderada por Bain Capital Ventures con participación de Elad Gil y Accel, totalizando 100 millones de dólares recaudados en el año y escalando agentes que resuelven flujos complejos de soporte con integración profunda a ERPs y CRMs corporativos.",
+      "links": [
+        {
+          "text": "Decagon Blog",
+          "url": "https://decagon.ai/blog/series-b",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
