@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-09",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "DeepSeek-MoE: Towards Ultimate Expertise in Large-Scale Mixture-of-Experts Language Models",
+        "author": "Damai Dai, Chengqi Deng, Chenggang Zhao, R. X. Xu, Huazuo Gao, Deli Chen, Jiashi Li, Wangding Zeng, Xingkai Yu, Y. Wu, Zhenda Xie, Y. K. Li, Panpan Huang, Fuli Luo, Chong Ruan (DeepSeek-AI)",
+        "description": "Introduce la arquitectura DeepSeek-MoE, una formulación avanzada de Mixture-of-Experts que supera las limitaciones de especialización de los MoE tradicionales (como GShard o Switch Transformers). Propone dos estrategias cardinales: segmentación ultra-fina de expertos (dividiendo a los expertos estándar en múltiples sub-expertos más pequeños, aumentando drásticamente la combinatoria y granularidad del enrutamiento sin incrementar el cómputo activo por token) y el aislamiento de expertos compartidos fijos que absorben el conocimiento genérico y común, permitiendo que los expertos enrutados se especialicen en conocimiento altamente específico. Con 16.000 millones de parámetros totales activando apenas 2.800 millones por token, DeepSeek-MoE 16B igualó el rendimiento de modelos densos como LLaMA 2 7B consumiendo solo el 40% de su cómputo.",
+        "analogy": "🏥 Como un hospital moderno que, en lugar de contar únicamente con médicos generalistas masivos, divide a su personal en especialistas ultra-enfocados (cardiólogos intervencionistas, neuropediatras, radiólogos vasculares) coordinados con un equipo central de enfermería de guardia común que atiende los signos vitales estándar de todo paciente, optimizando el tiempo y la atención médica con máxima precisión.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.06066",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "StarCoder: may the source be with you!",
+        "author": "Raymond Li, Loubna Ben Allal, Yangtian Zi, Niklas Muennighoff, Denis Kocetkov, Chenghao Mou, Marc Marone, Christopher Akiki, Jia Li, Jenny Chim, Qian Liu, Alexander M. Rush, Harm de Vries, Leandro von Werra et al. (BigCode Project, ServiceNow, Hugging Face)",
+        "description": "Presenta StarCoder, un modelo de lenguaje de código abierto de 15.500 millones de parámetros desarrollado bajo la iniciativa BigCode para programación en más de 80 lenguajes. Entrenado sobre 1 billón de tokens curados de The Stack (con rigurosa atribución de licencias permisivas y consentimiento de autores), incorpora Multi-Query Attention (MQA) para reducir radicalmente la huella de memoria KV-cache en inferencias largas, una ventana de contexto nativa de 8.192 tokens y el objetivo de preentrenamiento Fill-in-the-Middle (FIM) para permitir completado bidireccional y refactorización contextual. StarCoder superó a todos los modelos abiertos existentes en HumanEval y MBPP, compitiendo de cerca con alternativas cerradas como OpenAI code-cushman-001.",
+        "analogy": "🧙‍♂️ Como un archivero y traductor maestro que domina con fluidez más de 80 idiomas técnicos y dialectos antiguos, capaz no solo de continuar escribiendo un pergamino desde donde quedó la pluma, sino de leer el encabezado y el final simultáneamente para rellenar con precisión quirúrgica el párrafo exacto que faltaba en medio de una página deteriorada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.06161",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "OLMo: Accelerating the Science of Language Models",
+        "author": "Dirk Groeneveld, Iz Beltagy, Pete Walsh, Akshita Bhagia, Rodney Kinney, Oyvind Tafjord, Ananya Harsh Jha, Hamish Ivison, Ian Magnusson, Yizhong Wang, Bhargavi Paranjape, David Schwenk, Jesse Leverett, Noah A. Smith, Hannaneh Hajishirzi et al. (Allen Institute for AI - AI2)",
+        "description": "Presenta OLMo (Open Language Model), un hito pionero en transparencia científica para modelos fundacionales. A diferencia de modelos denominados abiertos que solo liberan los pesos finales (open-weights), el consorcio AI2 publicó el pipeline completo de extremo a extremo: el corpus de preentrenamiento masivo Dolma (3 billones de tokens con recetas de filtrado reproducibles), el código fuente de entrenamiento distribuido, más de 500 checkpoints intermedios guardados cada 1.000 pasos de gradiente, logs completos de telemetría de hardware y una suite estandarizada de evaluación exhaustiva. Este marco abierto permitió a la comunidad científica analizar empíricamente la dinámica de aprendizaje, las mesetas de convergencia y la formación de representaciones internas en modelos de 1B y 7B parámetros.",
+        "analogy": "🔬 Como publicar no solo el medicamento final aprobado en una farmacia, sino el diario de laboratorio completo con cada fórmula fallida, las grabaciones microscópicas de cada ensayo clínico en tiempo real, la lista exacta de reactivos químicos y la maquinaria utilizada, para que cualquier científico del planeta pueda auditar, replicar y mejorar el proceso desde cero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.00838",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
+        "author": "Patrick Esser, Sumith Kulal, Andreas Blattmann, Rahim Entezari, Jonas Müller, Harry Saini, Yam Levi, Dominik Lorenz, Axel Sauer, Frederic Boesel, Dustin Podell, Tim Dockhorn, Zion English, Kyle Lacey, Alex Goodwin, Yannik Marek, Robin Rombach (Stability AI, Black Forest Labs)",
+        "description": "Introduce la arquitectura MMDiT (Multimodal Diffusion Transformer) y el marco de Rectified Flow Matching, la tecnología fundacional detrás de Stable Diffusion 3 y FLUX. Sustituye las redes convolucionales U-Net tradicionales por un transformador escalable que utiliza conjuntos de pesos independientes para representaciones visuales y textuales, fusionados mediante atención cruzada bidireccional. Al formular la generación como una trayectoria rectilínea (Rectified Flow) que conecta directamente la distribución gaussiana de ruido con los datos reales en lugar de curvas estocásticas brownianas complejas, el modelo reduce sustancialmente el número de pasos de muestreo requeridos, alcanzando una fidelidad fotográfica sin precedentes, un renderizado ortográfico impecable de texto en imagen y una estricta adhesión a descripciones complejas.",
+        "analogy": "📐 Como trazar una autopista recta e iluminada entre dos ciudades a través de una planicie, en lugar de obligar a los conductores a transitar por un sinuoso camino de montaña lleno de curvas cerradas y baches bajo la lluvia: el viaje requiere mucha menos gasolina (pasos de cálculo) y el conductor llega a destino sin desvíos ni errores visuales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.03206",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
+        "author": "Yanwei Li, Yuechen Zhang, Chengyao Wang, Zhisheng Zhong, Yixin Chen, Ruihang Chu, Jiaya Jia (The Chinese University of Hong Kong, SmartMore)",
+        "description": "Propone Mini-Gemini, un marco multimodal eficiente diseñado para desbloquear el máximo potencial de los Vision-Language Models (VLMs) mediante tres innovaciones coordinadas: codificación visual dual (un codificador ViT de alta resolución para capturar microdetalles y un codificador convolucional ligero para extraer contexto semántico global), un mecanismo de proyección de tokens de parches por atención cruzada que reduce drásticamente el costo computacional de procesar imágenes de ultra-alta definición sin perder densidad informacional, y la integración de generación condicionada de texto e imagen de alta fidelidad. Mini-Gemini demostró capacidades de razonamiento multimodal de frontera en benchmarks como MMBench, TextVQA y ScienceQA, superando a modelos que utilizaban el triple de parámetros.",
+        "analogy": "🦅 Como la visión binocular de un águila en vuelo, que posee simultáneamente un campo visual panorámico amplio para ubicar el paisaje general y una fóvea de altísima resolución óptica capaz de enfocar con nitidez milimétrica el movimiento de un pequeño ratón oculto entre los pastizales a cientos de metros de altura.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.18814",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DeepSeek-VL: Towards Real-World Vision-Language Understanding",
+        "author": "Zhihong Shao, Xiao Bi, Haowei Zhang, Zebin Hou, Jianzhong Guo, R. Y. Song, Junxiao Song, Deli Chen, Jiashi Li, Panpan Huang, Y. Wu, Y. K. Li, Peiyi Wang, Chong Ruan (DeepSeek-AI)",
+        "description": "Presenta DeepSeek-VL, un modelo multimodal de código abierto concebido para abordar las aplicaciones visuales más exigentes del mundo real (gráficos financieros, diagramas de flujo, tablas densas, capturas de pantalla de interfaces web y razonamiento geométrico). Incorpora un codificador visual híbrido que combina SigLIP (entrenado para semántica lingüística a nivel de objeto) y SAM-B (Segment Anything Model, ajustado para segmentación y relaciones espaciales geométricas de bajo nivel) operando a una resolución nativa de 384x384 y 1024x1024 píxeles. Respaldado por una estrategia de preentrenamiento multimodal equilibrada que preserva la destreza lingüística pura del LLM base sin degradación catastrófica, DeepSeek-VL estableció nuevos récords en benchmarks multimodales de comprensión de documentos y OCR complejo.",
+        "analogy": "🧭 Como equipar a un analista técnico con dos pares de anteojos superpuestos: unos lentes polarizados para reconocer de un vistazo el tema general de un informe financiero y una lupa graduada de relojero para leer sin equivocarse cada letra diminuta, número decimal y curva en una compleja tabla estadística.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.05525",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Let's Verify Step by Step",
+        "author": "Hunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, Karl Cobbe (OpenAI)",
+        "description": "Investiga de forma pionera las diferencias cuantitativas entre la supervisión de resultados (Outcome-supervised Reward Models u ORMs, que solo evalúan la respuesta final de un problema) y la supervisión de procesos (Process-supervised Reward Models o PRMs, que califican la validez de cada paso deductivo individual en la cadena de pensamiento). Utilizando el conjunto de datos PRM800K (con 800.000 anotaciones humanas paso a paso sobre soluciones matemáticas generadas por modelos), demostraron que los PRMs superan holgadamente a los ORMs en el benchmark MATH, resolviendo el 78% de los problemas en una muestra representativa. El trabajo probó que la supervisión de procesos mitiga drásticamente las alucinaciones lógicas y recompensa a los modelos por razonar correctamente en lugar de adivinar el resultado mediante atajos espurios.",
+        "analogy": "📐 Como un profesor de álgebra exigente que califica un examen complejo revisando renglón por renglón el desarrollo deductivo del estudiante en la hoja borrador, otorgando la máxima nota únicamente si cada simplificación y despeje fue matemáticamente impecable, en lugar de poner un diez a quien copió solo el número final de la respuesta correcta de un compañero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.20050",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ChemCrow: Augmenting large-language models with chemistry tools",
+        "author": "Andres M. Bran, Sam Cox, Andrew D. White, Philippe Schwaller (EPFL, University of Rochester)",
+        "description": "Presenta ChemCrow, un sistema agéntico basado en modelos de lenguaje aumentados con herramientas especializadas diseñado para automatizar y razonar sobre tareas complejas en química orgánica, síntesis molecular y ciencia de materiales. ChemCrow integra 18 herramientas de software experto, incluyendo planificadores de retro-síntesis computacional (IBM RXN), predictores de reactividad molecular, bases de datos de patentes y propiedades toxicológicas (PubChem, MolSearch) y comprobadores de seguridad en laboratorio. El agente evalúa dinámicamente cada sub-objetivo sintético, descarta rutas peligrosas o inviables y compila protocolos reproducibles validados empíricamente en síntesis reales de insecticidas, retardantes de llama y organocatalizadores en laboratorios físicos.",
+        "analogy": "🧪 Como un químico sintético experimentado que trabaja en una mesa de laboratorio rodeado de los manuales de referencia más exhaustivos, una calculadora de reacciones químicas conectada a bases de datos de seguridad biológica y un espectrómetro digital: no actúa por impulsos ciegos, sino que consulta y valida cada paso experimental con herramientas analíticas antes de mezclar dos matraces.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2304.05376",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "OS-Copilot: Towards Generalist Computer Agents with Self-Improvement",
+        "author": "Zhiyong Wu, Chengcheng Han, Zichen Ding, Zhenmin Weng, Zhoumianze Liu, Shunyu Yao, Tao Yu, Lingpeng Kong (The University of Hong Kong, Princeton University)",
+        "description": "Introduce OS-Copilot, un marco de código abierto para construir y evaluar agentes generalistas que interactúan de forma autónoma con sistemas operativos reales (Linux, macOS, Windows) a través de bash, interfaces gráficas de usuario (GUI) y APIs del sistema. Presenta FRIDAY, un agente de referencia capaz de resolver tareas complejas de software abierto (análisis de datos en hojas de cálculo, edición multimedia, configuración de entornos de compilación y orquestación de aplicaciones de escritorio). Mediante un mecanismo de auto-mejora basado en memoria declarativa y procedimental, FRIDAY sintetiza nuevas habilidades reutilizables en código Python y shell tras resolver cada tarea, logrando un 35% de mejora relativa en el benchmark OSWorld frente a agentes sin memoria evolutiva.",
+        "analogy": "💻 Como un asistente técnico prodigioso sentado frente a tu computadora con acceso completo a teclado, mouse y consola de comandos, que aprende a usar programas nuevos viendo tutoriales o experimentando con seguridad, y que escribe pequeños scripts automáticos para recordar para siempre cómo resolver cada problema que le confías.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.07456",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Efficient Streaming Language Models with Attention Sinks (StreamingLLM)",
+        "author": "Guangxuan Xiao, Yuandong Tian, Beidi Chen, Song Han, Mike Lewis (MIT, Meta AI, Carnegie Mellon University)",
+        "description": "Identifica el fenómeno crítico de los attention sinks (sumideros de atención) en transformadores autoregresivos: los modelos asignan una cantidad desproporcionada de masa de atención a los primeros 4 tokens de una secuencia independientemente de su significado semántico, actuando como un ancla numérica para la función Softmax. El equipo descubrió que la degradación catastrófica de los LLMs al procesar secuencias que exceden su ventana de contexto de entrenamiento no se debe a la longitud en sí, sino a la expulsión de estos tokens iniciales del KV cache. Al introducir StreamingLLM (que preserva permanentemente los 4 tokens iniciales en el KV cache combinados con una ventana deslizante de tokens recientes), el marco permite que modelos como LLaMA, MPT y Falcon generen texto de manera continua y estable sobre más de 4 millones de tokens con consumo de memoria y latencia constante.",
+        "analogy": "⚓ Como un ancla pesada clavada firmemente en el lecho marino por un barco explorador: no importa cuántos kilómetros de soga desenrolle la embarcación mientras navega en una corriente infinita, mantener el ancla inicial fija evita que todo el sistema de navegación pierda el rumbo y zozobre ante la marea de datos continuos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2309.17453",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "PowerInfer: Fast Large Language Model Serving with a Commercial GPU and CPU",
+        "author": "Yixin Song, Zeyu Mi, Haotong Xie, Haibo Chen (Shanghai Jiao Tong University)",
+        "description": "Desarrolla PowerInfer, un motor de inferencia de LLMs de alta eficiencia que aborda la escasez de memoria VRAM en hardware de consumo al explotar la marcada localidad de activación en modelos basados en ReLU o variantes con dispersión inducida. Los investigadores demostraron que una pequeña fracción de neuronas (neuronas calientes, aproximadamente el 20%) se activa de manera constante en la gran mayoría de consultas, mientras que el resto (neuronas frías) solo se activa en contextos específicos. PowerInfer ubica las neuronas calientes de forma permanente en la memoria VRAM de la GPU para procesamiento paralelo instantáneo y delega las neuronas frías a la memoria RAM del sistema ejecutadas en CPU mediante extensiones AVX-512, logrando servir modelos como Falcon 40B o LLaMA-70B en una sola GPU comercial RTX 4090 a más de 13 tokens/segundo (hasta 11 veces más rápido que llama.cpp).",
+        "analogy": "🗄️ Como un cocinero profesional de restaurante que coloca los 5 ingredientes que usa en el 80% de sus platos (sal, aceite, ajo, pimienta y cebolla) al alcance inmediato de su mano en la mesada de trabajo principal, mientras almacena las especias raras y exóticas en la despensa del fondo, acudiendo a buscarlas únicamente cuando una receta singular lo requiere.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.12456",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SparseGPT: Massive Language Models Can Be Pruned in One-Shot",
+        "author": "Elias Frantar, Dan Alistarh (IST Austria)",
+        "description": "Presenta SparseGPT, el primer algoritmo de poda (pruning) post-entrenamiento de alta precisión capaz de ejecutarse en una sola pasada (one-shot) sobre modelos masivos de más de 100.000 millones de parámetros en apenas unas pocas horas de cómputo en una sola GPU. SparseGPT resuelve de manera analítica y local el problema de Hessian inverso para cada fila de pesos mediante una expansión de Taylor de segundo orden modificada, podando de forma estructurada (2:4) o no estructurada entre el 50% y el 60% de los pesos de la red sin requerir ningún paso de reentrenamiento o ajuste fino. El método preserva intacta la perplejidad del modelo y su rendimiento en pruebas de razonamiento zero-shot, reduciendo sustancialmente el ancho de banda de memoria requerido durante la inferencia.",
+        "analogy": "🌳 Como un podador botánico maestro que examina un roble centenario gigantesco y, mediante cortes milimétricos en ramas secundarias que no reciben sol directo ni sostienen la estructura viva, retira más de la mitad del follaje del árbol en una sola tarde sin marchitar una sola hoja principal ni frenar el crecimiento de su tronco.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2301.00774",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaMissense: Catálogo de Predicción de Mutaciones Genéticas Patogénicas en el Genoma Humano para Acelerar la Investigación en Enfermedades Raras",
+      "description": "Google DeepMind presenta AlphaMissense en la revista Science, un avance monumental en biología computacional que clasifica el impacto biológico de las mutaciones con cambio de sentido (missense variants) en el genoma humano. Mientras que la comunidad médica solo había clasificado con certeza el 0.1% de las posibles mutaciones de este tipo a lo largo de décadas de ensayos clínicos, AlphaMissense aplicó modelos de lenguaje de proteínas y la infraestructura estructural de AlphaFold para predecir con una precisión del 89% el efecto patogénico o benigno de las 71 millones de variantes posibles en las proteínas humanas (clasificando el 32% como probablemente patogénicas y el 57% como benignas). El catálogo completo ha sido liberado de forma abierta para la comunidad médica internacional para acelerar el diagnóstico de enfermedades raras y el diseño de terapias genéticas de precisión.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/alphamissense-catalogue-of-genetic-mutations-to-help-pinpoint-the-causes-of-disease/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "DALL-E 3: Integración Nativa con ChatGPT para Generación de Imágenes de Alta Fidelidad y Comprensión Semántica de Prompts Complejos",
+      "description": "OpenAI lanza oficialmente DALL-E 3, su modelo de generación de imágenes de tercera generación integrado de manera nativa dentro de ChatGPT Plus y Enterprise. A diferencia de los generadores de imágenes tradicionales que ignoran términos específicos o sufren de ceguera sintáctica ante descripciones largas, DALL-E 3 fue entrenado sobre un conjunto masivo de datos con subtítulos sintéticos ultra-detallados generados por modelos de lenguaje de última generación, eliminando la brecha entre el prompt del usuario y la representación visual interna. Además, la integración con ChatGPT permite que el modelo de lenguaje actúe como un ingeniero de prompts autónomo, refinando y expandiendo dinámicamente las ideas del usuario y garantizando el renderizado coherente de texto legible dentro de las ilustraciones.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/dall-e-3/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Anthropic RSP (Responsible Scaling Policy): Marco de Seguridad Operativa y Estándares de Protección contra Riesgos Catastróficos (ASL-1 a ASL-4) para Modelos de Frontera",
+      "description": "Anthropic presenta su Política de Escalado Responsable (Responsible Scaling Policy o RSP), un marco de gobernanza operativa y técnica pionero en la industria de la inteligencia artificial diseñado para anticipar y neutralizar riesgos de seguridad catastróficos asociados al aumento de capacidades en modelos de frontera. Inspirado en los niveles de bioseguridad de laboratorios médicos (BSL), el RSP define los Niveles de Seguridad de IA (AI Safety Levels o ASL, de ASL-1 a ASL-4). Bajo esta política vinculante, el despliegue y entrenamiento de modelos con capacidades críticas de proliferación biológica, cibernética o autonomía descontrolada queda estrictamente condicionado a la demostración empírica previa de contramedidas de ciberdefensa y alineación no eludibles.",
+      "links": [
+        {
+          "text": "Anthropic Safety",
+          "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "ESMFold & ESM-2: Modelo del Lenguaje de Proteínas de Meta AI para Predicción Ultra-rápida de Estructuras 3D a Escala Atómica",
+      "description": "Meta AI (FAIR) presenta ESMFold junto a la familia de modelos de lenguaje de proteínas ESM-2 (con escalas de hasta 15.000 millones de parámetros), logrando inferir estructuras tridimensionales de proteínas directamente a partir de secuencias individuales de aminoácidos a una velocidad hasta 60 veces superior a AlphaFold 2. Al aprender las reglas fisicoquímicas del plegamiento macromolecular a través de modelado de lenguaje auto-supervisado a escala evolutiva, ESMFold prescinde de las costosas búsquedas de alineamientos múltiples de secuencias (MSAs). Utilizando este avance, Meta publicó de forma abierta el Atlas Metagenómico ESM con más de 600 millones de estructuras 3D predichas de microorganismos no cultivados del suelo y los océanos, expandiendo exponencialmente el conocimiento de la biodiversidad microbiana del planeta.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/blog/protein-folding-esmfold-metagenomics/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Safe Superintelligence (SSI)",
+      "headline": "Safe Superintelligence (SSI), la compañía fundada por Ilya Sutskever (co-fundador y ex científico en jefe de OpenAI), Daniel Gross y Daniel Levy, recauda 1.000 millones de dólares en capital inicial de inversores de primer nivel como Andreessen Horowitz (a16z), Sequoia Capital, DST Global y SV Angel a una valuación de 5.000 millones de dólares, comprometiendo todo su cómputo exclusivamente al avance de la superinteligencia segura sin la distracción de ciclos comerciales de productos a corto plazo.",
+      "links": [
+        {
+          "text": "SSI Announcement",
+          "url": "https://ssi.inc/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Skild AI",
+      "headline": "Skild AI, la startup de robótica generalista fundada por profesores e investigadores de Carnegie Mellon, levanta 300 millones de dólares en una ronda Serie A liderada por SoftBank Group, Jeff Bezos (a través de Bezos Expeditions), Lightspeed Venture Partners y Felicis a una valuación de 1.500 millones de dólares, escalando su modelo fundacional agnóstico de hardware Skild Brain para manipulación y locomoción en robots bípedos, humanoides y cuadrúpedos.",
+      "links": [
+        {
+          "text": "Skild AI News",
+          "url": "https://www.skild.ai/news/series-a",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Together AI",
+      "headline": "Together AI cierra una ronda de financiamiento Serie A ampliada de 106 millones de dólares liderada por Salesforce Ventures con participación de Coatue, Lux Capital y Emergence Capital a una valuación de 1.250 millones de dólares, consolidando su plataforma de infraestructura distribuida en la nube para inferencia de modelos abiertos de ultra-alto rendimiento y microajuste optimizado con kernels CUDA personalizados.",
+      "links": [
+        {
+          "text": "Together AI Blog",
+          "url": "https://www.together.ai/blog/series-a",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Braintrust",
+      "headline": "Braintrust asegura 36 millones de dólares en una ronda Serie A liderada por Andreessen Horowitz (a16z) con participación de Elad Gil y líderes técnicos de OpenAI y Stripe, consolidando su plataforma empresarial de evaluación continua, ingeniería de prompts basada en datos y observabilidad en tiempo real para aplicaciones de agentes y LLMs en entornos de producción regulados.",
+      "links": [
+        {
+          "text": "Braintrust News",
+          "url": "https://www.braintrust.dev/blog/series-a",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
