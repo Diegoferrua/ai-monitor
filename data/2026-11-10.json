@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-10",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Granite 3.0 Language Models",
+        "author": "IBM Granite Team, Kevin McDonnell, Matthew Stallone, et al. (IBM Research)",
+        "description": "Presenta la familia fundacional Granite 3.0 (modelos densos de 2B y 8B parámetros y variantes Mixture-of-Experts 1B/A400M y 3B/A800M) desarrollada por IBM Research bajo principios de transparencia empresarial y licencias permisivas Apache 2.0. Entrenados sobre más de 12 billones de tokens mediante un innovador protocolo de dos etapas que combina filtrado heurístico agresivo, datos sintéticos de alta densidad y ajuste por DPO (Direct Preference Optimization), Granite 3.0 iguala o supera a modelos líderes de tamaño similar como Llama 3.1 8B y Mistral NeMo en tareas de razonamiento lógico, codificación, ciberseguridad y adherencia a llamadas de función.",
+        "analogy": "🏢 Como un arquitecto corporativo e ingeniero de precisión que diseña un edificio administrativo con planos completamente transparentes y certificados contra incendios, optimizando cada metro cuadrado para que el mantenimiento y la auditoría sean impecables sin desperdiciar un solo vatio de energía.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.16238",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Aya 23: Open Weights Foundation Models for Multilingual AI",
+        "author": "Ahmet Üstün, Viraat Aryabumi, Zheng-Xin Yong, Pradeep Kumar Del Sesto, et al. (Cohere For AI)",
+        "description": "Introduce la familia Aya 23 (modelos de 8B y 35B parámetros), un avance cardinal en el equilibrio entre amplitud lingüística y profundidad representacional en modelos abiertos multilingües. Desarrollada por Cohere For AI, Aya 23 concentra su capacidad en 23 lenguas habladas por casi la mitad de la población mundial, combinando preentrenamiento extendido con un currículum masivo de ajuste por instrucciones altamente curado por lingüistas nativos. Supera ampliamente a Llama 3 y Mistral en traducción, comprensión cultural y razonamiento en lenguas no dominantes o con recursos moderados, manteniendo una paridad total en inglés técnico.",
+        "analogy": "🌍 Como un diplomático políglota de Naciones Unidas que, en lugar de intentar aprender superficialmente saludos en cientos de dialectos, se sumerge a fondo en las 23 lenguas más habladas del planeta, comprendiendo no solo la gramática estricta sino las sutilezas culturales y metáforas locales de cada comunidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2405.15032",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MiniCPM: Unveiling the Potential of End-Side Large Language Models",
+        "author": "Shengding Hu, Yuge Tu, Xu Han, Chaoqun He, Ganqu Cui, Xiang Long, Zhenghao Liu, Yuan Yao, Haotian Chen, Zhiyuan Liu, Maosong Sun et al. (Tsinghua University, ModelBest)",
+        "description": "Propone MiniCPM, un modelo de lenguaje compacto de 2.400 millones de parámetros diseñado para desplegar capacidades de nivel de frontera directamente en procesadores móviles y dispositivos embebidos. Los autores introducen la estrategia de tasa de aprendizaje WSD (Warmup-Stable-Decay), que permite continuar el preentrenamiento y evaluar dinámicamente el aprendizaje sin descartar el estado del optimizador. Con cuantización INT4 nativa que reduce la huella de memoria a menos de 2 GB de RAM, MiniCPM supera a LLaMA-2-7B y compite con Mistral-7B en razonamiento general, matemáticas (GSM8K) y código, consumiendo una fracción del cómputo tradicional.",
+        "analogy": "📱 Como un motor turbo compacto de alta ingeniería automotriz que entrega la misma aceleración y potencia que un motor V8 tradicional de gran cilindrada, pero ocupando el tamaño de una maleta de mano y funcionando de forma continua con la batería de un teléfono inteligente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.06395",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs",
+        "author": "Shengbang Hao, Yunhao Ge, Shuhan Tan, Eric Li, Zhiqing Sun, Yiming Yang, Laurent Itti et al. (New York University, Meta AI)",
+        "description": "Presenta Cambrian-1, un exhaustivo marco de investigación de código abierto centrado en resolver los cuellos de botella de la representación visual en modelos multimodales (MLLMs). Introduce el Spatial Vision Aggregator (SVA), un mecanismo de atención cruzada que fusiona representaciones heterogéneas provenientes de múltiples codificadores visuales simultáneos (DINOv2 para geometría espacial, SigLIP para semántica lingüística, CLIP y ConvNeXt para texturas locales) en un espacio de tokens unificado. Acompañado de Cambrian-10M (un corpus curado de 10 millones de pares imagen-texto) y el benchmark 'Vision-Centric Benchmark' (CV-Bench), Cambrian-1 demuestra que priorizar la riqueza sensorial visual supera el simple aumento indiscriminado de parámetros en el LLM base.",
+        "analogy": "👁️ Como un cirujano que opera utilizando simultáneamente una cámara endoscópica 4K de alta definición, un ecógrafo Doppler en tiempo real y una imagen tomográfica superpuesta en sus visores, integrando todas las fuentes sensoriales para tomar decisiones clínicas con máxima seguridad espacial.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.16860",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "VILA: On Pre-training of Visual Language Models",
+        "author": "Ji Lin, Hongxu Yin, Wei Ping, Yao Lu, Pavlo Molchanov, Andrew Tao, Jan Kautz, Mohammad Shoeybi, Song Han (NVIDIA, MIT)",
+        "description": "Investiga de manera sistemática los protocolos de preentrenamiento óptimos para Modelos de Visión y Lenguaje (VLMs), demostrando que la práctica habitual de congelar los pesos del LLM y entrenar únicamente el proyector visual limita severamente las capacidades de razonamiento multimodal complejo. VILA establece tres principios fundamentales: desbloquear y actualizar los pesos del modelo de lenguaje durante el preentrenamiento visual, incorporar secuencias entrelazadas de texto e imagen (interleaved data) para dotar al modelo de comprensión contextual multi-imagen y aprendizaje en contexto zero-shot, y mantener la resolución espacial nativa de las imágenes. VILA supera a alternativas abiertas y cerradas en razonamiento visual secuencial y análisis de video.",
+        "analogy": "🧠 Como un estudiante que aprende artes visuales no solo mirando cuadros en silencio mientras mantiene su mente desconectada, sino reflexionando activamente, debatiendo cada trazo en voz alta y redactando ensayos críticos a medida que observa las obras, logrando que su vocabulario y su percepción visual evolucionen juntos de forma orgánica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2312.07533",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models",
+        "author": "Siddharth Karamcheti, Suraj Nair, Ashwin Balakrishna, Percy Liang, Thomas Kollar, Dorsa Sadigh (Stanford University, Toyota Research Institute)",
+        "description": "Disecciona rigurosamente el espacio de diseño de los modelos de visión y lenguaje para aislar qué factores determinan verdaderamente su rendimiento. A través de cientos de experimentos controlados, los autores evalúan la selección del codificador visual, la arquitectura de fusión de tokens, la calidad y composición de los datos de entrenamiento y los esquemas de optimización. Demuestran que la fusión simple y explícita de dos codificadores complementarios (SigLIP para semántica conceptual y DINOv2 para características espaciales de baja frecuencia) supera a arquitecturas complejas de atención cruzada o proyectores pesados, logrando un rendimiento de frontera en VQA y razonamiento visual con un entrenamiento computacionalmente eficiente.",
+        "analogy": "🔬 Como un sommelier y catador profesional que utiliza simultáneamente el olfato para captar las notas florales complejas y el paladar para evaluar la textura y acidez del vino, logrando un veredicto sensorial mucho más rico y certero que si dependiera de un solo sentido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.07865",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models",
+        "author": "Lei Wang, Wanyu Xu, Yihuai Lan, Zhiqiang Hu, Yunshi Lan, Roy Ka-Wei Lee, Ee-Peng Lim (Singapore Management University)",
+        "description": "Aborda las deficiencias sistemáticas del razonamiento zero-shot en cadenas de pensamiento tradicionales (Zero-shot-CoT), tales como la omisión involuntaria de pasos intermedios, errores de cálculo aritmético y desviaciones semánticas del objetivo inicial. Propone el paradigma Plan-and-Solve (PS) Prompting, que descompone el proceso deductivo en dos fases explícitas: primero, la formulación de un plan arquitectónico completo que desglosa el problema en subtareas ordenadas; segundo, la ejecución secuencial de cada paso computando variables intermedias. Su variante extendida PS+ Prompting añade directrices de validación aritmética, superando a Zero-shot-CoT en benchmarks de razonamiento como GSM8K, SVAMP, MultiArith y CSQA.",
+        "analogy": "📋 Como un maestro carpintero que, antes de comenzar a cortar madera o clavar piezas, dibuja un plano detallado con todas las medidas, la lista de cortes y el orden exacto de ensamblaje en un tablero de taller, evitando desperdicios de material y errores estructurales durante la construcción.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2305.04091",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
+        "author": "Hongliang He, Ziyan Wang, Kyungmin Lee, Boyu Gou, Han Wang, Zhou Yu et al. (Zhejiang University, Tencent, UC Davis)",
+        "description": "Presenta WebVoyager, un agente web multimodal de extremo a extremo capaz de interactuar de forma autónoma con sitios web dinámicos del mundo real mediante visión por computadora y llamadas a eventos de entrada (clic, desplazamiento, escritura de texto, navegación). A diferencia de los agentes basados exclusivamente en representaciones HTML/DOM simplificadas que se rompen ante páginas complejas o aplicaciones web ricas en JavaScript, WebVoyager utiliza capturas de pantalla visuales aumentadas con un etiquetado contextual de elementos interactivos (Set-of-Mark visual prompting). Evaluado en un nuevo benchmark de 15 sitios web reales (incluyendo Amazon, Google Flights, Booking, GitHub y Coursera), alcanzó una tasa de éxito del 55.7%, superando drásticamente a agentes basados en texto puro.",
+        "analogy": "🌐 Como un asistente de viajes experto sentado a tu lado que mira directamente la pantalla de la computadora con sus propios ojos, mueve el cursor con soltura, hace clic en los calendarios desplegables y compara vuelos y hoteles en vivo tal como lo haría un ser humano, sin confundirse con el código fuente subyacente de la página.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.13919",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "author": "Xiao Liu, Hao Yu, Hanchen Zhang, Yifan Xu, Xuanyu Lei, Hanyu Lai, Yu Gu, Hangdong Xu, Kaiyue Qiu, Chenhui Zhang, Yuantao Fan, Yuxiao Dong, Jie Tang (Tsinghua University)",
+        "description": "Establece AgentBench, el primer benchmark multidimensional estandarizado diseñado para evaluar rigurosamente a los modelos de lenguaje como agentes autónomos en entornos interactivos y multi-turno. AgentBench abarca 8 entornos operativos distintos clasificados en sistemas operativos (bash), interacción con bases de datos (SQL), navegación y comercio electrónico en la web, razonamiento sobre grafos de conocimiento, juegos de cartas digitales (AlfWorld) y resolución interactiva de misterios. El estudio reveló una brecha profunda entre los modelos de frontera cerrados y los modelos de pesos abiertos en la capacidad de recuperarse de errores de sintaxis, gestionar memoria episódica a largo plazo y mantener metas complejas.",
+        "analogy": "🏟️ Como un decatlón olímpico de alta exigencia donde los atletas no son evaluados únicamente por su capacidad de responder un cuestionario teórico, sino por superar pruebas prácticas en pista mojada, escalar muros, reparar una máquina averiada y ganar partidas de ajedrez bajo presión de tiempo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2308.03688",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Speculative Streaming: Fast LLM Inference without Draft Models",
+        "author": "Nikhil Bhendawade, Irina Belousova, Qiantong Xu, Michael S. Ryabinin et al. (Apple)",
+        "description": "Desarrolla Speculative Streaming, una innovadora arquitectura de decodificación especulativa que erradica la necesidad de mantener un modelo borrador (draft model) auxiliar en memoria o sincronizar dos modelos heterogéneos. En su lugar, el modelo base se entrena mediante un objetivo de predicción multitoken en streaming utilizando cabezales predictivos integrados que generan simultáneamente múltiples tokens futuros especulativos en una sola pasada hacia adelante. Respaldado por un esquema de poda y verificación en árbol, Speculative Streaming logra factores de aceleración de inferencia de 1.8x a 3.1x en modelos de diversa escala con cero sobrecarga de memoria GPU y preservación matemática exacta de la distribución de salida.",
+        "analogy": "🚂 Como un tren expreso que lleva instalados sensores ópticos avanzados en la parte delantera que inspeccionan las vías y activan los cambios de agujas varios kilómetros antes de llegar a la bifurcación, permitiendo mantener la máxima velocidad de viaje sin necesidad de que una locomotora exploradora viaje por separado adelante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.11131",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "EAGLE-2: Faster Subtree Retrieval for Speculative Decoding",
+        "author": "Yuhui Li, Fangyun Wei, Chao Zhang, Hongyang Zhang (University of Waterloo, Microsoft Research)",
+        "description": "Introduce EAGLE-2, una evolución de alto rendimiento en decodificación especulativa que resuelve la rigidez de los árboles de borradores estáticos. EAGLE-2 genera hipótesis especulativas no en el espacio de palabras o tokens, sino en el espacio de características ocultas del modelo (feature-level speculative sampling), utilizando un pequeño cabezal autoregresivo de un solo bloque de transformador. EAGLE-2 evalúa dinámicamente la incertidumbre y las probabilidades condicionales del contexto actual para podar y expandir un árbol de candidatos de forma adaptativa, alcanzando factores de aceleración de 3.0x a 4.0x en modelos de la familia LLaMA y Qwen sin alterar una sola coma de las respuestas generadas.",
+        "analogy": "🌳 Como un maestro de ajedrez relámpago que no analiza a ciegas todas las jugadas posibles por igual, sino que evalúa instantáneamente el peso posicional del tablero para calcular a fondo solo las tres líneas de ataque más prometedoras, ejecutando jugadas impecables cuatro veces más rápido que sus rivales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.16858",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Liger Kernel: Efficient Triton Kernels for LLM Training",
+        "author": "Byron Hsu, Jeffrey Hu, et al. (LinkedIn)",
+        "description": "Presenta Liger Kernel, una suite de kernels de alta eficiencia escritos en Triton diseñada para maximizar el rendimiento y la eficiencia de memoria durante el entrenamiento y ajuste fino de modelos de lenguaje masivos. Liger Kernel implementa fusiones de operadores críticos (CrossEntropy Loss, RMSNorm, RoPE, SwiGLU y GeLU) que eliminan por completo la materialización de tensores de activación gigantescos en la memoria global (HBM) de la GPU. Al calcular la pérdida y el gradiente de forma entrelazada en el nivel de memoria compartida (SRAM), Liger Kernel reduce el consumo de memoria GPU hasta en un 20% y acelera el rendimiento general en más de un 20% como un reemplazo directo (drop-in) para bibliotecas estándar como Hugging Face Transformers y FlashAttention.",
+        "analogy": "⚙️ Como un taller de maquinado industrial de alta precisión que reemplaza cinco estaciones de ensamblaje separadas que transportaban piezas a través de largas cintas transportadoras por una sola máquina automatizada que funde, corta y pule la pieza en una única operación continua sobre la misma mesa, ahorrando espacio de taller y eliminando tiempos muertos de traslado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.10989",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaCode 2: Sistema Avanzado de Programación Competitiva Potenciado por Gemini para la Resolución de Problemas Complejos en Codeforces",
+      "description": "Google DeepMind presenta AlphaCode 2, su sistema de inteligencia artificial para programación competitiva de nueva generación impulsado por los modelos fundacionales Gemini. A diferencia de su predecesor, AlphaCode 2 combina modelos masivos de generación de código, muestreo masivo de candidatos a soluciones en múltiples lenguajes (C++, Python, Java), filtrado guiado por clusters de ejecución sobre casos de prueba dinámicos y un modelo de reordenamiento y puntuación especializado. En evaluaciones sobre concursos reales de la prestigiosa plataforma Codeforces con más de 8.000 participantes humanos, AlphaCode 2 resolvió el 85% de los problemas complejos de algoritmos y combinatoria, situándose en el percentil 85 superior de todos los competidores humanos (casi el doble de rendimiento de AlphaCode 1).",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/alphacode-2-powered-by-gemini/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "SearchGPT: Prototipo de Motor de Búsqueda Impulsado por IA con Acceso Web en Tiempo Real, Citas Claras y Respuestas Conversacionales Contextualizadas",
+      "description": "OpenAI presenta SearchGPT, un prototipo de motor de búsqueda conversacional diseñado para transformar la experiencia de exploración en la web al combinar la potencia de los modelos de frontera con información en tiempo real directamente desde fuentes online confiables. En lugar de limitarse a una lista de enlaces publicitarios o snippets desarticulados, SearchGPT entrega respuestas estructuradas y sintetizadas en lenguaje natural acompañadas de citas claras, imágenes y enlaces directos a los editores y creadores originales. El prototipo cuenta con capacidades de seguimiento conversacional fluido para refinar consultas paso a paso y fue desarrollado en estrecha colaboración con editores y medios de comunicación globales para respetar la atribución de contenido y los derechos de autor.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/searchgpt-prototype/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Introducing Claude: Asistente Conversacional de Próxima Generación Desarrollado con Alineación Constitucional (RLAIF)",
+      "description": "Anthropic presenta oficialmente Claude, su asistente conversacional de frontera concebido bajo la metodología pionera de Inteligencia Artificial Constitucional (Constitutional AI / RLAIF). A diferencia de los modelos alineados exclusivamente mediante aprendizaje por refuerzo con feedback humano (RLHF) —que tienden a sufrir de respuestas evasivas o sesgos subjetivos de los evaluadores—, Claude utiliza un conjunto explícito de principios éticos y de seguridad universales para criticar, evaluar y refinar sus propias respuestas de forma autónoma. Con una arquitectura optimizada para minimizar alucinaciones factuales, resistir técnicas de ingeniería de inyección de prompts adversariales y mantener conversaciones colaborativas y útiles en tareas complejas de síntesis, codificación y análisis de texto, Claude sienta las bases fundacionales del ecosistema de seguridad de Anthropic.",
+      "links": [
+        {
+          "text": "Anthropic Announcement",
+          "url": "https://www.anthropic.com/news/introducing-claude",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "V-JEPA (Video Joint Embedding Predictive Architecture): Modelo Fundacional de Visión Auto-supervisado para Comprensión Física y Temporal del Mundo Físico",
+      "description": "Meta AI (FAIR) presenta V-JEPA (Video Joint Embedding Predictive Architecture), un modelo de visión fundacional pionero desarrollado bajo la visión teórica de Yann LeCun sobre arquitecturas predictivas basadas en energía. En lugar de predecir píxeles individuales o generar fotogramas detallados (un proceso computacionalmente costoso y propenso a enfocarse en detalles irrelevantes como el movimiento de hojas o ruido de fondo), V-JEPA aprende a predecir representaciones abstractas de regiones de video ocultas o enmascaradas directamente en el espacio de incrustaciones latentes. Entrenado de forma 100% auto-supervisada sin anotaciones humanas sobre secuencias de video continuas, V-JEPA demostró una comprensión profunda de la física intuitiva, la permanencia de objetos y la dinámica espacial, alcanzando una eficiencia de entrenamiento entre 1.5 y 6 veces superior a los modelos generativos visuales basados en píxeles.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Pinecone",
+      "headline": "Pinecone anuncia el despliegue a escala global de Pinecone Serverless, su arquitectura de base de datos vectorial nativa de la nube que desacopla completamente el cómputo de la indexación y el almacenamiento, reduciendo los costos de infraestructura hasta en un 80% para aplicaciones RAG empresariales y habilitando búsquedas semánticas sobre miles de millones de embeddings con latencias inferiores a 50 milisegundos.",
+      "links": [
+        {
+          "text": "Pinecone Blog",
+          "url": "https://www.pinecone.io/blog/serverless/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Weights & Biases (W&B)",
+      "headline": "Weights & Biases (W&B) consolida su plataforma W&B Weave y W&B Prompts para evaluación sistemática, observabilidad y depuración de pipelines de modelos de lenguaje e inferencia agéntica en producción, cerrando acuerdos estratégicos con los principales laboratorios de frontera y superando los 1.000 clientes empresariales en telecomunicaciones, finanzas y biotecnología.",
+      "links": [
+        {
+          "text": "W&B News",
+          "url": "https://wandb.ai/site/blog",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Hippocratic AI",
+      "headline": "Hippocratic AI cierra una ronda de financiamiento Serie A de 53 millones de dólares a una valuación de 500 millones liderada por Premji Invest y General Catalyst, acelerando la validación clínica y el despliegue de sus modelos de lenguaje especializados en atención médica y enfermería no diagnóstica, evaluados rigurosamente por más de mil profesionales de la salud certificados.",
+      "links": [
+        {
+          "text": "Hippocratic AI Announcement",
+          "url": "https://www.hippocraticai.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "D-Matrix",
+      "headline": "D-Matrix, la compañía de silicio de cómputo en memoria (Digital In-Memory Compute, DIMC) para aceleración de inferencia de LLMs, completa su ronda Serie B de 110 millones de dólares liderada por el fondo de capital de riesgo de Singapur Temasek con respaldo de Playground Global y Microsoft M12, iniciando la producción a gran escala de su procesador Corsair para inferencia con latencias récord y consumo energético mínimo.",
+      "links": [
+        {
+          "text": "D-Matrix News",
+          "url": "https://www.d-matrix.ai/news",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
