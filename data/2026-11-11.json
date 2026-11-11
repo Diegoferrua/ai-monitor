@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-11",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Qwen2.5: A Party of Foundation Models",
+        "author": "Qwen Team, Alibaba Cloud (An Yang, Baosong Yang, Binyuan Hui, Bo Zheng, Bowen Yu, Chang Zhou, Chengpeng Li et al.)",
+        "description": "Presenta el reporte técnico exhaustivo de la familia de modelos fundacionales Qwen2.5, que abarca desde arquitecturas ultraligeras de 0.5B hasta modelos insignia de 72B parámetros, además de variantes especializadas en código y matemáticas. Preentrenados sobre un corpus colosal de hasta 18 billones de tokens con un incremento sustancial en datos de programación y razonamiento formal, los modelos incorporan una ventana de contexto nativa de hasta 128k tokens, RoPE con escalado YARN, activación SwiGLU y sesgos QKV para estabilidad. Qwen2.5 establece nuevos récords de rendimiento en modelos de pesos abiertos, compitiendo de igual a igual con modelos propietarios de frontera en benchmarks como MMLU, GSM8K, MATH y HumanEval.",
+        "analogy": "📚 Como una red global de bibliotecas universitarias interconectadas que no solo almacena millones de volúmenes en cientos de idiomas, sino que cuenta con un sistema de fichaje cruzado de alta velocidad capaz de conectar al instante una demostración matemática abstracta con un algoritmo de ingeniería práctico sin perder el hilo de una investigación kilométrica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2412.15115",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SmolLM2: When Small Goes Big -- Small Language Models for On-Device AI",
+        "author": "Loubna Ben Allal, Anton Lozhkov, Elie Bakouch, Gabriel Martin Blazquez, Lewis Tunstall, Leandro von Werra, Thomas Wolf (Hugging Face)",
+        "description": "Introduce la familia SmolLM2 (modelos de 135M, 360M y 1.7B parámetros), diseñada específicamente para operar de forma eficiente y autónoma en dispositivos de borde (on-device AI) sin requerir conectividad a la nube. A través de un riguroso régimen de preentrenamiento sobre 11 billones de tokens con una curaduría exhaustiva de conjuntos de datos sintéticos densos (FineMath, SmolTalk y Cosmo2), SmolLM2 demuestra que la calidad y la densidad sintética de datos superan la simple acumulación masiva de parámetros. La variante de 1.7B supera a modelos previos como SmolLM-1.7B, MobileLLM y Qwen2.5-1.5B en razonamiento lógico, seguimiento de instrucciones complejas y redacción estructurada ocupando una huella de memoria ínfima.",
+        "analogy": "🛵 Como una motocicleta deportiva de cilindrada ultraeficiente y chasis de fibra de carbono que, gracias a un combustible sintético de grado aeroespacial, alcanza la misma aceleración ágil en calles estrechas que camiones pesados de gran tonelaje, consumiendo una milésima parte de combustible y aparcando en cualquier rincón.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2502.02737",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "InternLM2 Technical Report",
+        "author": "InternLM Team, Zheng Cai, Maosong Cao, Chenya Gu, Keyu Chen, Shan Chen et al. (Shanghai AI Laboratory, SenseTime, CUHK)",
+        "description": "Detalla la arquitectura y los fundamentos de entrenamiento de InternLM2 (modelos de 7B y 20B parámetros), enfocados en el aprendizaje continuo y la comprensión de secuencias ultra-largas de hasta 200.000 tokens. Introduce una estrategia de preentrenamiento progresivo con una fase crítica de Cool-Down que estabiliza las representaciones semánticas y refina la distribución del gradiente al final del entrenamiento masivo. Asimismo, presenta la técnica Conditional Online RLHF (COOL-RLHF), que resuelve el conflicto intrínseco entre adherencia a instrucciones (helpfulness) y seguridad/moderación (harmlessness) mediante un sistema de recompensas multietapa con retroalimentación humana continua.",
+        "analogy": "🧘 Como un atleta olímpico de fondo que, tras someterse a miles de kilómetros de entrenamiento extenuante a máxima intensidad, dedica semanas cruciales a una fase metódica de descarga muscular y meditación guiada para afinar sus reflejos, logrando mantener una concentración inquebrantable durante maratones de seis horas sin sufrir fatiga mental.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.17297",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Qwen2-VL: To See the World More Clearly",
+        "author": "Qwen Team, Peng Wang, Shuai Bai, Sinan Tan, Shijie Wang, Zhihao Fan, Jinze Bai, Junyang Lin et al. (Alibaba Cloud)",
+        "description": "Presenta Qwen2-VL, un modelo multimodal fundacional de vanguardia capaz de procesar imágenes de resoluciones dinámicas arbitrarias y secuencias de video de más de 20 minutos de duración. A diferencia de los modelos tradicionales que redimensionan las imágenes a una cuadrícula estática predefinida distorsionando la información visual, Qwen2-VL adopta el mecanismo NaViT de resolución adaptativa y un novedoso esquema Multimodal Rotary Position Embedding (M-RoPE) que desacopla e indexa independientemente el tiempo, la altura y la anchura espacial. Esto le permite actuar como un agente visual de precisión para operar sistemas operativos en tiempo real, interpretar gráficos de alta resolución y localizar objetos diminutos en coordenadas exactas.",
+        "analogy": "🦅 Como un águila con visión telescópica adaptativa y memoria cinemática que puede sobrevolar un valle reconociendo la topografía general en una mirada amplia, y en una fracción de segundo enfocar la pupila para distinguir con nitidez quirúrgica el movimiento de una pequeña presa entre la hierba alta a cientos de metros de altura.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.12191",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models",
+        "author": "Matt Deitke, Christopher Clark, Sangho Lee, Rohit Hajeldin, Weidi Huang, Shengbang Hao, Ali Farhadi et al. (Allen Institute for AI - AI2)",
+        "description": "Presenta la familia Molmo (desde 7B hasta 72B parámetros) y su corpus fundacional PixMo, marcando un nuevo estándar en ciencia abierta para modelos multimodales. Los autores demuestran que un conjunto de datos multimodal de alta calidad curado mediante anotaciones de puntero explícitas (pixel-level pointing data) permite entrenar modelos compactos de 7B que superan a gigantes de frontera propietarios cerrados como GPT-4o y Claude 3.5 Sonnet en benchmarks de razonamiento visual, diagramas de flujo y comprensión de interfaces de usuario. Todo el conjunto de datos PixMo (con millones de anotaciones de habla y señalamiento humano), el código de preentrenamiento y los pesos del modelo fueron liberados con licencias abiertas.",
+        "analogy": "🎯 Como un instructor de tiro y navegación que, en lugar de dar discursos teóricos abstractos y difusos sobre el paisaje, le enseña al alumno apuntando directamente con un puntero láser sobre cada coordenada milimétrica del mapa, transmitiendo una precisión espacial impecable en un tercio del tiempo de aprendizaje habitual.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.17146",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CogVLM2: Visual Language Models for Next-Generation Multimodal AI",
+        "author": "Zhengxiao Du, Aohan Zeng, Yuxiao Dong, Jie Tang et al. (Tsinghua University, Zhipu AI)",
+        "description": "Introduce la familia CogVLM2, una arquitectura de visión y lenguaje de nueva generación basada en modelos fundacionales de última generación como Llama 3 8B. CogVLM2 eleva la resolución nativa de procesamiento de imágenes hasta 8K (1344x1344 y resoluciones superiores mediante codificación en mosaico) y elimina la degradación por compresión de tokens visuales mediante un puente de atención profunda entre el codificador de imagen y el modelo lingüístico. Esto le otorga una precisión sobresaliente en reconocimiento óptico de caracteres multilingüe (OCR), lectura de documentos técnicos con tipografía diminuta y comprensión espacio-temporal de video cuadro por cuadro con tiempos de respuesta reducidos.",
+        "analogy": "🔍 Como un microscopio confocal digital conectado directamente a la retina de un perito calígrafo forense, permitiéndole examinar tanto la composición estilística general de un manuscrito histórico como los microporos y trazos invisibles de tinta bajo la lupa con una fidelidad milimétrica absoluta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.16500",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+        "author": "Chris Lu, Cong Lu, Robert Tjarko Lange, Jakob Foerster, Jeff Clune, David Ha (Sakana AI, University of Oxford, University of British Columbia)",
+        "description": "Presenta The AI Scientist, el primer marco completamente automatizado de inteligencia artificial para la generación y ejecución integral de investigación científica abierta en aprendizaje automático. Impulsado por agentes LLM orquestados, el sistema genera hipótesis novedosas, diseña experimentos computacionales, escribe y ejecuta el código en clústeres de GPUs, analiza los resultados empíricos, produce figuras cuantitativas, redacta un manuscrito científico completo en formato LaTeX y genera revisiones por pares automáticas basadas en directrices de conferencias como ICLR. El sistema demostró la capacidad de generar artículos científicos completos de manera autónoma con un costo de cómputo inferior a 15 dólares por investigación.",
+        "analogy": "🧪 Como un laboratorio científico completamente automatizado donde un equipo robótico no solo mezcla reactivos y calienta tubos de ensayo, sino que lee la literatura existente de madrugada, propone una nueva teoría, realiza los experimentos empíricos, tabula las curvas de error y redacta un borrador académico impecable listo para someter a arbitraje internacional.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.06292",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
+        "author": "Maciej Besta, Nils Blach, Ales Kubicek, Robert Gerstenberger, Lukas Gianinazzi, Piotr Nyczyk, Torsten Hoefler et al. (ETH Zurich)",
+        "description": "Propone Graph of Thoughts (GoT), un paradigma avanzado que generaliza los modelos de razonamiento como Chain-of-Thought (secuencias lineales) y Tree of Thoughts (estructuras jerárquicas arborescentes) en grafos acíclicos dirigidos (DAGs) arbitrarios. En GoT, cada pensamiento o deducción individual se modela como un vértice y las dependencias lógicas como aristas orientadas, permitiendo que el sistema combine múltiples ramas de razonamiento dispares (agregación y sinergia), evalúe la calidad de cada nodo intermedio y realice retrocesos iterativos o transformaciones dinámicas de la red de pensamientos. Evaluado en tareas como clasificación de documentos, operaciones con conjuntos y síntesis de algoritmos, GoT reduce el costo de tokens y supera a ToT en precisión resolutiva.",
+        "analogy": "🕸️ Como una sala de situación de detectives criminalistas con un pizarrón de corcho gigante donde las pistas, recortes de periódico e hipótesis no se organizan en una lista rígida ni en un árbol ramificado cerrado, sino que se conectan libremente con hilos rojos multidireccionales, permitiendo cruzar testimonios distantes y fusionar dos líneas de investigación para resolver un misterio intrincado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2308.09687",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents",
+        "author": "Xingyao Wang, Boxuan Li, Yufan Song, Frank F. Xu, Xiangru Tang, Mingchen Zhuge, Graham Neubig et al. (All-Hands AI, CMU, UIUC)",
+        "description": "Presenta OpenHands (anteriormente conocido como OpenDevin), una plataforma modular y de código abierto para construir, evaluar y desplegar agentes de software autónomos generalistas. OpenHands resuelve los desafíos críticos del desarrollo autónomo de software encapsulando el entorno del agente dentro de contenedores Docker aislados, gestionando estados asíncronos mediante una arquitectura basada en flujos de eventos (event-stream architecture), y dotando al modelo de navegación web interactiva, terminal de comandos bash con retroalimentación en tiempo real y edición contextual de archivos. En el benchmark SWE-bench Verified, los agentes desplegados en OpenHands alcanzaron tasas de resolución de incidentes reales de GitHub comparables a plataformas propietarias de primer nivel.",
+        "analogy": "🛠️ Como equipar a un ingeniero de software senior con una estación de trabajo virtual completamente aislada en un búnker de pruebas: cuenta con su propio terminal seguro, navegador web para consultar documentación, compilador automatizado y herramientas de depuración, permitiéndole clonar un repositorio roto, reproducir el error y verificar los parches de código sin riesgo de dañar la infraestructura de producción.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.16741",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts",
+        "author": "Trevor Gale, Deepak Narayanan, Cliff Young, Matei Zaharia (Stanford University, Databricks, Google Research)",
+        "description": "Desarrolla MegaBlocks, un sistema de entrenamiento y compilación para modelos Mixture-of-Experts (MoE) que erradica la ineficiencia causada por el desequilibrio de carga entre expertos. En las implementaciones MoE estándar basadas en operaciones densas, los tokens que sobrepasan la capacidad de un experto deben descartarse arbitrariamente o forzar un relleno masivo (padding) con cómputo artificial inútil. MegaBlocks formula el enrutamiento de expertos como una multiplicación matricial dispersa por bloques (Block-Sparse MatMul / dMoE) respaldada por kernels GPU personalizados de alto rendimiento, permitiendo procesar el 100% de los tokens sin descartes de información y acelerando el tiempo de entrenamiento de modelos MoE hasta en un 40% respecto a frameworks líderes como Tutel.",
+        "analogy": "📦 Como un centro de distribución logística de comercio electrónico que, en lugar de obligar a cada cinta transportadora a llevar un número fijo de paquetes rígidos (tirando a la basura los paquetes sobrantes si un camión se llena), cuenta con cintas transportadoras inteligentes de longitud variable que se adaptan dinámicamente en milisegundos al volumen exacto de carga de cada destino, sin perder un solo envío ni desperdiciar espacio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2211.15841",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DejaVu: Contextual Sparsity for Efficient LLM Serving with Sub-Network Invocations",
+        "author": "Zichang Liu, Jue Wang, Tri Dao, Tianyi Chen, Binhang Yuan, Zhao Song, Celestine Mendler-Dünner, Christopher Ré, Beidi Chen (Rice University, Stanford University, ETH Zurich)",
+        "description": "Introduce DejaVu, un sistema de inferencia acelerada de LLMs basado en el aprovechamiento de la escasez contextual dinámica (contextual sparsity). Los autores descubren empíricamente que, para cualquier token de entrada determinado, más del 75% de los parámetros en las capas MLP y en las cabezas de atención tienen una contribución residual prácticamente nula a la predicción final. DejaVu entrena pequeños clasificadores predictivos de mirada hacia adelante (lookahead predictors) que determinan en tiempo real qué subconjunto mínimo de neuronas y cabezas de atención se activará en la capa siguiente. Al omitir el cómputo de los bloques inactivos sin materializar activaciones completas, DejaVu reduce la latencia de inferencia en más de 2x manteniendo una fidelidad matemática indistinguible de la ejecución completa.",
+        "analogy": "💡 Como un edificio inteligente ultramoderno equipado con sensores de movimiento predictivos que enciende las luces y el aire acondicionado únicamente en las dos habitaciones y el pasillo por donde una persona va a caminar en el siguiente segundo, manteniendo el resto de las 50 habitaciones del piso completamente apagadas para reducir el consumo eléctrico a una fracción sin que el usuario note jamás una penumbra.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.17157",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DistFlashAttn: Distributed Memory-Efficient Attention for Long-Context LLMs Training",
+        "author": "Dacheng Li, Rulin Shao, Hao Zhang, Eric P. Xing, Joseph E. Gonzalez, Ion Stoica (UC Berkeley, Carnegie Mellon University)",
+        "description": "Presenta DistFlashAttn, un marco de paralelismo y atención distribuida diseñado para desbloquear el entrenamiento eficiente de modelos de lenguaje con ventanas de contexto ultra-largas (cientos de miles a millones de tokens) en clústeres heterogéneos de GPUs. DistFlashAttn extiende la técnica de cálculo exacto por bloques de FlashAttention al ámbito multi-GPU, superponiendo de forma asíncrona la comunicación de red inter-nodo con la computación tensorial interna de las matrices de consulta (Q), clave (K) y valor (V). Mediante un esquema de canalización en anillo (Ring-style pipeline) y equilibrio dinámico de carga, DistFlashAttn reduce el tráfico de red hasta en un 50% y elimina los cuellos de botella de memoria compartida, logrando factores de aceleración de hasta 2.5x en comparación con soluciones distribuidas tradicionales como Megatron-LM.",
+        "analogy": "🚒 Como una brigada de bomberos de rescate formada por cientos de voluntarios organizados en un círculo continuo perfecto, donde cada bombero pasa el cubo de agua hacia la derecha con una mano mientras con la otra ya está recibiendo el siguiente balde del bombero de la izquierda de forma sincronizada y fluida, apagando un incendio masivo sin que el flujo de agua se detenga jamás ni se derrame una sola gota en el trayecto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2310.03294",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Gemma 2: Modelos Abiertos de Nueva Generación (9B y 27B) con Arquitectura de Atención Local/Global y Destilación Masiva",
+      "description": "Google DeepMind lanza oficialmente Gemma 2 en tamaños de 9B y 27B parámetros, redefiniendo la frontera de eficiencia y capacidad en modelos de pesos abiertos. Diseñados desde cero con una arquitectura que alterna capas de atención local deslizante (sliding window local attention de 4.096 tokens) y capas de atención global completa (8.192 tokens), e impulsados por un protocolo de destilación de conocimiento masivo a partir de los modelos Gemini de mayor escala. Gemma 2 27B supera a modelos que duplican o triplican su tamaño como Llama 3 70B en benchmarks clave de razonamiento, STEM y diálogo instructivo, mientras que la variante 9B establece un nuevo estándar de rendimiento en GPUs de consumo individuales.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/gemma-2-improving-open-language-models-at-a-practical-size/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Fine-Tuning de Visión para GPT-4o: Personalización Multimodal para Reconocimiento de Imágenes Especializadas en la API",
+      "description": "OpenAI anuncia la disponibilidad general de fine-tuning para capacidades de visión en su modelo insignia GPT-4o a través de su plataforma para desarrolladores. Las organizaciones ahora pueden personalizar el modelo utilizando conjuntos de datos compuestos por imágenes y texto con tan solo unas pocas docenas de ejemplos, permitiendo adaptar con precisión el razonamiento multimodal para análisis de imágenes médicas, inspección de calidad automatizada en líneas de montaje industriales, lectura de planos arquitectónicos complejos y categorización visual de productos en comercio electrónico, manteniendo intactas las salvaguardas de seguridad y la velocidad de inferencia de la API.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/custom-vision-fine-tuning/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude 3.5 Sonnet: Salto en Razonamiento a Nivel de Posgrado, Comprensión Multimodal y Velocidad Operativa",
+      "description": "Anthropic presenta Claude 3.5 Sonnet, el primer modelo de la familia Claude 3.5 que eleva sustancialmente el listón de la industria en razonamiento lógico, matemáticas y codificación a nivel de posgrado universitario. Superando al modelo insignia Claude 3 Opus y a competidores de frontera en benchmarks estandarizados como GPQA, MMLU y HumanEval, Claude 3.5 Sonnet opera al doble de velocidad y a una quinta parte del costo de Opus. Además, introduce capacidades de visión de vanguardia para la interpretación de diagramas y visualizaciones complejas, e inaugura la función interactiva de Artifacts en Claude.ai y en la API.",
+      "links": [
+        {
+          "text": "Anthropic Announcement",
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Meta Llama 3 (8B y 70B): La Revolución de Preentrenamiento Abierto sobre 15 Billones de Tokens y Tokenizador de 128k",
+      "description": "Meta AI (FAIR) lanza la primera generación de Llama 3 en variantes de 8.000 y 70.000 millones de parámetros, marcando un hito transformador en el ecosistema de inteligencia artificial abierta. Preentrenados sobre un corpus de más de 15 billones de tokens (cuatro veces superior al volumen de Llama 2 y con más de un 5% de datos multilingües de alta calidad), Llama 3 incorpora un tokenizador tiktoken de 128.000 palabras que triplica la eficiencia de codificación y decodificación. El modelo iguala y supera a las principales alternativas propietarias en razonamiento general, resolución de problemas matemáticos y seguimiento estricto de instrucciones bajo una licencia comunitaria permisiva.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/meta-llama-3/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "CoreWeave",
+      "headline": "CoreWeave asegura una facilidad de crédito masiva de 650 millones de dólares y expande su infraestructura global de centros de datos de IA especializados en clusters NVIDIA Blackwell para satisfacer la demanda exponencial de cómputo en la nube para entrenamiento y despliegue de modelos de frontera.",
+      "links": [
+        {
+          "text": "CoreWeave Newsroom",
+          "url": "https://www.coreweave.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Lightmatter",
+      "headline": "Lightmatter completa una ronda de financiación Serie D de 400 millones de dólares a una valoración de 4.400 millones liderada por T. Rowe Price, acelerando el despliegue de su arquitectura de interconexión fotónica Passage para eliminar los cuellos de botella de ancho de banda y disipación térmica en centros de datos de IA a escala de gigavatios.",
+      "links": [
+        {
+          "text": "Lightmatter News",
+          "url": "https://lightmatter.co/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Groq",
+      "headline": "Groq supera los 500.000 desarrolladores en GroqCloud y anuncia acuerdos estratégicos con plataformas de nube empresarial para desplegar su arquitectura LPU (Language Processing Unit), alcanzando tasas de generación sostenidas de más de 300 tokens por segundo en modelos de código abierto como Llama 3.3 y Gemma 2.",
+      "links": [
+        {
+          "text": "Groq Press",
+          "url": "https://groq.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Cohere",
+      "headline": "Cohere presenta Command R+ Fine-Tuning y nuevas capacidades empresariales de búsqueda híbrida multilingüe para su suite de Embeddings y Rerank, consolidando alianzas con los principales bancos globales y proveedores de servicios en la nube para automatizar flujos de trabajo de análisis financiero y cumplimiento normativo.",
+      "links": [
+        {
+          "text": "Cohere Blog",
+          "url": "https://cohere.com/blog",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
