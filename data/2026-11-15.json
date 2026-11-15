@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-15",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte-Carlo Tree Search",
+        "author": "Huajian Xin, Z. Z. Ren, Junxiao Song, Zhihong Shao, Wanjia Zhao, Haocheng Wang, Bo Liu, Liyue Zhang et al. (DeepSeek-AI, Tsinghua University)",
+        "description": "Presenta DeepSeek-Prover-V1.5, un modelo de lenguaje de código abierto especializado en la demostración automática de teoremas formales en el asistente de pruebas Lean 4. Basado en DeepSeekMath-Base, introduce un esquema de entrenamiento dual que combina aprendizaje por refuerzo guiado por la retroalimentación del compilador (Proof Assistant Feedback RL) y búsqueda en árbol de Monte Carlo guiada por el modelo (MCTS). El sistema genera subtácticas y conjeturas intermedias, explorando sistemáticamente el espacio de demostración y retrocediendo cuando el verificador detecta errores sintácticos o semánticos. En el benchmark MiniF2F-test, DeepSeek-Prover-V1.5 alcanza una tasa de éxito del 58.5%, superando ampliamente a modelos anteriores y estableciendo un nuevo récord en demostración matemática formal con pesos abiertos.",
+        "analogy": "♟️ Como un gran maestro de ajedrez que, en lugar de memorizar aperturas de forma pasiva, juega millones de partidas contra un motor determinista infalible que le invalida de inmediato cada jugada ilegal, aprendiendo a proyectar ramas de movimientos hacia adelante y retroceder con agilidad mental antes de comprometer una pieza en el tablero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2408.08152",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models",
+        "author": "Zixiang Chen, Yihe Deng, Huizhuo Yuan, Kaixuan Ji, Quanquan Gu (University of California, Los Angeles - UCLA)",
+        "description": "Introduce SPIN (Self-Play Fine-Tuning), un marco revolucionario de auto-supervisión que permite a un modelo de lenguaje grande mejorar de manera iterativa sin requerir datos anotados por humanos adicionales ni modelos evaluadores (jueces) más potentes. Formulando el proceso de alineación como un juego de dos jugadores donde la versión actual del LLM genera respuestas contra las cuales su encarnación sucesora debe aprender a distinguir y superar en comparación con los datos demostrativos originales, SPIN demuestra matemáticamente que la distribución de salida del modelo converge al óptimo de la distribución de datos objetivo. En benchmarks como Open LLM Leaderboard, MT-Bench y GSM8K, un modelo Zephyr-7B ajustado con SPIN supera a alternativas entrenadas con datos directos de GPT-4.",
+        "analogy": "🤺 Como un esgrimista de élite que entrena frente a un espejo inteligente que graba y replica instantáneamente cada una de sus fintas y debilidades, obligándolo en cada asalto sucesivo a perfeccionar su técnica y anticipar sus propios fallos sin necesidad de contratar a un maestro externo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.01335",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DeepSeek-Coder: When the Large Language Model Meets Programming -- The Rise of Code Intelligence",
+        "author": "Qihao Zhu, Daya Guo, Zhihong Shao, Dejian Yang, Peiyi Wang, Runxin Xu, Y. Wu, Yukun Li, Huazuo Gao et al. (DeepSeek-AI)",
+        "description": "Presenta la familia DeepSeek-Coder (modelos desde 1.3B hasta 33B parámetros), entrenados desde cero sobre un corpus exhaustivo de 2 billones de tokens de código fuente de más de 80 lenguajes de programación y documentación técnica en inglés y chino. La arquitectura incorpora una ventana de contexto extendida de 16k tokens mediante RoPE con base escalada y emplea la estrategia Fill-In-the-Middle (FIM) a nivel de repositorio completo y archivo individual para soportar la compleción y refactorización contextual precisa de proyectos de software complejos. En evaluaciones exhaustivas sobre HumanEval, MBPP, DS-1000 y LeetCode Contest, DeepSeek-Coder 33B igualó y superó a modelos de frontera propietarios líderes como GPT-3.5 Turbo y Claude 2.",
+        "analogy": "🏗️ Como un ingeniero civil y arquitecto de software que no solo memoriza fragmentos de planos aislados, sino que comprende la estructura tridimensional completa del rascacielos: puede insertar una tubería o viga maestra en el piso 15 verificando de inmediato que no interfiera con los cimientos ni con las redes eléctricas del ático.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.14196",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "OmniGen: Unified Image Generation",
+        "author": "Shitao Xiao, Yueze Wang, Junjie Zhou, Huaying Yuan, Xingrun Xing, Ruiran Yan, Shuting Wang, Tiejun Huang, Zheng Liu (BAAI, Peking University)",
+        "description": "Presenta OmniGen, un modelo fundacional autoregresivo y unificado para la generación y manipulación de imágenes que elimina la necesidad de módulos auxiliares dispersos (como ControlNet, IP-Adapter o modelos de inpainting específicos). Basado en una arquitectura de Transformer simplificada donde cualquier instrucción textual, imagen de entrada, máscara o referencia condicional se procesa como una secuencia multimodal unificada, OmniGen resuelve tareas heterogéneas como texto a imagen, edición guiada por sujeto, transferencia de pose, estilización y restauración visual dentro de un único modelo de pesos. Esto simplifica drásticamente el flujo de trabajo de visión generativa y logra una fidelidad composicional y coherencia contextual sobresaliente.",
+        "analogy": "🎨 Como un pintor renacentista que domina con maestría el fresco, el grabado, el óleo y la restauración con una única paleta y mano firme, capaz de pintar un lienzo desde cero, agregar un personaje de otro cuadro conservando su postura exacta o retocar un detalle sutil sin cambiar jamás de caballete ni pedir ayuda a otros artesanos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.11340",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MobileVLM V2: Faster and Stronger Vision Language Models for Mobile Devices",
+        "author": "Xiangxiang Chu, Limeng Qiao, Xinyao Chu, Feiyue Lu, Zichao Geng et al. (Meituan)",
+        "description": "Introduce MobileVLM V2, una familia de modelos multimodales compactos (1.7B y 3B parámetros) diseñados específicamente para inferencia de alto rendimiento y bajo consumo energético en procesadores móviles como Qualcomm Snapdragon y MediaTek Dimensity. Incorpora el conector visual ligero LDPv2 (Lightweight Downsample Projector), que comprime de forma eficiente las matrices de parches visuales del codificador CLIP preservando la información posicional y los detalles de alta resolución sin inflar el número de tokens. Además, implementa un protocolo de preentrenamiento multimodal multietapa con datos textuales y visuales entrelazados, logrando una tasa de generación de hasta 21 tokens por segundo en teléfonos inteligentes y superando a modelos que triplican su tamaño en VQA, TextVQA y MME.",
+        "analogy": "📸 Como una cámara compacta de bolsillo equipada con un microprocesador neuronal que procesa, enfoca e interpreta al instante escenas complejas de la calle en tiempo real, ofreciendo la misma nitidez analítica que un pesado equipo de fotografía profesional de estudio sin agotar la batería del teléfono.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.03766",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LongVA: Resolving the Context Bottleneck in Visual Language Models",
+        "author": "Peiyuan Zhang, Kaichen Zhang, Bo Li, Guangtao Zeng, Jingkang Yang, Yuanhan Zhang, Ziyan Dong, Yifei Huang, Ciprian A. Corneanu, Ziwei Liu (S-Lab, Nanyang Technological University)",
+        "description": "Desarrolla LongVA, un modelo multimodal de visión y lenguaje capaz de procesar secuencias visuales ultra-largas de hasta 224.000 tokens de contexto, lo que equivale a más de 2.000 imágenes de alta resolución o secuencias de video completas de varias horas de metraje. Los autores identifican que el cuello de botella tradicional de los VLMs al escalar secuencias radica en el desajuste entre la atención espacial local y la compresión temporal. LongVA introduce un re-escalado dinámico de tokens y un protocolo de ajuste instructivo multimodal de ventana larga, demostrando una recuperación casi perfecta de información (superior al 99% en pruebas de Needle-in-a-Haystack visual) en documentos de cientos de páginas con gráficos técnicos y secuencias fílmicas continuas.",
+        "analogy": "📽️ Como un archivista cinemático con memoria fotográfica infinita capaz de ver una maratón continua de una trilogía de películas de 9 horas seguidas y, sin pestañear ni confundirse, señalar con precisión quirúrgica el segundo exacto en el que un personaje secundario cambió el color de su anillo en una escena fugaz.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.16852",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "VisualWebArena: Evaluating Multimodal Web Agents on Realistic Tasks",
+        "author": "Junpeng Liu, Shuyan Zhou, Frank F. Xu, Graham Neubig et al. (Carnegie Mellon University, University of Waterloo)",
+        "description": "Presenta VisualWebArena, un benchmark riguroso y realista diseñado para evaluar agentes de inteligencia artificial multimodal en entornos web dinámicos y visualmente complejos. A diferencia de las evaluaciones basadas únicamente en árboles DOM de texto plano, VisualWebArena requiere que los agentes interpreten elementos visuales gráficos, mapas interactivos, gráficos de precios, disposiciones dinámicas y tiendas de comercio electrónico complejas en sitios web funcionales totalmente desplegados (como Classifieds, Reddit y Shopping). Los autores revelan que los mejores modelos de visión y lenguaje de frontera alcanzan menos del 15% de éxito en tareas humanas cotidianas complejas, destacando los desafíos fundamentales en anclaje visual, razonamiento espacial y toma de decisiones secuenciales multi-paso.",
+        "analogy": "🧭 Como soltar a un navegante novato en medio de un hipermercado laberíntico con estanterías en constante reorganización, cupones impresos en tipografías variadas y pantallas táctiles dinámicas: no basta con saber leer el directorio en texto plano, es imperativo orientarse con la mirada, esquivar obstáculos y comprender los carteles visuales para llenar el carrito de compras.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.13649",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Agent-Driver: Language Agent for Autonomous Driving",
+        "author": "Jiageng Mao, Yuxi Qian, Hang Zhao, Yue Wang (University of Southern California, Tsinghua University)",
+        "description": "Introduce Agent-Driver, un novedoso marco de conducción autónoma que reimagina la pila tradicional de percepción y planificación mediante agentes LLM dotados de razonamiento cognitivo humano, sentido común y memoria experiencial. Agent-Driver integra una biblioteca de memoria de conducción (driving memory) que almacena escenarios de tráfico pasados, un motor de razonamiento que evalúa intenciones de otros conductores y peatones, y una suite de herramientas de control que interactúa con planificadores de trayectoria de bajo nivel. Evaluado en el benchmark nuScenes, Agent-Driver demuestra una capacidad de generalización superior en situaciones imprevistas de tráfico denso, obras viales y maniobras de emergencia, ofreciendo además explicaciones lingüísticas totalmente transparentes e interpretables de cada decisión al volante.",
+        "analogy": "🚗 Como un conductor experimentado y prudente que no solo reacciona mecánicamente a las líneas del asfalto y las luces de freno, sino que lee el lenguaje corporal de un peatón dubitativo en la esquina, recuerda cómo esquivar baches en una calle en obras y explica con calma a sus pasajeros por qué redujo la velocidad antes de una intersección ciega.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2311.10813",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents",
+        "author": "Chang Ma, Junlong Li, Lingquan Xie, Bohao Peng, Shumin Deng et al. (Tsinghua University, National University of Singapore)",
+        "description": "Propone AgentBoard, una plataforma de evaluación analítica y diagnóstico profundo diseñada para medir y diseccionar sistemáticamente las capacidades de agentes LLM en entornos interactivos multi-turno. Frente a las métricas simplistas basadas únicamente en tasas binarias de éxito o fracaso, AgentBoard introduce una métrica de progreso continuo (Progress Rate) y un panel de análisis que descompone el comportamiento del agente en dimensiones críticas: planificación jerárquica, anclaje contextual en el entorno, recuperación de herramientas y autorreflexión correctiva. Evaluado a lo largo de 9 tareas complejas (incluyendo navegación web, juegos de texto, robótica simulada y manipulación de APIs), el estudio revela correlaciones clave entre la longitud de razonamiento y el estancamiento en bucles de error.",
+        "analogy": "🩺 Como una suite de telemetría y diagnóstico médico para pilotos de carreras que, en lugar de registrar únicamente si el bólido cruzó o no la línea de meta, monitorea segundo a segundo la presión de frenado, los tiempos de reacción en cada curva, el consumo de neumáticos y la lucidez mental bajo presión para identificar exactamente dónde se produjo el fallo de conducción.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.13178",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
+        "author": "Huiqiang Jiang, Qianhui Wu, Chin-Yew Lin, Yuqing Yang, Lili Qiu (Microsoft Research)",
+        "description": "Presenta MInference 1.0, un sistema de inferencia acelerada diseñado para eliminar el cuello de botella computacional cuadrático de la fase de prellenado (pre-filling) en LLMs con contextos ultra-largos (de 32k a 1 millón de tokens). Los autores identifican que las matrices de atención en secuencias largas se organizan en patrones dispersos predecibles: atención vertical-diagonal (A-shape), bloques densos locales y cabezas dispersas aleatorias. MInference clasifica dinámicamente cada cabeza de atención en tiempo de ejecución y ejecuta kernels GPU optimizados en Triton para cada patrón específico sin requerir re-entrenamiento ni ajuste fino de pesos. En modelos como Llama-3-8B-1M y Phi-3-128K, MInference reduce la latencia del prefill hasta en 10x en una única GPU NVIDIA A100 manteniendo una precisión semántica intacta.",
+        "analogy": "⚡ Como un archivista judicial de lectura veloz que, al recibir un expediente de 1.000 páginas, no lee minuciosamente cada palabra de cada párrafo con lupa, sino que escanea al instante las firmas clave, los sellos en los márgenes y las cláusulas en negrita, localizando los antecedentes relevantes en segundos sin perder ningún detalle legal crítico.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.02490",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Layer-Skip: Enabling Early Exit Inference and Self-Speculative Decoding",
+        "author": "Mostafa Elhoushi, Akshat Shrivastava, Diana Liskovich, Basil Hosmer, Bram Wasti et al. (Meta AI)",
+        "description": "Introduce Layer-Skip, una técnica integral desarrollada por Meta AI que acelera la inferencia de modelos de lenguaje combinando salidas tempranas (early exit) con decodificación auto-especulativa sin requerir un modelo borrador (draft model) separado ni memoria GPU adicional. Durante el entrenamiento, Layer-Skip aplica una pérdida de salida anticipada con dropout de capas progresivo, enseñando a las capas intermedias a predecir correctamente el siguiente token. Durante la inferencia, el modelo genera borradores rápidos ejecutando únicamente las capas iniciales, y verifica múltiples tokens de forma concurrente en una sola pasada a través de las capas profundas restantes. En modelos Llama, Layer-Skip logra factores de aceleración de inferencia de hasta 2.16x en tareas de generación de código y diálogo.",
+        "analogy": "🏃 Como un estudiante brillante que redacta borradores veloces de sus respuestas saltándose pasos mecánicos obvios, y solo cuando llega al final de la página hace una revisión general profunda con sus apuntes completos para validar cuatro conclusiones al mismo tiempo en una fracción del tiempo habitual de examen.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.16710",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+        "author": "Zirui Liu, Jiayi Yuan, Hongye Jin, Shaochen Zhong, Zhaozhuo Xu, Vladimir Braverman, Beidi Chen, Xia Hu (Rice University, Carnegie Mellon University)",
+        "description": "Desarrolla KIVI, un algoritmo pionero de cuantización asimétrica de 2 bits para la memoria caché de claves y valores (KV Cache) que no requiere ningún tipo de entrenamiento ni ajuste de parámetros (tuning-free). KIVI descubre una disparidad fundamental en la distribución numérica de tensores de atención: los estados de clave (Key cache) exhiben valores atípicos (outliers) por canal, mientras que los estados de valor (Value cache) presentan valores atípicos por token. Al aplicar cuantización de 2 bits por canal para las claves y por token para los valores, KIVI reduce la huella de memoria del KV Cache en hasta 2.6x, permitiendo duplicar o triplicar el tamaño de lote (batch size) y la longitud de contexto en una única GPU comercial sin degradación en benchmarks de razonamiento largo.",
+        "analogy": "🧳 Como un experto empacador de equipaje para expediciones que comprime ropa blanda al vacío enrollándola en vertical dentro de bolsas cilíndricas, mientras encaja las herramientas rígidas en horizontal a lo largo de los compartimentos laterales, logrando meter el triple de suministros en la misma maleta de cabina sin romper nada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.02750",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Med-Gemini: Familia de Modelos Multimodales Especializados en Medicina para Razonamiento Clínico de Alta Precisión y Diagnóstico Asistido",
+      "description": "Google Research y Google DeepMind presentan la familia de modelos Med-Gemini, adaptando las capacidades de Gemini al dominio médico y clínico mediante fine-tuning especializado y búsqueda multimodal avanzada. Med-Gemini supera los puntos de referencia médicos de última generación en 14 benchmarks de evaluación clínica, alcanzando un récord del 91.1% en MedQA (USMLE) mediante una técnica de incertidumbre y verificación web. Además, demuestra habilidades pioneras para procesar estudios completos de resonancia magnética (3D MRI), secuencias largas de electrocardiogramas (ECG), diapositivas de histopatología en resolución gigapíxel y síntesis de historiales médicos electrónicos (EHR), superando a médicos especialistas en razonamiento diferencial.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/advancing-medical-ai-with-med-gemini/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "OpenAI Batch API: Procesamiento Asíncrono de Inferencia a Gran Escala con 50% de Descuento y Límites de Tasa Separados",
+      "description": "OpenAI lanza oficialmente la API de procesamiento por lotes (Batch API), permitiendo a las organizaciones y desarrolladores enviar grandes volúmenes de solicitudes de inferencia no urgentes con una ventana de resolución garantizada de 24 horas a la mitad del costo de la API estándar. Diseñada para tareas asíncronas masivas como evaluación de modelos, resumen de millones de documentos, enriquecimiento de datos para RAG y traducción de catálogos completos, la Batch API cuenta con cuotas de tasa de solicitudes independientes y un mecanismo de ingesta por archivos JSONL que no satura los límites de concurrencia en tiempo real de los entornos de producción.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-batch-api/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude 3.5 Haiku: Modelo Compacto de Próxima Generación con Velocidad de Inferencia Ultrarrápida y Capacidades de Codificación Avanzadas a Bajo Costo",
+      "description": "Anthropic anuncia el lanzamiento y disponibilidad general de Claude 3.5 Haiku, su modelo más veloz y económico de la familia Claude 3.5. Manteniendo el mismo costo por token y latencia instantánea que su predecesor Claude 3 Haiku, la variante 3.5 iguala y en varias tareas de codificación y razonamiento lógico supera al anterior modelo insignia Claude 3 Opus, alcanzando una precisión del 40.6% en el benchmark SWE-bench Verified. Está especialmente optimizado para productos orientados al usuario final, tareas agénticas de múltiples llamadas continuas, autocompletado en entornos IDE y procesamiento de grandes volúmenes de texto semiestructurado a escala corporativa.",
+      "links": [
+        {
+          "text": "Anthropic Announcement",
+          "url": "https://www.anthropic.com/news/claude-3-5-haiku",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Segment Anything Model 2 (SAM 2): Segmentación Visual de Objetos en Tiempo Real para Imágenes y Videos con Memoria Espaciotemporal",
+      "description": "Meta AI (FAIR) presenta SAM 2, un modelo fundacional unificado para la segmentación interactiva visual zero-shot de cualquier objeto tanto en imágenes estáticas como en secuencias continuas de video en tiempo real. SAM 2 introduce una arquitectura con atención en flujo de memoria (memory attention) que almacena representaciones espaciotemporales de los fotogramas anteriores, permitiendo rastrear y delimitar con precisión milimétrica objetos que sufren oclusiones temporales, cambios bruscos de iluminación o deformaciones de perspectiva. Junto con el modelo, Meta libera el dataset SA-V (el mayor corpus de segmentación de video del mundo con más de 50.900 secuencias y 642.000 anotaciones de máscaras) bajo una licencia abierta permisiva.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/segment-anything-2/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Tenstorrent",
+      "headline": "Tenstorrent, liderada por Jim Keller, asegura alianzas estratégicas globales y expande la producción de sus aceleradores Wormhole y procesadores RISC-V de arquitectura abierta, posicionando su tecnología de chiplets heterogéneos como una alternativa de alta eficiencia energética y costo-efectividad frente a los monopolios tradicionales de GPUs en inferencia y entrenamiento a gran escala.",
+      "links": [
+        {
+          "text": "Tenstorrent Newsroom",
+          "url": "https://tenstorrent.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "VAST Data",
+      "headline": "VAST Data supera los 200 millones de dólares en ingresos anuales recurrentes (ARR) y consolida su plataforma VAST Data Platform con soporte nativo para arquitecturas de inferencia y RAG en clústeres masivos de NVIDIA Blackwell, optimizando el rendimiento de I/O y eliminando cuellos de botella de almacenamiento en las mayores infraestructuras de supercomputación de IA del mundo.",
+      "links": [
+        {
+          "text": "VAST Data News",
+          "url": "https://vastdata.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Astera Labs",
+      "headline": "Astera Labs reporta un crecimiento interanual de ingresos superior al 200% impulsado por la adopción masiva de sus módulos de conectividad inteligente Aries PCIe/CXL y soluciones de retemporizadores ópticos Scorpio en centros de datos de IA de hiperescala, esenciales para solventar la congestión de ancho de banda entre aceleradores y memoria distribuida.",
+      "links": [
+        {
+          "text": "Astera Labs Press Releases",
+          "url": "https://asteralabs.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Mistral AI",
+      "headline": "Mistral AI sella acuerdos estratégicos con los principales consorcios financieros y gubernamentales de la Unión Europea para el despliegue de sus modelos frontier y embeddings en nubes soberanas e infraestructura on-premise, consolidando una alternativa europea robusta que garantiza el cumplimiento normativo estricto del AI Act y la privacidad absoluta de datos sensibles.",
+      "links": [
+        {
+          "text": "Mistral AI News",
+          "url": "https://mistral.ai/news",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
