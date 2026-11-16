@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-16",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "OLMoE: Open Mixture-of-Experts Language Models",
+        "author": "Niklas Muennighoff, Luca Soldaini, Dirk Groeneveld, Kyle Lo, Jacob Morrison, Sewon Min, Weijia Shi, Pete Walsh et al. (Allen Institute for AI - AI2, University of Washington)",
+        "description": "Presenta OLMoE (Open Language Model of Experts), un modelo de Mixture-of-Experts (MoE) completamente abierto con 1B de parámetros activos por token sobre un total de 7B parámetros (64 expertos con enrutamiento top-8). A diferencia de la gran mayoría de modelos MoE que mantienen sus recetas, datos o logs bajo secreto comercial, OLMoE libera de manera irrestricta los pesos, el código, los registros de optimización y el corpus completo de preentrenamiento de 5 billones de tokens (Dolma). Los resultados empíricos demuestran que OLMoE supera a modelos densos consolidados de costo equivalente como Llama 2 7B e iguala a arquitecturas considerablemente mayores con una reducción sustancial del consumo computacional por token en inferencia.",
+        "analogy": "🏭 Como un taller automotriz de alta competición con 64 mecánicos hiperespecializados, donde para solucionar cada avería milimétrica solo se convocan a los 8 técnicos exactos necesarios para esa pieza puntual, completando la puesta a punto en tiempo récord sin saturar el espacio ni incurrir en el gasto energético de tener a los 64 operarios activos a la vez.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2409.02060",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DeepSeek-Math: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+        "author": "Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Mingchuan Zhang, Y. K. Li, Y. Wu, Daya Guo (DeepSeek-AI)",
+        "description": "Introduce DeepSeekMath 7B, un modelo de lenguaje de pesos abiertos especializado en razonamiento matemático formal y deductivo preentrenado sobre DeepSeekMath Corpus (120 mil millones de tokens de matemáticas curados de Common Crawl). Propone el algoritmo Group Relative Policy Optimization (GRPO), una variante de optimización de políticas por refuerzo altamente eficiente que prescinde por completo del modelo crítico tradicional (critic network), estimando la línea base directamente a partir de las recompensas relativas de múltiples salidas muestreadas ante una misma instrucción. DeepSeekMath 7B alcanza un 51.7% en el benchmark MATH sin requerir acceso a herramientas externas ni compiladores, acercándose al nivel de GPT-4 y sentando las bases matemáticas y algorítmicas que consolidaron el auge de modelos de razonamiento como DeepSeek-R1.",
+        "analogy": "📐 Como un talentoso estudiante de olimpiadas matemáticas que prescinde de un tutor privado continuo que califique cada renglón de su cuaderno; en su lugar, resuelve el mismo teorema por cinco caminos diferentes en el pizarrón y, comparando sus propios borradores entre sí, discierne qué demostración fue rigurosa y directa y cuáles cometieron pasos superfluos.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.03300",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "StarCoder 2 and The Stack v2: The Next Generation",
+        "author": "Anton Lozhkov, Raymond Li, Loubna Ben Allal, Federico Cassano, Joel Lamy-Poirier, Nouamane Tazi, Ao Liu, Quentin Gallouédec, Leandro von Werra et al. (BigCode Project, ServiceNow, Hugging Face)",
+        "description": "Detalla la concepción y entrenamiento de StarCoder 2 (disponible en variantes de 3B, 7B y 15B parámetros) junto con The Stack v2, el conjunto de datos de código fuente abierto más rigurosamente filtrado y documentado de la industria (cubriendo más de 600 lenguajes de programación y 3.5 veces más extenso que su predecesor). Equipado con una ventana de contexto nativa de 16k tokens, Grouped-Query Attention (GQA) y entrenamiento con objetivos Fill-in-the-Middle (FIM) a nivel de repositorio, la versión de 15B parámetros supera a modelos de código de 33B en HumanEval y MBPP, además de ofrecer gobernanza de datos estricta con mecanismos transparentes de exclusión (opt-out) y atribución para los autores de software libre.",
+        "analogy": "💻 Como un maestro arquitecto de software de código abierto que ha leído y catalogado pacientemente miles de repositorios modulares bien construidos en cientos de lenguajes, capaz de completar con precisión quirúrgica el módulo central que falta en una biblioteca compleja respetando rigurosamente las licencias y la cohesión de todo el proyecto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.19173",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Aria: An Open Multimodal Native MoE Foundation Model",
+        "author": "Dongxu Li, Yudong Liu, Haoning Wu, Yue Wang, Zhiqi Shen et al. (Rhymes AI)",
+        "description": "Presenta Aria, un modelo fundacional multimodal nativo de pesos abiertos fundamentado en una arquitectura Mixture-of-Experts (MoE) que activa 3.9B parámetros de un total de 25.3B por token. Diseñado desde su inicialización con un espacio de representación compartido para texto, imágenes arbitrarias y secuencias extensas de video (soportando ventanas de contexto de hasta 64k tokens), Aria erradica el cuello de botella tradicional de conectar codificadores visuales congelados a LLMs existentes. Demuestra capacidades líderes en la comprensión profunda de videos extensos, extracción y razonamiento sobre diagramas técnicos y transcripción densa, superando ampliamente a modelos multimodales densos de mayor escala con un costo de inferencia significativamente más bajo.",
+        "analogy": "🎬 Como un director de cine políglota y montajista visual que no requiere de traductores intermedios para interpretar el material fílmico: sus propios sentidos procesan el guión literario, los fotogramas y la narrativa temporal de forma simultánea, activando únicamente los reflejos cognitivos exactos para cada secuencia sin fatiga mental.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2410.05993",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Qwen2-Audio: Large Audio-Language Model with Unified Audio Representation Learning",
+        "author": "Yunfei Chu, Jinzheng He, Xiaoqian Liu, Tingxun Shi, Bohao Li, Jinghua Liang, Hao Shen et al. (Qwen Team, Alibaba Group)",
+        "description": "Introduce Qwen2-Audio, un modelo fundacional multimodal de voz y lenguaje capaz de procesar señales de audio complejas e interactuar fluidamente mediante diálogos naturales. Qwen2-Audio supera las limitaciones de las canalizaciones tradicionales de reconocimiento de voz en cascada unificando dos modalidades de procesamiento acústico: la interacción conversacional por voz (voice chat) y el análisis holístico del entorno acústico (sonidos ambientales, emociones en la entonación, música y métricas de audio). Gracias a su codificador de audio escalado y a un entrenamiento por alineación de doble flujo, alcanza precisión de vanguardia en tareas de reconocimiento del habla multilingüe, subtitulado de audio y razonamiento auditivo directo sin necesidad de transcribir previamente a texto plano.",
+        "analogy": "🎙️ Como un intérprete simultáneo de conferencias diplomáticas dotado de oído absoluto: no solo traduce al instante las palabras complejas de un discurso extranjero, sino que percibe de inmediato el temblor de nerviosismo o la ironía en el tono de la voz y el eco de la sala, respondiendo con la tonalidad y precisión conceptual idónea.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2407.10759",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CogView3: Finer and Faster Text-to-Image Generation via Relay Diffusion",
+        "author": "Jiaming Zheng, Xiaoshi Chen, Jiayan Teng, Hongming Zhang, Yuxiao Dong, Jie Tang et al. (Tsinghua University, Zhipu AI)",
+        "description": "Propone CogView3, un modelo generativo de texto a imagen de vanguardia fundamentado en el paradigma de Relay Diffusion (difusión por relevos). En lugar de aplicar el costoso proceso de eliminación de ruido iterativo directamente en el espacio de alta resolución a partir de ruido puro, CogView3 descompone la generación en etapas progresivas: un modelo base sintetiza primero una aproximación estructural limpia a menor resolución y, de forma inmediata, un modelo de difusión por relevo condicional refina los detalles de alta frecuencia y microtexturas. Esta técnica reduce el número total de pasos de muestreo en un 50% y duplica la velocidad de inferencia sin comprometer la fidelidad estética ni el estricto seguimiento de instrucciones textuales complejas frente a arquitecturas tipo SDXL.",
+        "analogy": "🏃 Como una carrera de relevos en atletismo donde el primer atleta cubre con zancada firme y veloz el trazado estructural de la pista para entregarle el testigo a un compañero especialista en curvas cerradas que ejecuta el remate final con destreza milimétrica, completando la vuelta en la mitad del tiempo ordinario.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2403.05121",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "TAU-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+        "author": "Shunyu Yao, Noah Shinn, Pedram Razavi, Karthik Narasimhan (Sierra, Princeton University)",
+        "description": "Presenta TAU-bench, un marco de evaluación pionero y riguroso diseñado para medir el desempeño de agentes autónomos basados en LLMs en entornos dinámicos y realistas de tres vías: herramienta, agente y usuario humano (Tool-Agent-User). A diferencia de los entornos de evaluación basados en invocaciones aisladas de funciones sintéticas, TAU-bench recrea dominios comerciales vivos (como aerolíneas y retail) con bases de datos transaccionales de lectura y escritura, restricciones operativas complejas y usuarios simulados que modifican sus requerimientos a lo largo del diálogo. La investigación evidencia que incluso modelos de frontera como GPT-4o exhiben tasas de resolución inferiores al 50% debido a fallas recurrentes en el seguimiento de estado conversacional y en la aplicación estricta de políticas de negocio.",
+        "analogy": "✈️ Como un agente de atención al pasajero en un mostrador de abordaje durante un retraso imprevisto: debe escuchar a un cliente indeciso que cambia tres veces de destino, interactuar con el sistema de reservas para bloquear plazas en tiempo real y respetar a rajatabla los reglamentos de tarifas aéreas sin cometer un solo cobro erróneo ni extraviar una maleta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2406.12045",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+        "author": "Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, Jonathan Larson (Microsoft Research)",
+        "description": "Introduce GraphRAG, un enfoque pionero de Generación Aumentada por Recuperación (RAG) que combina la extracción automatizada de grafos de conocimiento asistida por LLMs con la síntesis jerárquica de comunidades semánticas. Mientras que los sistemas RAG vectoriales convencionales son incapaces de responder consultas holísticas que exigen comprensión global sobre un corpus masivo (por ejemplo: '¿Cuáles son los temas estructurales transversales en este millar de informes?'), GraphRAG extrae entidades, relaciones y aserciones para formar un grafo, detecta conglomerados mediante el algoritmo de Leiden y genera resúmenes precalculados a múltiples niveles de abstracción, logrando una exhaustividad y diversidad de respuesta sustancialmente superior.",
+        "analogy": "🗺️ Como un historiador de élite que, en lugar de consultar páginas sueltas con una lupa buscando palabras clave aisladas en una enciclopedia de cien tomos, teje un inmenso mapa genealógico y geopolítico de todo el imperio que vincula a cada linaje, ciudad y tratado, permitiendo responder con claridad magistral a qué se debió el auge y la caída de la dinastía entera.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.16130",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Self-Discover: Large Language Models Self-Compose Reasoning Structures",
+        "author": "Pei Zhou, Jay Pujara, Xiang Ren, Xinyun Chen, Heng-Tze Chou, Denny Zhou et al. (University of Southern California, Google DeepMind)",
+        "description": "Presenta SELF-DISCOVER, un marco de razonamiento adaptativo que capacita a los modelos de lenguaje para seleccionar y ensamblar de forma dinámica sus propias estructuras cognitivas de resolución de problemas a partir de un conjunto de módulos atómicos (como pensamiento crítico, descomposición paso a paso, análisis de hipótesis inversas y verificación sistemática). En lugar de imponer esquemas fijos e inflexibles como Chain-of-Thought (CoT) o Tree-of-Thoughts (ToT), SELF-DISCOVER analiza primero la naturaleza específica del desafío planteado, compone un plan de razonamiento a medida y lo ejecuta. Logra mejoras de hasta un 32% en precisión en benchmarks desafiantes como Big-Bench Hard y problemas matemáticos complejos, reduciendo hasta en 40x el cómputo frente a métodos de búsqueda exhaustiva.",
+        "analogy": "🧰 Como un maestro artesano que, al enfrentarse a una restauración arquitectónica atípica, no recurre por inercia al mismo martillo de siempre: primero inspecciona la fisura, abre su maletín, escoge las tres herramientas exactas para ese material singular, traza un croquis a mano alzada y ejecuta la intervención con pulso certero y sin desperdiciar energía.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2402.03620",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+        "author": "Ofir Press, Noah A. Smith, Mike Lewis (University of Washington, Meta AI)",
+        "description": "Presenta ALiBi (Attention with Linear Biases), una técnica fundamental de codificación posicional que confiere a los modelos Transformer la capacidad de extrapolar la atención a secuencias mucho más largas que las vistas durante la fase de entrenamiento. En vez de sumar embeddings posicionales a los vectores de entrada en las capas iniciales, ALiBi aplica una penalización proporcional y lineal directamente a los puntajes de atención entre tokens en función de su distancia relativa en la secuencia. Este mecanismo erradica la explosión de perplejidad al evaluar contextos que duplican o cuadruplican la longitud de preentrenamiento, reduce drásticamente el consumo de memoria y tiempo de entrenamiento inicial, y garantiza estabilidad numérica en secuencias ultra-largas.",
+        "analogy": "📏 Como una regla de perspectiva artística que atenúa gradualmente la nitidez visual de los edificios a medida que se alejan hacia el punto de fuga en el horizonte con una pendiente invariable, permitiendo al dibujante extender el lienzo hasta el infinito sin necesidad de recalcular las leyes básicas del dibujo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2108.12409",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AQLM: Extreme Compression of Large Language Models via Additive Quantization",
+        "author": "Vage Egiazarian, Andrei Panferov, Denis Kuznitskiy, Artem Babenko, Dan Alistarh (Yandex Research, IST Austria, Neural Magic)",
+        "description": "Introduce AQLM (Additive Quantization for Large Language Models), un algoritmo de vanguardia para la compresión extrema de modelos de lenguaje posterior al entrenamiento (PTQ) que logra cuantización de pesos por debajo de 2 bits por parámetro manteniendo la perplejidad prácticamente intacta. AQLM generaliza la cuantización vectorial representando bloques de parámetros como una combinación aditiva de múltiples vectores provenientes de libros de códigos (codebooks) optimizados de forma conjunta. A diferencia de las técnicas de redondeo escalar tradicionales que colapsan severamente la capacidad de razonamiento a 2 bits, AQLM permite ejecutar modelos masivos como Llama 2 70B en GPUs comerciales de 16 GB de VRAM con pérdidas de precisión marginales.",
+        "analogy": "🎼 Como una orquesta sinfónica reducida a un trío de cámara donde, en vez de simplificar las notas hasta volver la melodía tosca y mecánica, los tres instrumentos tocan sutiles acordes simultáneos entrelazados que reproducen en el oído humano la misma riqueza armónica que la filarmónica entera.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2401.06118",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving",
+        "author": "Zihao Ye, Ruihang Lai, Size Zheng, Lianmin Zheng, Haotian Tang, Song Han, Arvind Krishnamurthy (University of Washington, UC Berkeley, MIT)",
+        "description": "Presenta FlashInfer, un motor y biblioteca de kernels acelerados por GPU de código abierto diseñado para optimizar el servicio de inferencia de modelos de lenguaje grandes en entornos de producción con patrones de carga heterogéneos. FlashInfer aborda los cuellos de botella de la atención en fases de pre-filling y decoding mediante implementaciones de alta eficiencia para atención paginada (Paged Attention), compresión de KV cache, decodificación especulativa estructurada y ventanas de atención variables. Con soporte nativo para arquitecturas como Grouped-Query Attention (GQA), Multi-Head Latent Attention (MLA) y formatos de cuantización FP8/INT4, FlashInfer ofrece mejoras de rendimiento de hasta 2x frente a implementaciones estándar y se ha consolidado como motor central en vLLM y SGLang.",
+        "analogy": "🏎️ Como una estación de boxes de Fórmula 1 diseñada con herramientas neumáticas modulares de reacción instantánea donde, sin importar si entra a repostar un bólido con neumáticos experimentales o un alerón asimétrico, la cuadrilla ajusta sus pistolas al milímetro devolviendo el coche a la pista sin resignar una sola centésima de segundo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2404.14294",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "NeuralGCM: Modelo Híbrido de Redes Neuronales y Física Atmosférica Clásica para Pronóstico del Clima Global a Escala Decenal publicado en Nature",
+      "description": "Google Research y Google DeepMind presentan NeuralGCM (Neural General Circulation Models), un innovador enfoque de modelado climático que combina modelos físicos tradicionales de circulación atmosférica con redes neuronales basadas en aprendizaje automático. Publicado en la prestigiosa revista Nature, NeuralGCM supera a los modelos atmosféricos globales estándar en predicciones meteorológicas a 1-15 días y proporciona proyecciones climáticas multidecenales estables y de alta resolución a un costo computacional entre tres y cinco órdenes de magnitud inferior al de los supercomputadores climáticos convencionales.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/discover/blog/neuralgcm/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "OpenAI Model Spec: Marco Formal y Especificación Abierta de Comportamiento, Seguridad y Principios Operativos para Modelos de Frontera",
+      "description": "OpenAI publica la primera versión oficial del OpenAI Model Spec, un documento fundacional abierto que detalla las reglas de comportamiento, objetivos, principios éticos y salvaguardas que guían las respuestas de sus modelos de frontera en ChatGPT y la API. El Model Spec establece directrices explícitas sobre cómo los modelos deben navegar dilemas como la neutralidad ante opiniones subjetivas, el cumplimiento riguroso de instrucciones sin asumir sesgos no justificados, la negativa constructiva frente a solicitudes perjudiciales y la preservación de la privacidad y el contexto del usuario.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-the-model-spec/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Anthropic System Prompts Transparency: Publicación Abierta de las Instrucciones de Sistema y Filosofía Operativa para Claude 3.5 Sonnet y Claude 3.5 Haiku",
+      "description": "Anthropic da un paso inédito en transparencia dentro de la industria de la inteligencia artificial publicando en su documentación oficial los system prompts completos que rigen a sus modelos insignia Claude 3.5 Sonnet y Claude 3.5 Haiku tanto en la web como en las aplicaciones móviles y la API. El documento detalla las directrices operativas sobre la evitación de juicios morales paternalistas, la prohibición de halagos superficiales o respuestas aduladoras innecesarias, el manejo metódico de consultas complejas de programación y la interacción fluida con la herramienta Artifacts, estableciendo un nuevo estándar de apertura en la gobernanza de modelos de frontera.",
+      "links": [
+        {
+          "text": "Anthropic Announcement",
+          "url": "https://www.anthropic.com/news/system-prompts",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Meta Llama 3.2-Vision: Modelos Multimodales Abiertos de 11B y 90B para Razonamiento Visual Avanzado, OCR de Alta Densidad y Comprensión de Gráficos",
+      "description": "Meta AI libera los modelos multimodales Llama 3.2-Vision (en tamaños de 11B y 90B parámetros), incorporando comprensión nativa de imágenes y documentos visuales al ecosistema abierto de Llama. Diseñados mediante una arquitectura que acopla un codificador visual previamente alineado con el modelo denso de texto a través de capas de atención cruzada (cross-attention), Llama 3.2-Vision destaca en tareas exigentes como transcripción y análisis de infografías complejas, comprensión de gráficos técnicos, razonamiento visual de múltiples pasos y subtitulado denso, compitiendo directamente contra alternativas propietarias como Claude 3 Haiku y GPT-4o-mini con pesos accesibles para la comunidad investigadora y empresarial.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/llama-3-2-connect-2024/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Synthesia",
+      "headline": "Synthesia presenta su nueva generación de avatares sintéticos hiperrealistas Expressive Avatars y supera los 100 millones de dólares en ingresos anuales recurrentes (ARR), consolidando el uso de modelos generativos de video y doblaje multilingüe sincronizado en más de 50.000 organizaciones y empresas del Fortune 100.",
+      "links": [
+        {
+          "text": "Synthesia Newsroom",
+          "url": "https://www.synthesia.io/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Inflection AI",
+      "headline": "Inflection AI anuncia una transformación integral de su infraestructura hacia Inflection for Enterprise, ofreciendo soluciones de IA conversacional y agentes privados alojados en nubes soberanas e infraestructura on-premise, garantizando privacidad absoluta de datos y cumplimiento regulatorio estricto sin retención de telemetría corporativa.",
+      "links": [
+        {
+          "text": "Inflection AI News",
+          "url": "https://inflection.ai/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Harvey AI",
+      "headline": "Harvey AI, la plataforma líder de inteligencia artificial generativa aplicada al sector legal y financiero corporativo, cierra una ronda de financiación Serie C de 100 millones de dólares liderada por Google Ventures (GV) y OpenAI Startup Fund, alcanzando una valoración de 1.500 millones de dólares para expandir sus modelos especializados en litigios y análisis contractual transfronterizo.",
+      "links": [
+        {
+          "text": "Harvey AI Blog",
+          "url": "https://www.harvey.ai/blog",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Glean Technologies",
+      "headline": "Glean Technologies asegura más de 260 millones de dólares en su ronda de financiación Serie E valorando la compañía en 4.600 millones de dólares, impulsando su motor de búsqueda empresarial agéntico y conectores de grafos de conocimiento corporativo que integran de forma segura petabytes de datos no estructurados en clústeres empresariales globales.",
+      "links": [
+        {
+          "text": "Glean Newsroom",
+          "url": "https://www.glean.com/blog",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
