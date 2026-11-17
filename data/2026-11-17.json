@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-17",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "The Surprising Effectiveness of Deleting Weights in LLM Post-Training",
+        "author": "Jack Lu, Zhenbang Yang, Mike Lasby, Tejas Pote, Yani Ioannou, Mengye Ren",
+        "description": "Demuestra que poner a cero menos del 0,05% de los pesos de un LLM preentrenado, sin modificar ningún otro parámetro, iguala el rendimiento del ajuste fino completo (FFT) en aprendizaje por refuerzo con recompensas verificables, ajuste supervisado y destilación on-policy. El método, denominado Deletion Tuning, aprende una máscara binaria sobre la proyección gate de los bloques Transformer. Como resultado, las máscaras entrenadas ocupan cientos o miles de veces menos espacio que un checkpoint completo y reducen drásticamente el olvido catastrófico de tareas previas (manteniendo la precisión base bajo RL mientras FFT y LoRA pierden hasta 5,4 puntos).",
+        "analogy": "✂️ Como un escultor experto que no añade arcilla nueva a una estatua ya terminada ni la vuelve a moldear entera: simplemente talla unas pocas muescas milimétricas en lugares estratégicos para transformar su expresión, conservando intacto casi todo el bloque original y pesando apenas una fracción mínima.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.10866",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "BRAT: Bounded Residual-Aligned Training for Stable Multi-Pass LLM Post-Training",
+        "author": "Xunlan Zhou, Yuzhe Zhao, Xuhong Huang, Feng Chen, Xuanlin Chen, Lang Feng, Bo An",
+        "description": "Analiza por qué reutilizar lotes de trayectorias muestreadas durante varias pasadas de gradiente en post-entrenamiento con aprendizaje por refuerzo provoca colapsos de política y sobreajuste al grupo muestreado (donde la alineación con el objetivo regularizado por KL cae casi un orden de magnitud en trayectorias no vistas). Propone Bounded Residual-Aligned Training (BRAT), que asigna a cada token un peso de gradiente que decrece linealmente con su razón de probabilidad hasta anularse en la frontera de la región de confianza, normalizando las recompensas centradas por grupo según su magnitud máxima sin hiperparámetros adicionales.",
+        "analogy": "🧗 Como una cuerda elástica con tope de seguridad para un escalador: le permite avanzar y corregir su postura aprovechando el mismo tramo de roca varias veces, pero frena suavemente el impulso antes de que se desvíe demasiado del anclaje original, evitando caídas bruscas en lugar de cortar la cuerda de golpe.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.10873",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute",
+        "author": "Sietse Schelpe (Corbenic AI)",
+        "description": "Presenta y evalúa galahad-kv, una capa de memoria persistente que guarda el estado interno clave-valor (KV) de bloques de ~16.000 tokens en almacenamiento NVMe local cifrado y lo recarga de forma exacta bit a bit sin recomputar el prompt. Probado en vLLM sobre una sola GPU NVIDIA H100 con Gemma 4 12B y 31B a lo largo de 50 millones de tokens de texto real, logra cargar bloques entre 2,8x y 4,3x más rápido que recomputarlos y consume entre 8,8x y 12,3x menos energía de GPU, manteniendo plana la memoria VRAM y alcanzando un 98% de acierto en Gemma 4 31B al recuperar hechos sembrados millones de tokens atrás.",
+        "analogy": "🗄️ Como un archivista que, en lugar de volver a leer desde la primera página una biblioteca entera cada vez que recibe una pregunta, guarda las fichas de apuntes ya masticadas de cada tomo en un archivero ultrarrápido bajo llave y extrae al instante solo la gaveta exacta que necesita.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.10845",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "VideoNexus: Video Perception Beyond the Reasoning Context",
+        "author": "Yancheng Long, Xuanyu Zheng, Wei Chen, Luoyuan Zhang, Haoyang Xu, Bin Wen, Tingting Gao",
+        "description": "Propone VideoNexus, un marco sin entrenamiento adicional que separa la percepción detallada de video largo del contexto de razonamiento y planificación. El planificador decide qué segmentos inspeccionar, qué detalles resolver y con qué densidad muestrear, mientras subagentes de percepción procesan audio y video nativo en contextos independientes y devuelven evidencia compacta anclada temporalmente. Con Gemini 3.8 Flash como modelo base, alcanza un 88,6% de precisión en LVBench completo, superando la ingestión estática y el procesamiento agéntico integrado con solo el 44% del costo de API de este último.",
+        "analogy": "🎥 Como un director de investigación documental que no satura su escritorio con miles de horas de cintas crudas: envía a asistentes especializados a revisar minutos concretos de metraje en salas separadas para que le entreguen únicamente notas breves con marca de tiempo exacta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.21392",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models",
+        "author": "Hong Nie, Zhangchi Gao, Yuqian Liang, Jun Yu, Bo Wang, Jianqing Sun, Shengping Liu",
+        "description": "Introduce Uni-LaSpec, un marco de decodificación especulativa paralela por bloques para acelerar modelos visión-lenguaje (VLM) sin alterar su distribución de salida. Reutiliza la consulta de atención de la verificación previa para puntuar claves visuales cuantizadas en int8 y seleccionar mediante voto entre capas solo unos pocos tokens visuales relevantes para el borrador, además de adaptar dinámicamente la estructura de verificación (árboles bajo carga ligera o truncamiento lineal bajo carga alta). Seleccionar solo ocho tokens visuales retiene al menos el 98,6% de la tasa de aceptación de la imagen completa, logrando hasta 3,24x más throughput multimodal y reduciendo un 47,6% la latencia media ante ráfagas de peticiones.",
+        "analogy": "🔭 Como un lector veloz que describe una escena compleja consultando la fotografía completa únicamente en los ocho detalles donde realmente ocurre la acción, y ajusta cuántas frases adelanta por turno según qué tan congestionada esté la mesa de revisión.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.01617",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Vision-aligned Latent Reasoning for Multi-modal Large Language Model",
+        "author": "Byungwoo Jeon, Yoonwoo Jeong, Hyunseok Lee, Minsu Cho, Jinwoo Shin",
+        "description": "Aborda la dilución progresiva de la información visual en modelos multimodales grandes (MLLMs) durante cadenas largas de razonamiento. Presenta Vision-aligned Latent Reasoning (VaLR), un marco que genera dinámicamente tokens latentes alineados con la visión justo antes de cada paso de Chain-of-Thought, entrenados mediante alineación de representaciones con codificadores visuales para anclar el razonamiento en pistas perceptuales dentro del espacio latente. VaLR exhibe escalado efectivo en tiempo de prueba y eleva la precisión en VSI-Bench del 33,0% al 52,9% (+19,9 puntos porcentuales sobre Qwen2.5-VL).",
+        "analogy": "🧭 Como un detective que resuelve un enigma complejo mirando de reojo las fotografías de la escena del crimen antes de redactar cada nueva deducción en su libreta, evitando que la memoria visual se desvanezca a medida que el informe se alarga.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2602.04476",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Anticipatory Planning for Multimodal AI Agents",
+        "author": "Yongyuan Liang, Shijie Zhou, Yu Gu, Hao Tan, Gang Wu, Franck Dernoncourt, Jihyung Kil, Ryan A. Rossi, Ruiyi Zhang",
+        "description": "Presenta TraceR1, un marco de aprendizaje por refuerzo en dos etapas que entrena a agentes multimodales de uso de computadora y herramientas para planificar de manera anticipatoria en lugar de reaccionar paso a paso de forma aislada. La primera etapa aplica RL a nivel de trayectoria para garantizar coherencia global al prever horizontes cortos de acciones futuras antes de ejecutarlas; la segunda utiliza ajuste fino por refuerzo fundamentado en retroalimentación de ejecución para refinar precisión y ejecutabilidad. Evaluado en siete benchmarks de uso de computadora online, offline y herramientas multimodales, logra mejoras sustanciales en estabilidad y generalización.",
+        "analogy": "♟️ Como un jugador de ajedrez que deja de responder únicamente a la última jugada del tablero y pasa a simular mentalmente las próximas tres combinaciones completas antes de tocar una pieza, verificando después cada movimiento contra las reglas reales del juego.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2603.16777",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AI Planning Framework for LLM-Based Web Agents",
+        "author": "Orit Shahnovsky, Rotem Dror",
+        "description": "Propone una taxonomía formal que mapea las arquitecturas modernas de agentes web basados en LLMs a paradigmas clásicos de búsqueda y planificación: agentes paso a paso a Breadth-First Search (BFS), búsqueda en árbol a Best-First Tree Search y planificación completa por adelantado a Depth-First Search (DFS). Aporta cinco métricas nuevas para evaluar calidad de trayectorias más allá de la tasa de éxito final, junto con un conjunto de datos de 794 trayectorias de WebArena anotadas por humanos, revelando compensaciones clave entre alineación con trayectorias humanas (38% de éxito global en paso a paso) y precisión técnica sobre elementos (89% en planificación anticipada).",
+        "analogy": "🗺️ Como un auditor de logística que traduce la forma intuitiva en que distintos mensajeros navegan una ciudad compleja a planos clásicos de rutas —exploración amplia calle por calle frente a rutas trazadas de extremo a extremo—, permitiendo diagnosticar exactamente dónde y por qué pierden el rumbo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2603.12710",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Training LLMs for Multi-Agent Collaboration with Verifiable Information Rewards",
+        "author": "Keru Chen, Sen Lin, Yingbin Liang, Nathaniel D. Bastian, Shaofeng Zou",
+        "description": "Introduce CoSIR (Collaboration via Surprisal-based Information Rewards), un enfoque de post-entrenamiento que enseña a agentes LLM a compartir evidencia relevante, solicitar información faltante e integrar aportes de compañeros en sistemas multiagente. Utiliza un evaluador bayesiano en un entorno verificable que puntúa cada mensaje según cuánto reduce la sorpresa del equipo respecto a la respuesta correcta, y las solicitudes según su reducción potencial si se respondieran con veracidad. Tras entrenar Qwen3-4B, Qwen3-8B y Gemma-3-4B-it mediante self-play, CoSIR obtiene la puntuación agregada más alta al transferir a siete tareas colaborativas en lenguaje natural no vistas.",
+        "analogy": "🧩 Como un equipo de médicos especialistas entrenados no solo por si el paciente se recupera al final, sino premiando específicamente cada dato clínico clave que un médico comparte a tiempo o pide con precisión para reducir la incertidumbre de todo el comité.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.17893",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "CertiSum: Bitwise-Identical MXFP4 Training Across Platforms and Parallelism Layouts",
+        "author": "Steve Rhyner, Yubo Gao, Stefan de Lasa, Sankeerth Durvasula, Nandita Vijaykumar",
+        "description": "Resuelve el no determinismo en el entrenamiento con MXFP4 (formato de microescalado de 4 bits), donde las mismas entradas producen resultados distintos según la topología de paralelismo o el fabricante de GPU. CertiSum aprovecha que la acumulación nativa en FP32 de productos MXFP4 suele ser exacta sin importar el orden de suma: recolecta estadísticas durante la cuantización para certificar multiplicaciones matriciales nativas, recalcula exactamente solo las salidas no certificadas y mantiene intactos los bloques de cuantización al combinar sumas parciales. En experimentos con Qwen3-8B-Base preserva estados idénticos bit a bit entre AMD MI350X y NVIDIA GB200, con aceleraciones de hasta 1,24x sobre BF16 y 1,70x sobre BF16 determinista.",
+        "analogy": "🧮 Como un sistema de auditoría contable de alta velocidad que permite a distintas sucursales bancarias sumar millones de microtransacciones en distinto orden y con calculadoras diferentes, verificando al vuelo cuándo la aritmética estándar ya es exacta y recalculando solo los casos dudosos para cuadrar hasta el último céntimo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.21584",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices",
+        "author": "Yipin Guo, Arun M George, Siddharth Joshi (University of Notre Dame)",
+        "description": "Presenta Group-Adaptive Additive Codec (GAAC), un sistema de compresión sin pérdida y servicio para la caché clave-valor (KV) que alivia el cuello de botella de ancho de banda en inferencia de contexto largo sobre dispositivos personales. GAAC aprovecha la redundancia en los exponentes de tensores BF16 (y FP8) codificándolos mediante códigos adaptativos base-más-desplazamiento por canal e integra un kernel de atención fusionado que reconstruye los bloques KV al vuelo sin descomprimir toda la caché. Logra compresión sin pérdida de 1,405-1,407x en BF16, reduce la memoria KV residente en ~26%, aumenta el throughput en 13-29% y acelera la atención tanto en NVIDIA DGX Spark (1,19-1,27x a 64K) como en Apple M4 (1,02-1,25x).",
+        "analogy": "📦 Como un sistema de archivado al vacío sin pérdida que comprime solo los encabezados repetitivos de las carpetas mientras deja los números de serie intactos, y los desdobla directamente sobre la marcha en la mano del operario justo en el instante en que los lee.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2610.38210",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AutoEMatic: Runtime-Adaptive Mixed-Precision LLM Inference via Automatic Exponent-Mantissa Refinement",
+        "author": "Akshat Ramachandran, Reena Elangovan, Rangharajan Venkatesan, Charbel Sakr, Tijmen Blankevoort, Brucek Khailany, Tushar Krishna",
+        "description": "Propone AutoEMatic, un codiseño de pila completa que adapta en tiempo de ejecución la precisión de pesos, activaciones y caché KV durante cada paso de prefill y decode. Una política ligera elige la precisión por capa usando la entropía de la distribución del siguiente token y la magnitud de actualización de estados ocultos, respaldada por AutoFP (formato flotante multiescala que deriva precisiones de 2, 4 y 6 bits desde NVFP4) y kernels para Tensor Cores NVFP4. Mejora hasta un 21,7% la precisión frente a NVFP4 en benchmarks agénticos y de razonamiento usando 4,9 bits por peso, reteniendo el 90-98% del throughput de decodificación NVFP4 en GPUs GB300.",
+        "analogy": "🔍 Como un fotógrafo automático que ajusta la resolución lente a lente en tiempo real: dispara con compresión ligera en escenas simples para no frenar la ráfaga, pero cambia al instante a alta definición justo en los instantes de máximo detalle para no perder ningún rasgo clave.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.10165",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "AlphaProof Code: Verificación Formal de Software a Nivel de Código Máquina Aplicada al Protocolo Signal (libsignal)",
+      "description": "Google DeepMind presenta AlphaProof Code, un marco multiagente diseñado para automatizar la especificación y verificación formal de software crítico. Impulsado por clústeres de agentes autónomos sobre Gemini 4 Carbon y el asistente de pruebas Lean 4, el sistema verificó matemáticamente la implementación de referencia de Signal (libsignal v0.105.4 y spqr) compilada hasta código máquina ejecutable AArch64 (ARM de 64 bits), generando cerca de 6,5 millones de líneas de pruebas verificadas en Lean que garantizan propiedades de seguridad como secreto hacia adelante, autenticación y el handshake poscuántico PQXDH.",
+      "links": [
+        {
+          "text": "Google DeepMind Blog",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "GPT-6.1 Terra: Modelo Optimizado en Velocidad, Razonamiento Visual y Uso Autónomo de Computadora",
+      "description": "OpenAI lanza GPT-6.1 Terra (identificador de API gpt-6.1-terra), una actualización de nivel intermedio dentro de la familia GPT-6 diseñada para ofrecer alta velocidad, menor costo y sólido desempeño en razonamiento visual y tareas de uso de computadora. Con una ventana de contexto de ~1,05 millones de tokens, completa tareas interactivas más de tres veces más rápido que modelos superiores como Astra o Sol, duplica con creces la puntuación de GPT-5.6 Terra en tareas complejas y reduce el precio de API aproximadamente a la mitad ($1,00 por millón de tokens de entrada y $5,00 de salida).",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Fable 5.2 y Claude Mythos 5.2: Modelos de Razonamiento Profundo y Flujos Agénticos con Ventana de 1 Millón de Tokens",
+      "description": "Anthropic presenta Claude Fable 5.2 y Claude Mythos 5.2, dos variantes basadas en la misma arquitectura avanzada para programación compleja, investigación profunda y flujos agénticos de largo horizonte con 1 millón de tokens de contexto y hasta 128K tokens de salida. La versión 5.2 incrementa la velocidad en un 30%, añade un modo rápido opcional de 2,5x y reduce precios de API ($8 por millón de tokens de entrada y $40 de salida); Fable 5.2 incluye salvaguardas reforzadas de ciberseguridad y biología para disponibilidad general, mientras Mythos 5.2 ofrece acceso especializado a organizaciones verificadas.",
+      "links": [
+        {
+          "text": "Anthropic Claude Fable",
+          "url": "https://www.anthropic.com/claude/fable",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Meta Muse Charm: Dispositivo Portátil Dedicado con Voz, Cámara y Sensor Biométrico para el Agente Personal Muse",
+      "description": "Meta presenta Muse Charm, su primer dispositivo de hardware autónomo en formato compacto tipo llavero diseñado como compañero físico directo para su agente personal de IA Muse. Equipado con una pantalla integrada, conectividad móvil (5G), cámara para percibir el entorno inmediato, sensor de huellas dactilares para activación rápida y modelos de voz y avatar en tiempo real, Muse Charm permite delegar tareas cotidianas —desde gestionar correos hasta compras y agenda— sin desbloquear el teléfono, sincronizándose con el ecosistema Muse en WhatsApp, escritorio y gafas de IA.",
+      "links": [
+        {
+          "text": "Meta Muse Charm",
+          "url": "https://www.meta.com/muse-charm/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "AMD & World Labs",
+      "headline": "AMD completa oficialmente la adquisición de la startup de inteligencia espacial World Labs en una transacción valorada en aproximadamente 8.200 millones de dólares e incorpora a su fundadora, la Dra. Fei-Fei Li, como Vicepresidenta Ejecutiva y Científica Jefe para liderar la estrategia de modelos fundacionales espaciales e infraestructura abierta de IA.",
+      "links": [
+        {
+          "text": "AMD Newsroom",
+          "url": "https://newsroom.amd.com/news/amd-completes-acquisition-world-labs/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "headline": "La Junta Directiva de NVIDIA anuncia la renuncia inmediata de su cofundador Jensen Huang como presidente, director ejecutivo (CEO) y miembro del consejo tras revelaciones sobre relaciones no declaradas y escrutinio de seguridad nacional, designando a la directora financiera Colette Kress como CEO interina mientras inicia la búsqueda de un sucesor permanente.",
+      "links": [
+        {
+          "text": "NVIDIA Newsroom",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Genesis AI",
+      "headline": "La startup de robótica e inteligencia física Genesis AI cierra una ronda de financiamiento Serie A de 500 millones de dólares con una valoración de 3.500 millones de dólares, coliderada por Khosla Ventures, Eclipse y Premji Invest, para escalar su plataforma de entrenamiento mediante guantes instrumentados y desplegar robots de propósito general con destreza humana.",
+      "links": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Mirendil",
+      "headline": "Mirendil asegura una ronda Serie A de 1.000 millones de dólares destinada a acelerar el desarrollo y despliegue de herramientas de investigación científica e I+D empresarial impulsadas por agentes autónomos de inteligencia artificial.",
+      "links": [
+        {
+          "text": "Securities.io",
+          "url": "https://www.securities.io/mirendil-raises-1-billion-series-a-for-agent-led-ai-research-tools/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
