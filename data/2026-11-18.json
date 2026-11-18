@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-18",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "K2-Horizon: A Frontier Fleet of Open Source Language Models",
+        "author": "K2 Team, Zhengzhong Liu, Haonan Li, Xuezhe Ma, Alexander Moreno, Subham Sekhar Sahoo, Rupesh Kumar Srivastava, Mikhail Yurochkin et al.",
+        "description": "Presenta K2-Horizon, una familia de seis modelos de lenguaje completamente abiertos —desde un modelo denso de 0.9B hasta un MoE de 375B-A23B— orientada a razonamiento general, matemáticas, ingeniería de software y flujos agénticos, liberando pesos, checkpoints intermedios, datos de preentrenamiento, registros y código bajo el estándar LLM360. En el plano arquitectónico introduce Mixture-of-Value Attention (MoVA), que aplica Mixture-of-Experts sobre las proyecciones de valor de la atención, junto con compuertas de atención softplus; su variante 36B-A4B casi iguala a un modelo denso de 32B entrenado con los mismos datos usando una séptima parte de parámetros activos. Además incorpora Uno, adaptadores de difusión sin pérdida que aceleran la decodificación hasta 2,2x sin modelo borrador separado.",
+        "analogy": "🚢 Como una flota naval completamente transparente donde hasta los planos del astillero y los diarios de navegación son públicos: en lugar de encender toda la sala de máquinas para cada maniobra, activa solo los motores especialistas exactos en cada válvula de atención y añade un turbo integrado que adelanta varias palabras sin perder el rumbo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.21003",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Abstention Direction in Large Language Models: Mechanistic Interpretability of Abstention Across Query Ambiguity, Knowledge Limits, and Safety Alignment",
+        "author": "Koki Itai, Jun Hirako, Hiroaki Yamagiwa",
+        "description": "Analiza de manera conjunta los mecanismos internos por los que un LLM se abstiene de responder ante tres causas distintas: ambigüedad en la consulta, límites del conocimiento del modelo y desalineación con valores humanos. Mediante pares contrafactuales con plantilla compartida que solo varían en el factor detonante de la abstención, los autores extraen una dirección de abstención normalizada a partir de las diferencias de activación media. Experimentos de direccionamiento de activaciones (activation steering) demuestran que intervenir en capas intermedias permite aumentar o reducir la abstención de forma consistente en las tres dimensiones.",
+        "analogy": "🚦 Como descubrir que el pedal del freno en un automóvil responde al mismo circuito hidráulico central sin importar si el conductor se detiene por neblina en la ruta, porque no conoce el desvío o ante una señal de peligro: ajustando ese único regulador interno se puede calibrar qué tan cauteloso resulta el modelo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.20441",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Lost in a Few Heads: Diagnosing and Repairing Block Selection in Sparse Attention",
+        "author": "Wenhe Zhang, Boxing Chen",
+        "description": "Investiga por qué los modelos con atención dispersa por bloques pierden precisión de recuperación en contextos largos a presupuesto fijo. Usando selección exacta como oráculo, demuestra que el selector no se queda sin presupuesto sino que subestima bloques clave por culpa de un puñado de 'cabezas ciegas', donde el promedio de claves diluye un único token decisivo. En MiniCPM4.1-8B a 64K tokens, restaurar atención completa o usar un puntuador de 4 bits solo en esas cabezas eleva la recuperación multiclave del 54,1% al 97,5% sin reentrenamiento (conservando entre el 84% y el 89% del ahorro de TTFT entre 32K y 128K), y en Qwen3-8B con SeerAttention-R pasa del 29,8% al 97,7% activando atención completa en apenas 18 de 288 cabezas KV.",
+        "analogy": "🔎 Como un equipo de revisores que ojea un expediente de mil páginas leyendo solo los resúmenes por capítulo: casi todo el grupo acierta, pero tres lectores clave pierden la pista cuando un dato vital aparece en una sola línea; basta darles a esos tres la hoja original sin resumir para recuperar la precisión total sin frenar al resto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.21917",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "SpatialMind: Adaptive Multi-Level Geometric Fusion for Spatial Reasoning in Multimodal Large Language Models",
+        "author": "Shibin Zhao, Hao Tan, Fan Yang, Haixin Wang, Feilong Chen, Yidong Ma, Chaoyang Zhao, Ming Tang, Jinqiao Wang et al.",
+        "description": "Aborda las limitaciones de los MLLMs en razonamiento espacial 3D tras observar que distintas tareas cognitivas —como estimar distancias frente a planificar rutas— requieren granularidades geométricas diferentes que una fusión fija o de un solo nivel no logra cubrir. Propone SpatialMind, un marco adaptativo por tarea basado en el módulo GeoFus: una red de compuertas regulada conjuntamente por la instrucción textual, la semántica visual y las representaciones geométricas que modula dinámicamente características superficiales, intermedias y profundas en las capas del decodificador, junto con una pérdida de entropía negativa para evitar el colapso de compuertas. Alcanza una puntuación de vanguardia de 72,3 en VSI-Bench.",
+        "analogy": "📐 Como un arquitecto con lentes multifocales automáticos: si necesita calcular el ancho exacto de una puerta enfoca el detalle milimétrico del plano, pero si debe trazar un recorrido por todo el edificio cambia al instante a la vista estructural global según la pregunta que le hagan.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.22415",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Right Goal, Wrong Body: Re-grounding Frozen VLAs under Actuation Shift",
+        "author": "Umer Siddique, Peilang Li, Yongcan Cao",
+        "description": "Resuelve la caída de desempeño en modelos Visión-Lenguaje-Acción (VLA) cuando la dinámica física o de actuación del robot cambia tras el despliegue (por desgaste mecánico, remontaje o latencia de comandos). Presenta ReGround, un método en tiempo de inferencia que mantiene congelado el VLA original, aprende la dinámica real del robot desplegado mediante exploración motora agnóstica a la tarea y reancla las acciones previstas solo al detectar un desvío, sin requerir recompensas, demostraciones ni reentrenamiento. Evaluado en dos VLAs y ocho tareas de LIBERO bajo cinco escenarios de cambio, eleva la tasa de éxito de π0.5 de 0,16 a 0,90 con 400 ms de latencia.",
+        "analogy": "🚗 Como un piloto experimentado al que le cambian de repente la sensibilidad del volante y el retardo de los pedales: no olvida cómo conducir ni vuelve a la escuela de manejo; simplemente hace unos giros de prueba en el estacionamiento para recalibrar sus reflejos y seguir ejecutando el mismo plan de ruta con seguridad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.20244",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Dressed in Authority: Practical Black-Box Jailbreaking of MLLMs via Visual Trust Bias",
+        "author": "Weihang Liu, Qianqian Xu, Yangbangyan Jiang, Zitai Wang, Zhipeng Yu, Qingming Huang",
+        "description": "Expone una vulnerabilidad práctica en modelos multimodales grandes (MLLMs) en escenarios de caja negra al explotar su sesgo de confianza hacia señales visuales de autoridad en lugar de recurrir a ruido adversarial tradicional o perturbaciones únicamente textuales. Introduce el marco VTBA (Visual Trust Bias Attack), que combina indicadores visuales que aparentan legitimidad institucional con emparejamiento de plantillas de intención para evadir los filtros de seguridad del modelo.",
+        "analogy": "🪪 Como un guardia de seguridad entrenado para desconfiar de pedidos sospechosos por teléfono, pero que deja pasar instrucciones riesgosas en cuanto alguien se presenta en la puerta con un chaleco reflectante y una credencial visual de aspecto oficial.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.22292",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "MCTS Is Counting the Wrong Thing: Learning Exploration Counts for LLM Reasoning",
+        "author": "Xuan Zhang, Zhijian Zhou, Zicheng Hu, Yan Feng, Hongyan Hao, Yuan Qi, Chao Qu",
+        "description": "Identifica por qué Monte Carlo Tree Search (MCTS) suele ofrecer mejoras modestas en razonamiento con LLMs pese a consumir gran presupuesto de búsqueda: el algoritmo UCT estándar asigna conteos de visita independientes a cada rama textual, provocando una fragmentación de conteos cuando distintas redacciones expresan exactamente la misma estrategia lógica y reciben bonos de exploración repetidos. Propone Learned Pseudo-Count MCTS (LPC-MCTS), que emplea una red sobre representaciones ocultas para compartir evidencia de exploración entre ramas equivalentes y reducir el arrepentimiento acumulado.",
+        "analogy": "🧭 Como un explorador que anota en su mapa que visitó diez senderos distintos solo porque cada cartel usaba sinónimos diferentes para el mismo puente: al aprender a agrupar los caminos que llevan a la misma idea, deja de dar vueltas en círculo y dedica su energía a rutas verdaderamente nuevas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.22301",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
+        "author": "Mingyang Liu, Qingcan Kang, Shixiong Kai, Kaichao Liang, Xiaojin Fu, Tao Zhong, Linqi Song",
+        "description": "Formula la evolución de la memoria en agentes LLM como un problema de descubrimiento evolutivo de estrategias, evitando reglas estáticas prefijadas para reescribir recuerdos. Una política aprendible evalúa el estado actual de la memoria y el historial reciente de tareas para seleccionar e instanciar uno de cuatro operadores semánticos —Abstract, Refine, Bridge y Reframe— encargados de comprimir recuerdos afines, descomponer entradas sobrecargadas, conectar experiencias dispersas y reorganizar cadenas de razonamiento. Se entrena con una señal de aptitud binivel y supera a bases como MemP y MemRL en ALFWorld, WebShop y LifelongAgentBench.",
+        "analogy": "🗂️ Como un asistente ejecutivo que no se limita a apilar notas ni a borrarlas cada viernes con una regla rígida: decide en cada momento si conviene resumir diez apuntes en una ficha maestra, dividir una nota confusa o tender un puente entre dos proyectos pasados para encontrar la respuesta más rápido mañana.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.22102",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Learning Grounded Reasoning from Human Gaze",
+        "author": "Gabriel Sarch, Declan Campbell, Nicholas Budny, Kia Ghods, Katerina Fragkiadaki, Jonathan D. Cohen, Brenden M. Lake, Taylor W. Webb",
+        "description": "Explora cómo transferir patrones de mirada humana para mejorar el anclaje visual y el razonamiento corporizado en VLMs a partir de 7.109 ensayos de seguimiento ocular en comprensión de gráficos, búsqueda visual y conteo. Demuestra que utilizar la mirada humana como prior de exploración supera a la supervisión directa sobre la secuencia completa (ruidosa y redundante), y presenta GGR (Gaze-Guided Reasoner), que al combinarse con aprendizaje por refuerzo mejora la precisión, la calidad del anclaje visual y la consistencia con la conducta humana sin requerir supervisión ocular continua.",
+        "analogy": "👀 Como un aprendiz de radiólogo que no imita mecánicamente cada parpadeo de su mentor, sino que adopta su hábito estratégico de barrido visual para inspeccionar primero las zonas críticas antes de emitir un diagnóstico fundamentado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.23209",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "BitDecoding-FP4: Native FP4 KV Cache Decoding via Algorithm-System Co-Design",
+        "author": "Dayou Du, Woon Yee Ng, Guangming Sheng, Nick Lau, Jianyi Cheng, Luo Mai",
+        "description": "Presenta un codiseño algoritmo-sistema para ejecutar decodificación nativa de caché KV en formato flotante de 4 bits (NVFP4 y MXFP4) sobre Tensor Cores FP4 sin perder precisión. Mitiga tres fuentes críticas de error mediante cuantización dual-residual de consultas (reduciendo el error de logits del 60% al 1%), escalado de probabilidades consciente del subdesbordamiento en contextos largos y cuantización de claves resistente a valores atípicos con suavizado y rotación de Hadamard, junto con softmax transpuesto fusionado. Mantiene una brecha de 0,5 puntos respecto a BF16 KV con NVFP4 (1 punto con MXFP4) y alcanza entre 2,4x y 3,0x más throughput pico en NVIDIA B300 con Qwen3-4B y Qwen3-30B-A3B.",
+        "analogy": "🗜️ Como un sistema de compresión de carga aérea que no solo encoge los paquetes a la cuarta parte de su volumen, sino que refuerza exactamente los contenedores con picos irregulares y rediseña la cinta de embarque para que el avión los procese el triple de rápido sin dañar la mercancía.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.09825",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "XM-Sparse: High-Throughput Sparse-Attention LLM Serving over Scale-up Memory Pools",
+        "author": "Yijun Sun, Xudong Liao, Zhuobin Huang, Kai Chen, Nikita Lazarev, Zhizhen Zhong",
+        "description": "Aborda el cuello de botella de memoria HBM y ancho de banda al servir LLMs con atención dispersa en contextos largos utilizando pools de memoria escalables (scale-up memory pools). XM-Sparse descarga de forma agresiva tanto las entradas KV seleccionadas dinámicamente como las cachés de índices K del historial completo, emparejando cada una con un mecanismo de E/S dedicado: fusiona la recuperación basada en TMA con el cálculo de atención en un pipeline por bloques para las entradas KV y usa DMA iniciado por GPU con planificación por prioridades para pre-cargar accesos predecibles de índices sin interrumpir la ruta crítica.",
+        "analogy": "🏭 Como una línea de montaje conectada a un almacén ampliado mediante dos carriles dedicados: uno trae piezas por encargo justo a tiempo directo a la estación de soldadura y el otro adelanta en segundo plano los catálogos predecibles sin detener la máquina principal.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.22280",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving",
+        "author": "Xuan Wang, Zhuanhao Wu, Tingzhu Fang, Xushi Li, Sicheng Zhang, Zhenyu Yang, Feng Liu, Zhaohui Fan et al.",
+        "description": "Propone una arquitectura centrada en DRAM del anfitrión que descarga completamente la caché KV tanto en fase de prefill como de decodificación para elevar la concurrencia sin disparar la latencia. Combina una caché HBM rodante para prefill, una caché caliente para decode, un índice disperso inverso sin costo adicional de búsqueda ante fallos y un kernel con solapamiento de cómputo y transferencia. Desplegado con GLM-5.2 (con decodificación especulativa MTP3) en una plataforma desagregada Ascend910C, incrementa el throughput de prefill hasta 1,38x y el de decode hasta 1,91x bajo un objetivo de 30 ms por token (TPOT).",
+        "analogy": "📚 Como una biblioteca con pocos pupitres junto al mostrador (HBM) y un enorme depósito en el sótano (DRAM): mantiene siempre a mano las páginas más consultadas y sube los próximos tomos en el montacargas mientras el lector todavía está terminando el párrafo actual, sin hacerlo esperar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.07542",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Gemini 4 Hydrogen: Modelo Rápido con Ventana de 1 Millón de Tokens para Flujos Agénticos",
+      "description": "Google DeepMind presenta Gemini 4 Hydrogen, un modelo de alto rendimiento diseñado específicamente para ejecución rápida y rentable en flujos de trabajo agénticos y programación cotidiana. Disponible en la API de Gemini, Google AI Studio y Android Studio, combina una ventana de contexto de 1 millón de tokens con latencia reducida para encadenar múltiples pasos autónomos de razonamiento y uso de herramientas.",
+      "links": [
+        {
+          "text": "Google DeepMind Model Card",
+          "url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "GPT-6.2 Astra y GPT-6.2 Sol: Modelos de Frontera para Ingeniería Compleja y Ejecución de Alto Volumen",
+      "description": "OpenAI lanza GPT-6.2 Astra y GPT-6.2 Sol en ChatGPT Work, Codex y la API de OpenAI para maximizar desempeño minimizando el consumo de tokens de salida. GPT-6.2 Astra está orientado a ingeniería de software compleja, diseño 3D, investigación científica y uso autónomo de herramientas (alcanzando el umbral 'High' en capacidades de automejora bajo su Preparedness Framework), mientras que GPT-6.2 Sol prioriza velocidad y eficiencia de costos para flujos cotidianos de alto volumen.",
+      "links": [
+        {
+          "text": "OpenAI Announcement",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-and-sol/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude for Manufacturing: Plugin Industrial con 17 Habilidades Especializadas y Conectores ERP/CAD",
+      "description": "Anthropic lanza Claude for Manufacturing, un complemento empresarial orientado a plantas industriales, ingenieros de calidad y equipos de cadena de suministro. Incluye 17 habilidades nativas —como elaboración de cotizaciones, diagnóstico de fallos de inspección e informes de cumplimiento— y conectores directos con Autodesk Fusion, Infor, Microsoft 365 y Oracle NetSuite bajo supervisión humana.",
+      "links": [
+        {
+          "text": "Claude Resources",
+          "url": "https://claude.com/resources/articles/claude-for-manufacturing",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Muse Ember: Modelo Multimodal Ligero para Ejecución Agéntica de Alto Volumen",
+      "description": "Meta Superintelligence Labs lanza Muse Ember (muse-ember-1.0), un modelo multimodal compacto capaz de procesar texto, imágenes, audio y video con ventana de contexto de 1 millón de tokens y hasta 512K tokens de salida. Diseñado como capa ejecutora junto a modelos planificadores mayores como Muse Wonder o Muse Spark, se integra en Muse Code y en la Meta Model API con precios de $0,10 por millón de tokens de entrada y $0,50 de salida hasta 200K tokens.",
+      "links": [
+        {
+          "text": "Meta Developer Platform",
+          "url": "https://dev.meta.ai/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Isomorphic Labs",
+      "headline": "La empresa de descubrimiento farmacológico impulsado por IA surgida de Alphabet cierra una ronda Serie C de 5.000 millones de dólares coliderada por Greenoaks y Sequoia Capital, con participación de Andreessen Horowitz y Alphabet, para escalar su motor IsoDDE y llevar candidatos terapéuticos a ensayos clínicos.",
+      "links": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Model ML",
+      "headline": "La startup londinense Model ML, especializada en agentes de IA que automatizan modelado financiero, presentaciones y reportes de diligencia debida para banca de inversión y consultoría, recauda 250 millones de dólares en una ronda Serie B a una valoración de 1.500 millones de dólares coliderada por General Atlantic y QED Investors.",
+      "links": [
+        {
+          "text": "General Atlantic",
+          "url": "https://www.generalatlantic.com/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Humyn Labs",
+      "headline": "La startup de infraestructura de datos para robótica e inteligencia física Humyn Labs asegura una ronda Serie A de 47 millones de dólares (26 millones en capital liderados por Accel y Cactus Partners, más 21 millones en deuda de riesgo) para expandir su captura multicámara de actividad humana en más de 20 países.",
+      "links": [
+        {
+          "text": "Unite.AI",
+          "url": "https://www.unite.ai/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Norwest",
+      "headline": "La firma global de capital de riesgo Norwest anuncia el cierre de Norwest 18 (Fund XVIII), un fondo récord de 4.000 millones de dólares respaldado por Wells Fargo que eleva sus activos bajo gestión a 18.000 millones y prioriza inversiones en infraestructura nativa de IA, IA física, voz y ciberseguridad agéntica.",
+      "links": [
+        {
+          "text": "Norwest",
+          "url": "https://www.nvp.com/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
