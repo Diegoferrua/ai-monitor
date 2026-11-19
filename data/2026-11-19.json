@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-19",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "General progress substitutes for specific training data in language models",
+        "author": "Mark Marosi, Peter Antal",
+        "description": "Investiga qué ocurre cuando los desarrolladores filtran datos específicos durante el entrenamiento para evitar capacidades riesgosas: demuestra que el progreso general de un modelo sobre el resto de su corpus sustituye parcialmente la señal omitida. Evaluado en ajedrez, Othello, cadenas moleculares, lenguajes de paréntesis y un lenguaje de programación retenido en un modelo de 7B de parámetros, muestra que el filtrado solo retrasa la aparición de la capacidad y que la fracción de datos necesaria para readquirirla luego disminuye conforme escala el modelo.",
+        "analogy": "🧩 Como esconderle a un estudiante el manual de un idioma técnico mientras sigue leyendo enciclopedias, lógica y matemáticas: aunque nunca vio ese manual, su madurez general le permite deducir casi todas sus reglas y dominarlo en una fracción mínima de tiempo si luego accede a un par de páginas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24844",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "On-Policy Morphing into Hybrid Attention Models",
+        "author": "Disen Lan, Xuanda Wang, Jianbin Zheng, Huafeng Kuang, Wei Tang, Yu Cheng",
+        "description": "Presenta FlashMorph2, un método on-policy para convertir Transformers preentrenados en modelos de atención híbrida (combinando atención completa y atención lineal) bajo un presupuesto dado. Identifica dos desajustes off-policy en enfoques previos —la interpolación continua frente al cómputo discreto y los pesos congelados respecto a la recuperación posterior— y evalúa arquitecturas híbridas discretas de extremo a extremo optimizando conjuntamente puntajes de capa y pesos. En escalas Qwen3 de 0.6B a 8B mejora +2,42 en RULER y +1,08 en LongBench completando la selección en 0,72 a 3,57 horas de GPU.",
+        "analogy": "🔧 Como decidir qué tramos de una autopista siguen necesitando cuatro carriles y cuáles funcionan igual de bien con dos carriles rápidos probando el tráfico real en la ruta ya modificada, en lugar de estimarlo en un mapa estático antes de las obras.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24809",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+        "author": "Yan Qiu, Yuanyuan Li",
+        "description": "Propone Jailbreak Detection with Prototype Inference (JDPI), un método que detecta intentos de jailbreak y prompts dañinos usando representaciones aprendidas de forma contrastiva y prototipos benignos/maliciosos sin entrenar un clasificador posterior separado. Emplea etiquetas binarias de seguridad para adaptar el codificador y evaluar distancias relativas a prototipos, aprovechando además el historial acumulado en conversaciones multiturno. Supera a Llama Guard 3-8B entre 0,173 y 0,310 puntos de ROC-AUC en cuatro benchmarks y logra mayor robustez en transferencias entre conjuntos de datos.",
+        "analogy": "🧲 Como un detector aduanero que no necesita memorizar mil reglas por separado para cada valija sospechosa: simplemente ubica dos imanes de referencia en la sala —uno para equipaje seguro y otro para contrabando— y mide hacia cuál se inclina la conversación conforme avanza.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24936",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Z-sight: Unifying Vision-Language-Action and Latent World Modeling",
+        "author": "Junjie Ye, Yiqi Zhao, Muchen Xu, Celina Shiyu Wang, Hao Dong, Ruohai Ge, Rong Xue, Benjamin J Kolligs et al.",
+        "description": "Presenta Z-sight, un modelo fundacional robótico que unifica control Visión-Lenguaje-Acción (VLA) y modelado latente del mundo prediciendo el futuro directamente en el espacio nativo de tokens visuales con el que el VLM percibe el presente. Acopla un experto de prospectiva y un experto continuo de acciones mediante una mezcla de Transformers para eliminar la costosa reconstrucción de píxeles y los codificadores externos. Entrenado con videos humanos y trayectorias robóticas, alcanza 81,9% de éxito en SIMPLE (+9,6 puntos) y 73,3% en seis tareas del humanoide Unitree G1 (+20,0 puntos) a 110 ms por bloque.",
+        "analogy": "🤸 Como un gimnasta que no necesita imaginar una película en 4K paso a paso en su cabeza antes de saltar: ensaya el próximo movimiento directamente en el mismo esquema mental rápido con el que está mirando la barra en ese instante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24940",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "The Elephant in the Question: Unified Models Picture the Concepts Behind Their Answers",
+        "author": "Tobias Braun, Marcus Rohrbach, Lorenzo Cavallaro",
+        "description": "Introduce V-lens, una técnica sin decodificador adicional para visualizar estados ocultos intermedios en modelos multimodales unificados (capaces de comprender texto y generar imágenes dentro de la misma arquitectura), revelando conceptos implícitos que conectan una pregunta con su respuesta. Además propone lens tuning para supervisar estados ocultos seleccionados mediante imágenes; en BAGEL, SenseNova-U1 y HunyuanImage-3.0 eleva la visualización correcta de referentes pronominales del 2–11% al 86–94% y mejora simultáneamente la precisión de las respuestas textuales.",
+        "analogy": "🖼️ Como poder mirar directamente la pizarra mental de un traductor mientras lee una frase ambigua: si dibuja un bosquejo claro de a quién se refiere un pronombre antes de hablar, no solo entendemos su razonamiento, sino que también responde mejor por escrito.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24793",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Jeveration: System One Models Now Generate",
+        "author": "Yuhe Liu, Qi Li, Shihua Zhang, Xinchao Wang",
+        "description": "Demuestra que los modelos rápidos de decisión en paralelo tipo System One (como Jev) pueden generar imágenes de alta calidad en una sola pasada hacia adelante reutilizando un modelo visión-lenguaje congelado. Para resolver la coherencia global entre predicciones paralelas sin múltiples pasos iterativos, condiciona todas las posiciones espaciales a un estado aleatorio compartido guiado previamente por una distribución sobre códigos discretos de imagen. Un único checkpoint unifica texto-a-imagen, imagen-a-imagen y predicción densa, generando imágenes de 512×512 en 78 ms (hasta 122× más rápido que modelos unificados previos).",
+        "analogy": "📸 Como un muralista que, en lugar de pintar pincelada tras pincelada durante horas, coordina a cien pintores con un mismo plano maestro compartido para que todos estampen su parte exactamente al mismo segundo y el cuadro quede completo en un parpadeo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24738",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Counterfactual World Models: JEPAs That Reason About \"What If\"",
+        "author": "Randall Balestriero, Yann LeCun, Kerda Varaku",
+        "description": "Demuestra matemáticamente que los modelos del mundo entrenados únicamente con transiciones observadas no pueden responder preguntas contrafactuales ('qué habría ocurrido bajo otra acción ante la misma perturbación oculta'), pero aprovecha la continuidad física (natura non facit saltus) para convertir modelos JEPA ya entrenados (sobre DINOv2, MAE, DINOv3, SigLIP 2, CLIP y EVA-02) en modelos contrafactuales sin reentrenamiento ni parámetros extra, con cota de error O(h²). Eleva el R² contrafactual del 38–46% al 86–96% y mejora la planificación retrospectiva del 14–23% al 35–69%.",
+        "analogy": "⛵ Como un navegante que ve que una ráfaga imprevista desvió su velero hacia la izquierda: sin repetir el viaje ni reescribir sus cartas náuticas, suma ese mismo empujón del viento a la trayectoria que habría tomado si giraba el timón al otro lado y separa al instante mala suerte de mala decisión.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24778",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
+        "author": "Jiahang Lin, Jiahao Chen, Yiding Wang, Shichun Liu, Chengjun Pan, Shihan Dou, Honglin Guo, Yuyang Hu et al.",
+        "description": "Propone AHE-Beta, un ciclo evolutivo centrado en requisitos para optimizar arneses de agentes en tres etapas: evaluación multiturno con usuarios simulados que reportan requisitos implícitos, modificación en equipo hacia cambios generalizables en lugar de parches estrechos, y selección estricta tras verificación. En tareas reservadas eleva pass@1 del 21,9% al 33,3% consumiendo 40,8% menos tokens que Base Harness, supera a Claude Code, Meta-Harness y AHE, obtiene preferencia humana en 31 de 48 pares ciegos y transfiere mejoras de +15,8% y +5,3% a GLM-5.3 y DeepSeek-V4.1-Flash.",
+        "analogy": "🛠️ Como mejorar un taller mecánico escuchando las quejas reales de clientes durante toda la reparación en lugar de entrenar a un solo operario para pasar una inspección fija: las mejoras resultan más limpias, gastan menos piezas y sirven también cuando cambian las herramientas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24924",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Kaer: Security-Aware Replanning for Multi-Agent Systems",
+        "author": "Tushin Mallick, Evan Rose, Matthew Laws, Alina Oprea, Cristina Nita-Rotaru",
+        "description": "Aborda la vulnerabilidad de secuestro de replanificación en sistemas multiagente, donde subagentes maliciosos inyectan instrucciones dentro de su retroalimentación al orquestador para alterar el plan en curso. Kaer aísla al planificador traduciendo los diagnósticos de agentes exclusivamente a plantillas abstractas de fallo y restringiendo las revisiones a operadores deterministas de reparación validados contra políticas predefinidas. En el nuevo benchmark Cintra supera en robustez tanto a Magentic-One como a ControlValve manteniendo una utilidad competitiva.",
+        "analogy": "🛡️ Como un director de orquesta que recibe únicamente códigos estandarizados de falla de cada atril ('falta partitura' o 'cuerda rota') en lugar de notas manuscritas libres: así nadie puede colarle instrucciones falsas en medio del concierto para cambiar la sinfonía.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24839",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity",
+        "author": "Benjamin Novotny, Doug Szeto, Chang Wang, Shicheng Chen, George Zhihua Yuan, Bob Kamma, Michael Ge, John Xin Zhou et al.",
+        "description": "Presenta Cap-and-Track, la arquitectura de despacho asíncrono de inferencia de Meta (más de 300 millones de solicitudes diarias y picos de 1.100 millones en 24 horas) diseñada para flotas cuya capacidad y longitud de salida cambian dinámicamente. Combina un control de admisión de fallo rápido en el nodo saturado (Cap) con un despachador con estado que ajusta la tasa al alza o retrocede guiándose únicamente por los rechazos (Track), sin predecir longitudes ni recalibrar tasas globales. En un experimento A/B en producción redujo en un 43% el uso de GPUs H100 frente a su predecesor de tasa fija.",
+        "analogy": "🚦 Como un control de peaje inteligente que, en vez de adivinar cuánto tardará cada auto en pasar ni fijar un límite estático por hora, cierra la barrera al instante cuando la cabina se llena y acelera o frena el carril de entrada observando solo cuántas veces rebota el semáforo.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24891",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Harvesting Expert-Parallel Bubbles for Fine-Tuning",
+        "author": "Oana Balmau, Saurav Banka, Jiaxuan Chen, Anne-Marie Kermarrec, Ramya Narasimha Prabhu, Rafael Pires, Mathis Randl, Martijn de Vos",
+        "description": "Presenta BubbleTea, el primer sistema de colocación que aprovecha las burbujas de inactividad por paralelismo de expertos en modelos Mixture-of-Experts (entre 8% y 13% del tiempo de prefill cuando el enrutador reparte tokens de forma desigual entre GPUs) para ejecutar ajuste fino en paralelo al servicio. Predice las burbujas capa por capa en cada GPU a partir de la asignación del enrutador y reutiliza los pesos ya cargados en memoria mediante pases de compilador. En cuatro GPUs A100 acelera el fine-tuning entre 1,9× y 6,2× frente a LLMStation (3,3× en trazas con ráfagas) manteniendo la latencia p90 dentro del 7–10%.",
+        "analogy": "⏱️ Como aprovechar los microsegundos en que una línea de cocina espera a que el horno con más pedidos termine su tanda para preparar allí mismo los aderezos del día siguiente usando los ingredientes que ya están sobre la mesada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24496",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Every Query Routes Itself: Accelerating Video Diffusion Transformers with Per-Query Routed Sparse Attention",
+        "author": "Zhen Huang, Shuwei Li, Ruizhe Yao, Xinrui Chen, Danyi Liu, Haoyuan Liang, Zhiyu Ye, Qiuyan Sun et al.",
+        "description": "Propone Per-Query Routed Sparse Attention (PQRS), un método sin reentrenamiento para acelerar Video Diffusion Transformers al demostrar que agrupar consultas compartiendo claves degrada la precisión de la atención. PQRS agrupa únicamente las claves, permite que cada consulta elija sus propios clústeres de claves compensando los descartados con sus centroides, agrupa consultas con selecciones idénticas en tareas densas y fusiona resultados en un solo paso. En modelos Wan2.1-T2V y HunyuanVideo alcanza 1,66× a 2,10× de aceleración de extremo a extremo preservando 28,9 dB y 35,4 dB de PSNR.",
+        "analogy": "🗂️ Como dejar que cada investigador de una sala elija exactamente qué archivadores consultar en lugar de obligar a todo un equipo a mirar las mismas carpetas: quienes coincidan en la elección comparten el viaje al estante sin perder precisión ni frenar la búsqueda.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.24479",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Gemini 4 Neon: Modelo de Razonamiento Frontera con Ventana de 1M de Tokens para Ingeniería y Ciencia",
+      "description": "Google DeepMind presenta Gemini 4 Neon, posicionado entre Gemini 4 Carbon y Gemini 4 Hydrogen para cargas complejas de ingeniería de software, análisis avanzado, investigación científica y ciberdefensa en producción. Derivado de Carbon con ventana unificada de 1 millón de tokens y niveles de pensamiento ajustables ('high' y 'xhigh'), alcanza el puesto #3 global (61 puntos) en el Artificial Analysis Intelligence Index, destaca en seguimiento de instrucciones y baja tasa de alucinaciones, y llega con un precio de $3 por millón de tokens de entrada ($0,15 en caché) y $15 de salida en Gemini API, AI Studio y Google Antigravity.",
+      "links": [
+        {
+          "text": "Google DeepMind Model Card",
+          "url": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Diseño de Chips con Modelos de Frontera (AMD y Synopsys) y ChatGPT for Accounting",
+      "description": "OpenAI publica resultados de optimización de hardware asistida por modelos de frontera junto a AMD y Synopsys, logrando hasta un 14% de mejora en potencia, rendimiento y área (PPA) sobre propiedad intelectual de GPUs insignia de AMD con circuitos SystemVerilog RTL reescritos por IA enviados a fabricación, además de optimizar su chip de inferencia Jalapeño. En paralelo lanza ChatGPT for Accounting (v1.0.0) en planes Work y Business con integraciones para QuickBooks, Xero, Oracle NetSuite, BILL y FreshBooks.",
+      "links": [
+        {
+          "text": "OpenAI News",
+          "url": "https://openai.com/news/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Self-Hosted Claude Managed Agents y Beta Empresarial de Claude Meetings",
+      "description": "Anthropic habilita en beta privada Self-Hosted Claude Managed Agents, permitiendo a organizaciones alojar íntegramente dentro de su propio perímetro de seguridad (nube privada u on-premise) el servidor de agentes, la base de datos PostgreSQL, credenciales, historial de sesiones y entornos de ejecución. Al mismo tiempo despliega la beta de Claude Meetings para equipos en Google Meet, donde Claude participa en vivo redactando documentos, pizarras y elementos de acción durante la llamada.",
+      "links": [
+        {
+          "text": "Claude Resources",
+          "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Expansión del Agente Personal Muse (Voz, Avatares y Wearables) y Pruebas de Direct",
+      "description": "Meta amplía el ecosistema de su asistente agéntico Muse incorporando funciones de voz en tiempo real, avatares expresivos e integración con relojes inteligentes (Apple Watch y Wear OS) para ejecutar tareas entre correo, calendario y aplicaciones, junto con exhibiciones interactivas presenciales. En paralelo inicia pruebas de Direct, una aplicación independiente dedicada a la mensajería directa de Instagram, y avanza el despliegue global de su sistema de estimación de edad por IA.",
+      "links": [
+        {
+          "text": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Anthropic",
+      "headline": "Anthropic debuta en el Nasdaq bajo el símbolo 'ANT' tras fijar su histórica oferta pública inicial (OPI) en 83 dólares por acción, recaudando un récord de 81.300 millones de dólares a una valoración diluida cercana a 1,5 billones de dólares.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Mistral AI",
+      "headline": "Deutsche Telekom invierte 100 millones de euros (~110 millones de dólares) en la ronda Serie D de Mistral AI a través de T.Capital Tech Fund para impulsar despliegues soberanos de IA empresarial y gubernamental en Europa.",
+      "links": [
+        {
+          "text": "Deutsche Telekom",
+          "url": "https://www.telekom.com/en",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Linq",
+      "headline": "La plataforma de infraestructura de comunicaciones y herramientas para agentes de IA Linq anuncia una ronda Serie B de 90 millones de dólares liderada por Andreessen Horowitz (a16z), sumando a Ben Horowitz a su junta directiva.",
+      "links": [
+        {
+          "text": "PR Newswire",
+          "url": "https://www.prnewswire.com/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Dreamteam",
+      "headline": "La startup de CRM nativo de IA Dreamteam, fundada por exejecutivos de Freshworks sobre un modelo de memoria centralizada ('Company Brain'), emerge del sigilo con 53 millones de dólares en rondas semilla y Serie A lideradas por Together Fund y Accel.",
+      "links": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
