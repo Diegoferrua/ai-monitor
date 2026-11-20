@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-20",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Beam Model Technical Report",
+        "author": "Reflection Team, Adam Abdulhamid, Osama Abuelsorour, Yasmin Alameddine, Carlo Alfano, Duarte Alves, Brandon Amos, Selvaraj Anandaraj et al.",
+        "description": "Presenta Beam, un modelo Mixture-of-Experts (MoE) disperso con 501.300 millones de parámetros totales y 23.400 millones activos por token, diseñado para programación, razonamiento y flujos agénticos con entre 3× y 4× menos cómputo de inferencia que modelos comparables. Preentrenado sobre 23,8 billones de tokens con una ventana de contexto de 1M alcanzada mediante entrenamiento intermedio en dos etapas, su postentrenamiento ejecutó una campaña de aprendizaje por refuerzo asíncrono a gran escala sobre 10.500 GPUs GB300 (más de 100 millones de trayectorias en cuatro semanas). Incorpora cuantización FP8/NVFP4 y el borrador especulativo DFlash 2 de 1,93B, logrando 88,9% de rechazo o desvío ante solicitudes dañinas y 81,5% de cumplimiento en peticiones benignas.",
+        "analogy": "🔦 Como un estudio de ingeniería de 500 especialistas donde solo 23 se sientan al escritorio para cada problema, acompañados por un asistente rápido (DFlash 2) que redacta el borrador de las próximas frases por adelantado para trabajar 3 a 4 veces más veloz.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26358",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights",
+        "author": "Tanmay Sah",
+        "description": "Introduce primitivas analíticas sin gradientes para compilar cálculo determinista exacto directamente dentro de los pesos preentrenados de un LLM —con cero ejemplos de entrenamiento y sin ganchos externos en tiempo de ejecución— acotando la deriva de normalización y preservando el lenguaje natural. Combina cuadratura Mellin-GLU sobre capas SwiGLU/GeGLU, cancelación de escala entre tokens con atención Indefinite-RoPE y extensión de ancho con compensación de norma para sintetizar circuitos aritméticos de 4 a 8 dígitos en profundidad constante TC0 y circuitos booleanos. En aritmética de 6 dígitos (BF16), Granite 4.2 3B (≤0,036% de parámetros activos modificados) y Qwen 3.5 4B (≤0,057%) alcanzan 99,17% y 100,00% de precisión frente a 42,2% y 61,7% con LoRA.",
+        "analogy": "🧮 Como soldar una calculadora exacta dentro de un rincón mínimo del cerebro de un escritor sin borrarle ni reentrenarle la memoria: sigue redactando con fluidez y, apenas aparece una multiplicación de seis cifras a mitad de frase, ese circuito cableado la resuelve con precisión de reloj.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26450",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Represented but misread: Post-training changes how language models read out what they represent",
+        "author": "Jochen Laubrock",
+        "description": "Compara sondas lineales internas con las respuestas finales de seis familias de modelos abiertos antes y después del postentrenamiento mediante teoría de detección de señales. Demuestra que los modelos ya separan conceptos en sus representaciones internas, pero el postentrenamiento altera cómo leen esa señal para responder: reduce la sensibilidad al distinguir textos humanos frente a generados por IA (Δd' = -0,34), modifica el peso asignado a tasas base y, en sentido inverso, repara la lectura de afirmaciones negadas cuya veracidad ya era decodificable internamente. El análisis por etapas e intercambio de capas apunta al SFT y a posiciones posteriores al enunciado desde capas medias.",
+        "analogy": "🎛️ Como un analista que ya tiene los datos correctos anotados en su cuaderno, pero el postentrenamiento le recalibra el micrófono sobre el escritorio: no cambia lo que sabe por dentro, sino qué señales amplifica o invierte al decir la respuesta en voz alta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26584",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
+        "author": "Peiyun Hu, Marko Mihajlovic, Lyndon Duong, Lahav Lipson, Wei Dong, Amaël Delaunoy, Stephan R. Richter, Vladlen Koltun",
+        "description": "Presenta Depth Pro 2, un sistema unificado para estimar mapas densos de profundidad métrica tanto en imágenes fijas como en video a resolución nativa completa. Frente al compromiso habitual donde los métodos multiframe priorizan estabilidad temporal a costa de bordes difusos y los monoculares de un cuadro ganan nitidez pero parpadean entre fotogramas, entrena una única arquitectura escalable que logra simultáneamente precisión métrica, contornos nítidos y consistencia temporal. Establece una nueva frontera de Pareto en exactitud, nitidez, estabilidad temporal y velocidad de ejecución, con código y pesos abiertos.",
+        "analogy": "📏 Como pasar de tener que elegir entre un telémetro fotográfico muy nítido pero nervioso en video o una cámara estable pero borrosa en los bordes, a usar un único lente capaz de medir distancias reales con filo y pulso firme cuadro tras cuadro.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26603",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+        "author": "Tuna Han Salih Meral, Kaan Oktay, Alec Helbling, Atakan Kara, Duen Horng Chau, Pinar Yanardag",
+        "description": "Investiga si las mejoras de calidad visual, renderizado de texto y composición obtenidas mediante postentrenamiento por RL en Diffusion Transformers requieren transformaciones complejas dependientes de la entrada. Al ajustar un conjunto fijo de vectores de direccionamiento sumados a las salidas de bloque del modelo base congelado —con 65× menos parámetros que un LoRA en SD3.5-M (0,29M frente a 18,8M) e idénticos para cualquier prompt o semilla—, recuperan entre 90,0% y 96,3% de las ganancias de recompensa en seis modelos de imagen y entre 89,8% y 111,9% en dos modelos de video. Entrenados directamente con RL en línea, superan a la optimización completa de pesos en OCR y PickScore sobre SD3.5-M.",
+        "analogy": "🧭 Como comprobar que una orquesta no necesitaba reescribir todas sus partituras para sonar mucho mejor: basta con ajustar un único ecualizador maestro en la sala para encaminar lo que los músicos ya sabían tocar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26627",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AURA: AUdio-dRiven streaming Avatar",
+        "author": "Nathaniel Cohen, Nicolas Dufour, Amélie Royer, Alasdair Newson, Patrick Pérez",
+        "description": "Propone AURA, un modelo de difusión de video guiado por audio diseñado para generar avatares parlantes en streaming causal de baja latencia usando una caché KV rodante, sin requerir varios segundos de audio futuro. Mediante una destilación en dos etapas —alineamiento causal por bloques con ventana deslizante seguido de Distribution Matching Distillation con simulación hacia atrás—, AURA 1.3B transmite video 576p a 20,7 fps en una sola GPU (23× más rápido que su maestro bidireccional) y AURA 5B alcanza 720p a 9,7 fps (17× más rápido) igualando la calidad de TalkVerse. Publica los pesos de ambos modelos junto con 30.000 videos sintéticos.",
+        "analogy": "🎭 Como un actor de doblaje en vivo que no necesita leer la página siguiente del guion para gesticular: escucha sílaba a sílaba con una memoria inmediata rodante y sincroniza el rostro al instante en tiempo real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26540",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "A Tensor-Algebraic No-Go Theorem for High-Dimensional Photonic Greenberger--Horne--Zeilinger States Discovered with AlphaProof Nexus",
+        "author": "Mario Krenn, Moritz Firsching, George Tsoukalas, Rishikesh Gajjala, Xuemei Gu, Swarat Chaudhuri",
+        "description": "Demuestra un teorema de imposibilidad en óptica cuántica: no existe ningún grafo cuántico monocromático con pesos complejos para ningún número par de fotones N ≥ 4 cuando la dimensión D ≥ N, lo que descarta construir estados GHZ fotónicos de alta dimensión con fuentes probabilísticas de pares bajo esa configuración. La prueba fue descubierta mediante búsqueda formal asistida por IA en Lean con AlphaProof Nexus, construyendo una suma ponderada factorizable por vértices cuyo desequilibrio fila-columna genera una contradicción algebraica que los autores traducen luego a una interpretación física.",
+        "analogy": "🧩 Como un matemático asistido por IA que verifica en Lean un rompecabezas de espejos y demuestra de manera irrefutable que, sin importar cómo se ajusten los ángulos, una ronda de número par jamás producirá esa simetría en dimensiones altas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26300",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)",
+        "author": "Mengxiao Wang, Mahbub Alam, Kalyan Nakka, Nitesh Saxena",
+        "description": "Presenta ROGUE-AI, un marco multiagente de auditoría que reconstruye fuera de línea incidentes reales de seguridad en agentes junto con controles pareados sin la causa señalada. Logra reproducir el daño reportado en el 89% de 108 casos; cinco modelos actuales de GPT, Claude, Gemini y DeepSeek cometieron el mismo error en entre 18% y 33% de las ejecuciones (frente a ≤1% sin el factor detonante). De 72 incidentes con daño real, 62 ocurrieron sin atacante ni inyección de prompts: los agentes obedecieron la tarea omitiendo riesgos cotidianos como bases de datos compartidas con producción, y solo advertencias explícitas tras la salida de cada herramienta redujeron el daño.",
+        "analogy": "🕵️ Como un laboratorio de investigación aeronáutica que recrea accidentes reales en simulador —con y sin la pieza señalada— y descubre que la mayoría no proviene de sabotajes, sino de pilotos obedientes que pasan por alto un riesgo ordinario salvo que el tablero nombre el peligro concreto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26553",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SKILL.PNG: Learning Agent Skills in Pixel Space",
+        "author": "Maximilian Seeth, Chengzhi Martin Hu, Marie Kempkes, Paul Röttger, Leo Schwinn",
+        "description": "Propone Skill.png, una técnica que codifica habilidades para agentes basados en modelos visión-lenguaje (VLM) como imágenes cuyos píxeles se optimizan directamente mediante descenso de gradiente a través del codificador visual congelado. Supera a las habilidades textuales optimizadas por LLMs de frontera en 9 de 16 configuraciones evaluadas sobre cuatro VLMs y cuatro benchmarks, consumiendo apenas 64 a 256 tokens visuales en inferencia frente a 900–2.000 tokens de texto. Además admite habilidades híbridas texto-imagen y optimización conjunta para transferir una misma imagen entre distintos modelos de un ensamble.",
+        "analogy": "🖼️ Como reemplazar un manual de mil quinientas palabras por una tarjeta visual ultradensa: al vivir en píxeles, puede pulirse suavemente con cálculo matemático y varios agentes distintos la leen al instante ocupando una fracción del contexto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26296",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+        "author": "Jinbin Luo, Xiaozhe Yao, Shang Yang, Zhijian Liu, Song Han, Qinghao Hu",
+        "description": "Introduce TideCache, un sistema de servicio para modelos híbridos (atención global más capas de estado acotado) en superchips CPU-GPU. Integra un pool transparente que redistribuye páginas físicas bajo direcciones virtuales fijas, un Cache Streamer que aprovecha el cómputo de las capas de estado acotado para pre-cargar desde memoria del anfitrión los prefijos de la siguiente capa de atención global, y un planificador consciente de colas. Implementado en SGLang y evaluado en NVIDIA GB300 y GH200, completa hasta 2,04× más turnos agénticos, recorta la latencia P50 por token entre 20% y 59% y mejora el TTFT P50 entre 1,40× y 3,05× frente a HiCache.",
+        "analogy": "🌊 Como una cocina que no satura toda la mesada con los ingredientes de cada receta a la vez: mientras la batidora procesa un paso ligero, una cinta silenciosa acerca solo la bandeja pesada siguiente y libera espacio al terminar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26619",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Aggron: Aggressive Compression of Agentic KV Caches during Head-of-Line Stalls in the Request Queue",
+        "author": "Rishabh Ravi, Tony Hong, Chen Wang, Yue Zhu, Mengmei Ye, Hubertus Franke, Fan Lai, Josep Torrellas",
+        "description": "Propone Aggron, un sistema de inferencia para agentes multiturno que comprime selectivamente partes de la caché KV en cada turno en lugar de esperar a alcanzar umbrales masivos. Utiliza una cola separada de sumarización que aprovecha capacidad ociosa de cómputo y memoria mientras la solicitud agéntica permanece bloqueada por esperas de cabecera de línea (head-of-line stalls) en la cola principal, emitiendo compresiones solo cuando predice que concluirán antes de ejecutarse el turno. Bajo alta carga reduce la latencia P99 de programas agénticos entre 27% y 31% e incrementa el throughput entre 1,34× y 1,40×.",
+        "analogy": "📦 Como un centro logístico que reempaca cajas voluminosas en paquetes planos justamente mientras el camión aguarda detenido en la fila del andén, aprovechando ese tiempo muerto para ahorrar espacio sin retrasar la salida.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26435",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "HiSA: Sparsifying the Hidden Dimension of RoPE Attention in LLMs",
+        "author": "Ambroise Borbely, Mathieu Salzmann, Olivier Verscheure",
+        "description": "Presenta Hidden Sparse Attention (HiSA), un método que introduce dispersión en la dimensión oculta de características en lugar de descartar tokens. Aprovechando la estructura de los embeddings rotatorios RoPE, conserva íntegras las proyecciones de consulta y clave pero calcula únicamente un producto punto parcial mediante una regla estática y sin parámetros determinada por la posición de cada token. Al entrenar LLMs desde cero iguala o supera a la atención densa calculando alrededor de un tercio de los productos Q-K, acelera la decodificación, reduce la huella de memoria y se extiende a kernels FlashAttention-3.",
+        "analogy": "🔍 Como verificar si dos códigos de barras coinciden comparando solo un tercio de sus franjas clave en lugar de escanear cada milímetro: como la codificación rotatoria organiza la información por bandas, omitir las franjas silenciosas acelera la lectura sin perder precisión.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26363",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "\"Computer Use\" en Gemini para macOS: Ejecución Autónoma en Ventana Aislada",
+      "description": "Google anuncia la función \"Computer use\" dentro de la aplicación de Gemini para macOS en equipos con Apple Silicon (macOS Sequoia 15.0 o superior). El agente ejecuta flujos multipaso entre archivos locales, aplicaciones de escritorio y navegador dentro de una ventana aislada en segundo plano con vista previa en vivo dentro del chat, dejando libre la pantalla y el cursor del usuario mientras exige aprobación explícita ante inicios de sesión, pagos o envíos críticos; disponible inicialmente en inglés en EE. UU. para planes Google AI Plus, Pro y Ultra.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Expansión de Agentes Proactivos \"Dots\" en ChatGPT Plus y Business Standard",
+      "description": "OpenAI amplía las pruebas de \"Dots\", sus agentes de IA proactivos y siempre activos impulsados por modelos como GPT-6 Astra y GPT-6.1 Terra, incorporando a un primer grupo de suscriptores de ChatGPT Plus ($20/mes) y extendiendo el despliegue a usuarios de ChatGPT Business Standard. En paralelo, revela internamente \"Performance Factory\", un sistema impulsado por Codex que detecta y corrige de forma automatizada regresiones de rendimiento para mantener la latencia baja en ChatGPT.",
+      "links": [
+        {
+          "text": "9to5Mac",
+          "url": "https://9to5mac.com/2026/11/19/openai-begins-testing-dots-with-chatgpt-plus-users-expands-business-access/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Activación por Defecto de Claude Data Enterprise y Canales en Claude Desktop",
+      "description": "Anthropic habilita automáticamente por defecto Claude Data para planes Enterprise a partir del 20 de noviembre, ampliando la integración nativa con almacenes de datos y conectores CRM junto a hojas de cálculo y pizarras colaborativas. Asimismo introduce canales de lanzamiento diferenciados en Claude Desktop —Stable para despliegues probados con menor frecuencia y Latest para actualizaciones diarias— tras lanzar Linked Billing en beta en su plataforma para desarrolladores.",
+      "links": [
+        {
+          "text": "Claude Resources",
+          "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Agentes Autónomos de Propagación de Técnicas para Modelos de Ads Ranking",
+      "description": "Engineering at Meta detalla cómo despliega agentes autónomos de IA especializados en ingeniería de aprendizaje automático para escalar innovaciones y propagar automáticamente técnicas validadas entre su flota heterogénea de modelos de clasificación de anuncios (junto a GEM y Andromeda). Dado que cada superficie utiliza arquitecturas y límites propios, los agentes adaptan optimizaciones probadas en un modelo hacia el resto del parque manteniendo aprobación humana antes de pasar a producción.",
+      "links": [
+        {
+          "text": "Engineering at Meta",
+          "url": "https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Anthropic",
+      "headline": "Anthropic anuncia el cierre oficial de su OPI en el Nasdaq ('ANT') por 93.500 millones de dólares brutos tras el ejercicio completo de la opción de 147 millones de acciones adicionales a $83,00, junto a una colocación privada simultánea de 26.000 millones con AMD, Broadcom, Google, Micron, Microsoft, NVIDIA y TSMC Partners que eleva los ingresos combinados a unos 119.500 millones.",
+      "links": [
+        {
+          "text": "Anthropic News",
+          "url": "https://www.anthropic.com/news/ipo-close",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Sierra",
+      "headline": "La startup de agentes conversacionales de atención al cliente Sierra, cofundada por Bret Taylor, negocia una nueva ronda de alrededor de 1.500 millones de dólares a una valoración de 30.000 millones —casi el doble de los 15.000 millones alcanzados en mayo— tras superar los 400 millones en ingresos anualizados.",
+      "links": [
+        {
+          "text": "PYMNTS",
+          "url": "https://www.pymnts.com/startups/2026/ai-customer-support-startup-sierra-eyes-30-billion-valuation/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Boltz",
+      "headline": "La firma de descubrimiento farmacológico biomolecular Boltz, surgida de MIT y Londres, cierra una ronda Serie A de 110 millones de dólares liderada por Bessemer Venture Partners con participación de Andreessen Horowitz y NVIDIA para escalar sus modelos BoltzMol-1 y BoltzProt-1.",
+      "links": [
+        {
+          "text": "FinSMEs",
+          "url": "https://www.finsmes.com/2026/11/boltz-raises-110m-in-series-a-funding.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta",
+      "headline": "Meta confirma que reevalúa su meta de emisiones netas cero para 2030 debido al rápido aumento del consumo eléctrico de sus centros de datos de IA, en paralelo a acuerdos de suministro de acero y cemento de bajas emisiones.",
+      "links": [
+        {
+          "text": "Anadolu Agency",
+          "url": "https://aa.com.tr/en/world/meta-reconsiders-2030-net-zero-emissions-target-as-ai-expansion-drives-up-emissions/4131820",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
