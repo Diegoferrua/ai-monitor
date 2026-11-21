@@ -1,0 +1,280 @@
+{
+  "date": "2026-11-21",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Language Models Can Rewrite Their Own Weights",
+        "author": "Jiajun Fan, Neil He, Changyi Yang, Andy Mao, Xi Zhu, Chaoran Cheng, Kaiqu Liang, Shuaike Shen et al.",
+        "description": "Demuestra que un modelo de lenguaje abierto de 27B parámetros puede diagnosticar sus propios fallos y reescribir directamente sus propios pesos mediante razonamiento en pases hacia adelante, sin gradientes ni ciclos de entrenamiento adicionales. Al probar sus ediciones en problemas de práctica y conservar solo las mejoras verificadas, supera su propio desempeño en 6,6 puntos de precisión sobre problemas inéditos y continúa mejorando durante ocho sesiones consecutivas. Además logra reparar una copia dañada de sí mismo hasta recuperar más del 80% de su precisión original en tareas visuales nunca vistas, revelando una capacidad emergente ligada a la escala.",
+        "analogy": "🔧 Como un mecánico capaz de abrir su propio motor en marcha, detectar qué pieza falla tras revisar sus propios errores y recalibrarla con una llave inglesa sin necesidad de volver a la fábrica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.21885",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher",
+        "author": "Guoxin Chen, Shuang Sun, Fanzhe Meng, Xinyu Tang, Ruihua Song, Wayne Xin Zhao",
+        "description": "Propone Skill-FT (Skill-Guided Fine-Tuning) y el sistema autónomo AutoMaster para mejorar el postentrenamiento sin cambiar de modelo maestro ni aumentar el volumen de datos. Un agente LLM analiza trayectorias exitosas previas —que suelen arrastrar suposiciones sin respaldo o verificaciones superficiales— y diseña habilidades en lenguaje natural para suprimir malos hábitos y reforzar conductas efectivas durante nuevos despliegues. En tareas de terminal, búsqueda e ingeniería de software con modelos de 4B y 9B, mejora entre 1,42 y 8,99 puntos porcentuales sobre el SFT estándar, demostrando además que conservar las instrucciones de habilidad durante el ajuste favorece su internalización.",
+        "analogy": "🎯 Como un entrenador que descubre que un atleta ya conoce los movimientos ganadores, pero mejora drásticamente al darle notas breves sobre qué manías corregir antes de grabar el video de práctica que luego estudiará su aprendiz.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26510",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AltRA-Test: An Alternative Annotator Test for LLM Judges Without Shared Annotators",
+        "author": "Nagham Omar, Rotem Dror, Almog Gueta, Avigdor Gal, Roi Reichart, Nitay Calderon",
+        "description": "Presenta AltRA-Test, una prueba estadística basada en bootstrap con remuestreo diseñada para decidir cuándo es válido reemplazar anotadores humanos por jueces LLM incluso cuando distintos ítems fueron etiquetados por diferentes subconjuntos de personas. Al comparar paneles pareados exclusivamente humanos frente a paneles mixtos humano-LLM, aprueba el reemplazo solo si el acuerdo inter-anotador no resulta inferior al humano. Evaluado sobre 18 LLMs, 5 estrategias de prompting y 20 conjuntos de texto, imagen, audio y video, suele requerir apenas ~100 ítems y muestra que los LLMs superan la prueba en cerca de la mitad de los escenarios reales.",
+        "analogy": "⚖️ Como un comité de auditoría que, antes de sustituir a un jurado humano por un evaluador automático en un concurso donde cada obra tuvo revisores distintos, comprueba mediante sorteos estadísticos si el reemplazo mantiene intacto el consenso del jurado original.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26073",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
+        "author": "Changli Tang, Jie Yang, Tianyi Wang, Lei Li, Daoze Zhang, Zijie Xin, Zhan Liu, Li Li et al.",
+        "description": "Introduce WeMM-Video, una familia abierta y bilingüe (chino-inglés) de modelos fundacionales omnimodales en tamaños 2B, 4B, 9B y 35B-A3B que unifican texto, imagen, audio y video bajo un paradigma híbrido con modo directo rápido y modo de razonamiento paso a paso. Entrenada sobre ~1,2 billones de tokens multimodales mediante preentrenamiento progresivo y un pipeline con OPD multimaestro, MrDPO antirrepetición y RL especializado, establece un nuevo estado del arte abierto en más de 120 benchmarks: su modelo 35B-A3B supera a Qwen3.5-Omni-Flash y Seed2.0-Mini-0428, mientras que la variante 9B bate al más grande Qwen3-Omni-30B-A3B-Instruct.",
+        "analogy": "🎬 Como un crítico audiovisual que no solo mira la película y lee los subtítulos por separado, sino que escucha cada sonido en paralelo y decide cuándo responder al instante o detenerse a analizar escena por escena.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26409",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Posterior Matching Distillation",
+        "author": "Hidir Yesiltepe, Julius Berner, Arash Vahdat, Pinar Yanardag",
+        "description": "Propone Posterior Matching Distillation (PMD), un método de destilación para modelos de difusión de imagen y video que reemplaza el sesgo hacia modos dominantes de la divergencia KL inversa por un muestreo que cubre la distribución posterior completa del maestro para cualquier presupuesto de pasos. En lugar de entrenar una red auxiliar de score para el estudiante, empareja promedios exponencialmente reponderados de muestras del estudiante con evaluaciones del maestro sobre entradas desplazadas, demostrando unicidad teórica bajo ruido gaussiano. En SDXL y FLUX.2 [klein] 4B obtiene el mejor FID entre métodos de 4 pasos manteniendo alta alineación con el prompt.",
+        "analogy": "🎨 Como resumir un taller de pintura de cincuenta pinceladas en apenas cuatro trazos sin terminar pintando siempre el mismo cuadro promedio: el aprendiz aprende a conservar toda la variedad de estilos del maestro en lugar de refugiarse en su pose más segura.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26629",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Coda-DaVinci: Reimagining Video Generation with Code2Video",
+        "author": "Yiyan Ji, Qixun Wang, Yang Shi, Zhuoran Zhang, Yifan Xu, Tengfei Liu, Yuqi Tang, Xiaohan Zhang et al.",
+        "description": "Presenta Coda-DaVinci, un marco agéntico adaptativo para generación de video bajo el enfoque Code2Video que decide por tarea cuándo usar generación directa o proxies 3D programados por agentes, ajustando la granularidad por entidad (proxies gruesos para movimiento natural y medianos para consistencia) junto con simulación física e inspección visual iterativa. Al preservar los activos de escena y alinear el prompting con los proxies, alcanza resultados líderes en seguimiento de instrucciones sobre VTR y consistencia de escena en R2M, mejorando la plausibilidad física frente a la generación directa.",
+        "analogy": "🏗️ Como un director de cine que primero arma una maqueta digital con física real y maniquíes articulados en código antes de renderizar la escena final, ajustando qué objetos necesitan detalle milimétrico y cuáles solo movimiento fluido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26595",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs",
+        "author": "Xuwei Ding, Skylar Zhai, Linxin Song, Jiarui Feng, Dongqi Fu, Huajun Xi, Junnan Li, Jingcheng Liang et al.",
+        "description": "Introduce TuringSpace, un entorno web sintético con 125 CAPTCHAs espaciales interactivos que exigen inferir geometría 3D desde vistas 2D, actuar mediante clics y arrastres en pantalla y corregir errores observando el resultado. Mientras los humanos resuelven el 94,1% de las tareas, GPT-6 Astra falla el 25,9% y el mejor modelo abierto (Kimi K3) falla el 68,0%, a menudo alucinando justificaciones para defender una lectura errónea de la captura. Al entrenar a Qwen3.5-9B en este entorno generativo, su tasa de éxito salta de 1,6% a 33,1% y gana 9,9 puntos en los videos reales de VSI-Bench.",
+        "analogy": "🕹️ Como poner a prueba si alguien entiende de verdad una maqueta en 3D haciéndolo girar piezas con el ratón hasta encajarlas: no basta con describir la foto, tiene que notar cuándo movió mal la pieza y corregirse en el siguiente intento.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.25387",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TwinLab-Bench: Evaluating AI Scientists in Agentic Twins of Real Labs",
+        "author": "Yang Wan, Linchao Zhu",
+        "description": "Presenta TwinLab-Bench, un benchmark de 52 tareas en ciencias físicas, biológicas e ingeniería diseñado para evaluar si los agentes científicos pueden diseñar sus propios experimentos entre más de 100 tipos de acciones. Cada tarea cuenta con un agente TwinLab que actúa como gemelo del laboratorio real, consultando materiales originales y calculadoras calibradas con registros experimentales verídicos para devolver mediciones consistentes frente a pruebas de memoria cerrada. Los modelos de frontera aún enfrentan un reto considerable: el mejor evaluado, Claude Fable 5.2, obtiene apenas 45,0 puntos promedio.",
+        "analogy": "🧪 Como evaluar a un científico frente a un simulador fiel de laboratorio conectado a cuadernos experimentales reales: no se premia recitar teoría de memoria, sino decidir qué experimento montar y leer instrumentos que responden con física auténtica.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26248",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation",
+        "author": "Yuzhi Huang, Jie Wu, Fanding Huang, Junchao Lin, Weichen Zhang, Ziyi Xiong, Yang Li, Zhengwei Xie et al.",
+        "description": "Propone Mind2Act World, un benchmark diagnóstico con 30 tareas simuladas de manipulación robótica en cinco dominios reales (180 configuraciones entre escenas limpias y aleatorias) que separa tres vistas: Mind (decisión basada en historial), Act (ejecución física precisa) y Mind2Act (composición en lazo cerrado). Al evaluar agentes multimodales, VLAs y modelos mundo-acción, revela que el desempeño aislado no se transfiere: incluso el mejor agente alcanza 52,7% en Mind y 39,0% en Act, pero cae a solo 12,0% al combinar razonamiento y contacto físico continuo en Mind2Act.",
+        "analogy": "🤖 Como comprobar que saber planear una receta de memoria y tener buen pulso con un cuchillo por separado no basta para cocinar en vivo: el gran tropiezo ocurre al ajustar la mano en tiempo real según cómo reacciona cada ingrediente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26444",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Accelerating Mixture of Block Attention via Dynamic Routing, KV-Centric Execution and Runtime Pipelining",
+        "author": "Yingqi Shi, Junru Lu, Yun Liu, Di Yin, Xing Sun",
+        "description": "Presenta LightningMoBA, un codiseño de algoritmo y kernel GPU para Mixture of Block Attention (MoBA) que reemplaza el presupuesto fijo Top-k y la planificación centrada en consultas por enrutamiento dinámico por umbral, ejecución agrupada por columnas (cabezal de consulta, bloque KV) y pipelining en arquitectura Hopper. Al superponer transferencias regulares de KV y lecturas irregulares de consultas con el cómputo en Tensor Cores, evita fragmentar la reutilización de bloques KV. A retención equivalente a Top-16, acelera la generación de extremo a extremo entre 1,20× y 1,60× y eleva el puntaje medio en RULER de 74,42 a 75,28.",
+        "analogy": "🗂️ Como reorganizar un archivo de biblioteca para que, en lugar de que cada lector pida carpetas sueltas repitiendo viajes al depósito, se agrupen las consultas por estante y el bibliotecario traiga el siguiente cajón mientras el equipo lee el actual.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26268",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding",
+        "author": "Alagappan Valliappan, Ankit More, Dheevatsa Mudigere, Jatin Mitra",
+        "description": "Demuestra que los modelos borrador de decodificación especulativa que leen estados ocultos del modelo objetivo —como DFlash y EAGLE-3— no necesitan heredar su misma anchura oculta: todo el flujo residual del borrador puede operar a la mitad o a un cuarto de ancho conservando casi intacta la tasa de aceptación, e integrando el adaptador de salida en la proyección de vocabulario sin alterar los logits en DFlash. Evaluado en SGLang sobre Qwen3-8B (NVFP4) y GPT-OSS-20B (MXFP4), acelera la decodificación de extremo a extremo 1,06–1,12× en NVIDIA B200 y 1,13–1,44× en DGX Spark (GB10) a batch 1, y hasta 1,21× en lotes grandes.",
+        "analogy": "✏️ Como descubrir que el asistente encargado de proponer borradores no necesita un escritorio tan ancho como el del arquitecto jefe: con una libreta de un cuarto del tamaño propone casi las mismas palabras y libera ancho de banda para acelerar toda la obra.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.23835",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CompoundingKernel: Self-Improving from Zero to First",
+        "author": "Qian Qu, Hongyang Wang, Wenbo Chen, Yichuan Li, Jingguo Liu, Xian Li, Xuan Wang, Ruochen Wen et al.",
+        "description": "Presenta CompoundingKernel, un sistema de agentes automejorables que escribe kernels GPU mediante búsqueda partiendo desde cero, recibiendo únicamente la definición en PyTorch sin kernels de referencia ni puntajes oficiales. Un controlador LLM consulta un archivo externo de linajes válidos y asigna direcciones paralelas a agentes hijos validados por verificadores deterministas externos, alcanzando el #1 en los tableros públicos L1, L2 y Quantization de SOL-ExecBench (NVIDIA B200) al 11 de noviembre, con kernels correctos en los 235 problemas y una aceleración media de 4,40× en los 209 problemas públicos. Muestra que la tasa de medición fiable, y no el número de agentes, limita la escala de la búsqueda.",
+        "analogy": "⚡ Como un equipo de mil ingenieros de hardware probando variantes de código en paralelo frente a un cronómetro oficial implacable: nadie inventa resultados, y cada intento validado queda archivado como trampolín para que la siguiente oleada corra más rápido.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.19230",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Genie 4 en Gemini API y Google AI Studio + Tool Retrieval Dinámico",
+      "description": "Google abre Genie 4 para desarrolladores a través de la Interactions API de Gemini y Google AI Studio tras su estreno en Project Genie, permitiendo generar mundos interactivos continuos a 720p y 24 fps con audio nativo sincronizado (ambiente, efectos y diálogos) y dirección en tiempo real mediante teclado y prompts de texto, con marcas SynthID. En paralelo, lanza en vista previa Tool Retrieval en la Gemini API para Gemini 3.6 y posteriores: mediante `tool_search` y `defer_loading: true`, los agentes cargan esquemas completos solo bajo demanda para recortar tokens de entrada y latencia.",
+      "links": [
+        {
+          "text": "Google Blog",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/",
+          "type": "primary"
+        },
+        {
+          "text": "Tool Retrieval",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "ChatGPT Space en Plus, MedChemBench y Defensas contra Destilación Adversarial",
+      "description": "OpenAI despliega globalmente ChatGPT Space para suscriptores Plus (18+) como un espacio colaborativo para páginas interactivas, presentaciones, archivos y actualizaciones conectadas con apps como Slack. Además presenta MedChemBench —benchmark multimodal de química medicinal de 99 problemas y 761 moléculas donde GPT-6.2 Astra alcanza 84,5% frente a 83,3% de GPT-6 Astra— junto a su arquitectura de defensa en profundidad contra la extracción ilícita de cadenas de pensamiento ('protected reasoning'), reduciendo la tasa de éxito de ataques adaptativos del 54,0% al 0,2%.",
+      "links": [
+        {
+          "text": "OpenAI Safety",
+          "url": "https://openai.com/index/combatting-adversarial-distillation/",
+          "type": "primary"
+        },
+        {
+          "text": "MedChemBench",
+          "url": "https://openai.com/index/introducing-medchembench/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Computer Use (Beta) para Team/Enterprise y Claude Code v2.1.330",
+      "description": "Anthropic lanza en beta Computer Use para organizaciones Team y Enterprise, habilitando que Claude observe la pantalla e interactúe con aplicaciones permitidas desde Claude Desktop, web y móvil cuando el administrador activa el acceso. En paralelo publica Claude Code v2.1.330 con inicio de sesión directo administrado desde Enterprise Admin Console, el mod integrado `easel` para generar gráficos bajo demanda y métricas MCP en macOS/Linux, además de soporte de modo automático para Opus 4.6 y Sonnet 4.6 en Bedrock, Vertex y Foundry introducido en v2.1.328.",
+      "links": [
+        {
+          "text": "Claude Release Notes",
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "type": "primary"
+        },
+        {
+          "text": "Claude Code Changelog",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Self-Improving Memory de Meta FAIR: Destilación de Memoria Continua en Pesos",
+      "description": "Meta FAIR publica Self-Improving Memory, un enfoque de aprendizaje continuo en dos etapas para agentes con memoria persistente en archivos Markdown: primero un meta-agente optimiza iterativamente los prompts de gestión de memoria (`LOAD`/`OFFLOAD`) analizando trayectorias previas, y luego destila esas habilidades hacia los pesos del propio modelo mediante LoRA sobre respuestas ejecutadas con prompts genéricos. Evaluado en Continual Learning Bench sobre Kimi-K2.6 (Database, Codebase y Spectrum), los prompts descubiertos alcanzan 56,0 puntos frente a 44,6 de los mejores prompts escritos a mano (+11,4 puntos), y el modelo ajustado sube a 43,1 frente a 37,6 (+5,5).",
+      "links": [
+        {
+          "text": "Meta FAIR RAM",
+          "url": "https://facebookresearch.github.io/RAM/blogs/self_improving_memory/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "SpaceX",
+      "headline": "SpaceX cierra una emisión de deuda fuera de balance por 32.000 millones de dólares (\"Project Saturn\", parte de un paquete superior a 40.000 millones) vía Saturn Funding Trust respaldado por Apollo y Goldman Sachs para comprar GPUs Nvidia —incluidos futuros sistemas Rubin— y arrendarlas por ~5 años; el tramo principal de 25.200 millones rinde 8,259% con cláusulas que exigen mantener los chips en la Tierra.",
+      "links": [
+        {
+          "text": "Taipei Times",
+          "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/21/2003868108",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "NVIDIA",
+      "headline": "Reuters revela que la SEC investiga posibles problemas contables en Nvidia tras el escrutinio sobre su cliente singapurense Megaspeed y la salida de Jensen Huang; las acciones caen entre 13% y 14% el viernes hasta $125,53 y acumulan una pérdida semanal de ~23%, su peor semana desde la crisis de 2008.",
+      "links": [
+        {
+          "text": "Reuters",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/20/exclusive-nvidia-s-accounting-is-a-focus-of-us-sec-investigation-sources-say",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Naciones Unidas",
+      "headline": "En la cumbre de la Convención sobre Ciertas Armas Convencionales en Ginebra, los 128 Estados miembros acuerdan posponer hasta 2028 la elaboración de reglas sobre armas autónomas letales (\"robots asesinos\"), luego de que Estados Unidos, Rusia e Israel bloquearan bajo regla de consenso un tratado jurídicamente vinculante impulsado por casi 100 países.",
+      "links": [
+        {
+          "text": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/21/nations-agree-to-draft-rules-for-killer-robots-at-arms-control-summit",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Amazon Threat Intelligence",
+      "headline": "Amazon Threat Intelligence revela que actores vinculados a China utilizaron agentes autónomos de código abierto (\"Cairn\") para descubrir y explotar de forma autónoma en ~11 minutos una vulnerabilidad zero-day de path traversal en el software médico abierto MONAI Label (≤ 0.8.5), logrando acceso root en un servidor universitario.",
+      "links": [
+        {
+          "text": "AWS Security Blog",
+          "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
