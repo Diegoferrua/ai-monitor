@@ -1,0 +1,275 @@
+{
+  "date": "2026-11-22",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "GLiDE: A Fast, Calibrated Decision Model Distilled from Reasoning Teachers",
+        "author": "Sahibzada Allahyar, Julia White, Dhruv Atreja, George Hurn-Maloney, Urchade Zaratiana",
+        "description": "Presenta GLiDE, una familia de modelos de decisión (de 0,4B a 27B parámetros) construidos sobre modelos híbridos Qwen que puntúan respuestas candidatas en un único pase hacia adelante sin generar texto ni trazas de razonamiento. Al eliminar la máscara causal en las capas de atención completa para habilitar interacciones bidireccionales entre contexto, pregunta y candidatos, y combinar destilación de objetivos blandos desde múltiples maestros (incluido un modelo de razonamiento) con profundidad recurrente sin parámetros adicionales, GLiDE 27B alcanza 73,37 puntos en el conjunto oculto del Hugging Face Decision Index (71,52 antes del promedio de checkpoints) con un error de calibración esperado de apenas 2,1% y una latencia mediana de 92,9 ms en una sola GPU.",
+        "analogy": "⚡ Como un juez experto que, tras entrenar leyendo los razonamientos detallados de varios maestros, logra mirar todas las opciones sobre la mesa a la vez y emitir un veredicto calibrado en menos de un parpadeo sin tener que redactar el ensayo completo cada vez.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26509",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "MemFolder: Structure-Guided Memory Folding for Efficient Agent Memory Management",
+        "author": "Xuyang Liu, Chenwen Lu, Junxi Wang, Siyu Ren, Xinying Lin, Siteng Huang, Hongli Sun, Linfeng Zhang et al.",
+        "description": "Propone MemFolder, un marco de plegado estructural de memoria para agentes de largo horizonte que reduce secuencialmente tanto la cantidad de registros almacenados como la longitud del contexto recuperado. Su componente RecordFolder vincula menciones de entidades, selecciona anclas complementarias y consolida registros compatibles mediante afinidad semántica y encadenamiento temporal, mientras ContextFolder los comprime en texto compacto validado con retroalimentación de verificación para no perder hechos clave. En LoCoMo, PersonaMem, LongMemEval y los benchmarks multimodales M3-Bench, RecordFolder integrado en Mem0 retiene el 99,0% del rendimiento original con un 50% menos de registros, superando en 1,9 puntos porcentuales al mejor baseline.",
+        "analogy": "🗂️ Como un archivista metódico que, en lugar de tirar apuntes viejos o acumular cientos de notas repetidas, agrupa los expedientes por personaje e hilo temporal y redacta fichas compactas verificando que ningún dato crítico quede fuera.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26427",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Realized versus Population Reliability: Anytime-Valid Self-Consistency Certification under Correlated Reasoning",
+        "author": "Terence D. Agbeyegbe, Toneukarin G. Agbeyegbe",
+        "description": "Demuestra que los certificados secuenciales de autoconsistencia (anytime-valid e-processes) que asumen independencia entre muestreos fallan en la práctica porque las cadenas de razonamiento de un LLM están correlacionadas positivamente al compartir prefijos o heterogeneidad por prompt. Al modelar esta dependencia mediante correlación intraclase ρ, prueba que el tamaño de muestra efectivo dentro de una misma pregunta se satura en 1/ρ, por lo que el método clásico certifica la hipótesis realizada y no la poblacional. En evaluaciones con Claude Haiku 4.5, en AIME (ρ̂ = 0,480) la regla por unidad cruza falsamente en el 24% de los prompts bajo ε = 0,05 nominal, mientras que el e-proceso a nivel de prompt propuesto restaura la validez poblacional (0,00).",
+        "analogy": "🎲 Como comprobar que preguntarle diez veces lo mismo a alguien que siempre parte del mismo borrador mental no equivale a encuestar a diez personas independientes: si no se separa el sesgo inicial del punto de partida, el certificado de confianza se vuelve engañoso.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26592",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Probing the \"Conscious\" Mind: Selective Access and Global Workspace in Vision-Language Models",
+        "author": "Jiahao Huang, Jun Wang",
+        "description": "Introduce Multimodal Concept Lens (MC-Lens), una lente jacobiana multimodal inspirada en la Teoría del Espacio de Trabajo Global (GWT) que proyecta estados intermedios del codificador visual y del decodificador lingüístico hacia el vocabulario compartido de salida para medir qué conceptos son accesibles y cuándo participan en el cómputo. Mediante experimentos contrafactuales y dos métricas en espacio J durante el entrenamiento controlado de VLMs, demuestra que los conceptos visuales son legibles antes de que madure el acceso selectivo dependiente de la consulta, y que intervenir internamente esos portadores altera directamente la cadena de razonamiento posterior en distintas familias y escalas de VLMs.",
+        "analogy": "🔦 Como instalar monitores en la sala de control de un aeropuerto cognitivo para observar en qué momento las cámaras de video dejan de solo registrar objetos en bruto y empiezan a subir exactamente los conceptos relevantes a la pizarra central de decisiones.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26590",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "HiUni: Harmonizing Understanding and Generation in Shared Visual Space",
+        "author": "Jiahao Hu, Jingdong Du, Yichen Zhang, Yi Song, Zhenyu Zhang, Jiaxin Niu, Ruihang Li, Xiangzhao Hao et al.",
+        "description": "Explora cómo extender un modelo visión-lenguaje (VLM) preentrenado hacia un modelo multimodal unificado de comprensión y generación compartiendo el mismo ViT alineado con lenguaje y la misma columna vertebral densa Transformer, confinando el cómputo específico de tarea al lado de salida. Para superar la dificultad de optimizar en espacio de píxeles y la pérdida de detalle espacial en ViTs semánticos, HiUni incorpora una cabeza de difusión en píxeles (Pixel Diffusion Head) y la ruta ligera HiGate que reinyecta detalles espaciales finos cerca de la etapa final, manteniendo el puntaje de comprensión del VLM base mientras logra generación y edición competitivas sin duplicar la arquitectura central.",
+        "analogy": "🖌️ Como usar un único cerebro artístico para leer una escena y pintarla en el lienzo sin dividirlo en dos cabezas separadas, añadiendo apenas una lupa de trazo fino al final de la mano para recuperar las texturas exactas al dibujar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26107",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "WeVisForensics: Self-Evolving Agent for Omni AI-Generated Video Detection",
+        "author": "Yipeng Du, Yuxi Li, Ying Zhang, Chong Sun, Chen Li, Jing Lyu, Ying Tai",
+        "description": "Presenta WeVisForensics, un marco agéntico para detección forense de videos generados por IA donde un agente investigador coordina una biblioteca autoevolutiva de subagentes inspectores especializados en señales visuales y de audio. Mediante la estrategia Dual-Timescale Policy Optimization (DTPO) —que combina RL rápido sobre el investigador para elegir qué artefacto y ventana temporal examinar con refinamiento más lento de los inspectores sobre el conjunto curado ForenCue-30K—, logra una precisión media del 95,2% en benchmarks dentro y fuera de dominio (9,0 puntos sobre el detector previo más fuerte) fundamentando cada veredicto en evidencia localizada.",
+        "analogy": "🕵️ Como un detective jefe que no solo aprende a qué perito de imagen o sonido llamar según cada escena sospechosa, sino que entrena continuamente a sus propios peritos con cada caso resuelto para que detecten pistas microscópicas que antes pasaban por alto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.21373",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+        "author": "Yiyang Du, Yuxuan Kuang, Qitao Zhao, Yixuan Wang, Zhanqiu Guo, Yi Xu, Xin Li, Wenbin He et al.",
+        "description": "Propone AgentRoboCritic, un marco de evaluación acción por acción para agentes multimodales de frontera (como GPT-6 Astra) en control robótico directo con acciones numéricas de bajo nivel a lo largo de 12 benchmarks de manipulación, donde la política declara una intención local en cada paso y un crítico juzga el resultado frente a esa intención. Revela capacidades sólidas de recuperación en lazo cerrado y generalización zero-shot, pero identifica cuellos de botella físicos en agarre y alineación. Además libera un conjunto de 12.844 acciones anotadas y el crítico abierto Muse-Glimmer-30B, cuya precisión para clasificar modos de fallo sube de 32,58% a 74,24%.",
+        "analogy": "🦾 Como exigirle a un aprendiz de cirujano que diga en voz alta qué micro-movimiento intenta hacer antes de mover la pinza, permitiendo que un supervisor evalúe cada segundo dónde falló el pulso aunque la operación termine completándose.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26613",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain",
+        "author": "Zixuan Huang, Yang Zhou, Guli Zhang, Sunzhu Li, Hongyan Xie, Zehao Chen, Fuzhen Zhuang, Kaixuan Wang et al.",
+        "description": "Introduce ZeroVLN, una arquitectura de navegación visión-lenguaje lento-rápido que evita degradar las capacidades visuales generales del modelo VLM al eliminar por completo el ajuste fino supervisado (SFT) específico de navegación sobre el cerebro VLM. En su lugar, dota al VLM de una interfaz semántica de llamada a herramientas en lenguaje natural para comunicar decisiones de desplazamiento a un experto de acción continuo, optimizando ambos módulos de manera conjunta mediante aprendizaje por refuerzo agéntico en lazo cerrado. En entornos continuos VLN-CE supera a los métodos jerárquicos con SFT manteniendo casi intactos los pesos del VLM base.",
+        "analogy": "🧭 Como evitar reeducar desde cero el ojo y criterio general de un copiloto para que solo sepa dar coordenadas numéricas: basta con darle un radio limpio para que dé órdenes claras al conductor y afinar juntos la coordinación sobre el terreno.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26414",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
+        "author": "Amine Lbath, Manan Suri, Aurelien Delaitre, Vadim Okun, Massih-Reza Amini, Dinesh Manocha",
+        "description": "Sistematiza la evolución de agentes LLM en descubrimiento, validación y parcheo de vulnerabilidades mediante una escala de autonomía análoga a los niveles de conducción autónoma y una rúbrica sobre evidencia empírica y disponibilidad. Muestra que agentes autónomos ya descubrieron, validaron y parcharon fallos reales sin intervención humana antes de los modelos restringidos de 2026, y que modelos de pesos abiertos igualaron esa autonomía en hallazgo y validación. Analizando una década de avisos públicos, documenta que en 2026 las vulnerabilidades divulgadas más que se duplicaron —con mayor proporción crítica y fallos latentes de más de diez años— sin que se haya acortado el tiempo entre reporte, parche y explotación.",
+        "analogy": "🛡️ Como auditar con una escala estándar de conducción autónoma qué tan solos operan hoy los buscadores robóticos de grietas en software: ya encuentran y confirman fallos históricos por sí mismos a ritmo récord, aunque el ritmo humano para parcharlos sigue igual de lento.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26601",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models",
+        "author": "Suho Yoo, Youngjoon Jang, Hyebin Cho, Taeyeop Lee, Jaewook Jeong, Joon Son Chung",
+        "description": "Propone VSpark para acelerar modelos visión-lenguaje-acción (VLA) autorregresivos mediante decodificación especulativa sin pérdida, superando el cuello de botella de los tokens de acción continua donde pequeños desvíos provocan rechazos frecuentes del borrador. Combina rollouts con ruido de acción calibrado para cubrir estados reales del robot, alineación de características ocultas entre el modelo borrador y el VLA objetivo en lugar de solo coincidir en tokens de salida, y reutilización de continuaciones ya calculadas sobre borradores rechazados en el paso siguiente. Evaluado en cuatro VLAs con distintos tokenizadores y cuatro benchmarks de manipulación, alcanza aceleraciones de 1,28× a 2,10× sin alterar la política exacta.",
+        "analogy": "⚙️ Como entrenar a un asistente robótico para que no solo adivine el próximo comando exacto, sino que imite el estado interno del piloto y recicle los cálculos que ya adelantó aunque un pequeño ajuste milimétrico obligue a corregir la trayectoria.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.22666",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "SpecWM: Turning Verification into Refinement for Streaming World Models",
+        "author": "Jiaming Li, Lingzhen Li, Xiaze Yang, Chenyu Zhu, Kaiqi Liu, Xiaotong Zhao, Songlian Li, Toyota Li et al.",
+        "description": "Presenta SpecWM, un marco de inferencia especulativa sin entrenamiento para modelos del mundo en video en streaming que reemplaza evaluadores externos costosos verificando fragmentos del borrador directamente con el campo de velocidad latente del modelo objetivo. Esa misma verificación produce una corrección reutilizable y dos umbrales deciden entre aceptar, refinar (en 1 o 3 pasos para mejorar calidad perceptual y seguimiento de cámara) o rechazar. En WBench Navigation logra una aceleración de 1,63× sobre el modelo objetivo elevando el NavScore del borrador de 75,99 a 85,63 y sosteniendo el control en secuencias largas de LongSpecBench.",
+        "analogy": "🎞️ Como evitar tirar a la basura un boceto rápido de escena cuando tiene un ligero desenfoque: el director mide el trazo en el propio lienzo latente y aplica un retoque de uno o tres pincelazos reutilizando la corrección en lugar de volver a pintar desde cero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26211",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Held While Waiting: What LLM Agent Sessions Reserve on Serverless and Agent Runtimes",
+        "author": "Mekhala Hithyshini Sreenivasa",
+        "description": "Analiza el desperdicio estructural de recursos en runtimes serverless y de agentes LLM como Amazon Bedrock AgentCore: las sesiones pasan una mediana de 2,7 segundos esperando la respuesta del modelo frente a apenas 5 a 40 ms de cómputo propio, pero mantienen reservada una máquina virtual aislada por conversación hasta 15 minutos después de concluir un diálogo promedio de 33 segundos. Así, 1.000 conversaciones acaparan 1.000 entornos para realizar el trabajo de 2 a 15 núcleos. Su simulación muestra que compartir un entorno entre 64 conversaciones reduce en 59× los entornos requeridos manteniendo el 99% de las respuestas con menos de 40 ms de demora adicional.",
+        "analogy": "🍽️ Como un restaurante que cierra una mesa privada completa durante veinte minutos por cada comensal aunque el cliente solo pase treinta segundos comiendo y el resto esperando a la cocina: se agotan las mesas mucho antes de que la cocina alcance su capacidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26480",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "From AGI to ASI: Cuatro Rutas hacia la Superinteligencia y \"Industrialización Cognitiva\"",
+      "description": "Investigadores de Google DeepMind —incluyendo a Tim Genewein y al cofundador Shane Legg— publican el informe y ensayo \"From AGI to ASI\" (\"What comes after AGI?\"), trazando cuatro trayectorias compuestas hacia la superinteligencia artificial: escalamiento continuo de modelos y cómputo, cambios de paradigma más allá del Transformer, colectivos multiagente a gran escala y automejora recursiva. El análisis proyecta una \"industrialización cognitiva\" con crecimiento cercano a 10× anual en cómputo efectivo y advierte que los topes exclusivos al cómputo de entrenamiento no bastarán sin gobernanza específica para dinámicas multiagente.",
+      "links": [
+        {
+          "text": "DeepMind Research",
+          "url": "https://deepmind.google/research/publications/239142/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Perplexity and Intelligence: Marco Estandarizado de Log-Perplejidad y Límites Compartidos",
+      "description": "El científico jefe de OpenAI, Jakub Pachocki, publica este domingo \"Perplexity and Intelligence\", revelando mediciones internas de pérdida de entropía cruzada (log-perplejidad) sobre un conjunto retenido fijo desde GPT-3.5 hasta la familia GPT-6. El marco propone adoptar la log-perplejidad como indicador común para anticipar saltos discretos de capacidad (como matemáticas avanzadas y ciberseguridad) y llama a los laboratorios de frontera a pactar límites compartidos antes de cruzar nuevos umbrales sin sistemas maduros de monitoreo de alineación.",
+      "links": [
+        {
+          "text": "OpenAI",
+          "url": "https://openai.com/index/perplexity-and-intelligence/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Propuesta de Prueba Formal de la Hipótesis de Riemann con Claude en Lean y Política de Vulnerabilidades",
+      "description": "Levent Alpöge, matemático del equipo técnico de Anthropic, publica un archivo formal en Lean 4 de 175.187 archivos (~17 millones de líneas) detallando una prueba propuesta de la Hipótesis de Riemann y la Hipótesis de Riemann Generalizada desarrollada en estrecha colaboración con Claude; miembros de Mathlib y matemáticos como Andrew Sutherland (MIT) verificaron su compilación formal en Lean, quedando pendiente la revisión humana por pares. En paralelo, Anthropic acorta de 90 a 30 días su ventana de divulgación coordinada de vulnerabilidades críticas (vigente desde enero de 2027).",
+      "links": [
+        {
+          "text": "Nota Técnica (Lean Proof)",
+          "url": "https://alpo.ge/remark.pdf",
+          "type": "primary"
+        },
+        {
+          "text": "Anthropic Security",
+          "url": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Open Source AI for Science Summit: Expansión del Digital Brain Project y GSLM2",
+      "description": "Meta FAIR reúne en Menlo Park a investigadores clínicos, académicos e industriales en su Open Source AI for Science Summit, anunciando la expansión del Digital Brain Project junto a la Fundación Hospital Rothschild y la Universidad de Montreal para escalar los datos cerebrales abiertos y anonimizados hasta 25.000 horas. En paralelo, FAIR presenta GSLM2, una arquitectura de modelado generativo de lenguaje hablado multicanal apoyada en el codificador SpidR 2.0 con cabezales predictivos diferenciables para mejorar el escalado en voz.",
+      "links": [
+        {
+          "text": "Meta Newsroom",
+          "url": "https://about.fb.com/news/2026/11/advancing-science-together-highlights-from-the-open-source-ai-for-science-summit/",
+          "type": "primary"
+        },
+        {
+          "text": "Meta FAIR (GSLM2)",
+          "url": "https://ai.meta.com/research/publications/gslm2-multi-stream-speech-representation-learning-and-generative-spoken-language-modeling/",
+          "type": "secondary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Anthropic",
+      "headline": "El anuncio de Levent Alpöge (Anthropic) sobre una prueba formal en Lean de la Hipótesis de Riemann desarrollada junto a Claude genera intenso debate en matemáticas y tecnología tras superar la compilación automática del kernel de Lean, aunque especialistas advierten que validar el corpus completo exigirá una larga revisión por pares.",
+      "links": [
+        {
+          "text": "The Guardian",
+          "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "xAI / Industria IA",
+      "headline": "Elon Musk advierte este domingo que la industria de inteligencia artificial enfrenta una severa crisis de liquidez en 2027 (\"the cash shortage is also going to be nuts next year\"), alertando que retrasos de pocos meses en energizar centros de datos frente al gasto multimillonario en GPUs requerirán cientos de miles de millones adicionales en capital de trabajo.",
+      "links": [
+        {
+          "text": "Business Insider",
+          "url": "https://www.businessinsider.com/elon-musk-warning-ai-compute-data-centers-cash-spacex-tesla-2026-11",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Cursor",
+      "headline": "Un informe conjunto de los comités de Seguridad Nacional y sobre China de la Cámara de Representantes de EE. UU. revela que Cursor (adquirida por SpaceX) comunicó al Congreso que estudia eliminar gradualmente modelos abiertos de origen chino —tras usar Kimi K2.5 de Moonshot AI como base de Composer 2— ante riesgos geopolíticos.",
+      "links": [
+        {
+          "text": "Crypto Briefing",
+          "url": "https://cryptobriefing.com/cursor-phase-out-chinese-ai-models/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "CoreWeave",
+      "headline": "El proveedor de nube especializada en IA CoreWeave sufre fuerte escrutinio bursátil y sus acciones retroceden cerca del precio de su OPI tras reportar una deuda total próxima a los 47.000 millones de dólares al cierre del tercer trimestre y compromisos anuales de CapEx de 37.000 a 39.000 millones frente a una cartera contratada de 132.500 millones.",
+      "links": [
+        {
+          "text": "The Guardian",
+          "url": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
