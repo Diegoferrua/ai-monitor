@@ -1,0 +1,270 @@
+{
+  "date": "2026-11-23",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Search From the Start: Search-Native Pretraining for Language Models",
+        "author": "Kaustubh Ponkshe, Gyung Hyun Je, Stefan Taga, Colin Raffel, Martin Jaggi",
+        "description": "Propone el preentrenamiento nativo con búsqueda (Search-Native Pretraining) para enseñar a los modelos de lenguaje a invocar búsquedas e integrar evidencia externa desde la fase inicial sobre corpus de texto ordinarios como Wikipedia y DCLM-Edu, en lugar de relegar esa habilidad al postentrenamiento. Al aumentar el corpus de preentrenamiento con consultas web y respuestas recuperadas desde un índice local, la familia resultante QueryLM (de 360M a 3,3B parámetros) logra mayor precisión en tareas intensivas en conocimiento y mayor controlabilidad hacia la evidencia recuperada, ventaja que persiste tras el ajuste fino supervisado (SFT). En todos los benchmarks intensivos en conocimiento, QueryLM 1.4B iguala o supera a un modelo base de 3.3B con igual cómputo (FLOP-matched), liberando además checkpoints y artefactos de entrenamiento.",
+        "analogy": "📚 Como enseñar a un estudiante desde primer grado a consultar enciclopedias mientras redacta sus apuntes, en lugar de obligarlo a memorizar todo en silencio y recién entregarle un buscador en la universidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26809",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LLMs Memorize Their Own Hallucinations During Post-Training",
+        "author": "Anirudh Atmakuru, Tanya Goyal",
+        "description": "Analiza el impacto no deseado de trasladar recetas de postentrenamiento diseñadas para razonamiento lógico —como recompensas basadas en resultado final en RL y conductas cognitivas de formular y retractar hipótesis— hacia tareas de conocimiento factual. En experimentos sobre seis modelos abiertos de dos familias y dos arquitecturas, demuestra que reforzar alucinaciones autogeneradas durante el RL eleva su recordatorio posterior en un 4,83% promedio (frente a solo 0,17% en alucinaciones sin señal de refuerzo). Los modelos llegan incluso a memorizar datos falsos que ellos mismos retractan de inmediato en su cadena de razonamiento, con mayor incidencia en las preguntas difíciles, y reducir la abstención en un 7,23% promedio tras reforzar una alucinación.",
+        "analogy": "📝 Como un alumno que ensaya en voz alta conjeturas falsas antes de tacharlas al resolver problemas de historia: de tanto repetir sus propios borradores erróneos en voz alta, termina recordando las mentiras como si fueran hechos reales.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26863",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models",
+        "author": "Konstantinos Skianis, Aristidis Likas",
+        "description": "Estudia la programación en espacio de pesos —donde un modelo de lenguaje de frontera lee y reescribe directamente los pesos de un modelo más pequeño sin descenso por gradiente— evaluando seis tareas, cuatro editores de frontera y tres familias de modelos receptores sin instruirles nada sobre aprendizaje en contexto (ICL). En la mayoría de las ejecuciones, los editores miden el vector de tarea ICL (residual few-shot menos zero-shot en el último token del prompt) y lo escriben en los pesos, concentrándolo en unidades MLP casi silenciosas ligadas al formato del prompt. Así igualan la precisión de ICL y del ajuste fino (incluido LoRA) con los mismos ejemplos sin dejar prompts en entrada y manteniendo intacta la perplejidad; además, con entradas sin etiquetar, el editor más capaz genera sus propios ejemplos y rinde casi igual que con etiquetas.",
+        "analogy": "🔧 Como un maestro mecánico que observa cómo reacciona un motor pequeño ante unos pocos ejemplos de prueba y ajusta directamente sus engranajes internos con un destornillador, logrando el mismo desempeño que tras horas de rodaje sin tener que repetir las instrucciones cada vez.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26841",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs",
+        "author": "Qiang Zhou, Jianing Deng, Siyan Dong, Jingxian Chen, Han-Yi Lin, Jingtong Hu",
+        "description": "Presenta Baton, un mecanismo para cascadas de modelos visión-lenguaje (VLM) en agentes corpóreos donde un VLM pequeño procesa continuamente video largo y escala solo decisiones inciertas a un VLM grande sin que este deba re-codificar todo el historial visual. Baton descubre que el modelo grande necesita una memoria utilizable más que una copia exacta de su propia caché KV: mediante un mapeo lineal por capa destilado sin etiquetas a partir de las respuestas del modelo grande (codificando solo el cuadro actual), transfiere la memoria KV visual del modelo pequeño y traza la ganancia a una dirección en el tercio medio de capas. En RoboMME iguala el re-visionado completo con ~1 punto de diferencia usando 28–47% menos cómputo (8× menos por escalado a 64 cuadros), escala de 8B a 32B en ocho pares de modelos y transfiere zero-shot a OpenEQA.",
+        "analogy": "🏃 Como un guardia de campo que vigila todo el turno y, cuando pide apoyo al comandante ante una duda, le pasa directamente su libreta de apuntes traducida al instante para que el superior solo mire la cámara actual en lugar de volver a ver las dos horas de grabación.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26902",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "What Does the Visual Encoder Buy? Visual Information Gain in Encoder-Free Multimodal Pretraining",
+        "author": "Zhixuan Ge, Anqi Li, Wei Qiu",
+        "description": "Propone Visual Information Gain (VIG) —el incremento en pérdida de predicción del siguiente token textual al sustituir la imagen por una uniforme— para descomponer exactamente qué aporta un codificador visual en información global (estadísticas de imagen) e información de disposición espacial (layout, destruida al permutar parches). Al evaluar decodificadores sin codificador (158M a 1,04B hasta 40B de tokens) y 19 checkpoints públicos (incluidos Gemma 4 12B, NEO y Mono-InternVL), demuestra que la información global surge desde el primer millardo de tokens mientras el layout crece lento. Al anteponer un codificador SigLIP 2 congelado, la pérdida solo mejora con imágenes intactas (coincidiendo en 0,04 nats al permutar parches en 5 de 6 tipos de imagen), probando que la ventaja real del codificador preentrenado reside en la información espacial y especialmente en la lectura de texto en imágenes.",
+        "analogy": "🧩 Como comparar a quien describe el tema general de un collage con alguien que conserva las gafas graduadas para leer los carteles en su sitio exacto: sin el codificador visual aún se capta el ambiente global, pero la ventaja real aparece al leer la geometría y tipografía ordenada.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26917",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "TouchBench: Can Vision-Language Models Feel Invisible Physical Properties?",
+        "author": "Ziyao Zeng, Ziyi Kou, Chuan Qin, Mia Huang, Roger Boldu, Zhiwen Fan, Daniel Rakita, Eric Whitmire, Li Guan",
+        "description": "Introduce TouchBench, un benchmark egocéntrico de visión, lenguaje y tacto que empareja video en primera persona con sensores táctiles sincronizados de 137 canales en toda la mano (900 clips, 11 tareas, 900 preguntas absolutas y 4.102 relativas), separando preguntas resolubles visualmente (Tier A) de propiedades ocultas a la cámara como el nivel de llenado de una botella opaca o la rigidez (Tier B). Cuatro VLMs de vanguardia promedian 66,4% en Tier A relativo pero caen a 49,8% (casi azar) en Tier B. Para cerrar esta brecha proponen Tactile-as-Prompt (TaP), que expresa 34 estadísticas táctiles interpretables como texto sin requerir codificador táctil entrenado, elevando la precisión zero-shot en Tier B a 62,9% y a 73,1% tras ajuste fino (superando a video solo con 67,4% y a tokens táctiles aprendidos con 67,3%).",
+        "analogy": "🧤 Como pedirle a alguien con vista perfecta pero manos entumecidas que adivine qué botella opaca está llena o qué esponja es más blanda: apenas se le traducen las presiones de los dedos a palabras sencillas, recupera el criterio físico al instante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26883",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "MedicalRSI: Medical Recursive Self-Improving Agents via Clinical Model-Harness Co-Evolution",
+        "author": "Ziqing Wang, Hamid Palangi, Lili Zhao, Kaize Ding",
+        "description": "Presenta MedicalRSI, un marco de automejora recursiva (RSI) para agentes clínicos basado en coevolución entre el modelo y su arnés operativo (Clinical Model-Harness Co-Evolution), donde un mismo modelo asume dos roles entrenados de forma conjunta: Solver (el agente médico) e Improver (una estrategia aprendible que redacta y actualiza arneses clínicos a partir de los fallos del Solver). Cada arnés recibe recompensa según su ganancia neta frente a actuar sin él, permitiendo que el Improver se adapte de manera continua a los errores pendientes sin quedar congelado en una regla fija. En múltiples benchmarks clínicos y backbones LLM, MedicalRSI supera a métodos previos de automejora a nivel de contexto y de pesos, transfiriendo además a flujos inéditos, nuevos LLMs y nuevas bases de datos.",
+        "analogy": "🩺 Como un médico residente que no solo aprende de cada diagnóstico fallido, sino que entrena al mismo tiempo a su propio tutor interno para perfeccionar la lista de verificación clínica según los errores más difíciles que aún se le resisten.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26806",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ProbeAgent: Principled Diagnosis of Agent Failures in Verifiable Environments",
+        "author": "Yue Huang, Yuchen Ma, Shuhang Lin, Yuyang Wu, Zixuan Weng, Zixiang Xu, Xiangqi Wang, Yuexing Hao, Yujun Zhou, Yue Zhao, Olexandr Isayev, Stefan Feuerriegel, Xiangliang Zhang",
+        "description": "Introduce ProbeAgent, un marco automatizado para diagnosticar fallos de agentes multipaso en entornos verificables mediante pruebas ejecutables validadas contra soluciones de referencia. Para cada trayectoria fallida, ProbeAgent formula una explicación causal y construye tareas contrafactuales que preservan la causa sospechada mientras alteran el contexto circundante para comprobar si el error reaparece, agrupando luego modos de fallo compartidos con descripciones discriminativas (como planificar sin actuar o detenerse antes de entregar un archivo). Evaluado en 22 configuraciones de agentes sobre 10 benchmarks (1.244 fallos recopilados y 536 descripciones de modos de fallo), alcanza un 90,0% de aceptación humana en las descripciones asignadas y 83,3% de rechazo correcto frente a alternativas similares.",
+        "analogy": "🔬 Como un ingeniero de pruebas que, cuando un robot falla en una cocina, no se limita a decir 'no sirvió el plato', sino que arma cocinas de prueba ligeramente distintas para aislar si el tropiezo ocurre exactamente al abrir el horno o al olvidar apagar la hornalla.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26897",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AstronautBench: Measuring Agent Self-Improvement Across Episodes Through Knowledge, Evidence, and Progress",
+        "author": "Congyuan Yu, Runping Tian",
+        "description": "Propone AstronautBench sobre el videojuego de bucle temporal Outer Wilds —donde el mundo se reinicia cada 22 minutos y solo sobrevive la memoria del agente— para medir la automejora de agentes con pesos fijos desde tres vistas simultáneas tras cada episodio: progreso en el mundo (lugares alcanzados y pistas reveladas en la bitácora), conocimiento (164 preguntas evaluadas por dos jueces LLM de familias distintas) y respaldo en evidencia propia (cuadros y posiciones citadas de sus partidas). En ejecuciones de ocho episodios con GPT-6.1 Sol y Gemini 4 Argon, las tres métricas divergen: la precisión QA de GPT-6.1 Sol sube de 14,6% a 26,8%, pero en el episodio 8 solo entre 59% y 68% de esas respuestas están respaldadas por la evidencia citada y deja de descubrir pistas nuevas tras el episodio 3.",
+        "analogy": "🚀 Como evaluar a un explorador atrapado en un bucle temporal midiendo por separado hasta dónde llega en el mapa, qué responde en el examen y si realmente vio con sus propios ojos la pista que cita: avanzar más metros o acertar más preguntas no garantiza haber aprendido con evidencia real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26910",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "MixFold: Sub-4-Bit Mixed-Precision LLM Inference via Output-Channel Grouping on Mobile NPUs",
+        "author": "Vinnam Kim, Seong Hoon Seo, Junhan Kim, Jaeseong You, An Chen",
+        "description": "Aborda el cuello de botella de la cuantización sub-4-bit en NPUs móviles, donde convertir formatos no soportados en unidades vectoriales y la restricción de usar un solo tipo de dato por bloque matricial anulan la ganancia de memoria. MixFold ejecuta pesos de 3 bits y de 2 bits perfectamente simétricos mediante operaciones enteras nativas sin expandirlos a formatos más anchos durante la decodificación, asignando precisiones mixtas por grupos de canales de salida alineados a los mosaicos de la unidad matricial. Frente al backend Hexagon en el Snapdragon 8 Elite Gen 5 sobre la familia Qwen3, iguala o supera la precisión de referencia a iguales bits por peso decodificando entre 1,16× y 1,41× más rápido y generando de 1,5× a 4,3× más tokens por julio.",
+        "analogy": "📦 Como empacar carga mixta en palets estandarizados del tamaño exacto que levanta el montacargas del puerto: en vez de abrir cada caja chica en la puerta para reacomodarla, el camión entra directo al muelle a máxima velocidad y gastando mucha menos batería.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26976",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Run One, Get Two: Near-Free Streaming Safety Checks for Local LLMs",
+        "author": "Soheil Zibakhsh, Pedram Aghazadeh, Farinaz Koushanfar",
+        "description": "Aprovecha que la decodificación local de un LLM para un único usuario está limitada por el ancho de banda de memoria y deja capacidad de cómputo ociosa. Presenta ToRA, un adaptador que ejecuta un segundo modelo de seguridad en streaming como una fila adicional dentro del propio paso de decodificación del generador, compartiendo pesos y caché KV mediante kernels de doble fila que leen cada peso una sola vez para ambas ramas. En Qwen3-0.6B, ToRA iguala o supera a un guardia dedicado independiente (mayor F1 en 12 de 17 benchmarks) y detecta 11,8 puntos más de respuestas inseguras que una sonda sobre estados ocultos con costo similar, agregando menos de 4% de latencia por token frente a casi duplicar el tiempo.",
+        "analogy": "🛂 Como aprovechar que el autobús ya viaja medio vacío por el túnel de memoria para sentar a un inspector junto al conductor leyendo exactamente el mismo mapa: vigila cada parada en tiempo real sin necesidad de fletar un segundo vehículo detrás.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26975",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Don't Discard Your Rollouts: Reusing Teacher RL Traces for Student Distillation",
+        "author": "Vashisth Tiwari, Emma Strubell, J. Zico Kolter",
+        "description": "Resuelve el desperdicio de cómputo en destilación clásica, que descarta las costosas trayectorias (rollouts) muestreadas durante el postentrenamiento por RL (PPO o GRPO) del maestro y vuelve a generar datos desde cero. Al comprobar que SFT ingenuo sobre esas trazas rinde por debajo y DPO ingenuo colapsa en estudiantes débiles, replantea la reutilización como selección curricular guiada por metadatos ya registrados en GRPO: ordena los prompts por tasa de éxito para un arranque en SFT con los más fáciles seguido de DPO sobre prompts de éxito mixto, usando las log-verosimilitudes del maestro para escoger completaciones compatibles con el estudiante. En matemáticas y código Python iguala el desempeño de la destilación canónica sin ningún costo extra de inferencia para construir el dataset.",
+        "analogy": "♻️ Como aprovechar los cuadernos de borradores y correcciones que un entrenador ya anotó al entrenar al campeón, ordenándolos de lo más fácil a lo más reñido para formar al aprendiz sin tener que pagarle al maestro para que vuelva a redactar todo el manual desde cero.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.26803",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Evolución de Google Duplex hacia la Arquitectura Unificada Gemini en Tasks in Gemini",
+      "description": "Google Research publica la retrospectiva técnica de cómo Google Duplex evolucionó desde redes recurrentes de dominio cerrado (2018) y stacks híbridos con LaMDA (2022) hasta una arquitectura unificada sobre modelos Gemini integrada ahora en Tasks in Gemini. El sistema combina comprensión multimodal del habla, razonamiento contextual, planificación con calendario y síntesis vocal en tiempo real con baja latencia para realizar llamadas telefónicas autónomas a comercios locales a partir de instrucciones en texto libre.",
+      "links": [
+        {
+          "text": "Google Research",
+          "url": "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Expansión de ChatGPT for Academic Researchers a 200.000 Científicos (50.000 Nuevas Becas)",
+      "description": "OpenAI abre este lunes 23 de noviembre las solicitudes para 50.000 nuevas becas asignadas por orden de llegada (cada una cubre al investigador y hasta dos colaboradores con 12 meses de ChatGPT Plus sin entrenamiento por defecto sobre sus datos), duplicando su meta global hasta 200.000 científicos tras el piloto de 20.000 investigadores en 33 países. En paralelo publica 'Science at the Frontier', estudio de su equipo económico sobre más de 580.000 mensajes científicos de 1.819 investigadores.",
+      "links": [
+        {
+          "text": "OpenAI",
+          "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
+          "type": "primary"
+        },
+        {
+          "text": "Science at the Frontier",
+          "url": "https://openai.com/index/science-at-the-frontier/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Fable 5.2 Resuelve Dos Problemas Abiertos en Física de Agujeros Negros y Gravedad Cuántica",
+      "description": "El equipo científico de Anthropic detalla cómo una pequeña célula multiagente de instancias de Claude Fable 5.2 resolvió dos cálculos abiertos en gravedad cuántica mediante dualidad holográfica: completó un cálculo planteado desde 2003 demostrando que la transición de fase de Hawking-Page en la formación de agujeros negros sigue siendo abrupta incluso cuando el espaciotiempo pierde forma definida, y obtuvo el límite exacto de la versión más simple de cota por bootstrap modular en universos teóricos 2D.",
+      "links": [
+        {
+          "text": "Anthropic Science",
+          "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Unbundling Multimodal Vision Encoding: Separando Capacidad Visual y Fusión Temprana (Meta FAIR)",
+      "description": "Investigadores de Meta FAIR (incluyendo a Ellis Brown, Luke Zettlemoyer, Lucas Beyer, Saining Xie y Hu Xu) publican un estudio controlado desde cero que desacopla los tres componentes mezclados en los codificadores visuales multimodales: el sesgo visual previo, la capacidad dedicada a visión y su ubicación antes de la fusión. Demuestran que el preentrenamiento visual separado es prescindible frente a entrenar juntos desde cero, que la ventaja sobre modelos sin codificador proviene de la capacidad visual dedicada, y que ubicar módulos visuales en las primeras capas internas reduce el tiempo al primer token.",
+      "links": [
+        {
+          "text": "Meta AI Research",
+          "url": "https://ai.meta.com/research/publications/unbundling-multimodal-vision-encoding/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "OpenRouter / MiniMax",
+      "headline": "Una auditoría con 2 millones de credenciales y URLs trampa ('canarios') plantadas por el investigador HD Moore (Dragos) revela brechas de seguridad, robo de prompts e incumplimiento de banderas Zero Data Retention en enrutadores e intermediarios de IA; OpenRouter notifica a clientes y retira la etiqueta ZDR a endpoints de MiniMax y revendedores como AtlasCloud, Novita y StreamLake.",
+      "links": [
+        {
+          "text": "Ars Technica",
+          "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic / Mercados IA",
+      "headline": "Tras la histórica OPI de Anthropic por 81.000 millones de dólares y valoración de 1,5 billones en el Nasdaq ('ANT') —que dejó unos 600 empleados con participaciones superiores a 100 millones—, analistas y comentaristas advierten sobre la creciente concentración de riqueza, el rechazo ciudadano al costo eléctrico de los centros de datos y el riesgo de recesión si estalla la burbuja bursátil de IA.",
+      "links": [
+        {
+          "text": "The Guardian",
+          "url": "https://www.theguardian.com/commentisfree/2026/nov/23/anthropic-ipo-tech-elite-stock-bubble",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Centros de Datos / Regulación",
+      "headline": "Un análisis de Transparency International Australia revela que ejecutivos de 10 operadores de centros de datos mantuvieron casi 120 reuniones con primeros ministros y ministros estatales en tres años mientras sus donaciones políticas casi se triplicaron a 1,8 millones de dólares, incluyendo 13 citas en Queensland antes de acelerar permisos y pactar un centro de 31.900 millones con Anthropic.",
+      "links": [
+        {
+          "text": "The Guardian",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/23/datacentre-bosses-met-australian-state-premiers-and-ministers-almost-120-times-in-three-years-analysis-finds",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Amazon / eBay / Seguridad Infantil",
+      "headline": "Una coalición de 155 organizaciones de defensa infantil —encabezada por Fairplay, Alliance 4 Children CIC y Set@16— envía una carta abierta a los CEOs de Amazon y eBay exigiendo retirar de la venta los juguetes impulsados por IA tras hallazgos de U.S. PIRG sobre más de 50 productos en Amazon EE. UU. con fallos graves de privacidad, instrucciones peligrosas y conversaciones sexuales explícitas.",
+      "links": [
+        {
+          "text": "Mashable",
+          "url": "https://mashable.com/tech/ai-toys-amazon-ebay-open-letter",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
