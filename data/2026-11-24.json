@@ -1,0 +1,270 @@
+{
+  "date": "2026-11-24",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit",
+        "author": "Hussamuddin Syed",
+        "description": "Investiga por qué Qwen3.5-0.8B casi nunca cierra su bloque de pensamiento con un presupuesto de 4.096 tokens (15,4% en MATH-500) y aporta la línea base de gradiente faltante frente a ediciones sin gradiente hechas por modelos de frontera. Al ajustar únicamente entre 140 y 139.750 pesos con mayor gradiente sobre sus propias respuestas correctas en solo 50 ejemplos (2–9 minutos en una GPU), alcanza 39,0–45,5% a 4k tokens. El gradiente concentra el cambio en el canal más constante de las tres primeras capas —actuando en la práctica como un vector fijo añadido al flujo residual— y resulta complementario a la edición de GPT-6 Astra: al combinarlos a mitad de intensidad llega a 62,2% a 32k tokens (+10 puntos sobre Astra solo, con la mitad de tokens).",
+        "analogy": "🧭 Como descubrir que un corredor que da vueltas sin parar en la pista no necesita rehacer toda su técnica: basta un pequeño ajuste de rumbo en los primeros tres pasos —un empujón constante de brújula— para que encuentre la salida y complemente el entrenamiento avanzado.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33133",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs",
+        "author": "Yanlai Yang, Minki Kang, Divyam Madaan, Sung Ju Hwang, Mengye Ren",
+        "description": "Analiza cómo combinar adaptadores LoRA generados en un solo paso por hiperredes a partir de documentos (evaluando Doc-to-LoRA y SHINE) para evitar almacenar un adaptador por cada documento en flujos continuos. Demuestra que los LoRA generados por hiperredes tienen una geometría muy distinta a los ajustados directamente por descenso de gradiente: presentan mayor concentración espectral y fuerte alineación entre documentos en lugar de ser ortogonales y difusos. A partir de esa propiedad propone Latent Merger, que compone las representaciones latentes intermedias de la hiperred antes de decodificarlas en un único adaptador de rango fijo, superando consistentemente a las fusiones en espacio de pesos y de factores.",
+        "analogy": "🎨 Como mezclar las recetas base en la cocina antes de hornear el pastel, en lugar de intentar pegar varios pasteles ya terminados: al combinar los latentes previos de la hiperred, la información de múltiples documentos cabe en un solo adaptador limpio sin desbordar su tamaño.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33048",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "FOL-Proof: Verifying LLM Text-to-Logic Translations via Deterministic Semantics",
+        "author": "Yisrael Clark, Guy Katz",
+        "description": "Presenta FOL-Proof, un cortafuegos semántico que valida traducciones de lenguaje natural a lógica de primer orden (FOL) generadas por LLMs antes de ejecutar razonamiento simbólico posterior. El sistema deriva de forma determinista interpretaciones lingüísticas candidatas mediante herramientas formales (English Resource Grammar y Minimal Recursion Semantics) y usa un solucionador SMT para verificar equivalencia lógica con la fórmula del LLM; si falla, la rechaza o solicita reparación iterativa, absteniéndose de forma conservadora ante casos ambiguos. Evaluado en ProofWriter, RuleTaker, PrOntoQA y el nuevo benchmark adversarial LongFaithCheck, alcanza una precisión selectiva casi perfecta y supera ampliamente a jueces LLM y verificaciones de ida y vuelta.",
+        "analogy": "🛂 Como hacer revisar cada contrato traducido por un traductor automático ante un notario que usa un diccionario jurídico rígido y una calculadora lógica: si la versión final no equivale exactamente a la interpretación formal del texto original, se detiene el trámite antes de sacar conclusiones erróneas.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33078",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
+        "author": "Yuwei Yang, Xiaoxiao Sun, Alejandro Lozano, Yuan-Sen Ting, Yuhui Yuan, Liang Zheng, Serena Yeung-Levy",
+        "description": "Propone aprovechar la estructura intrínseca de los artículos científicos —figuras completas, subpaneles, pies de foto y párrafos que los citan— como señal de supervisión adicional para modelos visión-lenguaje biomédicos, en lugar de tratar cada par imagen-texto de forma aislada. Combina supervisión positiva fuerte para emparejamientos exactos, supervisión positiva suave entre paneles y pies hermanos, y mayor peso a negativos del mismo tipo de contenido entre artículos distintos, dando lugar al corpus Loom52M (52,4 millones de pares). Con ello, BioLoom (DFN-2B) logra 56,82% de precisión media balanceada en 67 tareas zero-shot (frente a 48,77% de MedPMC-CLIP) y 63,20% / 10,59% de Recall@1 bidireccional en BioLoomBench y BioMedFlickr.",
+        "analogy": "🔬 Como estudiar un atlas médico leyendo no solo la etiqueta de cada recorte aislado, sino comparando cómo dialogan las subfiguras vecinas de la misma lámina y los párrafos del texto que las explican, mientras se distingue con lupa entre láminas parecidas de otros libros.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33151",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
+        "author": "Xingjian Ran, Xiaoye Mo, Sihao Liu, Li Luo, Taiqiang Wu, Ji Zhao, Wenqi Shao, Hongyang Li, Jiaqi Wang, Bo Dai",
+        "description": "Introduce ROAM-Bench para evaluar la inteligencia espacial activa de agentes corpóreos bajo restricciones reales de movimiento y colisión en 250 tareas validadas manualmente (11 tipos en 5 grupos y 27 entornos interiores), abarcando búsqueda de objetos, conteo, juicios geométricos, orientación y reubicación. A diferencia de benchmarks que solo revisan la respuesta final, aplica comprobaciones independientes sobre el estado de simulación y las trayectorias para verificar tanto el resultado como la cobertura y evidencia observada. Mientras los evaluadores humanos alcanzan 84% de éxito estricto cumpliendo todas las verificaciones, siete VLMs de frontera muestran dos fallos opuestos: aciertos por azar sin reunir la evidencia requerida y respuestas incorrectas pese a haber visto la escena clave.",
+        "analogy": "🕵️ Como evaluar a un detective en una casa no solo por adivinar quién tiene la llave, sino revisando el registro de sus pasos para comprobar si realmente inspeccionó las habitaciones necesarias y evitó chocar con los muebles antes de responder.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33143",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+        "author": "Binfei Ji, Zhiwen Cao, Anqi Yang, Prem Seetharaman, Shuo Yang, Ratheesh Kalarot, Yingyan Celine Lin, Mingze Xu",
+        "description": "Presenta DiaCap, un LLM audiovisual unificado para subtitulado integral de diálogos que genera transcripción, marcas temporales precisas y descripción visual de quién habla en cada intervención de un video. Al modelar conjuntamente la temporización y la diarización audiovisual en dos etapas —preentrenamiento sobre 225K clips con etiquetas densas sintéticas y refinamiento por aprendizaje por refuerzo sobre 2,9K clips corregidos por humanos evaluando tiempo, agrupación y vínculo del hablante— logra igualar a Gemini 4 Argon en diarización audiovisual en DiaDemBench extendido y superarlo con claridad en precisión temporal (76,59 frente a 42,76 TIME), manteniendo solidez en videos multilingües y de un minuto.",
+        "analogy": "🎬 Como un transcriptor de cine que, en vez de escuchar primero el audio a ciegas y luego intentar encajar caras y horarios por separado, aprende a mirar y escuchar al mismo tiempo para anotar exactamente qué personaje dijo cada frase y en qué segundo exacto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33153",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+        "author": "Dawid J. Kopiczko, Tijmen Blankevoort, Yuki M. Asano",
+        "description": "Resuelve cómo destilar políticas agénticas de largo horizonte desde modelos cerrados de frontera cuya cadena de pensamiento (CoT) interna permanece oculta tras una API. Demuestra que un estudiante puede entrenarse imitando solo las acciones visibles del maestro con su bloque de razonamiento vacío y una pérdida KL sobre su propio buffer de repetición: sorprendentemente, en inferencia con modo pensante activado transfiere esa política y razona con su propio estilo (transferencia entre formatos), elevando a Qwen3-4B en AppWorld de 7% a 18% al destilar desde Qwen3.6-27B. Al añadir resúmenes breves tras el bloque vacío (CoT-proxies), sube a 35%, y al destilar desde GPT-5.6 Luna usando solo salidas visibles y resúmenes de API, Qwen3-4B salta de 7% a 48% en AppWorld y de 3% a 28% en SWE-bench Verified.",
+        "analogy": "🥋 Como un aprendiz que observa únicamente los movimientos visibles de un gran maestro y un breve resumen de su estrategia sin poder leerle la mente: aun así, al competir con tiempo para pensar por sí mismo, traduce esas jugadas a su propio razonamiento interno.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33148",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Delegent: A Multi-Agent Harness That Reduces Cost without Sacrificing Performance",
+        "author": "Lingwei Gu, Jimmy Lin",
+        "description": "Explora una arquitectura práctica implementada sobre Claude Code donde el modelo de frontera mantiene siempre el control principal de la tarea, pero delega subtareas rutinarias y focalizadas —como inspeccionar archivos de código, ejecutar pruebas o buscar en un corpus— a subagentes basados en modelos pequeños (SLM) locales sin entrenar ningún enrutador previo. A diferencia de cascadas o enrutadores que asignan todo el problema a un solo modelo, Delegent permite intercambiar libremente tanto el modelo líder como el SLM. Con un SLM de 27B FP8 reduce en 67% el costo del modelo de frontera en programación de largo horizonte y en 59% en búsqueda agéntica sin pérdida de rendimiento; incluso un SLM de 2B ejecutable en un portátil reduce el costo de código en 66%.",
+        "analogy": "🏗️ Como un arquitecto jefe que dirige toda la obra y toma las decisiones de diseño críticas, pero envía a un ayudante ágil a medir habitaciones, buscar planos en el archivo y comprobar interruptores, ahorrando dos tercios de sus horas sin bajar la calidad del edificio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33098",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "RecordRoute: Auditing Agent Failures with Localization-Guided Diagnosis",
+        "author": "Yifan Duan, Lihuan Li, Chao Xue, Siyuan Zheng, Du Yin, Flora D. Salim",
+        "description": "Aborda la auditoría automática de trayectorias fallidas en agentes, donde es necesario identificar el actor responsable, el primer paso decisivo del fallo y el modo de error. En lugar de predecir múltiples objetivos desde una representación global de toda la traza, RecordRoute acopla localización comparativa dentro de la trayectoria —ordenando registros mediante rasgos de palabras y caracteres para aislar el registro culpable— con diagnóstico local guiado exclusivamente por el texto y metadatos de ese paso seleccionado. En el benchmark controlado Who&When Pro supera a StepFinder y ASCon en las cuatro métricas oficiales (alcanzando 77,47% de precisión conjunta frente a 69,28% usando la traza completa) y también supera a los baselines y a tres LLMs abiertos en fallos naturales de TraceElephant y CatchBench POST.",
+        "analogy": "🧰 Como un mecánico que, antes de diagnosticar la avería de un tren, compara vagón por vagón hasta aislar exactamente el primer enganche que falló y revisa solo esa pieza bajo la lupa, evitando confundirse con todo el ruido de los vagones posteriores.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33022",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
+        "author": "Yuxing Liu, Wei Zuo, Walid Krichene, Tong Zhang, Li Zhang",
+        "description": "Estudia la calibración posterior (post-hoc) del modelo borrador en decodificación especulativa, cuya aceleración depende directamente de la distancia L1 entre la distribución del modelo objetivo y la del borrador. Detecta un fenómeno sistemático en modelos borrador de código abierto: aunque suelen acertar el token candidato principal, tienden a estar subconfiados respecto al modelo objetivo, reduciendo la tasa de aceptación. Al aplicar métodos simples de calibración posterior —especialmente escalado de temperatura estándar y calibración por token— sobre la distribución del borrador, logra aumentar la longitud media de aceptación hasta aproximadamente un 10% en diversas tareas y elevar el rendimiento de servicio sin casi ningún costo computacional adicional.",
+        "analogy": "🎯 Como ajustar la escala de seguridad de un asistente rápido que ya suele acertar la respuesta correcta, pero la entrega con demasiada timidez: con un giro mínimo de perilla en su confianza, el supervisor aprueba rachas más largas de borradores de una sola vez.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33111",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Shifter Quantization: Compact Representations for Native Integer Computation",
+        "author": "Yufeng Huang",
+        "description": "Resuelve la penalización de la cuantización por grupos en GPUs, donde los factores de escala por bloque impiden que las instrucciones nativas MMA de enteros abarquen el producto punto completo. Propone Shifter Quantization (SQ) y su variante Shifter Integer (SHI) para kernels INT4, que reconstruyen operandos enteros de ancho nativo añadiendo y desplazando bits compartidos. En 2 bits, SQ2 y SHI2 alcanzan de 2,71× a 3,77× del throughput de prefill a 4.096 tokens de llama.cpp (Q2_K) reduciendo además la divergencia KL en WikiText-2 en 6,6–7,8%; en 4 bits, SQ4 logra 1,43–2,47× más throughput que NInfer con 24–40% menos KL; y en 8 bits, SQ8 supera en 27,4% el throughput de prefill batch-1 del FP8 en línea de vLLM con 72,7% menos KL.",
+        "analogy": "⚙️ Como reemplazar cajas de medidas raras que obligan a detener la cinta transportadora para reempaquetar cada grupo por piezas compactas que encajan directo en los engranajes nativos del motor entero de la GPU a máxima velocidad.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33080",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+        "author": "Guangyuan Wang, Chengran Li, Minchen Luo, Jichen Feng, Mengdi Wang, Yifan Zhang",
+        "description": "Evalúa qué necesitan los agentes de programación basados en LLM para diseñar aceleradores de hardware en código RTL sintetizable que implementen decodificadores cuantizados de Qwen3.5, Gemma 3, Gemma 4 y Llama 3.2 frente a una referencia entera paso a paso, incluyendo una segunda pista para acelerar diseños correctos manteniendo el área casi fija. A lo largo de 9.136 intentos con cuatro agentes, demuestra que el principal obstáculo es el estado interno almacenado entre pasos de decodificación: dar retroalimentación que señala la primera discrepancia de estado eleva la tasa de aceptación entre 25,0 y 46,9 puntos porcentuales en todas las celdas y reduce a la mitad las horas de agente; aun así, 45 de 69 diseños aprobados fallan al reevaluarse en nuevas secuencias.",
+        "analogy": "🔌 Como pedirle a un ingeniero diseñar un circuito de reloj digital: no basta decirle al final si la hora en pantalla salió mal; necesita un osciloscopio que señale exactamente en qué registro interno y en qué ciclo se desfasó el estado antes de pasar la prueba final.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33093",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Algoritmos Cuánticos Descubiertos por Agentes Gemini 4 y Verificados en Lean",
+      "description": "Google DeepMind y Google Quantum AI publican un marco donde equipos multiagente basados en Gemini 4 descubren algoritmos cuánticos más eficientes y demuestran su corrección matemática y cotas de recursos en el asistente formal Lean 4 (mediante lógica de Hoare cuántica), ya que circuitos de cientos o miles de cúbits no pueden simularse clásicamente. El método reduce en 11,8× el costo espacio-temporal de simular fusión por confinamiento inercial, 8× en fotoquímica y hasta 290× en carga aritmética de arcoseno, liberando en GitHub la librería en Lean 4, especificaciones y soluciones verificadas.",
+      "links": [
+        {
+          "text": "Google DeepMind",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Shirudo: Runtime de Seguridad en Linux Basado en eBPF Junto a Cisco",
+      "description": "OpenAI y Cisco lanzan Shirudo, un proyecto y runtime de código abierto bajo licencia BSD-2-Clause diseñado para cerrar la ventana de exposición entre el descubrimiento de una vulnerabilidad y el despliegue del parche definitivo. Basado en eBPF y con raíces en Tetragon, permite que agentes de IA (como Codex) redacten y prueben mitigaciones temporales ('shields') firmadas criptográficamente sobre kernels Linux en ejecución —con registro en hardware TPM 2.0 y autorización humana final— bloqueando exploits como Java4Shell sin reiniciar servicios ni frenar el tráfico legítimo.",
+      "links": [
+        {
+          "text": "OpenAI",
+          "url": "https://openai.com/index/introducing-shirudo/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Claude Ship: Suite de Agentes en GitHub para Revisar, Reparar y Aprobar Pull Requests",
+      "description": "Anthropic lanza Claude Ship para equipos en planes Claude Team y Enterprise con repositorios en GitHub (accesible también mediante el comando /ship en Claude Code y escritorio), automatizando el cuello de botella posterior a escribir código. Integra tres agentes: Code Review (disponibilidad general, con niveles Quick, Standard y Deep), PR Steward (en beta, que repara pruebas CI fallidas y conflictos de fusión dejando explicación y pasos de reversión, sin permiso de merge) y Claude Approvals (en beta, que aprueba PRs rutinarios según políticas definidas en el repositorio).",
+      "links": [
+        {
+          "text": "Claude by Anthropic",
+          "url": "https://claude.com/resources/articles/introducing-claude-ship",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI",
+      "name": "Expansión de Muse al Reino Unido: Agente Personal en App, Web y WhatsApp",
+      "description": "Meta despliega oficialmente en el Reino Unido su agente personal Muse (impulsado por el modelo Muse Spark) tras su lanzamiento en EE. UU., disponible en app independiente (iOS/Android), web y dentro de WhatsApp. Cada usuario opera en un entorno virtual aislado en la nube con integraciones iniciales junto a comercios británicos como Marks & Spencer, Sainsbury's, Argos, Currys y easyJet, pagos gestionados mediante Stripe Link y aprobación explícita del usuario antes de efectuar compras o enviar correos, bajo vigilancia de reguladores locales como ICO y CMA.",
+      "links": [
+        {
+          "text": "Meta Newsroom",
+          "url": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "NVIDIA / Mercados IA",
+      "headline": "La ola vendedora en acciones tecnológicas se reanuda este martes 24 tras disiparse el repunte inicial por la restitución de Jensen Huang como CEO de NVIDIA (donde la acción llegó a dispararse más de 30% el lunes): NVIDIA cierra con caída cercana al 6%, el Nasdaq retrocede 1,48% y Anthropic cae por debajo de su precio de salida a bolsa ante dudas sobre gasto de capital y rentabilidad.",
+      "links": [
+        {
+          "text": "The Guardian",
+          "url": "https://www.theguardian.com/business/2026/nov/24/nvidia-stock-falls-jensen-huang",
+          "type": "primary"
+        },
+        {
+          "text": "NVIDIA Newsroom",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "OpenClaw / ShellBench",
+      "headline": "El nuevo benchmark ShellBench —creado por la OpenClaw Foundation junto a UC Berkeley, Hugging Face, Red Hat y Parsewave a partir de más de 10 millones de peticiones reales anonimizadas— revela que incluso los agentes de frontera de OpenAI, Anthropic y Meta fallan más de un tercio de las tareas cotidianas (máximo de ~60–62,5% de éxito) e incumplen requisitos de seguridad en el 15,7% de los intentos.",
+      "links": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic / FRI",
+      "headline": "La versión 2 del informe sobre automejora recursiva del Forecasting Research Institute (FRI), publicado el 24 de noviembre con datos de METR hasta el 20 de noviembre, estima que los mejores modelos internos de Anthropic mantuvieron en 2026 una ventaja de entre uno y cuatro meses (1,4 a 4,6 puntos en el Epoch Capabilities Index) sobre la IA disponible al público.",
+      "links": [
+        {
+          "text": "Dealroom News",
+          "url": "https://dealroom.co/news/175664-anthropic-s-best-internal-models-ran-about-one-to-four-months-ahead-of-p/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Meta AI / Superinteligencia",
+      "headline": "El director de IA de Meta, Alexandr Wang, advierte que 'la superinteligencia está llegando' y que los próximos doce meses serán decisivos para conservar el control humano ante sistemas capaces de automatizar la investigación en IA, en un debate avivado por el anuncio de una prueba formal de la hipótesis de Riemann asistida por Claude y la volatilidad bursátil del sector.",
+      "links": [
+        {
+          "text": "Fortune",
+          "url": "https://fortune.com/2026/11/23/alexandr-wang-meta-superintelligence-arriving-riemann-hypothesis-nasdaq-ai-selloff/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
