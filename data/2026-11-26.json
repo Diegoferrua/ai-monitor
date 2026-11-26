@@ -1,0 +1,323 @@
+{
+  "date": "2026-11-26",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Mixture-of-Loops Transformer",
+        "author": "Lianghui Zhu, Shijie Wang, Xinggang Wang, Jinze Bai, Bo Wang, Xiang Bai",
+        "description": "Replantea qué información debe transmitirse entre iteraciones de un Transformer en bucle (Looped Transformer) para ampliar la frontera entre expresividad y eficiencia. Propone Mixture-of-Loops Transformer (MoLT) con atención MoLA, que reutiliza claves y valores (KV) como memoria selectiva entre profundidades y bucles: la variante MoLT-KV reinicia desde los embeddings y lee las KV locales del bucle actual junto a las KV de memoria de bucles previos en posiciones anteriores, eliminando la dependencia en la misma posición y habilitando entrenamiento paralelo con loop forcing y decodificación más allá del horizonte de entrenamiento. Además, U-MoLT separa la construcción de memoria de la lectura de predicciones para omitir recorridos innecesarios del decodificador. En preentrenamiento de 400B tokens frente a OLMo3 (700M/1.5B densos y 3B MoE), logra 1,7× de eficiencia por token en entropía cruzada a 700M, mejora la perplejidad en 10 dominios del MoE 3B en 0,75 y eleva la precisión media en +2,1 puntos porcentuales.",
+        "analogy": "🗂️ Como un lector que en cada relectura de un libro no vuelve a copiar cada página a mano, sino que consulta únicamente las notas adhesivas (KV) dejadas en pasadas anteriores para profundizar sin frenar la lectura.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34923",
+            "type": "primary"
+          },
+          {
+            "text": "GitHub",
+            "url": "https://github.com/hustvl/MoLT",
+            "type": "secondary"
+          }
+        ]
+      },
+      {
+        "title": "Repairing the Trustworthiness of Distilled Language Models",
+        "author": "Kumar Shubham, Devendra Vyas, Vidushi Agarwal, Jayin Khanna, Prathosh AP",
+        "description": "Aborda las regresiones en fiabilidad (trustworthiness) que sufren los modelos estudiante pequeños tras la destilación de conocimiento desde LLMs mayores, incluso cuando mantienen buen rendimiento en tareas generales. Dado que el corpus original de destilación suele no estar disponible y el ajuste por preferencias directo (DPO) puede erosionar capacidades heredadas del maestro, los autores proponen un marco de reparación focalizada basado en la función de respuesta proximal de Bregman (PBRF). Estiman la curvatura necesaria mediante un conjunto proxy sustituto y extienden el método a supervisión por preferencias mediante un objetivo de razón de probabilidades (odds-ratio) que restringe la deriva del modelo destilado. En distintos modelos destilados de pre y postentrenamiento, reduce las regresiones de fiabilidad hasta en un 8% con menos de un 1% de penalización en perplejidad.",
+        "analogy": "🔧 Como corregir una vibración en el volante de un auto compacto sin volver a fabricar el motor ni descalibrar la suspensión original: se aplica un ajuste quirúrgico guiado por un plano aproximado que mantiene intacto lo aprendido del maestro.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34831",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Tokenisation is not in APX",
+        "author": "Violeta Kastreva, Philip Whittington, Dennis Komm, Tiago Pimentel",
+        "description": "Demuestra formalmente desde la teoría de la complejidad computacional que, salvo que P=NP, ningún algoritmo en tiempo polinomial puede encontrar un tokenizador cuyo objetivo esté dentro de un factor constante del óptimo global, lo que sitúa el problema fuera de la clase APX. La prueba cubre tanto la tokenización directa como la ascendente (bottom-up), bajo objetivos de compresión y de verosimilitud logarítmica unigrama, y tanto para alfabetos binarios como mayores; incluso sobre alfabetos unarios, la tokenización directa resulta APX-difícil y no admite esquema de aproximación en tiempo polinomial (PTAS). El resultado fundamenta teóricamente por qué algoritmos voraces como BPE siguen siendo heurísticas pragmáticas sin garantías constantes de optimalidad.",
+        "analogy": "🧱 Como intentar cortar un rollo infinito de tela en retazos estándar para ahorrar al máximo: matemáticamente no existe un atajo rápido que garantice acercarse siquiera a un porcentaje fijo del corte perfecto, por eso seguimos usando reglas prácticas como BPE.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34938",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Can image generation help visual reasoning? An empirical study",
+        "author": "Xueyang Yu, Yifan Jing, Taiming Lu, Linrong Cai, Zhipeng Cai, Yunyang Xiong, Gabriel Sarch, Zhuang Liu",
+        "description": "Evalúa empíricamente la hipótesis de que los modelos multimodales pueden 'pensar en imágenes' generando una imagen auxiliar antes de responder a una pregunta visual, combinando la imagen original y la generada. Al evaluar 13 pares de modelos visión-lenguaje y generadores en diez tareas, generar la imagen auxiliar reduce la precisión media en 3,7 puntos porcentuales, con caídas en nueve de las diez tareas; dos modelos unificados (BAGEL y Janus-Pro-7B) pierden precisión en ocho tareas cada uno, y en VSTAR añadir la imagen generada al mismo indicio de planificación recorta la precisión en 10,47 puntos. Incluso con ediciones iterativas, ChartQAPro y MathVista quedan por debajo del baseline sin generación, mientras solo ERQA mejora (+3 puntos tras diez ediciones).",
+        "analogy": "🎨 Como pedirle a un alumno que primero dibuje un boceto a mano alzada antes de resolver un problema de geometría: si el boceto introduce imprecisiones visuales, termina distrayendo más que ayudando frente a mirar directamente la figura original.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34935",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "AnyCam: Anything Can Represent Camera for Video Generation",
+        "author": "Weijie Lyu, Zhixin Shu, Yuntian Ke, Ming-Hsuan Yang",
+        "description": "Resuelve la generación de video controlada por cámara cuando esta orbita alrededor de un objeto en escenas monoculares, donde los parámetros de cámara sufren ambigüedad de escala y la proyección de nubes de puntos o profundidad se rompe ante cambios grandes de ángulo. AnyCam representa la cámara mediante un objeto ancla de la propia escena reconstruido en 3D y renderizado a lo largo de la trayectoria objetivo, aportando una señal consciente de la escala y completa desde cualquier vista. Un modelo de difusión de video transfiere el contenido y la dinámica originales al nuevo punto de vista usando una disposición H-Concat que alinea temporalmente fotogramas fuente y objetivo, permitiendo destilar AnyCam-AR como generador en streaming de pocos pasos para control de cámara en tiempo real.",
+        "analogy": "🗿 Como usar una estatua en el centro de la plaza como brújula visual para saber exactamente desde dónde estás mirando: al rotar el modelo 3D de ese objeto ancla, la cámara nunca pierde la escala ni el rumbo aunque dé toda la vuelta.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34944",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Improving and Expanding Video Editing Capabilities Without Videos",
+        "author": "Ji Xie, Yanhao Jia, Xiangpeng Yang, Martin Q. Ma, Sihan Xu, Erik Cambria, Louis-Philippe Morency",
+        "description": "Presenta Image-to-Video Transfer (I2VT), una técnica de postentrenamiento que transfiere capacidades avanzadas de edición de imágenes hacia editores de video preentrenados sin cambios arquitectónicos ni pares de videos editados, usando únicamente imágenes individuales. La clave consiste en hacer que el editor de video 'actúe' como editor de imagen procesando cada imagen como un video de un solo fotograma mientras un editor de imagen guía sus predicciones en cada paso de eliminación de ruido; en inferencia, el modelo generaliza las nuevas habilidades a clips completos preservando la coherencia temporal. Además introduce OpenVE++, que amplía OpenVE-Bench con cuatro tareas nuevas (cambios de acción, expresión, movimiento corporal y reiluminación), alcanzando resultados SOTA en tres editores de video.",
+        "analogy": "🎞️ Como entrenar a un animador de cine practicando correcciones sobre un único fotograma bajo la tutela de un retocador experto en fotografía, para que luego aplique automáticamente esa misma técnica fotograma a fotograma en toda la película.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34941",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+        "author": "Lukas Aichberger, Adam Golinski, Arno Blaas, Arwen Bradley, Jacob Springer, Mehrdad Farajtabar, Michael Kirchhof, Sinead Williamson",
+        "description": "Ataca la escasez de trazas válidas en problemas matemáticos difíciles bajo muestreo Monte Carlo (MC) independiente durante el postentrenamiento de LLMs. Propone Diverse Alternative Reasoning Traces (DART), que parte de una traza rechazada, la descompone en pasos, los ordena por incertidumbre ponderada por posición y genera candidatos alternativos deliberadamente distintos en los pasos críticos usando guía de respuesta de referencia y un meta-pensamiento antes de completar la traza. En problemas de DeepMath-103K no resueltos por decodificación voraz, DART recupera un 37% más de problemas que MC con igual presupuesto de trazas y reduce un 30% el costo por traza aceptada; entrenar Llama-3.1-8B-Instruct con trazas DART logra el mejor promedio en 5 de 6 evaluaciones sobre MATH-500 y AIME.",
+        "analogy": "🧭 Como revisar un examen fallido justo en el paso donde el estudiante dudó más y obligarlo a probar un camino distinto desde ahí, en lugar de hacerle repetir todo el examen desde cero a ver si acierta por azar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34928",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
+        "author": "Han Huang, Yuchen Yan, Xingyu Wu, Yijun Li, Chao Deng, Jie Liu, Jin Ma, Yongliang Shen",
+        "description": "Introduce DRBench Pro, un benchmark centrado en cobertura estructurada del conocimiento para evaluar agentes de investigación profunda (Deep Research). Su pipeline automatizado construye árboles de conocimiento locales a partir de Wikipedia y extrae subgrafos para generar consultas abiertas y rúbricas ancladas en evidencia, donde cada rúbrica representa una relación del árbol y permite medir tanto amplitud entre líneas de investigación como profundidad en cadenas relacionadas (combinadas mediante media geométrica). Con 144 casos en 24 dominios y 44.102 rúbricas, la evaluación de 16 agentes revela perfiles distintos de amplitud y profundidad, alcanzando el mejor agente un 57,04% de cobertura global con alta concordancia respecto a jueces humanos.",
+        "analogy": "🌳 Como evaluar el informe de un analista midiendo cuántas ramas principales del árbol de conocimiento exploró y hasta qué raíz llegó en cada una, en lugar de juzgar solo si su redacción suena convincente.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34852",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches",
+        "author": "Aakash Goel, Benjamin Steenhoek, Yu Hu",
+        "description": "Investiga la creencia de que los agentes de programación sobreeditan el código simplemente porque sus parches modifican más líneas que los de desarrolladores humanos. Introduce Delta Residue Attribution (DRA), que reejecuta trayectorias de agentes, rastrea cada bloque del parche hasta el paso que lo escribió, revierte cada unidad individualmente y vuelve a correr los tests para determinar si era necesaria, analizándolo en 7.660 trayectorias resueltas de GitHub Copilot CLI con 18 modelos frontera en SWE-bench Verified y DeepSWE. Aunque los agentes tocan más líneas (sobre todo tests en un 61% y docs en un 13% en SWE-bench Verified), su proporción de código necesario supera en promedio a la humana (0,887 vs. 0,864); aun así, un 11% de unidades de código en SWE-bench Verified sobran y el 89% de ellas altera el comportamiento, por lo que proponen reportar necesidad de código junto a la tasa de resolución y podar parches desde el harness.",
+        "analogy": "✂️ Como comprobar qué tornillos de una reparación sobran quitándolos uno por uno y viendo si la máquina sigue pasando la inspección: los agentes ponen más piezas que un humano, pero casi todas las de código hacen falta aunque convenga podar el pequeño porcentaje redundante.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34875",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "PipeAxes: Decoupling Compute and Communication Granularities for Pipeline-Parallel LLM Serving",
+        "author": "Xiaoqiang Guo, Yifan Lin, Yang Liu, Jianan Zhang, Yingqi Peng, Jiamei Lv, Yi Gao, Wei Dong",
+        "description": "Optimiza el servicio de LLMs de contexto largo con paralelismo de pipeline en servidores PCIe y clústeres heterogéneos, donde los motores actuales atan el tamaño de chunk de prefill al ancho de lote en GPU y al volumen de transferencias entre etapas. PipeAxes desacopla ambas granularidades ejecutando lotes anchos de prefill por rodajas de pocas capas para intercalar pasos de decode entre ellas, mientras un códec fusionado Triton Hadamard-INT4 comprime las activaciones y las envía en grupos de filas independientes sobre sockets TCP paralelos, guiado por un planificador consciente del margen de latencia. En 97 trazas (5.016 peticiones en A800, RTX 4090 y RTX 3090), reduce la latencia p95 del primer token en carga mixta de 64K contexto desde 129,8 s en vLLM nativo hasta 512 ms y sirve hasta 23,3× más peticiones dentro de SLA en MoE de cuatro etapas, manteniendo la precisión casi idéntica a BF16.",
+        "analogy": "🚚 Como enviar carga pesada por carretera dividiendo el viaje en tramos cortos con camiones anchos pero cargamento comprimido, de modo que las ambulancias (peticiones interactivas de decode) puedan cruzar en cada pausa sin esperar a que termine todo el convoy.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34615",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "CoordRoute: Coordinated Multi-Model Routing for Maximum Compute-Budget Utility",
+        "author": "Boning Huangfu, Boxiao Du, Chen Chen",
+        "description": "Formula el enrutamiento entre múltiples LLMs de distinto tamaño como un problema coordinado bajo un presupuesto global fijo (límite de gasto en APIs o capacidad de un clúster GPU privado), superando a los routers convencionales que optimizan cada petición de forma aislada. CoordRoute sigue un bucle predict-plan-rectify: predice ganancia relativa entre modelos comparando peticiones previas similares, un planificador con lookahead cobra a cada elección el costo de oportunidad frente a peticiones futuras, y una corrección en tiempo de ejecución cancela o escala peticiones en vuelo inspeccionando respuestas parciales solo cuando resulta rentable. En trazas reales de Azure Conversation y BurstGPT, aumenta la utilidad total acumulada en un 18,72% frente al router más sólido del estado del arte.",
+        "analogy": "⚡ Como un controlador aéreo que no asigna la pista más grande a cada avión que llega primero, sino que reserva capacidad según el tráfico esperado del día y redirige vuelos en curso para maximizar el total de pasajeros atendidos dentro del presupuesto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34161",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Libtt: A Compiler and Runtime for Tenstorrent Processors",
+        "author": "Philipp Moritz, Sarah Dong",
+        "description": "Presenta Libtt, una biblioteca compartida unificada que lleva el ecosistema estándar de PyTorch y JAX a los procesadores de Tenstorrent implementando PJRT, la interfaz con la que los frameworks basados en XLA ejecutan sobre TPUs de Google. Al apoyarse en el compilador y runtime open-source de Tenstorrent junto a correcciones extensivas y nuevas optimizaciones de compilación, permite ejecutar JAX directamente y PyTorch mediante TorchTPU portando código escrito para TPU sin cambios salvo kernels personalizados. Supera la mayor parte de las suites de prueba de JAX y TorchTPU y ejecuta stacks de producción como SGLang, TorchTitan y Miles abarcando inferencia, fine-tuning y aprendizaje por refuerzo.",
+        "analogy": "🔌 Como construir un adaptador universal de corriente que permite enchufar toda la maquinaria ya diseñada para TPUs directamente en chips Tenstorrent sin reescribir las aplicaciones.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34273",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google Research / DeepMind",
+      "name": "Cogentic: Publicación Autónoma de Seis Papers Matemáticos en GitHub Verificados en Lean 4",
+      "description": "Google Research libera directamente en GitHub seis artículos científicos (~274 páginas) generados de forma autónoma por su marco multiagente Cogentic impulsado por Gemini 4, sin intervención humana tras el prompt inicial. Los preprints abordan problemas abiertos en teoría de números, criptografía y complejidad computacional —incluyendo una cota esperada subexponencial L[1/3] para factorización de enteros y mejoras en aproximaciones de equilibrios de Nash—, acompañados de formalizaciones completas en el asistente de pruebas Lean 4 mientras la comunidad matemática revisa las demostraciones.",
+      "links": [
+        {
+          "text": "MLQ.ai",
+          "url": "https://mlq.ai/news/googles-cogentic-agent-posts-six-math-papers-led-by-a-claimed-proven-l13-bound-for-factoring-integers/",
+          "type": "primary"
+        },
+        {
+          "text": "arXiv (Cogentic)",
+          "url": "https://arxiv.org/abs/2609.40324",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Reescritura de la API Messages de Python a Rust: 70% Menos CPU y 80% Menos Memoria",
+      "description": "Anthropic publica un análisis técnico detallando la migración sin tiempo de inactividad de su API central Messages desde Python hacia Rust. Con agentes de Claude generando la ruta inicial de peticiones en cerca de una semana y varios meses de validación con tráfico sombra (shadow traffic) y arneses automáticos de comparación de huellas, la nueva arquitectura reduce en ~70% el uso de CPU por petición, recorta la huella de memoria en más del 80% y acelera en ~20% el tiempo mediano al primer token en flujos como Claude Code.",
+      "links": [
+        {
+          "text": "InfoWorld",
+          "url": "https://www.infoworld.com/article/4253460/anthropic-says-it-moved-its-claude-api-from-python-to-rust-with-no-downtime.html",
+          "type": "primary"
+        },
+        {
+          "text": "MLQ.ai",
+          "url": "https://mlq.ai/news/anthropic-rewrites-claudes-api-in-rust-cutting-cpu-per-request-70/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Medición Unificada de Uso Compartido (Chat y Work) para ChatGPT Pro",
+      "description": "OpenAI inicia el despliegue de un medidor de uso unificado para suscriptores de ChatGPT Pro que fusiona en un mismo cupo de tokens las cuotas antes separadas entre los entornos de Chat y Work (como Codex), con expansión general prevista para diciembre. Aunque los usuarios intensivos podrán alcanzar límites antes en modelos de razonamiento pesado, OpenAI confirma que los mensajes con el modelo Instant permanecen ilimitados y no consumen del nuevo fondo compartido.",
+      "links": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+          "type": "primary"
+        },
+        {
+          "text": "Emergent",
+          "url": "https://emergent.sh/news/openai-merges-chatgpt-chat-work-into-one",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "DeepL",
+      "name": "Aure v2: Modelo de Traducción Voz-a-Voz End-to-End con 50% Menos Latencia",
+      "description": "En su cumbre Unmute Summit en Tokio, DeepL lanza Aure v2, su modelo de traducción de voz de nueva generación integrado en DeepL Voice y APIs para desarrolladores. Al operar de extremo a extremo voz-a-voz sin depender de una etapa intermedia de transcripción textual, Aure v2 reduce la latencia mediana de traducción hasta en un 50% frente a la primera generación, manteniendo mayor expresividad conversacional y menores tasas de error en pares complejos como inglés-japonés.",
+      "links": [
+        {
+          "text": "PR Newswire",
+          "url": "https://www.prnewswire.com/apac/news-releases/deepl-introduces-aure-v2-its-fastest-voice-ai-translation-model-302950696.html",
+          "type": "primary"
+        },
+        {
+          "text": "DeepL Aure",
+          "url": "https://www.deepl.com/es/products/voice/aure",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "XPENG",
+      "name": "Robot Humanoide IRON (76 DoF) y Arquitectura Turing Physical AI con WorldGPT",
+      "description": "Durante el XPENG AI Day 2026, la compañía presenta la versión de producción del robot humanoide IRON con 76 grados de libertad (21 por mano) e impulsado por chips propios Turing AI, anunciando producción masiva desde enero de 2027, despliegue en tiendas en el Q1 y lanzamiento comercial en el Q2. Junto al hardware, introduce la arquitectura Turing Physical AI y el modelo del mundo WorldGPT, que unifica datos de seis factores de forma físicos (autos, botes, drones y robots de uno, dos brazos y humanoides) bajo un cerebro compartido.",
+      "links": [
+        {
+          "text": "GlobeNewswire",
+          "url": "https://www.globenewswire.com/news-release/2026/11/26/3410647/0/en/xpeng-achieves-new-milestone-in-humanoid-robotics-as-iron-brings-human-centric-intelligence-into-the-mass-production-era.html",
+          "type": "primary"
+        },
+        {
+          "text": "Unite.AI",
+          "url": "https://www.unite.ai/xpeng-debuts-iron-humanoid-and-outlines-store-training-plan/",
+          "type": "secondary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "Banco de Inglaterra / Mercados IA",
+      "headline": "El Banco de Inglaterra advierte en su Informe de Estabilidad Financiera que la deuda y los compromisos fuera de balance de los grandes hyperscalers para infraestructura de IA ya superan los 4 billones de dólares —con más de 305.000 millones en emisiones de bonos ligados a IA este año—, elevando el riesgo sistémico global si los ingresos futuros decepcionan.",
+      "links": [
+        {
+          "text": "Business Standard",
+          "url": "https://www.business-standard.com/technology/artificial-intelligence/ai-firms-4-trillion-exposure-amplifies-global-market-risks-boe-126112601042_1.html",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "NVIDIA / CBS News",
+      "headline": "Una investigación de CBS News revela que NVIDIA vendió servidores de última generación Blackwell B200 y B300 a socios estadounidenses catalogados como 'preferentes' y 'élite' (como RiCloud AI y Aivres) controlados por matrices chinas —incluyendo a Inspur, sancionada en la Entity List—, reavivando la presión del Senado estadounidense sobre las brechas en controles de exportación.",
+      "links": [
+        {
+          "text": "CBS News",
+          "url": "https://www.cbsnews.com/news/nvidia-china-ai-chips-computing-sales/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic / OpenAI",
+      "headline": "El CEO de Anthropic, Dario Amodei, rechaza públicamente las acusaciones de que su laboratorio busque 'entregar el libre albedrío humano' a la IA y defiende el control democrático de la tecnología; en paralelo, el ingeniero central de Claude Code, Thariq Shihipar, confirma su salida de Anthropic para incorporarse a OpenAI.",
+      "links": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+          "type": "primary"
+        },
+        {
+          "text": "MLQ.ai",
+          "url": "https://mlq.ai/news/claude-code-engineer-thariq-shihipar-joins-openai-from-anthropic/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Unión Europea / Soberanía IA",
+      "headline": "La Comisión Europea presenta en Estrasburgo un paquete legislativo que propone crear un Fondo Europeo de Capital Tecnológico Soberano (STEF) de hasta 50.000 millones de euros (55.000 millones de dólares) para tomar participaciones directas en scaleups de inteligencia artificial y computación cuántica y frenar la dependencia tecnológica exterior.",
+      "links": [
+        {
+          "text": "TNW",
+          "url": "https://thenextweb.com/news/eu-50bn-sovereign-tech-equity-fund-ai-quantum",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Z.AI / Moonshot AI / Regulación EE. UU.",
+      "headline": "Las nuevas restricciones estadounidenses sobre licencias para acceso remoto a clústeres equivalentes a 750+ GPUs H100 en el extranjero y los bloqueos antidestilación de laboratorios occidentales retrasan los modelos insignia chinos: Zhipu (Z.AI) aplaza GLM-5.5 de 3 billones de parámetros hacia 2027 y Moonshot AI prevé duplicar de 6 a más de 12 meses su ciclo de lanzamientos.",
+      "links": [
+        {
+          "text": "The Japan Times",
+          "url": "https://www.japantimes.co.jp/business/2026/11/26/companies/china-ai-development-hurdles/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
