@@ -1,0 +1,296 @@
+{
+  "date": "2026-11-27",
+  "papers": {
+    "LLMs": [
+      {
+        "title": "Context Scaling: A New Frontier of AI Scaling",
+        "author": "Xipeng Qiu",
+        "description": "Propone el 'escalado de contexto' (context scaling) como un tercer eje fundamental junto al cómputo de entrenamiento y el cómputo en tiempo de decisión. Formaliza un sistema como P_θ(d|c) gobernado por tres presupuestos —entrenamiento (B_θ), tiempo de decisión (B_d) e infraestructura de contexto (B_c)— situando al par modelo-infraestructura como unidad de análisis. Separa el estado real del despliegue del contexto visible para el modelo, clasifica fallos de disponibilidad, fidelidad, selección y utilización, y organiza los mecanismos existentes en un ciclo de vida de cinco operaciones evaluable mediante curvas utilidad-costo.",
+        "analogy": "🏥 Como darle a un cirujano brillante no solo más años de estudio ni más minutos para pensar, sino una sala de urgencias con la historia clínica completa, análisis actualizados y herramientas bien ordenadas justo a tiempo antes de operar.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33160",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Rethinking Knowledge Distillation for Diffusion Language Models",
+        "author": "Yuxuan Sun, Yuanjian Xu, Jianing Hao, Yu Li, Sowmen Das, Zhong Li, Sangwoong Yoon, Miguel R. D. Rodrigues",
+        "description": "Presenta el primer estudio sistemático de destilación de conocimiento para modelos de lenguaje por difusión enmascarada (DLMs), revelando dos fallos de la divergencia KL directa (FKL): la perplejidad del estudiante no mejora monotónicamente con más datos del maestro y rinde peor que entrenar con el objetivo original de denoising. Propone un marco unificado libre de datos en dos fases: destilación off-policy inicial seguida de destilación on-policy con pérdida de trayectoria sobre el proceso inverso del propio estudiante, reponderación por confianza del maestro y ancla de región de confianza. En MDLM el estudiante alcanza 24,75 de perplejidad frente a 27,04 del maestro, y al destilar Dream-7B a 93M baja la perplejidad de 25,23 a 19,83.",
+        "analogy": "🎨 Como un aprendiz de restauración que deja de copiar láminas estáticas del taller del maestro y pasa a retocar sus propios bocetos paso a paso mientras el maestro le corrige solo los trazos donde tiene plena certeza.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33670",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Learning from Recurrence: Internalizing Depth-Induced Preferences in Looped Language Models",
+        "author": "Hui Chen, Joshua Elsdon, Can Goksen",
+        "description": "Explora si un bloque Transformer compartido en un modelo de lenguaje en bucle (looped LLM) puede internalizar las mejoras que logra al ejecutarse con mayor profundidad recurrente. Tras adaptar OLMo-2-1B con un bloque recurrente, los autores observan que las pasadas adicionales redistribuyen probabilidad entre tokens que ya destacaban en la primera pasada e introducen 'transfer preference write-back': entrenar el bloque en una sola pasada usando continuaciones generadas a mayor profundidad sin respuestas de referencia ni filtrado por corrección. En seis benchmarks matemáticos logra hasta +46,2% de ganancia relativa media frente a un control no recurrente con igual presupuesto de tokens.",
+        "analogy": "🎹 Como un pianista que graba su cuarta pasada lenta y cuidada de una partitura y luego usa esa grabación como guía para que su primera lectura a vista suene casi igual de precisa.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33468",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Vision/Multimodal": [
+      {
+        "title": "Tracking Any Point with Agentic Visual Reasoning",
+        "author": "Xuweiyi Chen, Jin Yao, Linzhan Mou, Lei Gong, Di Liu, Cheng Zhang, Ziqiao Ma, Sihan Xu, Adam W. Harley, Shengyi Qian, Zezhou Cheng",
+        "description": "Aborda el seguimiento de puntos físicos específicos en video (point correspondence), una tarea difícil para VLMs cuando cambia la apariencia o el punto desaparece y vuelve a surgir. Introduce AgenTAP, un agente basado en VLM que predice coordenadas y visibilidad y razona activamente sobre qué regiones inspeccionar para verificar la identidad del punto y refinar su estimación; combinado con GPT-6 Astra supera a modelos especialistas sin ajuste fino específico. Además emplea AgenTAP para reconectar trayectorias fragmentadas y construir EgoTAP-4D, un conjunto de trayectorias 3D en video egocéntrico real que mejora el entrenamiento de D4RT.",
+        "analogy": "🔍 Como un perito que sigue el rastro de un mismo rasguño sobre una pieza en movimiento: si queda oculto por un giro, retrocede y hace zoom en pistas clave alrededor para confirmar que reapareció exactamente el mismo punto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34943",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE",
+        "author": "Jiachen An, Sijie Zhao, Le Li, Hongyu Liu, Zhiyuan Li, Tianyu Yang, Xiaoyu Kong, Xunliang Cai, Yong Zhang, Chi-Man Pun, Xiaoming Wei, Xiaodong Cun",
+        "description": "Ataca el cuello de botella de los VAEs de video en generación y edición interactiva en streaming, donde las convoluciones pesadas y la atención global encarecen tanto la codificación como la decodificación. Tras comprobar que el campo receptivo efectivo de cada parche depende casi exclusivamente de sus vecinos espaciotemporales cercanos, LiveVAE reemplaza la atención global por atención causal en ventana con caché KV temporal acotada, preservando el espacio latente mediante destilación desacoplada y ajuste conjunto. En MiniMax-H3 acelera la codificación entre 5,2× y 6,2× y la decodificación entre 3,0× y 3,3× con mayor PSNR, alcanzando 13,4× de aceleración total con su infraestructura de inferencia.",
+        "analogy": "🪟 Como un montador de cine en vivo que no necesita volver a mirar toda la película para empalmar cada segundo nuevo: le basta vigilar una pequeña ventana de fotogramas recientes para mantener el flujo en tiempo real.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34912",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation",
+        "author": "Shaoteng Liu, Shuai Yang, Wei Huang, Luozhou Wang, Song Han, Yukang Chen",
+        "description": "Resuelve la pérdida de consistencia de personajes, objetos y escenarios en generadores de video autorregresivos en tiempo real que reciben prompts sobre la marcha sin conocer el guion completo. Propone un agente de memoria asíncrono en GPUs dedicadas que lee solo los prompts acumulados —nunca los fotogramas generados, evitando propagar errores visuales— y mantiene fichas textuales e imágenes evolutivas de cada entidad para prellenar el attention sink antes del siguiente plano, entrenado con RL y recompensa de imagen calibrada. En LongStory-Online (857 planos), eleva la identidad de protagonistas en +44,9 puntos y la consistencia de lugares en +40,4, transmitiendo a 34,3 FPS en un nodo 8×B200 durante historias de 14 minutos.",
+        "analogy": "🎬 Como una directora de continuidad en un rodaje improvisado en vivo que anota en fichas aparte el vestuario y los decorados según el guion que va llegando y entrega la foto de referencia al camarógrafo justo antes de rodar cada nueva escena.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34907",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Agents & Reasoning": [
+      {
+        "title": "Collect for Coverage, Replay with Evidence: Adaptive and Efficient On-Policy Distillation for Long-Horizon Agents",
+        "author": "Haowen Hou, Gen Li, Ruilin Li, Yicheng Liu, Zhen Huang, Shuai Dong, Congcong Wang, Kaiwen Tuo, Hongrui Wu, Zelin Peng, Kanghui Tian, Ji Zhao, Dianyi Wang, Jiaqi Wang",
+        "description": "Supera el alto costo de la destilación on-policy (OPD) en agentes de horizonte largo mediante CARE-OPD (Collect for coverAge, Replay with Evidence). Para ampliar la cobertura de trayectorias sin degradar al maestro, combina completaciones del maestro sembradas por el estudiante con filtrado por confianza a nivel de respuesta; luego usa evidencia de ejecución posterior (hindsight replay allocation) para priorizar los turnos verdaderamente determinantes en lugar de horarios fijos por posición. En tareas de ingeniería de software e investigación profunda, supera a la OPD asíncrona en línea elevando el éxito en SWE-bench Verified al 59,5% con un 45% menos de tiempo de entrenamiento y un 44% menos de acciones en el entorno.",
+        "analogy": "🏈 Como entrenar a un mariscal de campo joven dejando que él inicie la jugada hasta meterse en aprietos, pedir al veterano que muestre cómo salir de ese punto y repasar en video solo las decisiones que realmente cambiaron el marcador.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34756",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "vSFT: Learning to Verbally Tune Agents at Test Time",
+        "author": "Qishuai Wen, Rui Chen, Haiwen Li, Zhiyuan Huang, Qiwen Gu, Bingjie Gao, Geng Li, Jing Tang, Xiangxiang Chu, Chun-Guang Li",
+        "description": "Introduce verbally Supervised Fine-Tuning (vSFT), un marco de adaptación en tiempo de prueba que convierte retroalimentación densa en lenguaje natural directamente en actualizaciones de pesos de bajo rango. Un supervisor diagnostica verbalmente las trayectorias fallidas del agente y una hiperred traduce esa crítica en actualizaciones LoRA para ajustar al agente en bucle cerrado durante la ejecución, evitando el costo de rollouts masivos con recompensas escasas de RL. Evaluado sobre Qwen3-4B, vSFT supera a GRPO y Reflexion en +8,7% y +13,9% de tasa de éxito en ALFWorld, y en +4,8% y +18,2% en WebShop.",
+        "analogy": "🧠 Como un entrenador que no se limita a gritar consejos desde la banda ni a hacer repetir mil partidos: explica con palabras exactas el fallo técnico tras la jugada y un mecanismo traduce ese consejo directamente en memoria muscular antes del siguiente punto.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34440",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "How Much Effort Does an AI Code Reviewer Need? Evidence from Claude 5.5 Models on Plausible-but-Wrong Patches",
+        "author": "Zax Shen, Hanling Zhang, Zixu Wang",
+        "description": "Mide cuánto esfuerzo de razonamiento necesita un revisor de código con IA para detectar parches 'plausibles pero incorrectos' que superan los tests de SWE-bench Verified pero fallan ante pruebas reforzadas (SWE-ABS). Evaluando Claude Opus 5.5, Sonnet 5.5 y Haiku 5.5 en niveles de esfuerzo bajo, medio y alto sobre 90 parches de Django (55 incorrectos), el esfuerzo alto redujo la falsa aceptación frente al bajo (0,45 vs. 0,67 en Opus y 0,51 vs. 0,78 en Haiku). En Opus el nivel medio resultó no inferior al alto ahorrando un 20% de costo, aunque ninguna configuración superó la barrera de aceptar al menos un 45% de parches defectuosos.",
+        "analogy": "🔎 Como pagarle a un inspector de obra más horas para revisar planos que pasaron el visto bueno superficial: dedicar más tiempo detecta grietas reales, pero incluso el revisor más minucioso sigue dejando pasar casi la mitad de los fallos sutiles.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33639",
+            "type": "primary"
+          }
+        ]
+      }
+    ],
+    "Infrastructure & Optimization": [
+      {
+        "title": "DFly2: Turbocharging Long-Context Speculative Decoding by Sharing the Target's Sparsity",
+        "author": "Hong Liu, Rui Cen, Junhan Shi, Lin Niu, Runzhi Fan, Zhaojing Zhou, Haodi Lei, Jiebin Zhang, Saiyong Yang, Junqiang Zheng, Zhenghai Xue, Guanghua Yu, Jianchen Zhu",
+        "description": "Optimiza la decodificación especulativa sobre LLMs nativamente dispersos en contextos largos (como DeepSeek-V4 o Hy4), donde los borradores actuales aún desperdician memoria y ancho de banda manteniendo su propia caché KV o leyendo ventanas fijas. Al observar que los índices dispersos elegidos por el modelo objetivo en un paso cubren cerca del 90% de las posiciones del paso siguiente, DFly2 reutiliza tanto la caché KV emparejada como las posiciones seleccionadas por el indexador del objetivo (KV sharing + Index sharing) sin ejecutar pasadas de puntuación ni mantener caché propia. En cargas de 64K a alta concurrencia sobre DS-V4.1-Flash logra un 62% y 81% más de throughput con igual velocidad por usuario, superando a DFlash y DSpark hasta en 31,5% en contexto largo y agentes.",
+        "analogy": "🗺️ Como un copiloto de rally que deja de llevar su propio mapa pesado y se asoma directamente a las notas que el piloto principal ya subrayó un segundo antes, acertando el 90% de las curvas sin gasto extra.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34776",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Asymmetric Speculative Decoding: Unlocking In-Context Learning in Draft Models",
+        "author": "Guang Huang, Zeyi Wen",
+        "description": "Identifica el 'isomorfismo de tarea' —dar exactamente el mismo prompt al modelo borrador y al modelo objetivo— como la causa de las altas tasas de rechazo en decodificación especulativa sobre razonamiento, al exigir al borrador pequeño resolver problemas por encima de su capacidad. Demuestra que la tasa de aceptación sube monotónicamente durante la generación gracias al aprendizaje en contexto (ICL) sobre tokens ya verificados y propone AsymSpec, un método sin reentrenamiento que entrega soluciones ejemplo relevantes solo al modelo borrador para transformar su tarea de razonamiento en simulación por ICL. Logra aceleraciones exactas de entre 2,29× y 4,95× frente a decodificación autorregresiva en razonamiento, código y resumen.",
+        "analogy": "📝 Como darle al asistente junior una hoja con ejemplos resueltos muy parecidos mientras el experto resuelve el caso original: en vez de bloquearse inventando la solución desde cero, el asistente imita el patrón y propone borradores acertados desde el primer renglón.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.34010",
+            "type": "primary"
+          }
+        ]
+      },
+      {
+        "title": "RankCast: Phase-Aware Rank Balancing in MoE Serving",
+        "author": "Kaidi Fu, Xu-Hao Lu, Pingwei Sun, Jianchao Tan, Yuchen Xie, Xunliang Cai",
+        "description": "Resuelve el desequilibrio de carga en el servicio desagregado de grandes modelos Mixture-of-Experts (MoE) con paralelismo de expertos (EP), distinguiendo los cuellos de botella de cada fase: tokens máximos por rango en prefill (limitado por cómputo) y expertos activos máximos por rango en decode (limitado por memoria). RankCast conserva los Top-p expertos predichos y reasigna los k−p restantes dentro de los Top-L candidatos usando precios por rango en prefill y cierre selectivo de expertos saturados en decode, solapando sus kernels sobre SGLang y DeepEP. En Qwen3-235B (EP=8) y Qwen3.5-397B (EP=16) elimina más del 75% del exceso de carga en prefill, sube el throughput de entrada hasta un 19% y recorta el tiempo por token de salida hasta un 10% con menos de un punto porcentual de impacto en calidad.",
+        "analogy": "🚦 Como un gestor de tráfico inteligente que en hora punta de entrada reparte camiones entre casetas menos llenas, y en la salida nocturna apaga ventanillas poco usadas para atender en menos vueltas sin perder calidad de servicio.",
+        "links": [
+          {
+            "text": "arXiv",
+            "url": "https://arxiv.org/abs/2611.33542",
+            "type": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "launches": [
+    {
+      "company": "Google DeepMind",
+      "name": "Agentes de IA Controlan Autónomamente Presupuesto de Cómputo para Experimentos de Gemini",
+      "description": "El VP de Investigación Koray Kavukcuoglu confirmó que agentes internos de Google DeepMind ya gestionan de forma autónoma parte del presupuesto de cómputo del laboratorio para seleccionar y ejecutar experimentos destinados a futuras generaciones de Gemini. Para mantener la trazabilidad y seguridad, DeepMind no aplica recompensas directas sobre la cadena de pensamiento de los agentes, conservando sus intenciones revisables en lenguaje natural antes de la ejecución.",
+      "links": [
+        {
+          "text": "Emergent",
+          "url": "https://emergent.sh/news/deepmind-ai-agents-now-control-gemini",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "name": "Beta Pública de \"Skills over MCP\" para Claude y Claude Code",
+      "description": "Con motivo del segundo aniversario del Model Context Protocol, Anthropic abre la beta pública de Skills over MCP, permitiendo que los servidores MCP publiquen guías de flujo de trabajo reutilizables junto a sus herramientas. Claude y Claude Code cargan dinámicamente estos playbooks bajo demanda solo cuando la tarea lo exige, evitando inflar la ventana de contexto.",
+      "links": [
+        {
+          "text": "CryptoBriefing",
+          "url": "https://cryptobriefing.com/anthropic-skills-over-mcp-claude-beta/",
+          "type": "primary"
+        },
+        {
+          "text": "The New Stack",
+          "url": "https://thenewstack.io/mcp-skills-tasks-claude/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "name": "Configuraciones Clínicas Especializadas para Astra y Sol en la OpenAI API",
+      "description": "OpenAI habilita en la Responses API configuraciones médicas especializadas que adaptan modelos como Astra y Sol para flujos clínicos sin requerir un entorno ChatGPT for Healthcare. Cuando se activa la búsqueda web, consultan un índice sanitario dedicado para localizar, comparar y resumir evidencia médica con citas y soporte para integraciones compatibles con HIPAA.",
+      "links": [
+        {
+          "text": "OpenAI Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Krafton / Aleph Alpha / inclusionAI",
+      "name": "Oleada de Modelos MoE Open-Weight de Largo Contexto (Raon-1 mini, Kolibri 1.1 y Ling-3.2-air)",
+      "description": "Tres desarrolladores de Corea del Sur, Alemania y China publicaron en Hugging Face nuevos modelos Mixture-of-Experts con licencias comerciales permisivas y ventanas de ~256K+ tokens: Raon-1 mini de Krafton (28,8B totales / 4,3B activos, Apache 2.0), Kolibri 1.1 de Aleph Alpha (75B / 3,44B activos, extensible a 1M tokens) y el multimodal Ling-3.2-air de inclusionAI de Ant Group (124B / 5,5B activos, MIT, entrada de imagen y video).",
+      "links": [
+        {
+          "text": "MLQ.ai",
+          "url": "https://mlq.ai/news/krafton-aleph-alpha-and-ants-inclusionai-post-open-weight-moe-models/",
+          "type": "primary"
+        },
+        {
+          "text": "Hugging Face (Kolibri 1.1)",
+          "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1.1",
+          "type": "secondary"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "company": "SpaceX / FCC",
+      "headline": "La FCC otorga autorización condicional a SpaceX para desplegar hasta un millón de satélites orbitales como centros de datos de IA ('Starmind'), aprovechando energía solar continua y evitando restricciones terrestres de red eléctrica y agua pese a críticas de astrónomos por basura espacial e interferencias.",
+      "links": [
+        {
+          "text": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
+          "type": "primary"
+        },
+        {
+          "text": "CNN",
+          "url": "https://edition.cnn.com/2026/11/26/business/spacex-satellites-space-data-centers-intl",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Ramp / Economía IA",
+      "headline": "El Ramp AI Index revela este 27 de noviembre que el precio promedio pagado por empresas a OpenAI y Anthropic cayó un 11,2% mensual hasta 0,45 USD por millón de tokens (0,38 USD en OpenAI y 0,50 USD en Anthropic), mientras el consumo de tokens saltó un 27,2% y el 1% superior de clientes genera el 80% de ese ingreso.",
+      "links": [
+        {
+          "text": "MLQ.ai",
+          "url": "https://mlq.ai/news/ai-token-prices-fall-11-in-a-month-as-business-usage-jumps-27-ramp-says/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Japón / Regulación y Defensa",
+      "headline": "El gobierno de Japón prepara una reforma a su Ley de Promoción de la IA —apuntando a la sesión de la Dieta de 2027— con inspecciones presenciales, reporte obligatorio de incidentes y multas de hasta 100 millones de yenes también para firmas extranjeras, mientras Defensa publica su nueva 'Defense AI Vision' manteniendo el mando humano final.",
+      "links": [
+        {
+          "text": "MLQ.ai (Ley IA)",
+          "url": "https://mlq.ai/news/japans-ai-law-overhaul-would-allow-inspections-and-fines-up-to-100-million/",
+          "type": "primary"
+        },
+        {
+          "text": "MLQ.ai (Defensa)",
+          "url": "https://mlq.ai/news/japans-defense-ministry-adopts-ai-vision-that-keeps-humans-in-command/",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "company": "Fuerza Aérea de EE. UU. / Cloud One",
+      "headline": "Reuters revela en exclusiva este 27 de noviembre que atacantes vulneraron Cloud One —la plataforma cloud insignia de la Fuerza Aérea estadounidense operada sobre Microsoft, Amazon, Oracle y Alphabet—, forzando a pausar migraciones, bloquear actualizaciones y revocar accesos administrativos mientras se evalúa el alcance.",
+      "links": [
+        {
+          "text": "MLQ.ai / Reuters",
+          "url": "https://mlq.ai/news/hackers-breached-the-air-forces-cloud-one-platform-reuters-finds/",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "company": "Google / Centros de Datos",
+      "headline": "Inspectores regionales de Valonia emitieron el 26 de noviembre una orden de paralización a cerca de 300 trabajadores en el segundo campus de centros de datos de Google en Farciennes (Bélgica), al detectar un edificio de 30.000 m² casi terminado pese al rechazo previo a su cambio de permisos para refrigeración fluvial.",
+      "links": [
+        {
+          "text": "MLQ.ai / RTBF",
+          "url": "https://mlq.ai/news/wallonia-orders-google-to-stop-work-on-its-farciennes-data-center/",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}
